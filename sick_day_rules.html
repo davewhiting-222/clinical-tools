@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sick Day Rules for Diabetes: Medication Management During Illness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #7c2d12 0%, #ea580c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #7c2d12;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ea580c;
+        }
+
+        h3 {
+            color: #c2410c;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .critical-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .critical-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .info-box {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .medication-card {
+            background-color: #fff7ed;
+            border: 2px solid #fb923c;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .medication-card h4 {
+            color: #9a3412;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .medication-list {
+            background-color: #fef3c7;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .medication-list strong {
+            color: #92400e;
+        }
+
+        .safe-medication {
+            background-color: #d1fae5;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .safe-medication strong {
+            color: #065f46;
+        }
+
+        .flowchart-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .flowchart-title {
+            font-weight: 600;
+            color: #7c2d12;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .checklist {
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            color: #065f46;
+            margin-bottom: 15px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 8px 0;
+            background-color: white;
+            border-radius: 6px;
+            border-left: 3px solid #10b981;
+        }
+
+        .checklist-item::before {
+            content: "✓";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #10b981;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #fed7aa;
+            color: #7c2d12;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tr:hover {
+            background-color: #fef3c7;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .emergency-number {
+            background-color: #fee2e2;
+            border: 3px solid #dc2626;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .emergency-number h3 {
+            color: #991b1b;
+            margin-bottom: 10px;
+        }
+
+        .emergency-number p {
+            font-size: 1.1em;
+            color: #7f1d1d;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sick Day Rules for Diabetes</h1>
+            <p>Essential Medication Management During Illness</p>
+        </div>
+
+        <div class="content">
+            <div class="critical-box">
+                <h3>⚠️ Critical Information: Protect Your Kidneys</h3>
+                <p>When you are sick with vomiting, diarrhea, or high fever and cannot maintain adequate hydration, certain medications must be temporarily stopped to prevent serious kidney damage. This is known as the "Sick Day Rule" and is essential for your safety.<sup>1,2,3</sup></p>
+            </div>
+
+            <h2>What Are the Sick Day Rules?</h2>
+            <p>The Sick Day Rules are a set of guidelines designed to protect your kidneys during acute illness. When you're sick and losing fluids through vomiting, diarrhea, or fever, your body becomes dehydrated. Certain medications that are normally safe can become dangerous when you're dehydrated because they put extra stress on your kidneys.<sup>1,2</sup></p>
+
+            <p>Your kidneys are responsible for filtering waste from your blood and maintaining the right balance of fluids and minerals in your body. When you're dehydrated, blood flow to your kidneys decreases. Some medications can worsen this situation, potentially causing acute kidney injury â€" a serious and sometimes irreversible condition.<sup>2,3,4</sup></p>
+
+            <div class="info-box">
+                <h3>Why Is This Important?</h3>
+                <p>Studies have shown that continuing certain medications during dehydrating illnesses significantly increases the risk of acute kidney injury. By following the Sick Day Rules, you can reduce your risk of kidney damage by up to 50%.<sup>3,5</sup></p>
+            </div>
+
+            <h2>When Should I Follow the Sick Day Rules?</h2>
+            <p>You should stop your medications and follow these rules if you experience any of the following:<sup>1,2,6</sup></p>
+
+            <div class="flowchart-container">
+                <div class="flowchart-title">Sick Day Rule Triggers</div>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Start box -->
+                    <rect x="275" y="20" width="250" height="60" fill="#dbeafe" stroke="#3b82f6" stroke-width="3" rx="8"/>
+                    <text x="400" y="45" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">Are you experiencing</text>
+                    <text x="400" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">any of these symptoms?</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 80 L 400 110" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowblack)"/>
+                    
+                    <!-- Three symptom boxes -->
+                    <!-- Vomiting box -->
+                    <rect x="50" y="120" width="200" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="8"/>
+                    <text x="150" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">Vomiting</text>
+                    <text x="150" y="165" text-anchor="middle" font-size="12" fill="#78350f">Unable to keep</text>
+                    <text x="150" y="182" text-anchor="middle" font-size="12" fill="#78350f">fluids down</text>
+                    
+                    <!-- Diarrhea box -->
+                    <rect x="300" y="120" width="200" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="8"/>
+                    <text x="400" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">Diarrhea</text>
+                    <text x="400" y="165" text-anchor="middle" font-size="12" fill="#78350f">Frequent loose</text>
+                    <text x="400" y="182" text-anchor="middle" font-size="12" fill="#78350f">or watery stools</text>
+                    
+                    <!-- Fever box -->
+                    <rect x="550" y="120" width="200" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="8"/>
+                    <text x="650" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">High Fever</text>
+                    <text x="650" y="165" text-anchor="middle" font-size="12" fill="#78350f">Especially with</text>
+                    <text x="650" y="182" text-anchor="middle" font-size="12" fill="#78350f">sweating</text>
+                    
+                    <!-- Arrows from symptom boxes -->
+                    <path d="M 150 200 L 150 240 L 350 240" stroke="#333" stroke-width="3" fill="none"/>
+                    <path d="M 400 200 L 400 240" stroke="#333" stroke-width="3" fill="none"/>
+                    <path d="M 650 200 L 650 240 L 450 240" stroke="#333" stroke-width="3" fill="none"/>
+                    <path d="M 400 240 L 400 270" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowblack)"/>
+                    
+                    <!-- Decision box -->
+                    <rect x="250" y="280" width="300" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="3" rx="8"/>
+                    <text x="400" y="305" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">STOP YOUR MEDICATIONS</text>
+                    <text x="400" y="325" text-anchor="middle" font-size="13" fill="#7f1d1d">(See list below)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 340 L 400 365" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowblack)"/>
+                    
+                    <!-- Action box -->
+                    <rect x="225" y="365" width="350" height="30" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="6"/>
+                    <text x="400" y="385" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">Contact your healthcare provider or pharmacist</text>
+                    
+                    <!-- Arrow markers -->
+                    <defs>
+                        <marker id="arrowblack" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="warning-box">
+                <h3>Additional Situations That Require Caution</h3>
+                <ul>
+                    <li><strong>Reduced food and fluid intake:</strong> If you haven't been able to eat or drink normally for 24 hours</li>
+                    <li><strong>Signs of dehydration:</strong> Dark urine, dizziness when standing, dry mouth, decreased urination</li>
+                    <li><strong>Excessive sweating:</strong> From fever, heat, or strenuous activity while ill</li>
+                    <li><strong>Before planned procedures:</strong> Always inform your healthcare team about these medications before surgery or procedures requiring fasting<sup>6</sup></li>
+                </ul>
+            </div>
+
+            <h2>Which Medications Should I Stop?</h2>
+            <p>During sick days, you must temporarily pause four main categories of medications. These are sometimes remembered by the acronym <strong>"SADMANS"</strong> (Sick day rules for: Sulphonylureas, ACE-inhibitors/ARBs, Diuretics, Metformin, SGLT2 inhibitors, NSAIDs).<sup>1,2,3</sup></p>
+
+            <div class="medication-card">
+                <h4>1. Blood Pressure Medications (ACE Inhibitors and ARBs)</h4>
+                <div class="medication-list">
+                    <p><strong>How to identify:</strong> These medications typically end in <strong>-pril</strong> or <strong>-sartan</strong></p>
+                    <p><strong>Common examples:</strong></p>
+                    <ul>
+                        <li>ACE Inhibitors (-pril): Ramipril, Lisinopril, Enalapril, Perindopril, Quinapril</li>
+                        <li>ARBs (-sartan): Losartan, Valsartan, Candesartan, Irbesartan, Telmisartan</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> These medications lower blood pressure by relaxing blood vessels. When you're dehydrated, they can cause blood pressure to drop too low and reduce blood flow to the kidneys, potentially causing acute kidney injury.<sup>2,4,7</sup></p>
+                </div>
+            </div>
+
+            <div class="medication-card">
+                <h4>2. Diuretics (Water Pills)</h4>
+                <div class="medication-list">
+                    <p><strong>Common examples:</strong></p>
+                    <ul>
+                        <li>Furosemide (Lasix)</li>
+                        <li>Hydrochlorothiazide (HCTZ)</li>
+                        <li>Bumetanide</li>
+                        <li>Indapamide</li>
+                        <li>Chlorthalidone</li>
+                        <li>Spironolactone (Aldactone)</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> Diuretics increase urine production to remove excess fluid. When you're already dehydrated from illness, continuing diuretics can worsen dehydration and harm your kidneys.<sup>2,4</sup></p>
+                </div>
+            </div>
+
+            <div class="medication-card">
+                <h4>3. Diabetes Medications</h4>
+                <div class="medication-list">
+                    <p><strong>Metformin:</strong></p>
+                    <ul>
+                        <li>Metformin, Glucophage</li>
+                        <li>Combination products: Janumet, Glucovance, others</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> When you're dehydrated and your kidneys aren't working optimally, metformin can build up in your system and cause a rare but serious condition called lactic acidosis.<sup>2,8</sup></p>
+                    
+                    <p style="margin-top: 15px;"><strong>SGLT2 Inhibitors (Gliflozins):</strong></p>
+                    <ul>
+                        <li>Empagliflozin (Jardiance)</li>
+                        <li>Dapagliflozin (Forxiga)</li>
+                        <li>Canagliflozin (Invokana)</li>
+                        <li>Ertugliflozin (Steglatro)</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> These medications cause you to lose glucose and fluid through urine, which can worsen dehydration and increase the risk of diabetic ketoacidosis, especially when you're not eating normally.<sup>2,9</sup></p>
+                    
+                    <p style="margin-top: 15px;"><strong>Sulphonylureas:</strong></p>
+                    <ul>
+                        <li>Gliclazide (Diamicron)</li>
+                        <li>Glyburide (Glibenclamide)</li>
+                        <li>Glipizide</li>
+                        <li>Glimepiride</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> When you're not eating normally, these medications can cause dangerously low blood sugar levels (hypoglycemia).<sup>2</sup></p>
+
+                    <p style="margin-top: 15px;"><strong>GLP-1 Agonists (Injectable medications):</strong></p>
+                    <ul>
+                        <li>Semaglutide (Ozempic)</li>
+                        <li>Dulaglutide (Trulicity)</li>
+                        <li>Liraglutide (Victoza)</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> These medications slow stomach emptying and can worsen nausea and vomiting during illness. They also reduce appetite when you may already have difficulty eating.<sup>10</sup></p>
+                </div>
+            </div>
+
+            <div class="medication-card">
+                <h4>4. Anti-Inflammatory Pain Relievers (NSAIDs)</h4>
+                <div class="medication-list">
+                    <p><strong>Common examples:</strong></p>
+                    <ul>
+                        <li>Ibuprofen (Advil, Motrin)</li>
+                        <li>Naproxen (Aleve, Naprosyn)</li>
+                        <li>Diclofenac (Voltaren)</li>
+                        <li>Celecoxib (Celebrex)</li>
+                        <li>Indomethacin</li>
+                        <li>Ketorolac</li>
+                    </ul>
+                    <p><strong>Why stop?</strong> NSAIDs reduce blood flow to the kidneys. Combined with dehydration, this significantly increases the risk of acute kidney injury.<sup>2,4,11</sup></p>
+                </div>
+                
+                <div class="safe-medication">
+                    <p><strong>✓ SAFE ALTERNATIVE:</strong> Acetaminophen (Tylenol, Paracetamol) is safe to use for pain and fever during sick days as it does not affect kidney function in the same way.<sup>2</sup></p>
+                </div>
+            </div>
+
+            <h2>What Medications Should I Continue?</h2>
+            <p>It's equally important to know which medications you should <strong>continue taking</strong> during illness:<sup>1,2</sup></p>
+
+            <div class="success-box">
+                <h3>Continue These Medications:</h3>
+                <ul>
+                    <li><strong>Insulin:</strong> If you take insulin, continue it but may need dose adjustments. Contact your healthcare provider for guidance<sup>2,12</sup></li>
+                    <li><strong>Acetaminophen/Tylenol:</strong> Safe for pain and fever relief</li>
+                    <li><strong>Antibiotics:</strong> If prescribed for the current illness</li>
+                    <li><strong>Thyroid medications</strong></li>
+                    <li><strong>Anti-seizure medications</strong></li>
+                    <li><strong>Heart rhythm medications</strong></li>
+                    <li><strong>Blood thinners</strong> (unless directed otherwise by your doctor)</li>
+                    <li><strong>Steroids</strong> (prednisone, etc.) â€" never stop these suddenly</li>
+                    <li><strong>Psychiatric medications</strong> (antidepressants, antipsychotics, etc.)</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>When in doubt, contact your healthcare provider or pharmacist before stopping any medication.</strong></p>
+            </div>
+
+            <h2>When Should I Restart My Medications?</h2>
+            <p>This is a critical question, and the timing is important for your safety.<sup>1,2,6</sup></p>
+
+            <div class="warning-box">
+                <h3>Do NOT Restart Immediately</h3>
+                <p>Many people make the mistake of restarting their medications as soon as they feel slightly better or when vomiting stops. This can be dangerous because your body needs time to fully rehydrate and for your kidney function to normalize.<sup>2,6</sup></p>
+            </div>
+
+            <div class="checklist">
+                <h3>Safe Restart Checklist</h3>
+                <p>You can restart your medications when <strong>ALL</strong> of the following criteria are met:</p>
+                
+                <div class="checklist-item">
+                    You have been eating and drinking normally for 24 to 48 hours
+                </div>
+                
+                <div class="checklist-item">
+                    No vomiting for at least 24 hours
+                </div>
+                
+                <div class="checklist-item">
+                    No diarrhea, or diarrhea has resolved to near-normal bowel movements
+                </div>
+                
+                <div class="checklist-item">
+                    Fever has resolved
+                </div>
+                
+                <div class="checklist-item">
+                    You are well-hydrated (passing normal amounts of light-colored urine)
+                </div>
+                
+                <div class="checklist-item">
+                    You feel your energy returning to normal
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>When to Seek Medical Advice Before Restarting</h3>
+                <p>Contact your healthcare provider or pharmacist before restarting if:<sup>2,6</sup></p>
+                <ul>
+                    <li>You were ill for more than 3 days</li>
+                    <li>You have ongoing kidney disease</li>
+                    <li>You're over 65 years old</li>
+                    <li>You have heart failure</li>
+                    <li>You're unsure about your hydration status</li>
+                    <li>You experienced dizziness or lightheadedness</li>
+                    <li>You notice changes in your urine output or color</li>
+                </ul>
+            </div>
+
+            <h2>Additional Sick Day Management Tips</h2>
+
+            <h3>Monitoring Your Condition</h3>
+            <p>During illness, monitor the following:<sup>2,12</sup></p>
+            <ul>
+                <li><strong>Blood glucose:</strong> Check more frequently if you have diabetes (every 2-4 hours). Illness typically raises blood sugar even if you're eating less</li>
+                <li><strong>Ketones:</strong> If you have type 1 diabetes, check urine or blood ketones if blood glucose is above 14 mmol/L (250 mg/dL)</li>
+                <li><strong>Hydration status:</strong> Monitor urine color and frequency</li>
+                <li><strong>Temperature:</strong> Track fever patterns</li>
+                <li><strong>Symptoms:</strong> Note changes in nausea, vomiting, or diarrhea</li>
+            </ul>
+
+            <h3>Staying Hydrated</h3>
+            <p>Hydration is crucial during sick days:<sup>2,13</sup></p>
+            <ul>
+                <li>Aim for small, frequent sips of fluid rather than large amounts at once</li>
+                <li>Good fluid options: water, diluted juice, clear broth, electrolyte solutions</li>
+                <li>If you have diabetes and are vomiting: alternate between sugar-free and regular fluids to maintain blood glucose</li>
+                <li>Avoid caffeinated and alcoholic beverages as they can worsen dehydration</li>
+                <li>Ice chips or popsicles can help if you're having trouble keeping fluids down</li>
+            </ul>
+
+            <h3>Nutrition During Illness</h3>
+            <p>When you're sick:<sup>2,12</sup></p>
+            <ul>
+                <li>Try to eat small amounts of easily digestible foods</li>
+                <li>Good options: crackers, toast, rice, applesauce, bananas</li>
+                <li>If you have diabetes: try to consume some carbohydrates to prevent low blood sugar, especially if taking insulin</li>
+                <li>Don't force yourself to eat large meals; small frequent snacks are better</li>
+            </ul>
+
+            <div class="emergency-number">
+                <h3>⚠️ When to Seek Emergency Care</h3>
+                <p>Call 911 or go to the emergency department if you experience:</p>
+                <ul style="text-align: left; margin-top: 10px;">
+                    <li>Persistent vomiting for more than 24 hours</li>
+                    <li>Signs of severe dehydration: extreme thirst, very dark urine or no urine, dizziness, confusion</li>
+                    <li>Severe abdominal pain</li>
+                    <li>Blood in vomit or stool</li>
+                    <li>High fever (>39.4°C/103°F) that doesn't respond to acetaminophen</li>
+                    <li>Difficulty breathing or chest pain</li>
+                    <li>For people with diabetes: blood glucose consistently above 20 mmol/L (360 mg/dL) or ketones in urine/blood</li>
+                    <li>Altered mental status or extreme weakness</li>
+                </ul>
+            </div>
+
+            <h2>Creating Your Personal Sick Day Plan</h2>
+            <p>Work with your healthcare team to create a personalized sick day plan. This should include:<sup>1,2</sup></p>
+
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><strong>Medication List</strong></td>
+                    <td>Complete list of all your medications with clear marking of which to stop during sick days</td>
+                </tr>
+                <tr>
+                    <td><strong>Contact Information</strong></td>
+                    <td>Phone numbers for your doctor, pharmacist, and after-hours care</td>
+                </tr>
+                <tr>
+                    <td><strong>Monitoring Plan</strong></td>
+                    <td>How often to check blood sugar, when to check ketones (if applicable)</td>
+                </tr>
+                <tr>
+                    <td><strong>Insulin Adjustments</strong></td>
+                    <td>If you take insulin, specific instructions for dose adjustments during illness</td>
+                </tr>
+                <tr>
+                    <td><strong>Warning Signs</strong></td>
+                    <td>Symptoms that require immediate medical attention specific to your conditions</td>
+                </tr>
+                <tr>
+                    <td><strong>Emergency Contacts</strong></td>
+                    <td>Family members or friends who can help in an emergency</td>
+                </tr>
+            </table>
+
+            <div class="success-box">
+                <h3>Preparing for Sick Days</h3>
+                <p>Be prepared before illness strikes:</p>
+                <ul>
+                    <li>Keep a written list of medications to stop on sick days posted on your refrigerator or in your medication storage area</li>
+                    <li>Ensure family members know about the sick day rules</li>
+                    <li>Stock acetaminophen/Tylenol for fever and pain relief</li>
+                    <li>Keep electrolyte solutions or clear fluids on hand</li>
+                    <li>Have a thermometer available</li>
+                    <li>If you have diabetes, keep glucose monitoring supplies readily accessible and know how to check ketones</li>
+                    <li>Save your healthcare provider's contact information in your phone</li>
+                </ul>
+            </div>
+
+            <h2>Key Takeaways</h2>
+            <div class="critical-box">
+                <h3>Remember These Essential Points:</h3>
+                <ol>
+                    <li><strong>STOP medications</strong> during vomiting, diarrhea, or fever with poor fluid intake: ACE inhibitors/ARBs (-pril/-sartan), diuretics, metformin, SGLT2 inhibitors, sulphonylureas, GLP-1 agonists, and NSAIDs</li>
+                    <li><strong>SWITCH to Tylenol</strong> instead of ibuprofen or naproxen for pain/fever relief</li>
+                    <li><strong>CONTINUE insulin</strong> and other essential medications (may need dose adjustments â€" contact your provider)</li>
+                    <li><strong>WAIT 24-48 hours</strong> after you're eating and drinking normally before restarting medications</li>
+                    <li><strong>CONTACT your healthcare provider</strong> if you're unsure about any medication decisions</li>
+                    <li><strong>SEEK emergency care</strong> for severe symptoms or prolonged illness</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>Questions to Ask Your Healthcare Team</h3>
+                <ul>
+                    <li>Can you review my medication list and mark which ones follow the sick day rules?</li>
+                    <li>What should I do with my insulin doses if I'm sick?</li>
+                    <li>At what point should I call you if I'm ill?</li>
+                    <li>Are there any other medications specific to my conditions that I should stop?</li>
+                    <li>Can we create a written sick day action plan together?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="references">
+            <h2>References and Additional Resources</h2>
+            
+            <h3 style="color: #475569; font-size: 1.1em; margin-top: 20px; margin-bottom: 10px;">Key References:</h3>
+            
+            <div class="reference-item">1. Diabetes Canada Clinical Practice Guidelines Expert Committee. Diabetes Canada 2018 Clinical Practice Guidelines for the Prevention and Management of Diabetes in Canada. Can J Diabetes. 2018;42(Suppl 1):S1-S325. Available at: <a href="https://guidelines.diabetes.ca/" target="_blank">https://guidelines.diabetes.ca/</a></div>
+            
+            <div class="reference-item">2. National Institute for Health and Care Excellence (NICE). Type 2 diabetes in adults: management. NICE guideline [NG28]. Updated 2022. Available at: <a href="https://www.nice.org.uk/guidance/ng28" target="_blank">https://www.nice.org.uk/guidance/ng28</a></div>
+            
+            <div class="reference-item">3. Whiting P, Morden A, Tomlinson LA, et al. What are the risks and benefits of temporarily discontinuing medications to prevent acute kidney injury? A systematic review and meta-analysis. BMJ Open. 2017;7(4):e012674.</div>
+            
+            <div class="reference-item">4. Lameire NH, Bagga A, Cruz D, et al. Acute kidney injury: an increasing global concern. Lancet. 2013;382(9887):170-179.</div>
+            
+            <div class="reference-item">5. Dreischulte T, Morales DR, Bell S, Guthrie B. Combined use of nonsteroidal anti-inflammatory drugs with diuretics and/or renin-angiotensin system inhibitors in the community increases the risk of acute kidney injury. Kidney Int. 2015;88(2):396-403.</div>
+            
+            <div class="reference-item">6. Royal College of General Practitioners. Sick day guidance. Updated 2022. Available at: <a href="https://www.rcgp.org.uk/" target="_blank">https://www.rcgp.org.uk/</a></div>
+            
+            <div class="reference-item">7. Mansfield KE, Nitsch D, Smeeth L, Bhaskaran K, Tomlinson LA. Prescription of renin-angiotensin system blockers and risk of acute kidney injury: a population-based cohort study. BMJ Open. 2016;6(12):e012690.</div>
+            
+            <div class="reference-item">8. Lalau JD, Kajbaf F, Bennis Y, Hurtel-Lemaire AS, Belpaire F, De Broe ME. Metformin and other antidiabetic agents in renal failure patients. Kidney Int. 2015;87(2):308-322.</div>
+            
+            <div class="reference-item">9. Burke KR, Schumacher CA, Harpe SE. SGLT2 Inhibitors: A Systematic Review of Diabetic Ketoacidosis and Related Risk Factors in the Primary Literature. Pharmacotherapy. 2017;37(2):187-194.</div>
+            
+            <div class="reference-item">10. American Diabetes Association. Standards of Medical Care in Diabetes-2023. Diabetes Care. 2023;46(Supplement_1). Available at: <a href="https://diabetesjournals.org/care/issue/46/Supplement_1" target="_blank">https://diabetesjournals.org/care/issue/46/Supplement_1</a></div>
+            
+            <div class="reference-item">11. Huerta C, Castellsague J, Varas-Lorenzo C, García Rodríguez LA. Nonsteroidal anti-inflammatory drugs and risk of ARF in the general population. Am J Kidney Dis. 2005;45(3):531-539.</div>
+            
+            <div class="reference-item">12. Laffel LM, Limbert C, Phelan H, Virmani A, Wood J, Hofer SE; ISPAD Clinical Practice Consensus Guidelines Compendium. Sick day management in young people with diabetes: a position statement from the International Society for Pediatric and Adolescent Diabetes. Pediatr Diabetes. 2018;19 Suppl 27:193-204.</div>
+            
+            <div class="reference-item">13. Institute for Safe Medication Practices. Sick Day Medication Rules. Available at: <a href="https://www.ismp.org/" target="_blank">https://www.ismp.org/</a></div>
+            
+            <h3 style="color: #475569; font-size: 1.1em; margin-top: 25px; margin-bottom: 10px;">Additional Trusted Resources:</h3>
+            
+            <div class="reference-item"><strong>Diabetes Canada:</strong> <a href="https://www.diabetes.ca/" target="_blank">https://www.diabetes.ca/</a> â€" Comprehensive diabetes education and sick day management resources</div>
+            
+            <div class="reference-item"><strong>American Diabetes Association:</strong> <a href="https://diabetes.org/" target="_blank">https://diabetes.org/</a> â€" Evidence-based diabetes care guidelines</div>
+            
+            <div class="reference-item"><strong>National Kidney Foundation:</strong> <a href="https://www.kidney.org/" target="_blank">https://www.kidney.org/</a> â€" Kidney health and medication safety information</div>
+            
+            <div class="reference-item"><strong>NHS Sick Day Rules:</strong> <a href="https://www.nhs.uk/" target="_blank">https://www.nhs.uk/</a> â€" Patient-friendly sick day guidance from the UK National Health Service</div>
+            
+            <div class="reference-item"><strong>Think Kidneys (NHS England):</strong> <a href="https://www.thinkkidneys.nhs.uk/" target="_blank">https://www.thinkkidneys.nhs.uk/</a> â€" Acute kidney injury prevention resources</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always consult with your healthcare provider or pharmacist before making changes to your medications. If you're unsure whether to stop or continue a medication during illness, contact your healthcare team immediately.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: February 2026</p>
+        </div>
+    </div>
+</body>
+</html>
