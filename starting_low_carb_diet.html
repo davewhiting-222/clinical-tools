@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting a Low-Carbohydrate Diet: A Practical Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .info-box {
+            background-color: #e0e7ff;
+            border-left: 5px solid #6366f1;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            color: #3730a3;
+            margin-top: 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #eff6ff;
+        }
+
+        .meal-plan {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .meal-plan h4 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .meal-plan p {
+            margin-bottom: 10px;
+            padding-left: 15px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .strategy-card {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .strategy-card h4 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .organizations-section {
+            background-color: #fef3c7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .organizations-section h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Starting a Low-Carbohydrate Diet</h1>
+            <p>A Practical Guide to Reversing Insulin Resistance Through Nutrition</p>
+        </div>
+
+        <div class="content">
+            <div class="key-point">
+                <h3>Before You Begin</h3>
+                <p>This guide assumes you understand insulin resistance and why addressing it is important for your health. If you haven't already, please review the companion handout "Understanding Insulin Resistance" to learn about the underlying condition this dietary approach is designed to treat.</p>
+            </div>
+
+            <h2>What Is a Low-Carbohydrate Diet?</h2>
+            <p>A low-carbohydrate diet is a nutritional approach that restricts the intake of carbohydrates—primarily sugars and starches found in grains, starchy vegetables, and sweetened foods. The academic literature generally uses the following definitions:<sup>1,2</sup></p>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Dietary Approach</th>
+                    <th>Daily Carbohydrate Intake</th>
+                    <th>Primary Goal</th>
+                </tr>
+                <tr>
+                    <td><strong>Standard Diet</strong></td>
+                    <td>200-300 grams</td>
+                    <td>Maintenance nutrition</td>
+                </tr>
+                <tr>
+                    <td><strong>Low-Carbohydrate Diet (LCD)</strong></td>
+                    <td>50-130 grams</td>
+                    <td>Improve insulin sensitivity, metabolic health</td>
+                </tr>
+                <tr>
+                    <td><strong>Very Low-Carbohydrate/Ketogenic Diet (VLCD)</strong></td>
+                    <td>20-50 grams</td>
+                    <td>Induce ketosis, maximize metabolic improvement</td>
+                </tr>
+            </table>
+
+            <p>Unlike simple calorie restriction, which focuses only on total energy intake, a low-carbohydrate diet recognizes that <strong>the source of calories matters</strong> because different macronutrients (proteins, fats, and carbohydrates) trigger different hormonal responses in your body.<sup>3,4</sup></p>
+
+            <h2>Why Does a Low-Carbohydrate Diet Work?</h2>
+            <p>The rationale for using a low-carbohydrate diet to treat insulin resistance is based on solid physiological principles and extensive clinical evidence:<sup>5,6,7</sup></p>
+
+            <h3>1. Reduces Insulin Demand</h3>
+            <p>Carbohydrates have the most significant impact on blood sugar and insulin levels. When you eat carbohydrates, your pancreas must produce insulin to move glucose into your cells. By reducing carbohydrate intake, you dramatically reduce the amount of insulin your body needs to produce. This "rests" your pancreas and allows your cells to recover their sensitivity to insulin.<sup>5,6</sup></p>
+
+            <h3>2. Breaks the Vicious Cycle</h3>
+            <p>Chronically elevated insulin levels actually cause cells to become more resistant to insulin over time, creating a vicious cycle. By lowering insulin levels through carbohydrate restriction, you interrupt this cycle and allow healing to begin.<sup>7,8</sup></p>
+
+            <h3>3. Promotes Fat Burning</h3>
+            <p>When insulin levels are high, your body is locked in "storage mode" and cannot effectively burn stored fat. Lower insulin levels allow your body to access and burn fat from both your diet and your body's fat stores, including the dangerous fat that accumulates in your liver and muscles—the very fat that drives insulin resistance.<sup>9,10</sup></p>
+
+            <h3>4. Reduces Inflammation</h3>
+            <p>Low-carbohydrate diets have been shown to reduce inflammatory markers throughout the body, which further improves insulin sensitivity and reduces cardiovascular risk.<sup>11</sup></p>
+
+            <div class="success-box">
+                <h3>Evidence of Effectiveness</h3>
+                <p>Clinical studies have demonstrated impressive results from low-carbohydrate diets:<sup>5,6,12,13</sup></p>
+                <ul>
+                    <li><strong>50-75% improvement</strong> in insulin sensitivity within 2-12 weeks</li>
+                    <li><strong>Up to 60% remission rate</strong> for type 2 diabetes at one year</li>
+                    <li><strong>Significant reductions</strong> in triglycerides (often 30-50%)</li>
+                    <li><strong>Increases in HDL</strong> ("good") cholesterol</li>
+                    <li><strong>Improved blood pressure</strong> and fatty liver disease</li>
+                    <li>Improvements occur <strong>independent of weight loss</strong>—meaning the diet helps even before significant weight is lost</li>
+                </ul>
+            </div>
+
+            <h2>Low-Carb vs. Ketogenic: What's the Difference?</h2>
+            <p>While both approaches restrict carbohydrates, there's an important distinction between them:<sup>2,14</sup></p>
+
+            <h3>Low-Carbohydrate Diet (LCD)</h3>
+            <p>A standard low-carb diet (50-130g carbs/day) significantly reduces insulin demand and improves metabolic health for most people. You can still eat moderate amounts of fruit, some starchy vegetables, and even small portions of whole grains if desired. This approach is sustainable for most people long-term and provides substantial metabolic benefits.<sup>12,13</sup></p>
+
+            <h3>Ketogenic Diet (VLCD)</h3>
+            <p>A ketogenic diet (20-50g carbs/day) is strict enough to shift your body into <strong>ketosis</strong>—a metabolic state where your body primarily burns fat and produces ketones for fuel instead of relying on glucose. Ketosis offers additional benefits beyond standard low-carb:<sup>14,15,16</sup></p>
+            <ul>
+                <li><strong>Enhanced appetite suppression:</strong> Ketones naturally reduce hunger hormones</li>
+                <li><strong>Improved mental clarity:</strong> The brain efficiently uses ketones for fuel</li>
+                <li><strong>Greater metabolic flexibility:</strong> Your body becomes highly efficient at burning fat</li>
+                <li><strong>Anti-inflammatory effects:</strong> Ketones act as signaling molecules that reduce inflammation</li>
+                <li><strong>Neuroprotective benefits:</strong> Ketones may protect brain health</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>When Is a Ketogenic Diet Necessary?</h3>
+                <p>Most people with insulin resistance will see excellent results with a standard low-carbohydrate diet. However, a ketogenic approach may be warranted in certain situations:</p>
+                <ul>
+                    <li><strong>Severe insulin resistance:</strong> When HbA1c is very elevated (>8%) or type 2 diabetes has been long-standing</li>
+                    <li><strong>Significant metabolic syndrome:</strong> Multiple risk factors present (high triglycerides, low HDL, hypertension, central obesity)</li>
+                    <li><strong>Therapeutic need for rapid improvement:</strong> When faster metabolic correction is medically beneficial</li>
+                    <li><strong>Plateau on standard low-carb:</strong> When progress stalls at a moderate carbohydrate level</li>
+                    <li><strong>Food addiction issues:</strong> When complete abstinence from carbohydrates is psychologically easier than moderation (more on this below)</li>
+                </ul>
+                <p><strong>Important:</strong> For most people, starting with a standard low-carbohydrate approach (50-130g/day) is appropriate. You can always transition to a ketogenic level if needed.</p>
+            </div>
+
+            <h2>Getting Started: Two Approaches</h2>
+            <p>There are two main strategies for starting a low-carbohydrate diet: immediate transition ("cold turkey") and gradual transition. The right approach for you depends on your psychology and your medical situation.<sup>17</sup></p>
+
+            <h3>The "Chocolate Bar" Test: Which Type Are You?</h3>
+            <p>Ask yourself this question: <em>"If I open a chocolate bar or a bag of chips, can I eat just a small amount and put it away, or do I have to finish the whole thing?"</em></p>
+
+            <div class="strategy-card">
+                <h4>🔴 Strategy 1: Immediate Transition ("Cold Turkey")</h4>
+                <p><strong>Best for: "The Abstainer"</strong> — If you answered "I eat the whole thing"</p>
+                <p><strong>Your Profile:</strong> You likely have a strong all-or-nothing personality. For you, moderation is torture. Eating "just a little bit" of sugar keeps the craving center of your brain active, and you spend all day fighting the urge for more. You may have what resembles food addiction, particularly to carbohydrate-rich foods.</p>
+                <p><strong>Why This Works for You:</strong> Total abstinence from refined carbohydrates and sugars silences the cravings. As one expert puts it: <em>"It is easier to cage a tiger than to walk it on a leash."</em> While the first 3-5 days may be challenging, most people find that cravings completely disappear after this initial period.<sup>17,18</sup></p>
+                <p><strong>The Approach:</strong></p>
+                <ul>
+                    <li>Make a complete switch on Day 1</li>
+                    <li>Eliminate all refined carbohydrates, sugars, and starchy foods immediately</li>
+                    <li>Focus on protein, non-starchy vegetables, and healthy fats</li>
+                    <li>Expect 3-5 difficult days, then significant improvement</li>
+                    <li>Stay well-hydrated and ensure adequate salt intake during transition</li>
+                </ul>
+            </div>
+
+            <div class="strategy-card">
+                <h4>🟡 Strategy 2: Gradual Transition</h4>
+                <p><strong>Best for: "The Moderator"</strong> — If you answered "I can have just one piece"</p>
+                <p><strong>Your Profile:</strong> You can moderate your intake without feeling deprived. Strict rules make you anxious and may cause you to rebel. A step-down approach feels more sustainable and less overwhelming to you.</p>
+                <p><strong>Why This Works for You:</strong> Gradual change allows you to adapt psychologically while still achieving metabolic benefits. You're less likely to feel deprived and more likely to stick with the changes long-term.<sup>17</sup></p>
+                <p><strong>The Approach (Recommended Steps):</strong></p>
+                <ol>
+                    <li><strong>Week 1-2: Eliminate Liquid Sugar</strong>
+                        <ul>
+                            <li>Cut out all sugar-sweetened beverages (soda, juice, sweet tea, fancy coffee drinks)</li>
+                            <li>This alone can dramatically reduce liver fat and triglycerides</li>
+                            <li>Keep your solid food habits the same initially</li>
+                        </ul>
+                    </li>
+                    <li><strong>Week 3-4: Add Protein and Fiber First ("Crowd Out" Strategy)</strong>
+                        <ul>
+                            <li>Start each meal with protein (eggs, meat, fish) and vegetables</li>
+                            <li>This naturally increases satiety and reduces room for carbohydrates</li>
+                            <li>You may naturally eat less carbohydrate without trying</li>
+                        </ul>
+                    </li>
+                    <li><strong>Week 5-6: Eliminate Refined Carbohydrates</strong>
+                        <ul>
+                            <li>Remove white bread, white rice, pasta, pastries, cookies</li>
+                            <li>Keep whole fruits and starchy vegetables for now</li>
+                        </ul>
+                    </li>
+                    <li><strong>Week 7-8: Reduce Starchy Vegetables and Limit Fruit</strong>
+                        <ul>
+                            <li>Transition to low-starch vegetables (see food lists below)</li>
+                            <li>Limit fruit to berries in small amounts</li>
+                        </ul>
+                    </li>
+                    <li><strong>Week 9+: Fine-Tune to Your Target Range</strong>
+                        <ul>
+                            <li>Adjust to reach your desired carbohydrate level (50-130g for LCD, 20-50g for ketogenic)</li>
+                            <li>Monitor your response and adjust as needed</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Medical Urgency May Override Your Preference</h3>
+                <p>Even if you prefer a gradual approach, certain medical conditions respond so dramatically to immediate carbohydrate restriction that a "cold turkey" approach may be recommended:</p>
+                <ul>
+                    <li><strong>Severe fluid retention/heart failure:</strong> Carbohydrate restriction causes rapid water loss; visible improvement in leg swelling within 3 days</li>
+                    <li><strong>Severe acid reflux/GERD:</strong> Often resolves within 3-5 days of eliminating starches and sugars</li>
+                    <li><strong>Dangerously high triglycerides (>500 mg/dL or >5.0 mmol/L):</strong> Risk of pancreatitis requires immediate intervention</li>
+                </ul>
+                <p>On the other hand, certain situations require a gradual approach:</p>
+                <ul>
+                    <li><strong>Multiple daily insulin injections:</strong> Gradual allows safe insulin reduction over time</li>
+                    <li><strong>Frail or elderly patients:</strong> Rapid water/weight loss can cause falls and hypotension</li>
+                    <li><strong>History of eating disorders:</strong> Strict elimination rules can trigger unhealthy patterns</li>
+                </ul>
+                <p><strong>Always discuss your approach with your healthcare provider, especially if you have these conditions.</strong></p>
+            </div>
+
+            <h2>Standard Low-Carb vs. Mediterranean Low-Carb</h2>
+            <p>Both approaches restrict carbohydrates, but they differ in their fat and protein sources, which affects other health markers, particularly cardiovascular risk.<sup>19,20</sup></p>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Aspect</th>
+                    <th>Standard Low-Carb</th>
+                    <th>Mediterranean Low-Carb</th>
+                </tr>
+                <tr>
+                    <td><strong>Primary Fats</strong></td>
+                    <td>Butter, cream, cheese, coconut oil</td>
+                    <td>Extra virgin olive oil, avocado, nuts</td>
+                </tr>
+                <tr>
+                    <td><strong>Primary Proteins</strong></td>
+                    <td>Red meat, poultry, eggs, dairy</td>
+                    <td>Fish, seafood, poultry, moderate red meat</td>
+                </tr>
+                <tr>
+                    <td><strong>Vegetables</strong></td>
+                    <td>Non-starchy vegetables</td>
+                    <td>Daily large salads, abundant non-starchy vegetables</td>
+                </tr>
+                <tr>
+                    <td><strong>Special Features</strong></td>
+                    <td>May include bacon, processed meats</td>
+                    <td>Emphasis on omega-3 fatty acids, polyphenols; may include moderate red wine</td>
+                </tr>
+                <tr>
+                    <td><strong>Metabolic Benefits</strong></td>
+                    <td>Excellent insulin sensitivity improvement</td>
+                    <td>Excellent insulin sensitivity improvement</td>
+                </tr>
+                <tr>
+                    <td><strong>Effect on LDL Cholesterol</strong></td>
+                    <td>May significantly increase in some individuals</td>
+                    <td>Typically maintains or reduces LDL cholesterol</td>
+                </tr>
+                <tr>
+                    <td><strong>Cardiovascular Studies</strong></td>
+                    <td>Fewer long-term studies</td>
+                    <td>Extensive evidence of cardiovascular benefit</td>
+                </tr>
+            </table>
+
+            <div class="success-box">
+                <h3>The Spanish Ketogenic Mediterranean Diet (SKMD)</h3>
+                <p>The SKMD is a specific protocol that combines the metabolic benefits of a ketogenic diet with the cardiovascular benefits of a Mediterranean diet. Studies show it provides:<sup>19,20</sup></p>
+                <ul>
+                    <li>Excellent weight loss and metabolic improvement</li>
+                    <li>Significant reduction in LDL cholesterol (unlike standard ketogenic diets)</li>
+                    <li>Reduction in triglycerides and increase in HDL cholesterol</li>
+                    <li>Lower inflammatory markers</li>
+                    <li>Improved blood pressure</li>
+                </ul>
+                <p><strong>Key Principles:</strong> Extra virgin olive oil as the primary fat source, fatty fish 3-4 times per week, daily large salads and green vegetables, limited red meat, optional moderate red wine (one glass with dinner).</p>
+            </div>
+
+            <h3>Which Approach Should You Choose?</h3>
+            <p>For most people, a <strong>Mediterranean-style low-carbohydrate diet</strong> is the best choice because it provides:<sup>19,20,21</sup></p>
+            <ul>
+                <li>All the metabolic benefits of carbohydrate restriction</li>
+                <li>Additional cardiovascular protection from healthy fats and omega-3 fatty acids</li>
+                <li>Lower risk of LDL cholesterol elevation</li>
+                <li>Abundance of anti-inflammatory polyphenols and antioxidants</li>
+                <li>Excellent long-term safety profile with decades of research</li>
+            </ul>
+
+            <p>A standard low-carb approach may be appropriate if:</p>
+            <ul>
+                <li>You don't enjoy fish or seafood</li>
+                <li>You have budget constraints (olive oil and fish can be expensive)</li>
+                <li>Your LDL cholesterol is monitored and remains favorable</li>
+            </ul>
+
+            <h2>The Importance of Whole Foods</h2>
+            <p>While restricting carbohydrates is important, <strong>food quality matters just as much as macronutrient composition.</strong><sup>22,23</sup></p>
+
+            <div class="warning-box">
+                <h3>⚠️ Beware of "Keto" Processed Foods</h3>
+                <p>The popularity of low-carb diets has led to an explosion of processed "keto" products: bars, cookies, crackers, and packaged meals. While these may fit the macronutrient profile of a low-carb diet, they often contain:</p>
+                <ul>
+                    <li>Highly processed seed oils (soybean, corn, canola oil) that promote inflammation</li>
+                    <li>Artificial sweeteners that may disrupt gut health and insulin sensitivity</li>
+                    <li>Processed fibers and thickeners that may cause digestive issues</li>
+                    <li>Hidden additives and preservatives</li>
+                </ul>
+                <p><strong>Remember: Processed keto food is still processed food.</strong> It defeats the purpose of improving your metabolic health if you're consuming inflammatory, ultra-processed ingredients.</p>
+            </div>
+
+            <div class="success-box">
+                <h3>Focus on Whole Foods</h3>
+                <p>A healthy low-carbohydrate diet should be built around <strong>real, whole foods</strong> that humans have eaten for thousands of years:<sup>22,23</sup></p>
+                <ul>
+                    <li><strong>Proteins:</strong> Whole cuts of meat, fish, seafood, eggs, poultry</li>
+                    <li><strong>Fats:</strong> Olive oil, avocados, nuts, seeds, butter from grass-fed cows</li>
+                    <li><strong>Vegetables:</strong> Fresh, whole vegetables (not vegetable oils or vegetable-based processed foods)</li>
+                    <li><strong>Minimal processing:</strong> Foods you could theoretically make in your own kitchen</li>
+                </ul>
+                <p><strong>A simple rule:</strong> Shop the perimeter of the grocery store. Most whole foods are found around the edges—produce, meat, fish, eggs, dairy. The interior aisles contain most of the processed foods.</p>
+            </div>
+
+            <h2>What to Eat: Food Lists</h2>
+
+            <h3>Foods to Emphasize (Eat Freely)</h3>
+            <ul>
+                <li><strong>Proteins:</strong> Fish (especially fatty fish like salmon, mackerel, sardines), shellfish, poultry, eggs, grass-fed beef, lamb, pork</li>
+                <li><strong>Healthy Fats:</strong> Extra virgin olive oil, avocado oil, avocados, nuts (walnuts, almonds, macadamias), seeds (chia, flax, pumpkin), olives</li>
+                <li><strong>Non-Starchy Vegetables:</strong> Leafy greens (spinach, kale, lettuce, arugula), cruciferous vegetables (broccoli, cauliflower, Brussels sprouts, cabbage), zucchini, cucumber, bell peppers, tomatoes, asparagus, green beans, eggplant, mushrooms</li>
+                <li><strong>Full-Fat Dairy (in moderation):</strong> Greek yogurt, cheese, butter, heavy cream</li>
+                <li><strong>Herbs and Spices:</strong> All herbs and spices (watch for added sugars in spice blends)</li>
+                <li><strong>Beverages:</strong> Water, unsweetened coffee, unsweetened tea, sparkling water</li>
+            </ul>
+
+            <h3>Foods to Limit (Small Amounts)</h3>
+            <ul>
+                <li><strong>Berries:</strong> Strawberries, blueberries, raspberries, blackberries (½ cup portions)</li>
+                <li><strong>Moderate-Starch Vegetables (on LCD, not ketogenic):</strong> Carrots, beets, winter squash (small portions)</li>
+                <li><strong>Legumes (on LCD, not ketogenic):</strong> Lentils, chickpeas, black beans (small portions)</li>
+                <li><strong>Dark Chocolate:</strong> 85% cacao or higher (1-2 squares)</li>
+                <li><strong>Wine (optional):</strong> Dry red wine (one 5 oz glass)</li>
+            </ul>
+
+            <h3>Foods to Avoid</h3>
+            <ul>
+                <li><strong>Sugars:</strong> Table sugar, honey, agave, maple syrup, high-fructose corn syrup</li>
+                <li><strong>Sugar-Sweetened Beverages:</strong> Soda, juice, sweet tea, energy drinks, fancy coffee drinks</li>
+                <li><strong>Grains:</strong> Wheat, rice, oats, corn, quinoa, bread, pasta, cereal, crackers</li>
+                <li><strong>Starchy Vegetables:</strong> Potatoes, sweet potatoes, yams, plantains, corn</li>
+                <li><strong>Most Fruits:</strong> Bananas, apples, oranges, grapes, pineapple, mango (high in sugar)</li>
+                <li><strong>Processed Foods:</strong> Chips, cookies, candy, pastries, packaged snacks</li>
+                <li><strong>Seed Oils:</strong> Soybean oil, corn oil, canola oil, vegetable oil, margarine</li>
+                <li><strong>Low-Fat Products:</strong> Usually contain added sugars</li>
+            </ul>
+
+            <h2>Sample Meal Plans</h2>
+
+            <h3>Standard Low-Carbohydrate Daily Menu (~75g net carbs)</h3>
+            
+            <div class="meal-plan">
+                <h4>Breakfast</h4>
+                <p><strong>Three-Egg Omelet with Vegetables</strong></p>
+                <p>3 eggs cooked in butter with spinach, mushrooms, and cheese. Side of 2 slices of bacon.</p>
+                <p><em>Carbs: ~3g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Lunch</h4>
+                <p><strong>Chicken Caesar Salad (No Croutons)</strong></p>
+                <p>Grilled chicken breast over romaine lettuce with Parmesan cheese, Caesar dressing (check for no added sugar), and a drizzle of olive oil. Add ½ avocado.</p>
+                <p><em>Carbs: ~8g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Snack</h4>
+                <p><strong>Handful of Mixed Nuts and Cheese</strong></p>
+                <p>1 oz mixed almonds and walnuts with 1 oz sharp cheddar cheese</p>
+                <p><em>Carbs: ~5g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Dinner</h4>
+                <p><strong>Grilled Steak with Roasted Vegetables</strong></p>
+                <p>6 oz grass-fed ribeye steak with roasted broccoli, cauliflower, and Brussels sprouts tossed in olive oil. Side salad with olive oil and vinegar dressing.</p>
+                <p><em>Carbs: ~12g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Dessert (Optional)</h4>
+                <p><strong>Berries with Whipped Cream</strong></p>
+                <p>½ cup mixed berries with 2 tbsp unsweetened whipped heavy cream</p>
+                <p><em>Carbs: ~7g</em></p>
+            </div>
+
+            <h3>Mediterranean Low-Carbohydrate Daily Menu (~70g net carbs)</h3>
+
+            <div class="meal-plan">
+                <h4>Breakfast</h4>
+                <p><strong>Greek Yogurt Bowl</strong></p>
+                <p>Full-fat Greek yogurt with chopped walnuts, chia seeds, a few berries, and a drizzle of olive oil (yes, really!). 2 hard-boiled eggs on the side.</p>
+                <p><em>Carbs: ~10g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Lunch</h4>
+                <p><strong>Mediterranean Salmon Salad</strong></p>
+                <p>Large mixed green salad with grilled salmon, cucumber, tomatoes, Kalamata olives, red onion, feta cheese, dressed liberally with extra virgin olive oil and lemon juice. Side of ¼ cup hummus with cucumber slices.</p>
+                <p><em>Carbs: ~15g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Snack</h4>
+                <p><strong>Olives and Almonds</strong></p>
+                <p>Handful of mixed olives and 1 oz almonds</p>
+                <p><em>Carbs: ~4g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Dinner</h4>
+                <p><strong>Grilled Sea Bass with Vegetables</strong></p>
+                <p>6 oz grilled sea bass with asparagus and zucchini sautéed in garlic and olive oil. Large side salad with mixed greens, tomatoes, and olive oil dressing. Optional: 5 oz glass of dry red wine.</p>
+                <p><em>Carbs: ~10g (wine adds ~3-4g)</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Dessert</h4>
+                <p><strong>Dark Chocolate</strong></p>
+                <p>2 squares of 85% dark chocolate</p>
+                <p><em>Carbs: ~6g</em></p>
+            </div>
+
+            <h3>Ketogenic Daily Menu (~30g net carbs)</h3>
+
+            <div class="meal-plan">
+                <h4>Breakfast</h4>
+                <p><strong>Keto Breakfast Plate</strong></p>
+                <p>3 eggs fried in butter, 3 slices of bacon, ½ avocado, handful of spinach sautéed in olive oil</p>
+                <p><em>Carbs: ~4g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Lunch</h4>
+                <p><strong>Tuna Salad Lettuce Wraps</strong></p>
+                <p>Tuna mixed with mayonnaise, chopped celery, and herbs wrapped in large lettuce leaves. Side of 10 olives.</p>
+                <p><em>Carbs: ~3g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Snack</h4>
+                <p><strong>Macadamia Nuts</strong></p>
+                <p>1 oz macadamia nuts (lowest carb nut)</p>
+                <p><em>Carbs: ~2g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Dinner</h4>
+                <p><strong>Salmon with Cauliflower Mash</strong></p>
+                <p>6 oz baked salmon with creamed cauliflower "mash" (cauliflower, butter, cream, garlic), side of sautéed spinach with olive oil</p>
+                <p><em>Carbs: ~8g</em></p>
+            </div>
+
+            <div class="meal-plan">
+                <h4>Evening Snack</h4>
+                <p><strong>Cheese and Cucumber</strong></p>
+                <p>2 oz cheese with cucumber slices</p>
+                <p><em>Carbs: ~3g</em></p>
+            </div>
+
+            <h2>What to Expect: Managing the Transition</h2>
+
+            <h3>The First Week: "Keto Flu"</h3>
+            <p>During the first 3-7 days, many people experience temporary symptoms as their body adapts:<sup>24</sup></p>
+            <ul>
+                <li>Fatigue and low energy</li>
+                <li>Headache</li>
+                <li>Irritability</li>
+                <li>Difficulty concentrating ("brain fog")</li>
+                <li>Muscle cramps</li>
+                <li>Constipation</li>
+            </ul>
+
+            <div class="success-box">
+                <h3>How to Minimize Transition Symptoms</h3>
+                <p>Most of these symptoms are caused by water and electrolyte loss, not true carbohydrate withdrawal:<sup>24</sup></p>
+                <ul>
+                    <li><strong>Increase salt intake:</strong> Add 1-2 teaspoons of salt to your food daily or drink bouillon/broth</li>
+                    <li><strong>Stay hydrated:</strong> Drink plenty of water</li>
+                    <li><strong>Consider magnesium supplementation:</strong> 300-400mg daily can prevent cramps</li>
+                    <li><strong>Increase potassium:</strong> Eat avocados, spinach, salmon</li>
+                    <li><strong>Don't restrict calories:</strong> Eat until satisfied; focus on carbohydrate restriction, not calorie restriction</li>
+                    <li><strong>Be patient:</strong> Symptoms typically resolve within a week</li>
+                </ul>
+            </div>
+
+            <h3>Weeks 2-4: Adaptation Period</h3>
+            <p>During this period, you should notice:<sup>5,6</sup></p>
+            <ul>
+                <li>Energy levels returning to normal or improving</li>
+                <li>Reduced hunger and fewer cravings</li>
+                <li>Improved mental clarity</li>
+                <li>Steady weight loss (if overweight)</li>
+                <li>Better sleep quality</li>
+                <li>Initial improvements in blood sugar if monitoring</li>
+            </ul>
+
+            <h3>Months 2-3: Continued Improvement</h3>
+            <p>This is when the metabolic magic really happens:<sup>5,6,13</sup></p>
+            <ul>
+                <li>Significant improvement in insulin sensitivity</li>
+                <li>Normalization of blood sugar levels</li>
+                <li>Reduction in triglycerides</li>
+                <li>Increase in HDL cholesterol</li>
+                <li>Improved blood pressure</li>
+                <li>Reduction in fatty liver</li>
+                <li>Stable, sustained energy throughout the day</li>
+            </ul>
+
+            <h3>Common Challenges and Solutions</h3>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Challenge</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td><strong>Intense carb cravings</strong></td>
+                    <td>Eat more protein and fat to feel satisfied. Cravings usually disappear after 5-7 days. Stay busy and distracted during initial period.</td>
+                </tr>
+                <tr>
+                    <td><strong>Constipation</strong></td>
+                    <td>Increase non-starchy vegetables, stay hydrated, add magnesium supplement, consider psyllium husk fiber.</td>
+                </tr>
+                <tr>
+                    <td><strong>Dining out difficulty</strong></td>
+                    <td>Order protein and vegetables, ask for substitutions (salad instead of fries), request sauces on the side, don't be afraid to customize your order.</td>
+                </tr>
+                <tr>
+                    <td><strong>Social pressure</strong></td>
+                    <td>Have a prepared response ("I'm working on my health with my doctor"), focus on what you can eat rather than restrictions, bring a dish to share at gatherings.</td>
+                </tr>
+                <tr>
+                    <td><strong>Plateau in progress</strong></td>
+                    <td>Reduce carbs further if on LCD, ensure adequate sleep, manage stress, check for hidden carbs in processed foods, consider intermittent fasting.</td>
+                </tr>
+                <tr>
+                    <td><strong>Bad breath (ketogenic diet)</strong></td>
+                    <td>Temporary; caused by acetone in breath. Chew sugar-free gum, brush teeth more frequently, stay hydrated. Usually resolves after a few weeks.</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <h3>🚨 CRITICAL: Medication Management</h3>
+                <p><strong>If you take medications for diabetes, you MUST work with your healthcare provider before starting a low-carbohydrate diet.</strong> This diet can lower blood sugar so rapidly and dramatically that your current medication doses may become dangerously high, leading to severe hypoglycemia (low blood sugar).<sup>25,26</sup></p>
+                
+                <p><strong>Medications Requiring Immediate Adjustment:</strong></p>
+                <ul>
+                    <li><strong>Insulin:</strong> May need 20-50% reduction on Day 1</li>
+                    <li><strong>Sulfonylureas</strong> (gliclazide, glipizide, glyburide): May need to be stopped or reduced by 50% immediately</li>
+                    <li><strong>Meglitinides:</strong> Similar risk to sulfonylureas</li>
+                </ul>
+
+                <p><strong>SGLT2 Inhibitors Warning:</strong> If you take SGLT2 inhibitors (empagliflozin, canagliflozin, dapagliflozin), combining them with a strict ketogenic diet increases the risk of euglycemic diabetic ketoacidosis (euDKA)—a dangerous condition where ketone levels become dangerously high even though blood sugar appears normal. Discuss this risk with your doctor.<sup>27</sup></p>
+
+                <p><strong>Blood pressure medications</strong> may also need adjustment as blood pressure often improves on a low-carb diet.</p>
+            </div>
+
+            <h2>Monitoring Your Progress</h2>
+            <p>Track these markers with your healthcare provider:<sup>5,6</sup></p>
+
+            <ul>
+                <li><strong>Blood sugar:</strong> Fasting glucose and HbA1c (every 3 months initially)</li>
+                <li><strong>Lipid panel:</strong> Triglycerides, HDL, LDL, total cholesterol</li>
+                <li><strong>Blood pressure:</strong> Should improve within weeks</li>
+                <li><strong>Weight:</strong> If overweight, expect steady loss</li>
+                <li><strong>How you feel:</strong> Energy, mood, sleep quality, hunger levels</li>
+                <li><strong>Medication needs:</strong> Many people significantly reduce or eliminate diabetes medications</li>
+            </ul>
+
+            <div class="success-box">
+                <h3>Signs of Success</h3>
+                <p>You'll know the diet is working when you experience:</p>
+                <ul>
+                    <li>Stable energy without the afternoon crash</li>
+                    <li>Ability to go 4-5 hours between meals without intense hunger</li>
+                    <li>No more obsessive food thoughts or cravings</li>
+                    <li>Improved mental clarity</li>
+                    <li>Better sleep</li>
+                    <li>Clothes fitting more loosely</li>
+                    <li>Improving blood work</li>
+                    <li>Reduced medication needs</li>
+                </ul>
+            </div>
+
+            <h2>Long-Term Sustainability</h2>
+            <p>A low-carbohydrate diet is not a temporary "diet" but a sustainable way of eating for long-term metabolic health:<sup>28,29</sup></p>
+
+            <ul>
+                <li><strong>It gets easier:</strong> After the first few weeks, most people find low-carb eating natural and satisfying</li>
+                <li><strong>Flexibility is possible:</strong> Once your metabolic health improves, some people can tolerate occasional higher-carb meals without losing progress</li>
+                <li><strong>Listen to your body:</strong> Your optimal carbohydrate level may differ from others</li>
+                <li><strong>Focus on how you feel:</strong> If you feel energetic, sleep well, and maintain stable weight and blood sugar, you've found your sweet spot</li>
+                <li><strong>Continue medical monitoring:</strong> Regular check-ups ensure continued progress and allow medication adjustments</li>
+            </ul>
+
+            <div class="key-point">
+                <h3>The Bottom Line</h3>
+                <p>A low-carbohydrate diet is a powerful, evidence-based tool for reversing insulin resistance and preventing or treating type 2 diabetes. By reducing the demand on your pancreas and allowing your cells to regain their insulin sensitivity, you address the root cause of metabolic disease—not just the symptoms.</p>
+                <p>Whether you choose a standard low-carb, Mediterranean-style, or ketogenic approach, and whether you transition immediately or gradually, the most important factor is finding an approach that works for your psychology, your medical situation, and your long-term sustainability.</p>
+                <p><strong>Remember: Every meal is an opportunity to improve your metabolic health. You have the power to reverse insulin resistance through the food choices you make.</strong></p>
+            </div>
+        </div>
+
+        <div class="references">
+            <div class="organizations-section">
+                <h3>Respected Organizations Supporting or Acknowledging Low-Carbohydrate Diets</h3>
+                <p>The following organizations either use, promote, or acknowledge the potential benefits of low-carbohydrate dietary approaches:</p>
+                <ul>
+                    <li><strong>American Diabetes Association (ADA):</strong> Updated 2019 Standards of Care to include low-carbohydrate diets as an evidence-based eating pattern for diabetes management</li>
+                    <li><strong>Diabetes UK:</strong> Recognizes low-carb diets as a safe and effective option for managing type 2 diabetes</li>
+                    <li><strong>European Association for the Study of Diabetes (EASD):</strong> Acknowledges low-carb approaches in clinical guidelines</li>
+                    <li><strong>Virta Health:</strong> Clinic specializing in type 2 diabetes reversal through nutritional ketosis</li>
+                    <li><strong>Public Health Collaboration (UK):</strong> Promotes low-carb real food approaches for metabolic health</li>
+                    <li><strong>The Nutrition Coalition:</strong> Advocates for evidence-based nutrition policy including low-carb approaches</li>
+                    <li><strong>Society of Metabolic Health Practitioners:</strong> Professional organization supporting therapeutic carbohydrate restriction</li>
+                </ul>
+            </div>
+
+            <h2>References</h2>
+            
+            <div class="reference-item">1. Feinman RD, Pogozelski WK, Astrup A, et al. Dietary carbohydrate restriction as the first approach in diabetes management: critical review and evidence base. Nutrition. 2015;31(1):1-13.</div>
+            
+            <div class="reference-item">2. Westman EC, Tondt J, Maguire E, Yancy WS Jr. Implementing a low-carbohydrate, ketogenic diet to manage type 2 diabetes mellitus. Expert Rev Endocrinol Metab. 2018;13(5):263-272.</div>
+            
+            <div class="reference-item">3. Ludwig DS, Ebbeling CB. The Carbohydrate-Insulin Model of Obesity: Beyond "Calories In, Calories Out". JAMA Intern Med. 2018;178(8):1098-1103.</div>
+            
+            <div class="reference-item">4. Hall KD, Guo J. Obesity Energetics: Body Weight Regulation and the Effects of Diet Composition. Gastroenterology. 2017;152(7):1718-1727.</div>
+            
+            <div class="reference-item">5. Hyde PN, Sapper TN, Crabtree CD, et al. Dietary carbohydrate restriction improves metabolic syndrome independent of weight loss. JCI Insight. 2019;4(12):e128308.</div>
+            
+            <div class="reference-item">6. Hallberg SJ, McKenzie AL, Williams PT, et al. Effectiveness and Safety of a Novel Care Model for the Management of Type 2 Diabetes at 1 Year: An Open-Label, Non-Randomized, Controlled Study. Diabetes Ther. 2018;9(2):583-612.</div>
+            
+            <div class="reference-item">7. Petersen MC, Shulman GI. Mechanisms of insulin action and insulin resistance. Physiol Rev. 2018;98(4):2133-2223.</div>
+            
+            <div class="reference-item">8. Templeman NM, Clee SM, Johnson JD. Hyperinsulinemia: an early indicator of metabolic dysfunction. J Endocr Soc. 2019;3(9):1727-1747.</div>
+            
+            <div class="reference-item">9. Perry RJ, Samuel VT, Petersen KF, Shulman GI. The role of hepatic lipids in hepatic insulin resistance and type 2 diabetes. Nature. 2014;510(7503):84-91.</div>
+            
+            <div class="reference-item">10. Volek JS, Phinney SD, Forsythe CE, et al. Carbohydrate restriction has a more favorable impact on the metabolic syndrome than a low fat diet. Lipids. 2009;44(4):297-309.</div>
+            
+            <div class="reference-item">11. Forsythe CE, Phinney SD, Fernandez ML, et al. Comparison of low fat and low carbohydrate diets on circulating fatty acid composition and markers of inflammation. Lipids. 2008;43(1):65-77.</div>
+            
+            <div class="reference-item">12. Boden G, Sargrad K, Homko C, Mozzoli M, Stein TP. Effect of a low-carbohydrate diet on appetite, blood glucose levels, and insulin resistance in obese patients with type 2 diabetes. Ann Intern Med. 2005;142(6):403-411.</div>
+            
+            <div class="reference-item">13. Saslow LR, Daubenmier JJ, Moskowitz JT, et al. Twelve-month outcomes of a randomized trial of a moderate-carbohydrate versus very low-carbohydrate diet in overweight adults with type 2 diabetes mellitus or prediabetes. Nutr Diabetes. 2017;7(12):304.</div>
+            
+            <div class="reference-item">14. Paoli A, Rubini A, Volek JS, Grimaldi KA. Beyond weight loss: a review of the therapeutic uses of very-low-carbohydrate (ketogenic) diets. Eur J Clin Nutr. 2013;67(8):789-796.</div>
+            
+            <div class="reference-item">15. Newman JC, Verdin E. β-Hydroxybutyrate: A Signaling Metabolite. Annu Rev Nutr. 2017;37:51-76.</div>
+            
+            <div class="reference-item">16. Yancy WS Jr, Foy M, Chalecki AM, Vernon MC, Westman EC. A low-carbohydrate, ketogenic diet to treat type 2 diabetes. Nutr Metab (Lond). 2005;2:34.</div>
+            
+            <div class="reference-item">17. Unwin D, Haslam D, Livesey G. It is the glycaemic response to, not the carbohydrate content of food that matters in diabetes and obesity: The glycaemic index revisited. J Insulin Resist. 2016;1(1):a8.</div>
+            
+            <div class="reference-item">18. Lennerz B, Lennerz JK. Food Addiction, High-Glycemic-Index Carbohydrates, and Obesity. Clin Chem. 2018;64(1):64-71.</div>
+            
+            <div class="reference-item">19. Pérez-Guisado J, Muñoz-Serrano A. A pilot study of the Spanish Ketogenic Mediterranean Diet: an effective therapy for the metabolic syndrome. J Med Food. 2011;14(7-8):681-687.</div>
+            
+            <div class="reference-item">20. Pérez-Guisado J, Muñoz-Serrano A, Alonso-Moraga Á. Spanish Ketogenic Mediterranean diet: a healthy cardiovascular diet for weight loss. Nutr J. 2008;7:30.</div>
+            
+            <div class="reference-item">21. Estruch R, Ros E, Salas-Salvadó J, et al. Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. N Engl J Med. 2018;378(25):e34.</div>
+            
+            <div class="reference-item">22. Cordain L, Eaton SB, Sebastian A, et al. Origins and evolution of the Western diet: health implications for the 21st century. Am J Clin Nutr. 2005;81(2):341-354.</div>
+            
+            <div class="reference-item">23. Spreadbury I. Comparison with ancestral diets suggests dense acellular carbohydrates promote an inflammatory microbiota, and may be the primary dietary cause of leptin resistance and obesity. Diabetes Metab Syndr Obes. 2012;5:175-189.</div>
+            
+            <div class="reference-item">24. Bostock ECS, Kirkby KC, Taylor BV, Hawrelak JA. Consumer Reports of "Keto Flu" Associated With the Ketogenic Diet. Front Nutr. 2020;7:20.</div>
+            
+            <div class="reference-item">25. Hallberg SJ, Gershuni VM, Hazbun TL, Athinarayanan SJ. Reversing Type 2 Diabetes: A Narrative Review of the Evidence. Nutrients. 2019;11(4):766.</div>
+            
+            <div class="reference-item">26. McKenzie AL, Hallberg SJ, Creighton BC, et al. A Novel Intervention Including Individualized Nutritional Recommendations Reduces Hemoglobin A1c Level, Medication Use, and Weight in Type 2 Diabetes. JMIR Diabetes. 2017;2(1):e5.</div>
+            
+            <div class="reference-item">27. Goldenberg RM, Berard LD, Cheng AYY, et al. SGLT2 Inhibitor-associated Diabetic Ketoacidosis: Clinical Review and Recommendations for Prevention and Diagnosis. Clin Ther. 2016;38(12):2654-2664.</div>
+            
+            <div class="reference-item">28. Sainsbury E, Kizirian NV, Partridge SR, Gill T, Colagiuri S, Gibson AA. Effect of dietary carbohydrate restriction on glycemic control in adults with diabetes: A systematic review and meta-analysis. Diabetes Res Clin Pract. 2018;139:239-252.</div>
+            
+            <div class="reference-item">29. Athinarayanan SJ, Adams RN, Hallberg SJ, et al. Long-Term Effects of a Novel Continuous Remote Care Intervention Including Nutritional Ketosis for the Management of Type 2 Diabetes: A 2-Year Non-randomized Clinical Trial. Front Endocrinol (Lausanne). 2019;10:348.</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always consult with your healthcare provider before making changes to your diet or treatment plan, especially if you take medications for diabetes.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: February 2026</p>
+        </div>
+    </div>
+</body>
+</html>
