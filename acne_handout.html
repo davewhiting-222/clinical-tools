@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding and Treating Acne</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .step-card {
+            background: #f0f7ff;
+            border: 2px solid #bfdbfe;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .step-card .step-num {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .step-card h4 {
+            color: #1e3a8a;
+            font-size: 1.05em;
+            margin-bottom: 6px;
+        }
+
+        .step-card p {
+            margin: 0;
+            font-size: 0.95em;
+            text-align: left;
+        }
+
+        .timeline-box {
+            border: 2px solid #bfdbfe;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .timeline-row {
+            display: flex;
+            align-items: stretch;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        .timeline-row:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-period {
+            background: #1e3a8a;
+            color: white;
+            padding: 14px 18px;
+            font-weight: bold;
+            font-size: 0.95em;
+            min-width: 130px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-content {
+            padding: 14px 18px;
+            font-size: 0.95em;
+            background: #f8fafc;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+            .step-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Understanding and Treating Acne</h1>
+            <p>How It Develops, How We Treat It, and What to Expect</p>
+        </div>
+
+        <div class="content">
+
+            <div class="key-point">
+                <h3>The Most Important Thing to Know</h3>
+                <p>Acne is a medical condition — not a reflection of poor hygiene or something to be embarrassed about. It is caused by a combination of biology, hormones, and bacteria, and it responds well to a structured treatment plan. The key is understanding that effective treatment takes time, and consistency is everything.</p>
+            </div>
+
+            <h2>What Is Acne?</h2>
+            <p>Acne (acne vulgaris) is the most common skin condition in Canada, affecting up to 85% of people at some point between the ages of 12 and 25, though it can persist or first appear in adulthood.<sup>1,2</sup> It occurs when hair follicles in the skin become plugged with oil (sebum) and dead skin cells, creating an environment where bacteria can thrive and trigger inflammation.<sup>3</sup></p>
+
+            <p>Acne appears in several forms:<sup>3,4</sup></p>
+            <ul>
+                <li><strong>Comedones (non-inflammatory):</strong> Blackheads (open comedones, where the plugged follicle is exposed to air) and whiteheads (closed comedones, covered by a thin layer of skin)</li>
+                <li><strong>Papules:</strong> Small, raised, red bumps caused by inflamed or infected hair follicles</li>
+                <li><strong>Pustules:</strong> Like papules, but containing visible pus at the tip</li>
+                <li><strong>Nodules and cysts:</strong> Larger, deeper, painful lumps beneath the skin — the type most likely to cause scarring</li>
+            </ul>
+
+            <h2>How Does Acne Develop?</h2>
+            <p>Acne is not caused by one single factor — it is the result of four interacting processes that reinforce each other. Understanding these helps explain why treatment works the way it does.<sup>3,4,5</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">The Four Drivers of Acne</div>
+                <svg width="760" height="460" viewBox="0 0 760 460">
+                    <defs>
+                        <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+                        </marker>
+                    </defs>
+
+                    <!-- Central circle: Acne -->
+                    <circle cx="380" cy="230" r="70" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+                    <text x="380" y="225" text-anchor="middle" font-size="18" font-weight="bold" fill="#991b1b">Acne</text>
+                    <text x="380" y="247" text-anchor="middle" font-size="13" fill="#991b1b">Lesion</text>
+
+                    <!-- TOP: Excess Sebum -->
+                    <rect x="270" y="20" width="220" height="75" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="8"/>
+                    <text x="380" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">① Excess Sebum</text>
+                    <text x="380" y="63" text-anchor="middle" font-size="12" fill="#78350f">Hormones (especially</text>
+                    <text x="380" y="80" text-anchor="middle" font-size="12" fill="#78350f">androgens) drive overproduction</text>
+                    <path d="M 380 95 L 380 160" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrowblue)"/>
+
+                    <!-- RIGHT: C. acnes Bacteria -->
+                    <rect x="565" y="180" width="180" height="90" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="8"/>
+                    <text x="655" y="205" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">③ Bacteria</text>
+                    <text x="655" y="223" text-anchor="middle" font-size="12" fill="#1e3a8a">C. acnes bacteria</text>
+                    <text x="655" y="241" text-anchor="middle" font-size="12" fill="#1e3a8a">thrive in blocked</text>
+                    <text x="655" y="257" text-anchor="middle" font-size="12" fill="#1e3a8a">follicles</text>
+                    <path d="M 565 225 L 450 225" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrowblue)"/>
+
+                    <!-- BOTTOM: Inflammation -->
+                    <rect x="270" y="370" width="220" height="75" fill="#fecaca" stroke="#dc2626" stroke-width="2" rx="8"/>
+                    <text x="380" y="397" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">④ Inflammation</text>
+                    <text x="380" y="415" text-anchor="middle" font-size="12" fill="#7f1d1d">Immune response creates</text>
+                    <text x="380" y="432" text-anchor="middle" font-size="12" fill="#7f1d1d">redness, swelling, pain</text>
+                    <path d="M 380 370 L 380 300" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrowblue)"/>
+
+                    <!-- LEFT: Follicle Plugging -->
+                    <rect x="15" y="180" width="195" height="90" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="8"/>
+                    <text x="112" y="205" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">② Plugged Follicle</text>
+                    <text x="112" y="223" text-anchor="middle" font-size="12" fill="#065f46">Dead skin cells mix</text>
+                    <text x="112" y="241" text-anchor="middle" font-size="12" fill="#065f46">with oil, blocking</text>
+                    <text x="112" y="257" text-anchor="middle" font-size="12" fill="#065f46">the pore</text>
+                    <path d="M 210 225 L 310 225" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrowblue)"/>
+
+                    <!-- Connecting arrow: Sebum feeds plugging -->
+                    <path d="M 300 95 Q 150 95 112 180" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4" fill="none" marker-end="url(#arrowblue)"/>
+                </svg>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    These four factors work together in a cycle. Hormones stimulate excess oil production, oil mixes with dead skin cells to block pores, bacteria multiply inside the blocked follicle, and the immune system's response to those bacteria causes the inflammation we see as a pimple.
+                </p>
+            </div>
+
+            <h3>The Role of Hormones</h3>
+            <p>Androgens — male hormones present in both males and females — are the primary hormonal driver of acne. They stimulate the sebaceous (oil) glands to enlarge and produce more sebum. This is why acne flares during puberty, around menstrual cycles, and during times of stress (which raises cortisol and, in turn, androgens).<sup>5,6</sup> It is also why some people continue to experience acne well into adulthood.</p>
+
+            <h3>The Role of C. acnes Bacteria</h3>
+            <p><em>Cutibacterium acnes</em> (formerly <em>Propionibacterium acnes</em>) is a normal resident of healthy skin. The problem arises when follicles become plugged — this creates an oxygen-deprived, sebum-rich environment in which C. acnes multiplies rapidly. The bacteria break down sebum into fatty acids and release enzymes that trigger the immune system, leading to the redness and swelling we associate with inflammatory acne.<sup>3,5</sup></p>
+
+            <h2>Principles of Treatment</h2>
+            <p>Because acne has four contributing factors, effective treatment typically targets more than one of them simultaneously. Most treatments address one or more of the following:<sup>7,8</sup></p>
+            <ul>
+                <li><strong>Reducing sebum production</strong> (e.g., hormonal therapies, isotretinoin)</li>
+                <li><strong>Preventing follicle plugging</strong> (e.g., retinoids, gentle exfoliation)</li>
+                <li><strong>Killing C. acnes bacteria</strong> (e.g., antibiotics, benzoyl peroxide)</li>
+                <li><strong>Reducing inflammation</strong> (e.g., antibiotics, benzoyl peroxide, retinoids)</li>
+            </ul>
+
+            <div class="warning-box">
+                <h3>⏱ Treatment Takes Time — This Is Normal</h3>
+                <p>One of the most common reasons treatment fails is stopping too early. Acne treatments work gradually because they interrupt biological processes that have been developing over weeks. Most treatments take <strong>6 to 8 weeks</strong> before meaningful improvement is visible, and <strong>3 to 6 months</strong> for full effect.<sup>8,9</sup> In the first 2–4 weeks, some patients even notice a temporary worsening as the skin purges trapped material from pores — this is a normal part of the process, not a sign the treatment is failing. <strong>Please continue your treatment and follow up with us before stopping anything.</strong></p>
+            </div>
+
+            <h2>When Over-the-Counter Treatments Have Not Been Enough</h2>
+            <p>Many patients arrive having already tried over-the-counter (OTC) products containing low-dose benzoyl peroxide, salicylic acid, or adapalene. When these have not controlled the acne adequately, it is time to step up to prescription-strength treatment. The approach below is what we typically recommend at this stage.<sup>8,9,10</sup></p>
+
+            <h3>Step 1: Prescription-Strength Benzoyl Peroxide</h3>
+            <p>Benzoyl peroxide (BPO) is a cornerstone of acne therapy. It works by releasing oxygen into the follicle, directly killing C. acnes bacteria. Crucially, unlike antibiotics, <strong>bacteria cannot develop resistance to benzoyl peroxide</strong>. This makes it an essential partner whenever antibiotics are used.<sup>7,11</sup></p>
+
+            <p>We prescribe a 5% benzoyl peroxide cream or gel. This is stronger and more effective than the 2.5% commonly found in drugstores. It is applied once daily, typically in the evening, after cleansing.</p>
+
+            <div class="warning-box">
+                <h3>Important: Benzoyl Peroxide Can Bleach Fabric</h3>
+                <p>Benzoyl peroxide will bleach towels, pillowcases, and clothing on contact. Use white towels to pat your face dry, and consider white or light-coloured pillowcases. Allow the product to fully absorb before getting into bed or touching fabric.</p>
+            </div>
+
+            <h3>Step 2: Oral Doxycycline (First-Line Antibiotic)</h3>
+            <p>Oral doxycycline is the most evidence-supported antibiotic for moderate to severe acne. It works in two ways: it reduces the C. acnes bacterial load, and it has independent anti-inflammatory properties that help calm papules and pustules more quickly than topical treatments alone.<sup>9,10,12</sup></p>
+
+            <p>It is taken once or twice daily with food (to reduce stomach upset) and a full glass of water. You should avoid lying down for 30 minutes after taking it. We typically prescribe a course of <strong>3 to 6 months</strong>, at which point we reassess and taper off the antibiotic while continuing topical maintenance therapy.</p>
+
+            <div class="key-point">
+                <h3>Why We Always Combine Doxycycline with Benzoyl Peroxide</h3>
+                <p>Using an antibiotic alone creates pressure that can cause C. acnes to develop antibiotic resistance — meaning the treatment stops working over time and can contribute to resistance issues more broadly. <strong>Combining the antibiotic with benzoyl peroxide significantly reduces this risk</strong>, because benzoyl peroxide's mechanism is independent of any biological target that bacteria can mutate around.<sup>7,11,13</sup> This combination is strongly recommended in all major clinical guidelines.</p>
+            </div>
+
+            <h3>If Doxycycline Is Not Suitable: Topical Antibiotics</h3>
+            <p>For patients who cannot take oral doxycycline — for example, due to allergy, pregnancy, or side effect intolerance — we will use a topical antibiotic instead. The most commonly prescribed options are topical clindamycin (1%) or erythromycin, applied once or twice daily.<sup>9,10</sup></p>
+
+            <p>Topical antibiotics are less potent than oral doxycycline for moderate-to-severe acne, but are effective for mild-to-moderate disease, particularly for inflammatory papules and pustules. The same principle applies: <strong>topical antibiotics must always be paired with benzoyl peroxide</strong> to prevent resistance from developing.<sup>7,11</sup></p>
+
+            <h3>Step 3: Adding a Topical Retinoid (If Needed)</h3>
+            <p>If antibiotic-based treatment provides insufficient control after 2 to 3 months, the next step is adding a <strong>topical retinoid</strong> such as tretinoin or adapalene. Retinoids work differently from antibiotics — they normalize the way skin cells turn over inside the follicle, preventing the plugging that initiates acne formation in the first place. They are also the most effective treatment available for comedonal (non-inflammatory) acne.<sup>8,14</sup></p>
+
+            <p>Retinoids are applied at night and require a careful introduction period to minimize the skin irritation they can initially cause. If we reach this stage, your provider will guide you through how to introduce it gradually.</p>
+
+            <p>If acne remains inadequately controlled despite this combination of treatments, the next consideration is isotretinoin (Accutane) — <strong>please refer to the separate Accutane handout</strong> for a full discussion of that treatment.</p>
+
+            <h2>Your Daily Skin Care Routine</h2>
+            <p>Getting your skincare routine right is just as important as the medications themselves. Harsh, drying, or poorly chosen products can irritate the skin barrier, worsen inflammation, and reduce the effectiveness of your treatments. The goal is a simple, consistent, non-irritating routine that supports your prescriptions.<sup>15,16</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Your Morning and Evening Routine</div>
+                <svg width="720" height="340" viewBox="0 0 720 340">
+                    <defs>
+                        <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#1e3a8a"/>
+                        </marker>
+                    </defs>
+
+                    <!-- MORNING Column -->
+                    <text x="185" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#f59e0b">☀ MORNING</text>
+
+                    <!-- Morning Step 1 -->
+                    <rect x="50" y="45" width="270" height="62" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="75" y="70" font-size="13" font-weight="bold" fill="#92400e">① Gentle Cleanser</text>
+                    <text x="75" y="90" font-size="12" fill="#78350f">Wash face with lukewarm water</text>
+                    <path d="M 185 107 L 185 127" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#arrowdown)"/>
+
+                    <!-- Morning Step 2 -->
+                    <rect x="50" y="127" width="270" height="62" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+                    <text x="75" y="152" font-size="13" font-weight="bold" fill="#065f46">② Moisturiser</text>
+                    <text x="75" y="172" font-size="12" fill="#065f46">Non-comedogenic, oil-free formula</text>
+                    <path d="M 185 189 L 185 209" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#arrowdown)"/>
+
+                    <!-- Morning Step 3 -->
+                    <rect x="50" y="209" width="270" height="62" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+                    <text x="75" y="234" font-size="13" font-weight="bold" fill="#1e40af">③ SPF Sunscreen</text>
+                    <text x="75" y="254" font-size="12" fill="#1e3a8a">SPF 30+ (especially if on retinoids)</text>
+
+                    <!-- EVENING Column -->
+                    <text x="535" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e3a8a">🌙 EVENING</text>
+
+                    <!-- Evening Step 1 -->
+                    <rect x="400" y="45" width="270" height="62" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="425" y="70" font-size="13" font-weight="bold" fill="#92400e">① Gentle Cleanser</text>
+                    <text x="425" y="90" font-size="12" fill="#78350f">Wash face, pat dry with clean towel</text>
+                    <path d="M 535 107 L 535 127" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#arrowdown)"/>
+
+                    <!-- Evening Step 2 -->
+                    <rect x="400" y="127" width="270" height="62" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+                    <text x="425" y="152" font-size="13" font-weight="bold" fill="#991b1b">② Benzoyl Peroxide</text>
+                    <text x="425" y="172" font-size="12" fill="#7f1d1d">Apply to affected areas. Let absorb.</text>
+                    <path d="M 535 189 L 535 209" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#arrowdown)"/>
+
+                    <!-- Evening Step 3 -->
+                    <rect x="400" y="209" width="270" height="62" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+                    <text x="425" y="234" font-size="13" font-weight="bold" fill="#065f46">③ Moisturiser</text>
+                    <text x="425" y="254" font-size="12" fill="#065f46">Apply after BPO has absorbed</text>
+
+                    <!-- Centre divider -->
+                    <line x1="360" y1="35" x2="360" y2="310" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4"/>
+                    <text x="360" y="320" text-anchor="middle" font-size="11" fill="#94a3b8">If also using a topical antibiotic or retinoid, apply it after cleanser and before moisturiser as directed</text>
+                </svg>
+            </div>
+
+            <h3>Choosing the Right Cleanser</h3>
+            <p>The right cleanser for acne-prone skin is gentle, not aggressive. Harsh soaps and foaming cleansers strip the skin barrier and trigger the skin to produce more oil in response — the opposite of what you want. Look for a <strong>mild, non-comedogenic (non-pore-blocking), fragrance-free cleanser</strong> that is either gel-based or lotion-based.<sup>15,16</sup></p>
+
+            <p>Good examples include products marketed as "gentle," "hydrating," or "for sensitive skin" — such as Cetaphil Gentle Skin Cleanser, CeraVe Hydrating Cleanser, or La Roche-Posay Toleriane Hydrating Gentle Cleanser. Avoid cleansers with harsh exfoliating beads, strong fragrances, high concentrations of alcohol, or antibacterial agents, as these cause unnecessary irritation.</p>
+
+            <p>Wash your face <strong>twice daily</strong> — morning and evening — and after exercise. Use lukewarm (not hot) water. Gently pat dry with a clean towel rather than rubbing, which irritates inflamed skin.</p>
+
+            <h3>Choosing the Right Moisturiser</h3>
+            <p>Many acne patients avoid moisturiser because they worry it will make oily skin worse. This is a common misconception. <strong>Moisturising is essential</strong>, particularly when using treatments like benzoyl peroxide or retinoids that can dry and irritate the skin. A healthy skin barrier actually helps control oil production and reduces inflammatory flare-ups.<sup>15,16</sup></p>
+
+            <p>Choose a moisturiser that is:<sup>15</sup></p>
+            <ul>
+                <li><strong>Non-comedogenic</strong> — specifically labelled as not blocking pores</li>
+                <li><strong>Oil-free</strong> — especially if your skin is oily</li>
+                <li><strong>Fragrance-free</strong> — fragrance is a common irritant for acne-prone skin</li>
+                <li><strong>Lightweight</strong> — gel-cream or lotion formulations rather than thick creams or ointments</li>
+            </ul>
+
+            <p>Good choices include CeraVe PM Facial Moisturising Lotion, Neutrogena Hydro Boost Water Gel, or La Roche-Posay Effaclar Mat. Apply a small amount morning and evening, after any topical treatments have had a minute or two to absorb.</p>
+
+            <h3>The Correct Order: Cleanser First, Then Benzoyl Peroxide</h3>
+            <p>The sequence of application matters. Always <strong>cleanse first, then apply benzoyl peroxide</strong>. Cleansing removes surface oil, debris, and makeup, allowing the benzoyl peroxide to penetrate the follicle effectively rather than sitting on top of a dirty surface. If you apply benzoyl peroxide to uncleansed skin, its effectiveness is significantly reduced.<sup>16</sup></p>
+
+            <p>After applying benzoyl peroxide, wait 1 to 2 minutes for it to absorb before applying your moisturiser. This prevents the moisturiser from diluting or spreading the active ingredient away from where it needs to work.</p>
+
+            <h3>Sunscreen</h3>
+            <p>Sunscreen is especially important for patients on acne treatments. Benzoyl peroxide and retinoids increase the skin's sensitivity to sunlight, and unprotected sun exposure can worsen post-acne marks and hyperpigmentation. Use a <strong>non-comedogenic, oil-free SPF 30 or higher</strong> every morning. Mineral sunscreens (zinc oxide or titanium dioxide) are often better tolerated on acne-prone skin than chemical sunscreens.<sup>16</sup></p>
+
+            <h2>Things to Avoid</h2>
+
+            <div class="warning-box">
+                <h3>Habits That Can Worsen Acne or Interfere with Treatment</h3>
+                <ul>
+                    <li><strong>Picking, squeezing, or popping:</strong> This pushes bacteria and inflammatory material deeper into the skin, worsens inflammation, and is the primary cause of acne scarring. Resist the urge.</li>
+                    <li><strong>Over-washing:</strong> Washing more than twice daily strips the skin barrier and stimulates excess oil production. More is not better.</li>
+                    <li><strong>Harsh scrubs and exfoliants:</strong> Physical scrubbing irritates already-inflamed skin and should be avoided during active treatment.</li>
+                    <li><strong>Heavy, pore-blocking products:</strong> Check makeup, sunscreen, and hair products for "non-comedogenic" labels. Pomades and heavy hair oils that contact the forehead are a common trigger.</li>
+                    <li><strong>Stopping treatment early:</strong> The most common reason acne returns or treatment "doesn't work" is stopping before the full course is complete. Please speak to us before stopping any prescription treatment.</li>
+                </ul>
+            </div>
+
+            <h2>What to Expect Over Time</h2>
+            <p>Treatment progress follows a predictable timeline. Understanding this helps you stay the course during the early weeks when improvement may not yet be visible.<sup>8,9</sup></p>
+
+            <div class="timeline-box">
+                <div class="timeline-row">
+                    <div class="timeline-period">Weeks 1–2</div>
+                    <div class="timeline-content">Your skin is adapting. Some initial dryness or redness from benzoyl peroxide is normal. A temporary increase in breakouts ("purging") may occur as the skin begins to clear trapped material. Continue treatment.</div>
+                </div>
+                <div class="timeline-row">
+                    <div class="timeline-period">Weeks 2–4</div>
+                    <div class="timeline-content">New inflamed lesions (papules and pustules) typically begin to reduce in frequency. Existing spots begin to resolve more quickly. Skin texture may start to feel calmer.</div>
+                </div>
+                <div class="timeline-row">
+                    <div class="timeline-period">Weeks 4–8</div>
+                    <div class="timeline-content">Clearer improvement is usually visible. New breakouts are less frequent and less severe. This is when most patients begin to feel the treatment is working.</div>
+                </div>
+                <div class="timeline-row">
+                    <div class="timeline-period">Months 3–6</div>
+                    <div class="timeline-content">Maximum benefit from antibiotic-based treatment is typically reached by month 3. This is when we reassess and may taper the antibiotic while continuing topical maintenance therapy.</div>
+                </div>
+                <div class="timeline-row">
+                    <div class="timeline-period">Long-Term</div>
+                    <div class="timeline-content">Maintenance topical therapy (benzoyl peroxide, and/or retinoid if added) continues to prevent recurrence. Many patients achieve sustained remission with good skin care habits.</div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>Signs Treatment Is Working</h3>
+                <p>Look for these signals that your treatment plan is on track:</p>
+                <ul>
+                    <li>Fewer new pimples forming each week</li>
+                    <li>Existing spots clearing faster than before</li>
+                    <li>Reduced redness and swelling around existing lesions</li>
+                    <li>Skin feeling less oily through the day</li>
+                    <li>Improvement in overall skin texture and tone</li>
+                </ul>
+                <p style="margin-top:10px;">Remember: the absence of dramatic change in the first two weeks is <em>not</em> a sign that treatment is failing.</p>
+            </div>
+
+            <div class="key-point">
+                <h3>Stay in Touch with Your Healthcare Team</h3>
+                <p>Acne treatment is not a one-size-fits-all process. If you are experiencing significant irritation, side effects, or if your acne is not responding after 6–8 weeks, please contact us. There is always a next step, and we can adjust your plan to suit your skin. Do not stop prescription treatments without speaking to us first.</p>
+            </div>
+
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+
+            <div class="reference-item">1. Tan JKL, Bhate K. A global perspective on the epidemiology of acne. Br J Dermatol. 2015;172(Suppl 1):3–12.</div>
+
+            <div class="reference-item">2. Wolkenstein P, Machovcová A, Szepietowski JC, Tennstedt D, Veraldi S, Delarue A. Acne prevalence and associations with lifestyle: a cross-sectional online survey of adolescents/young adults in 7 European countries. J Eur Acad Dermatol Venereol. 2018;32(2):298–306.</div>
+
+            <div class="reference-item">3. Zaenglein AL, Pathy AL, Schlosser BJ, et al. Guidelines of care for the management of acne vulgaris. J Am Acad Dermatol. 2016;74(5):945–973.</div>
+
+            <div class="reference-item">4. Williams HC, Dellavalle RP, Garner S. Acne vulgaris. Lancet. 2012;379(9813):361–372.</div>
+
+            <div class="reference-item">5. Thiboutot D, Gollnick H, Bettoli V, et al. New insights into the management of acne: an update from the Global Alliance to Improve Outcomes in Acne group. J Am Acad Dermatol. 2009;60(5 Suppl):S1–S50.</div>
+
+            <div class="reference-item">6. Goulden V, Clark SM, Cunliffe WJ. Post-adolescent acne: a review of clinical features. Br J Dermatol. 1997;136(1):66–70.</div>
+
+            <div class="reference-item">7. Walsh TR, Efthimiou J, Dréno B. Systematic review of antibiotic resistance in acne: an increasing topical and oral threat. Lancet Infect Dis. 2016;16(3):e23–e33.</div>
+
+            <div class="reference-item">8. Nast A, Dréno B, Bettoli V, et al. European evidence-based (S3) guideline for the treatment of acne – update 2016 – short version. J Eur Acad Dermatol Venereol. 2016;30(8):1261–1268.</div>
+
+            <div class="reference-item">9. Garner SE, Eady A, Bennett C, Newton JN, Thomas K, Popescu CM. Minocycline for acne vulgaris: efficacy and safety. Cochrane Database Syst Rev. 2012;(8):CD002086.</div>
+
+            <div class="reference-item">10. Simonart T, Dramaix M, De Maertelaer V. Efficacy of tetracyclines in the treatment of acne vulgaris: a review. Br J Dermatol. 2008;158(2):208–216.</div>
+
+            <div class="reference-item">11. Leyden JJ, Del Rosso JQ, Webster GF. Clinical considerations in the treatment of acne vulgaris and other inflammatory skin disorders: focus on antibiotic resistance. Cutis. 2007;79(6 Suppl):9–25.</div>
+
+            <div class="reference-item">12. Eady EA, Gloor M, Leyden JJ. Propionibacterium acnes resistance: a worldwide problem. Dermatology. 2003;206(1):54–56.</div>
+
+            <div class="reference-item">13. Thiboutot DM, Dréno B, Abanmi A, et al. Practical management of acne for clinicians: an international consensus from the Global Alliance to Improve Outcomes in Acne. J Am Acad Dermatol. 2018;78(2 Suppl 1):S1–S23.e1.</div>
+
+            <div class="reference-item">14. Leyden J, Stein-Gold L, Weiss J. Why topical retinoids are mainstay of therapy for acne. Dermatol Ther (Heidelb). 2017;7(3):293–304.</div>
+
+            <div class="reference-item">15. Chularojanamontri L, Tuchinda P, Kulthanan K, Pongparit K. Moisturizers for acne: what are their constituents? J Clin Aesthet Dermatol. 2014;7(5):36–44.</div>
+
+            <div class="reference-item">16. Kraft J, Freiman A. Management of acne. CMAJ. 2011;183(7):E430–E435.</div>
+
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always consult with your healthcare provider before making changes to your treatment plan.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: February 2026</p>
+        </div>
+    </div>
+</body>
+</html>
