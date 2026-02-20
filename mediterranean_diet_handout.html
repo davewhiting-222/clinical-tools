@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mediterranean Diet: Evidence-Based Guidance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Two-column food table */
+        .food-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .food-column {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .food-column-header {
+            padding: 12px 16px;
+            font-weight: 700;
+            font-size: 1.05em;
+            text-align: center;
+        }
+
+        .food-column-body {
+            padding: 16px;
+        }
+
+        .food-column-body ul {
+            margin-left: 18px;
+            margin-bottom: 0;
+        }
+
+        .food-column-body li {
+            margin-bottom: 6px;
+            font-size: 0.97em;
+        }
+
+        .eat-more {
+            background-color: #f0fdf4;
+            border: 2px solid #10b981;
+        }
+
+        .eat-more .food-column-header {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .displace {
+            background-color: #fff7ed;
+            border: 2px solid #f59e0b;
+        }
+
+        .displace .food-column-header {
+            background-color: #f59e0b;
+            color: white;
+        }
+
+        .trial-card {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .trial-card .trial-name {
+            font-weight: 700;
+            color: #1e3a8a;
+            font-size: 1.1em;
+            margin-bottom: 6px;
+        }
+
+        .trial-card .trial-result {
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 6px;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>The Mediterranean Diet</h1>
+            <p>The Most Evidence-Based Dietary Pattern for Heart Health and Longevity</p>
+        </div>
+
+        <div class="content">
+
+            <div class="key-point">
+                <h3>What Makes This Diet Different</h3>
+                <p>Unlike many popular diets backed only by short-term studies or observational data, the Mediterranean diet has been tested in large, rigorous randomized controlled trials — the same standard we use to evaluate medications. It is one of the only dietary patterns proven to reduce heart attacks, strokes, and cardiovascular death in people both with and without established heart disease.<sup>1,2</sup></p>
+            </div>
+
+            <h2>The Evidence: What the Trials Tell Us</h2>
+            <p>The evidence base for the Mediterranean diet is exceptionally strong, derived from multiple high-quality trials involving tens of thousands of participants across decades of research.</p>
+
+            <!-- PREDIMED Trial Card -->
+            <div class="trial-card">
+                <div class="trial-name">PREDIMED Trial — Primary Prevention (2013, updated 2018)<sup>1</sup></div>
+                <div class="trial-result">Result: 30% reduction in major cardiovascular events</div>
+                <p style="margin-bottom:0; font-size:0.97em;">Over 7,000 high-risk adults in Spain with no prior heart disease were randomized to a Mediterranean diet supplemented with extra virgin olive oil, a Mediterranean diet supplemented with mixed nuts, or a low-fat control diet. The Mediterranean diet groups experienced significantly fewer heart attacks, strokes, and cardiovascular deaths. The benefit was so clear that the trial was stopped early for ethical reasons — it would have been wrong to keep the control group on the low-fat diet.</p>
+            </div>
+
+            <!-- PREDIMED-Plus -->
+            <div class="trial-card">
+                <div class="trial-name">PREDIMED-Plus Trial — Primary Prevention with Lifestyle Intervention (ongoing, interim results 2023)<sup>2</sup></div>
+                <div class="trial-result">Result: Improved cardiovascular risk factors, weight loss, and reduced events compared to Mediterranean diet alone</div>
+                <p style="margin-bottom:0; font-size:0.97em;">Over 6,800 adults with metabolic syndrome were randomized to an intensive Mediterranean diet plus physical activity program versus a standard Mediterranean diet. Interim results confirm substantial reductions in cardiovascular risk and body weight, with ongoing follow-up for hard outcomes.</p>
+            </div>
+
+            <!-- LYON Diet Heart Study -->
+            <div class="trial-card">
+                <div class="trial-name">Lyon Diet Heart Study — Secondary Prevention (1999)<sup>3</sup></div>
+                <div class="trial-result">Result: 72% reduction in recurrent heart attacks and cardiovascular death</div>
+                <p style="margin-bottom:0; font-size:0.97em;">Patients who had already survived a heart attack were randomized to a Mediterranean-style diet (enriched with alpha-linolenic acid) versus a Western diet. This landmark trial demonstrated that dietary change could dramatically reduce recurrent events in people with established heart disease — a benefit that persisted even after four years of follow-up and that far exceeded what medications achieve alone.</p>
+            </div>
+
+            <!-- GISSI-Prevenzione / Dietary Pattern Meta-analysis -->
+            <div class="trial-card">
+                <div class="trial-name">Meta-Analyses of Randomized and Prospective Cohort Studies<sup>4,5</sup></div>
+                <div class="trial-result">Result: Consistent 10–30% reductions in cardiovascular events, stroke, type 2 diabetes, and total mortality</div>
+                <p style="margin-bottom:0; font-size:0.97em;">Multiple systematic reviews pooling data from hundreds of studies and millions of participants confirm that greater adherence to a Mediterranean dietary pattern is associated with reduced risk of cardiovascular disease, type 2 diabetes, several cancers, cognitive decline, and all-cause mortality. The consistency across diverse populations and study designs is highly compelling.</p>
+            </div>
+
+            <div class="success-box">
+                <h3>Bottom Line on the Evidence</h3>
+                <p>The Mediterranean diet is supported by <strong>Level 1 evidence</strong> — randomized controlled trials — for both primary prevention (preventing a first heart attack or stroke) and secondary prevention (preventing a second event after a heart attack). This is the highest standard of evidence in medicine, equivalent to what we expect from medications. Few dietary interventions have achieved this level of rigour.</p>
+            </div>
+
+            <h2>Why Does It Work? The Role of Inflammation</h2>
+            <p>The Mediterranean diet's benefits are not primarily explained by its effects on LDL cholesterol — in fact, LDL levels often do not change significantly. Instead, the diet works through multiple pathways, with <strong>reducing chronic inflammation</strong> being the most important.<sup>6,7</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">How the Mediterranean Diet Reduces Cardiovascular Risk</div>
+                <svg width="780" height="420" viewBox="0 0 780 420">
+                    <!-- Diet box at top -->
+                    <rect x="280" y="20" width="220" height="60" fill="#1e3a8a" rx="10"/>
+                    <text x="390" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Mediterranean Diet</text>
+                    <text x="390" y="65" text-anchor="middle" font-size="12" fill="#bfdbfe">Rich in polyphenols, omega-3s, fibre</text>
+
+                    <!-- Arrow down from diet -->
+                    <line x1="390" y1="80" x2="390" y2="110" stroke="#1e3a8a" stroke-width="2.5" marker-end="url(#arrowblue)"/>
+
+                    <!-- Central mechanism box: Inflammation -->
+                    <rect x="270" y="110" width="240" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="10"/>
+                    <text x="390" y="135" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">↓ Chronic Inflammation</text>
+                    <text x="390" y="155" text-anchor="middle" font-size="11" fill="#7f1d1d">CRP, IL-6, TNF-α all reduced</text>
+
+                    <!-- Arrows from inflammation to outcomes -->
+                    <!-- Left -->
+                    <line x1="270" y1="140" x2="185" y2="180" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowred2)"/>
+                    <!-- Center-left -->
+                    <line x1="320" y1="170" x2="270" y2="205" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowred2)"/>
+                    <!-- Center -->
+                    <line x1="390" y1="170" x2="390" y2="205" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowred2)"/>
+                    <!-- Center-right -->
+                    <line x1="460" y1="170" x2="510" y2="205" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowred2)"/>
+                    <!-- Right -->
+                    <line x1="510" y1="140" x2="595" y2="180" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowred2)"/>
+
+                    <!-- Outcome boxes -->
+                    <!-- 1 -->
+                    <rect x="40" y="185" width="155" height="65" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+                    <text x="118" y="207" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">↓ Endothelial</text>
+                    <text x="118" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Dysfunction</text>
+                    <text x="118" y="240" text-anchor="middle" font-size="10" fill="#1e40af">Healthier blood vessels</text>
+
+                    <!-- 2 -->
+                    <rect x="205" y="210" width="150" height="65" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+                    <text x="280" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">↓ Oxidative</text>
+                    <text x="280" y="247" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Stress</text>
+                    <text x="280" y="265" text-anchor="middle" font-size="10" fill="#1e40af">Less cell damage</text>
+
+                    <!-- 3 -->
+                    <rect x="315" y="210" width="150" height="65" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+                    <text x="390" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">↑ Insulin</text>
+                    <text x="390" y="247" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Sensitivity</text>
+                    <text x="390" y="265" text-anchor="middle" font-size="10" fill="#1e40af">Better glucose control</text>
+
+                    <!-- 4 -->
+                    <rect x="425" y="210" width="155" height="65" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+                    <text x="503" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">↓ Blood</text>
+                    <text x="503" y="247" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Pressure</text>
+                    <text x="503" y="265" text-anchor="middle" font-size="10" fill="#1e40af">Direct vascular effect</text>
+
+                    <!-- 5 -->
+                    <rect x="585" y="185" width="155" height="65" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+                    <text x="663" y="207" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">↑ HDL /</text>
+                    <text x="663" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">↓ Triglycerides</text>
+                    <text x="663" y="240" text-anchor="middle" font-size="10" fill="#1e40af">Improved lipid profile</text>
+
+                    <!-- Arrows down to final outcome -->
+                    <line x1="118" y1="250" x2="200" y2="340" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen2)"/>
+                    <line x1="280" y1="275" x2="290" y2="340" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen2)"/>
+                    <line x1="390" y1="275" x2="390" y2="340" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen2)"/>
+                    <line x1="503" y1="275" x2="490" y2="340" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen2)"/>
+                    <line x1="663" y1="250" x2="580" y2="340" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen2)"/>
+
+                    <!-- Final outcome -->
+                    <rect x="175" y="340" width="430" height="55" fill="#d1fae5" stroke="#10b981" stroke-width="2.5" rx="10"/>
+                    <text x="390" y="365" text-anchor="middle" font-size="15" font-weight="bold" fill="#065f46">↓ Heart Attack · ↓ Stroke · ↓ Cardiovascular Death</text>
+                    <text x="390" y="384" text-anchor="middle" font-size="11" fill="#065f46">Proven in randomized trials — independent of LDL change</text>
+
+                    <defs>
+                        <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#1e3a8a"/>
+                        </marker>
+                        <marker id="arrowred2" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+                        </marker>
+                        <marker id="arrowgreen2" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top:15px; font-size:0.95em; color:#64748b; max-width:720px; margin-left:auto; margin-right:auto;">
+                    The Mediterranean diet works through multiple pathways simultaneously. Reducing inflammation is the central mechanism, but it also improves blood vessel function, glucose metabolism, blood pressure, and lipid patterns — all contributing to cardiovascular protection.
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h3>Why Your LDL May Not Change — And Why That Is Okay</h3>
+                <p>Many patients and even some clinicians expect a heart-healthy diet to lower LDL cholesterol. With the Mediterranean diet, <strong>LDL-C often does not change significantly, and this does not mean the diet isn't working.</strong><sup>6,8</sup></p>
+                <p style="margin-bottom:0;">The PREDIMED trial demonstrated a 30% reduction in cardiovascular events with only modest, non-significant changes in LDL. The diet's benefits come primarily from reducing inflammation, improving blood vessel function, and shifting the quality of lipid particles — not from lowering the total LDL number on a lab report. If your LDL stays the same, your risk has still almost certainly improved. <strong>Do not judge the success of this diet by your LDL number alone.</strong></p>
+            </div>
+
+            <h2>Core Principles of the Mediterranean Diet</h2>
+            <p>The Mediterranean diet is not a rigid meal plan — it is a flexible dietary pattern with consistent principles drawn from the traditional eating habits of populations bordering the Mediterranean Sea.<sup>9,10</sup> The following features are found across all Mediterranean dietary patterns studied in trials:</p>
+
+            <ul>
+                <li><strong>Abundant plant foods:</strong> Vegetables, fruits, legumes, whole grains, nuts, and seeds form the foundation of every meal</li>
+                <li><strong>Olive oil as the primary fat:</strong> Extra virgin olive oil replaces butter, margarine, and refined vegetable oils for cooking and as a condiment</li>
+                <li><strong>Fish and seafood frequently:</strong> At least two to three servings per week, with emphasis on oily fish (salmon, sardines, mackerel, herring)</li>
+                <li><strong>Moderate poultry, eggs, and dairy:</strong> Consumed in moderate amounts, with preference for yogurt and cheese over processed dairy</li>
+                <li><strong>Minimal red and processed meat:</strong> Red meat limited to a few times per month; processed meats (deli meats, sausages) largely avoided</li>
+                <li><strong>Herbs and spices over salt:</strong> Flavouring with garlic, oregano, basil, rosemary, and other herbs reduces sodium intake and adds polyphenols</li>
+                <li><strong>Water as the primary beverage:</strong> Moderate red wine is traditional in some cultural versions (1 glass/day for women, up to 2 for men, with meals), but is not required — consult your physician about alcohol</li>
+                <li><strong>Minimal ultra-processed foods and added sugars:</strong> The diet is inherently low in packaged snack foods, sugary drinks, refined baked goods, and fast food</li>
+                <li><strong>Meals as a social and unhurried experience:</strong> Mindful eating, shared meals, and adequate meal time are culturally embedded features associated with better health outcomes</li>
+            </ul>
+
+            <h2>What to Eat and What Gets Displaced</h2>
+            <p>One of the most practical ways to understand the Mediterranean diet is to think about displacement: when you fill your plate with Mediterranean foods, you naturally crowd out the foods most strongly associated with cardiovascular harm. This is a diet of <em>addition</em> first, not restriction.</p>
+
+            <div class="food-grid">
+                <div class="food-column eat-more">
+                    <div class="food-column-header">✓ Emphasize These Foods</div>
+                    <div class="food-column-body">
+                        <p style="font-size:0.9em; margin-bottom:10px; text-align:left;"><strong>Vegetables &amp; Legumes</strong></p>
+                        <ul>
+                            <li>Leafy greens (spinach, arugula, kale)</li>
+                            <li>Tomatoes, peppers, eggplant, zucchini</li>
+                            <li>Lentils, chickpeas, white beans, black beans</li>
+                            <li>Artichokes, beets, fennel, onions</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Whole Grains</strong></p>
+                        <ul>
+                            <li>Whole wheat bread and pita</li>
+                            <li>Farro, barley, bulgur, quinoa</li>
+                            <li>Oats, brown rice</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Fish &amp; Seafood</strong></p>
+                        <ul>
+                            <li>Salmon, sardines, mackerel, herring (oily fish — aim for 2–3×/week)</li>
+                            <li>Tuna, cod, shrimp, mussels, clams</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Healthy Fats</strong></p>
+                        <ul>
+                            <li>Extra virgin olive oil (use generously)</li>
+                            <li>Avocados</li>
+                            <li>Walnuts, almonds, pistachios, hazelnuts</li>
+                            <li>Flaxseed, chia seeds</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Fruits</strong></p>
+                        <ul>
+                            <li>Berries, citrus, figs, grapes, pomegranate</li>
+                            <li>Apples, pears, stone fruits (peaches, plums)</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Dairy &amp; Eggs</strong></p>
+                        <ul>
+                            <li>Greek yogurt, labneh (moderate amounts)</li>
+                            <li>Aged cheeses like feta or Parmesan (moderate)</li>
+                            <li>Eggs (several per week)</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Herbs, Spices &amp; Flavourings</strong></p>
+                        <ul>
+                            <li>Garlic, oregano, basil, rosemary, thyme</li>
+                            <li>Lemon juice, red wine vinegar, capers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="food-column displace">
+                    <div class="food-column-header">→ These Get Displaced</div>
+                    <div class="food-column-body">
+                        <p style="font-size:0.9em; margin-bottom:10px; text-align:left;"><strong>Processed &amp; Red Meats</strong></p>
+                        <ul>
+                            <li>Deli meats, cold cuts, salami, sausages, hot dogs</li>
+                            <li>Bacon, processed ham</li>
+                            <li>Frequent red meat (beef, pork, lamb — limit to a few times per month)</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Refined Carbohydrates &amp; Sugars</strong></p>
+                        <ul>
+                            <li>White bread, white rice, refined pasta in large portions</li>
+                            <li>Pastries, muffins, biscuits, crackers</li>
+                            <li>Sugar-sweetened beverages (pop, juice, energy drinks)</li>
+                            <li>Candy, desserts, sweetened cereals</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Unhealthy Fats</strong></p>
+                        <ul>
+                            <li>Butter and margarine (especially for cooking)</li>
+                            <li>Lard, shortening</li>
+                            <li>Refined vegetable oils (corn, soybean, canola in large amounts)</li>
+                            <li>Trans fats (partially hydrogenated oils)</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Ultra-Processed Foods</strong></p>
+                        <ul>
+                            <li>Packaged snack foods (chips, crackers, cookies)</li>
+                            <li>Fast food and deep-fried foods</li>
+                            <li>Frozen prepared meals</li>
+                            <li>Processed cheese products</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Excess Salt</strong></p>
+                        <ul>
+                            <li>High-sodium condiments (soy sauce, bottled dressings)</li>
+                            <li>Heavily salted processed foods</li>
+                        </ul>
+                        <p style="font-size:0.9em; margin-bottom:10px; margin-top:12px; text-align:left;"><strong>Eating Patterns That Get Displaced</strong></p>
+                        <ul>
+                            <li>Rushed, distracted eating</li>
+                            <li>Large portions of animal protein as the "centre" of every meal</li>
+                            <li>Skipping vegetables in favour of starchy sides</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Practical Tips for Getting Started</h2>
+            <p>The Mediterranean diet is meant to be enjoyable and sustainable — not a source of guilt or restriction. Small, consistent changes are more effective than an all-or-nothing approach.<sup>9,10</sup></p>
+
+            <h3>Week 1–2: Focus on Additions</h3>
+            <ul>
+                <li>Switch to extra virgin olive oil for all cooking and as a salad dressing base</li>
+                <li>Add a serving of vegetables to at least two meals per day</li>
+                <li>Replace one red meat meal with fish or legumes this week</li>
+                <li>Have a small handful of unsalted nuts as a snack instead of packaged snacks</li>
+            </ul>
+
+            <h3>Week 3–4: Build the Pattern</h3>
+            <ul>
+                <li>Make legumes (chickpeas, lentils, beans) a regular part of your weekly meals — aim for three to four servings per week</li>
+                <li>Eat oily fish (salmon, sardines, mackerel) at least twice per week</li>
+                <li>Replace butter or margarine on bread with olive oil, avocado, or hummus</li>
+                <li>Begin cooking with garlic, oregano, and lemon as your primary flavourings rather than salt</li>
+            </ul>
+
+            <h3>Ongoing: The 80% Principle</h3>
+            <ul>
+                <li>Aim to follow Mediterranean principles at <em>most</em> meals, not necessarily all — consistency over time matters more than perfection</li>
+                <li>Use the plate model: half the plate vegetables and legumes, one quarter protein (preferably fish, eggs, or poultry), one quarter whole grains</li>
+                <li>Think of red meat and processed foods as occasional foods, not staples</li>
+            </ul>
+
+            <div class="diagram-container">
+                <div class="diagram-title">The Mediterranean Plate: What a Typical Meal Looks Like</div>
+                <svg width="600" height="340" viewBox="0 0 600 340">
+                    <!-- Plate outer -->
+                    <circle cx="300" cy="175" r="155" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="3"/>
+                    <!-- Plate inner (food area) -->
+                    <circle cx="300" cy="175" r="140" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+
+                    <!-- Section 1: Vegetables & Legumes (50%) - top half + left -->
+                    <path d="M 300 175 L 300 35 A 140 140 0 0 0 160 245 Z" fill="#bbf7d0" stroke="white" stroke-width="2"/>
+                    <!-- small label -->
+                    <text x="235" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">Vegetables</text>
+                    <text x="235" y="136" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">&amp; Legumes</text>
+                    <text x="235" y="152" text-anchor="middle" font-size="11" fill="#047857">½ the plate</text>
+
+                    <!-- Section 2: Protein - fish/eggs/poultry (25%) - right -->
+                    <path d="M 300 175 L 300 35 A 140 140 0 0 1 440 245 Z" fill="#bfdbfe" stroke="white" stroke-width="2"/>
+                    <text x="375" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Fish, Eggs</text>
+                    <text x="375" y="146" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">or Poultry</text>
+                    <text x="375" y="162" text-anchor="middle" font-size="11" fill="#1e3a8a">¼ the plate</text>
+
+                    <!-- Section 3: Whole Grains (25%) - bottom -->
+                    <path d="M 300 175 L 160 245 A 140 140 0 0 0 440 245 Z" fill="#fde68a" stroke="white" stroke-width="2"/>
+                    <text x="300" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">Whole Grains</text>
+                    <text x="300" y="296" text-anchor="middle" font-size="11" fill="#78350f">¼ the plate</text>
+
+                    <!-- Centre dot -->
+                    <circle cx="300" cy="175" r="6" fill="white" stroke="#94a3b8" stroke-width="1.5"/>
+
+                    <!-- Olive oil drizzle outside plate -->
+                    <ellipse cx="102" cy="175" rx="35" ry="35" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="102" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400e">Extra</text>
+                    <text x="102" y="183" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400e">Virgin</text>
+                    <text x="102" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400e">Olive Oil</text>
+                    <line x1="137" y1="175" x2="156" y2="175" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+
+                    <!-- Water glass outside plate -->
+                    <rect x="460" y="148" width="30" height="40" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" rx="3"/>
+                    <rect x="460" y="148" width="30" height="12" fill="#bae6fd" rx="3"/>
+                    <text x="475" y="205" text-anchor="middle" font-size="10" font-weight="bold" fill="#0369a1">Water</text>
+                    <text x="475" y="217" text-anchor="middle" font-size="9" fill="#0369a1">primary</text>
+                    <text x="475" y="228" text-anchor="middle" font-size="9" fill="#0369a1">beverage</text>
+
+                    <!-- Herbs note -->
+                    <text x="300" y="20" text-anchor="middle" font-size="12" fill="#4b5563" font-style="italic">Season generously with herbs, spices, garlic, and lemon</text>
+                </svg>
+                <p style="margin-top:15px; font-size:0.95em; color:#64748b; max-width:560px; margin-left:auto; margin-right:auto;">
+                    A Mediterranean plate prioritizes vegetables and legumes above all else. Protein comes primarily from fish, with whole grains as a side — not the centre — of the meal. Extra virgin olive oil is used freely.
+                </p>
+            </div>
+
+            <h2>What About Cost and Accessibility?</h2>
+            <p>A common concern is that eating this way is expensive. In practice, the Mediterranean diet can be very affordable, particularly when emphasizing legumes and whole grains — among the cheapest and most nutritious foods available.</p>
+            <ul>
+                <li><strong>Canned or dried legumes</strong> (chickpeas, lentils, beans) are inexpensive, shelf-stable, and can anchor multiple meals per week</li>
+                <li><strong>Canned sardines and canned salmon</strong> are highly affordable alternatives to fresh oily fish and retain full nutritional benefits</li>
+                <li><strong>Seasonal and frozen vegetables</strong> are equally nutritious to fresh and significantly cheaper</li>
+                <li><strong>Eggs</strong> are an affordable, versatile, Mediterranean-approved protein source</li>
+                <li>Reducing purchases of processed snack foods, deli meats, and sugary beverages often offsets the cost of higher-quality olive oil and fresh produce</li>
+            </ul>
+
+            <div class="key-point">
+                <h3>Key Takeaways for Your Health</h3>
+                <p>The Mediterranean diet is not a short-term weight loss plan — it is a long-term eating pattern that has been shown to reduce your risk of heart attack, stroke, and death from cardiovascular causes. Its benefits are proven in rigorous clinical trials, it works primarily through reducing inflammation (not just lowering LDL), and it is flexible enough to adapt to Canadian food availability and cultural preferences. You do not need to be perfect — consistent adherence over time is what drives the protective effect.</p>
+            </div>
+
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+
+            <div class="reference-item">1. Estruch R, Ros E, Salas-Salvadó J, et al; PREDIMED Study Investigators. Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. N Engl J Med. 2018;378(25):e34. [Retraction and republication of 2013 original; corrected 2018]</div>
+
+            <div class="reference-item">2. Salas-Salvadó J, Díaz-López A, Ruiz-Canela M, et al; PREDIMED-Plus Investigators. Effect of a lifestyle intervention program with energy-restricted Mediterranean diet and exercise on weight loss and cardiovascular risk factors: one-year results of the PREDIMED-Plus trial. Diabetes Care. 2019;42(5):777-788.</div>
+
+            <div class="reference-item">3. de Lorgeril M, Salen P, Martin JL, Monjaud I, Delaye J, Mamelle N. Mediterranean diet, traditional risk factors, and the rate of cardiovascular complications after myocardial infarction: final report of the Lyon Diet Heart Study. Circulation. 1999;99(6):779-785.</div>
+
+            <div class="reference-item">4. Sofi F, Cesari F, Abbate R, Gensini GF, Casini A. Adherence to Mediterranean diet and health status: meta-analysis. BMJ. 2008;337:a1344.</div>
+
+            <div class="reference-item">5. Rees K, Takeda A, Martin N, et al. Mediterranean-style diet for the primary and secondary prevention of cardiovascular disease. Cochrane Database Syst Rev. 2019;3(3):CD009825.</div>
+
+            <div class="reference-item">6. Schwingshackl L, Hoffmann G. Mediterranean dietary pattern, inflammation and endothelial function: a systematic review and meta-analysis of intervention trials. Nutr Metab Cardiovasc Dis. 2014;24(9):929-939.</div>
+
+            <div class="reference-item">7. Casas R, Sacanella E, Estruch R. The immune protective effect of the Mediterranean diet against chronic low-grade inflammatory diseases. Endocr Metab Immune Disord Drug Targets. 2014;14(4):245-254.</div>
+
+            <div class="reference-item">8. Estruch R, Martínez-González MA, Corella D, et al; PREDIMED Study Investigators. Effects of a Mediterranean-style diet on cardiovascular risk factors: a randomized trial. Ann Intern Med. 2006;145(1):1-11.</div>
+
+            <div class="reference-item">9. Willett WC, Sacks F, Trichopoulou A, et al. Mediterranean diet pyramid: a cultural model for healthy eating. Am J Clin Nutr. 1995;61(6 Suppl):1402S-1406S.</div>
+
+            <div class="reference-item">10. Bach-Faig A, Berry EM, Lairon D, et al; Mediterranean Diet Foundation Expert Group. Mediterranean diet pyramid today. Science and cultural updates. Public Health Nutr. 2011;14(12A):2274-2284.</div>
+
+            <div class="reference-item">11. Martínez-González MA, Gea A, Ruiz-Canela M. The Mediterranean diet and cardiovascular health. Circ Res. 2019;124(5):779-798.</div>
+
+            <div class="reference-item">12. Trichopoulou A, Costacou T, Bamia C, Trichopoulos D. Adherence to a Mediterranean diet and survival in a Greek population. N Engl J Med. 2003;348(26):2599-2608.</div>
+
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace individualized medical advice. Please consult your healthcare provider before making significant changes to your diet, especially if you take medications for diabetes, blood pressure, or cholesterol.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: February 2026</p>
+        </div>
+    </div>
+</body>
+</html>

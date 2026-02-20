@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Portfolio Diet: A Natural Approach to Lowering Cholesterol</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .food-card {
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .food-card.encouraged {
+            background-color: #d1fae5;
+            border: 2px solid #10b981;
+        }
+
+        .food-card.displaced {
+            background-color: #fee2e2;
+            border: 2px solid #ef4444;
+        }
+
+        .food-card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .food-card.encouraged h3 {
+            color: #065f46;
+        }
+
+        .food-card.displaced h3 {
+            color: #991b1b;
+        }
+
+        .food-card ul {
+            margin-left: 20px;
+        }
+
+        .food-card li {
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+            .food-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>The Portfolio Diet</h1>
+            <p>A Natural, Food-Based Approach to Lowering LDL Cholesterol</p>
+        </div>
+
+        <div class="content">
+
+            <div class="key-point">
+                <h3>What You Need to Know</h3>
+                <p>The Portfolio Diet is a well-researched eating pattern designed specifically to lower LDL cholesterol — the type of cholesterol most associated with heart disease risk. Unlike many diets, it was built around a clear scientific goal: combining several natural, cholesterol-lowering foods into one eating plan to get the most benefit possible.</p>
+            </div>
+
+            <h2>Where Did the Portfolio Diet Come From?</h2>
+            <p>The Portfolio Diet was developed in the early 2000s by Dr. David Jenkins, a Canadian researcher at the University of Toronto — the same scientist who created the concept of the glycemic index. He had a simple but clever idea: instead of relying on just one food that lowers cholesterol (like oats), why not combine several proven cholesterol-lowering foods together? The combined effect, he predicted, would be much more powerful — like assembling a portfolio of investments rather than putting everything into one stock. That's how the diet got its name.<sup>1,2</sup></p>
+
+            <p>The diet was designed primarily as a <em>low-fat</em> approach to managing cholesterol — a meaningful alternative for people who prefer to avoid medications like statins, or who want to reduce their dose, or who simply prefer a dietary strategy.<sup>1,2</sup></p>
+
+            <h2>Does It Work?</h2>
+            <p>Yes — for its primary goal of lowering LDL cholesterol, the Portfolio Diet works well. Studies have shown it can reduce LDL cholesterol by roughly 15 to 30%, which is comparable to a low dose of a statin medication. That's a meaningful result from food alone.<sup>3,4</sup></p>
+
+            <div class="success-box">
+                <h3>The Results Are Real</h3>
+                <p>In clinical studies, people following the Portfolio Diet consistently reduced their LDL cholesterol by 15–30%. Some studies have also shown improvements in blood pressure and inflammation markers — both important for heart health.<sup>3,4,5</sup></p>
+            </div>
+
+            <h2>An Important Nuance: LDL and Heart Disease Risk</h2>
+            <p>Here's where we need to have an honest conversation. The Portfolio Diet was designed to lower LDL cholesterol, and the assumption has been that lowering LDL will meaningfully reduce heart attack risk. For many people, this is true. But the relationship between LDL cholesterol and actual heart disease is more complicated than it might seem.</p>
+
+            <p>Modern technology — specifically a test called a <strong>coronary artery calcium (CAC) scan</strong> — has revealed something surprising. Some people carry high LDL cholesterol levels their entire lives and never develop meaningful cholesterol buildup in their arteries. Their arteries remain clean. On the other hand, some people with normal or even low LDL levels do develop blockages. This tells us that LDL is an important risk factor, but it is not the whole story.<sup>6,7</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Who Benefits Most From LDL Lowering?</div>
+                <svg width="750" height="320" viewBox="0 0 750 320">
+
+                    <!-- Left person: high LDL, no buildup -->
+                    <text x="185" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">High LDL — Clean Arteries</text>
+
+                    <!-- Artery cross section - clean -->
+                    <circle cx="185" cy="130" r="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+                    <circle cx="185" cy="130" r="58" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+                    <!-- Open lumen -->
+                    <circle cx="185" cy="130" r="42" fill="#fca5a5" opacity="0.5"/>
+                    <text x="185" y="125" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="bold">Open</text>
+                    <text x="185" y="141" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="bold">Lumen</text>
+
+                    <!-- Labels -->
+                    <text x="185" y="240" text-anchor="middle" font-size="13" fill="#1e40af">LDL: High</text>
+                    <text x="185" y="258" text-anchor="middle" font-size="13" fill="#065f46">CAC Score: 0 (Normal)</text>
+                    <text x="185" y="278" text-anchor="middle" font-size="12" fill="#374151">No plaque in arteries</text>
+                    <text x="185" y="296" text-anchor="middle" font-size="12" fill="#374151">despite high LDL</text>
+
+                    <!-- Dividing line -->
+                    <line x1="375" y1="20" x2="375" y2="310" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8,4"/>
+                    <text x="375" y="310" text-anchor="middle" font-size="12" fill="#94a3b8">vs.</text>
+
+                    <!-- Right person: high LDL, buildup present -->
+                    <text x="565" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">High LDL — Plaque Present</text>
+
+                    <!-- Artery cross section - with plaque -->
+                    <circle cx="565" cy="130" r="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+                    <circle cx="565" cy="130" r="58" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+
+                    <!-- Plaque deposits -->
+                    <ellipse cx="540" cy="105" rx="22" ry="14" fill="#92400e" opacity="0.8"/>
+                    <ellipse cx="590" cy="155" rx="20" ry="13" fill="#92400e" opacity="0.8"/>
+                    <ellipse cx="548" cy="152" rx="16" ry="10" fill="#78350f" opacity="0.75"/>
+
+                    <!-- Narrowed lumen -->
+                    <ellipse cx="572" cy="122" rx="22" ry="18" fill="#fca5a5" opacity="0.6"/>
+                    <text x="572" y="120" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">Narrowed</text>
+                    <text x="572" y="133" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">Lumen</text>
+
+                    <!-- Labels -->
+                    <text x="565" y="240" text-anchor="middle" font-size="13" fill="#1e40af">LDL: High</text>
+                    <text x="565" y="258" text-anchor="middle" font-size="13" fill="#dc2626">CAC Score: Elevated</text>
+                    <text x="565" y="278" text-anchor="middle" font-size="12" fill="#374151">Plaque has built up</text>
+                    <text x="565" y="296" text-anchor="middle" font-size="12" fill="#374151">in artery walls</text>
+
+                </svg>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Two people can have the same high LDL cholesterol level with very different outcomes. A coronary artery calcium (CAC) scan can reveal whether LDL is actually causing plaque buildup — helping identify who will benefit most from aggressive cholesterol lowering.
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h3>What About Clinical Trial Evidence?</h3>
+                <p>It's worth being transparent about something: we have strong long-term clinical trial data showing that the <strong>Mediterranean diet</strong> reduces heart attacks and strokes. With the Portfolio Diet, we have excellent evidence that it lowers LDL cholesterol, but we don't yet have the same type of large, long-term trials showing that it directly prevents heart attacks. This isn't a flaw of the diet — running those trials is enormously expensive and requires years of follow-up, and funding for dietary research is limited. The assumption that lower LDL leads to fewer heart attacks is reasonable and supported by broader evidence, but it's honest to acknowledge the distinction.<sup>8,9</sup></p>
+            </div>
+
+            <h2>Who Is the Portfolio Diet Best Suited For?</h2>
+            <p>The Portfolio Diet is an excellent choice for people who:</p>
+            <ul>
+                <li>Prefer a <strong>low-fat dietary approach</strong> to managing cholesterol</li>
+                <li>Want to reduce or avoid cholesterol-lowering medication</li>
+                <li>Have elevated LDL cholesterol and have decided — with their doctor — that lowering it is a priority</li>
+                <li>Already have evidence of cholesterol buildup in their arteries (such as a positive CAC scan)</li>
+                <li>Enjoy plant-based foods and don't mind structured eating</li>
+            </ul>
+
+            <p>For people who genuinely have high LDL and clear evidence that it is contributing to artery disease, this diet offers a powerful, medication-free strategy to fight back.</p>
+
+            <h2>The Four Pillars of the Portfolio Diet</h2>
+            <p>The Portfolio Diet is built around four core food groups, each of which has its own independent cholesterol-lowering effect. Together, they add up to something greater than the sum of their parts.<sup>1,2,3</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">The Four Food Pillars of the Portfolio Diet</div>
+                <svg width="720" height="360" viewBox="0 0 720 360">
+
+                    <!-- Central label -->
+                    <circle cx="360" cy="180" r="65" fill="#1e3a8a"/>
+                    <text x="360" y="172" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Portfolio</text>
+                    <text x="360" y="191" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Diet</text>
+
+                    <!-- Top: Soluble Fibre -->
+                    <rect x="255" y="20" width="210" height="80" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="10"/>
+                    <text x="360" y="48" text-anchor="middle" font-size="15" font-weight="bold" fill="#065f46">Soluble Fibre</text>
+                    <text x="360" y="66" text-anchor="middle" font-size="12" fill="#374151">Oats, barley, psyllium,</text>
+                    <text x="360" y="82" text-anchor="middle" font-size="12" fill="#374151">beans, lentils, apples</text>
+
+                    <!-- Arrow top to center -->
+                    <path d="M 360 100 L 360 115" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowG)"/>
+
+                    <!-- Right: Plant Sterols -->
+                    <rect x="530" y="130" width="175" height="80" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="10"/>
+                    <text x="617" y="158" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">Plant Sterols</text>
+                    <text x="617" y="176" text-anchor="middle" font-size="12" fill="#374151">Fortified foods,</text>
+                    <text x="617" y="192" text-anchor="middle" font-size="12" fill="#374151">some margarines</text>
+
+                    <!-- Arrow right to center -->
+                    <path d="M 530 170 L 425 170" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowB)"/>
+
+                    <!-- Bottom: Nuts -->
+                    <rect x="255" y="265" width="210" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="10"/>
+                    <text x="360" y="293" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">Nuts</text>
+                    <text x="360" y="311" text-anchor="middle" font-size="12" fill="#374151">Almonds, walnuts,</text>
+                    <text x="360" y="327" text-anchor="middle" font-size="12" fill="#374151">cashews, pistachios</text>
+
+                    <!-- Arrow bottom to center -->
+                    <path d="M 360 265 L 360 245" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowY)"/>
+
+                    <!-- Left: Soy Protein -->
+                    <rect x="15" y="130" width="175" height="80" fill="#fce7f3" stroke="#ec4899" stroke-width="2" rx="10"/>
+                    <text x="102" y="158" text-anchor="middle" font-size="15" font-weight="bold" fill="#9d174d">Soy Protein</text>
+                    <text x="102" y="176" text-anchor="middle" font-size="12" fill="#374151">Tofu, edamame,</text>
+                    <text x="102" y="192" text-anchor="middle" font-size="12" fill="#374151">soy milk, tempeh</text>
+
+                    <!-- Arrow left to center -->
+                    <path d="M 190 170 L 295 170" stroke="#ec4899" stroke-width="2" fill="none" marker-end="url(#arrowP)"/>
+
+                    <!-- Arrow defs -->
+                    <defs>
+                        <marker id="arrowG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+                        </marker>
+                        <marker id="arrowB" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+                        </marker>
+                        <marker id="arrowY" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+                        </marker>
+                        <marker id="arrowP" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#ec4899"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #64748b; max-width: 680px; margin-left: auto; margin-right: auto;">
+                    Each pillar lowers LDL cholesterol through a different mechanism. Combining all four creates a cumulative effect significantly greater than any single food alone.
+                </p>
+            </div>
+
+            <h3>1. Soluble Fibre</h3>
+            <p>Soluble fibre is a type of fibre that dissolves in water and forms a thick gel in your digestive system. This gel traps cholesterol-rich bile acids and carries them out of your body before they can be reabsorbed. Your liver then has to pull cholesterol out of your blood to make new bile acids — lowering your LDL levels as a result.<sup>2,3</sup></p>
+            <p>Best sources: oats and oat bran, barley, psyllium husk, beans and lentils, apples, and pears. Aim for at least 10 grams of soluble fibre per day.</p>
+
+            <h3>2. Plant Sterols and Stanols</h3>
+            <p>Plant sterols are naturally occurring compounds found in plants that look very similar to cholesterol in structure. When you eat them, they compete with cholesterol for absorption in your intestine — and win. Less cholesterol gets absorbed, so blood LDL levels drop.<sup>2,3</sup></p>
+            <p>Best sources: plant sterol-enriched margarines (such as Becel Pro-activ), some fortified orange juices and yogurts. Naturally occurring in smaller amounts in nuts, seeds, and vegetable oils. The target is about 2 grams per day.</p>
+
+            <h3>3. Nuts</h3>
+            <p>A small daily handful of nuts — particularly almonds and walnuts — consistently lowers LDL cholesterol in studies. Nuts are rich in healthy unsaturated fats, fibre, and plant sterols, all of which contribute to this effect. Despite being calorie-dense, studies have not shown that regular nut eating leads to weight gain when replacing other snacks.<sup>2,3,4</sup></p>
+            <p>Best sources: almonds, walnuts, pistachios, cashews, pecans, hazelnuts. About a small handful (roughly 30 grams) per day is the target.</p>
+
+            <h3>4. Soy Protein</h3>
+            <p>Replacing animal protein with soy-based protein modestly lowers LDL cholesterol, likely through effects on how the liver processes cholesterol and the types of fats accompanying soy foods.<sup>2,3</sup></p>
+            <p>Best sources: tofu, edamame (young soybeans), soy milk, tempeh, and soy-based meat alternatives. About 25 grams of soy protein per day is the target — roughly two to three servings.</p>
+
+            <h2>What Foods Does the Portfolio Diet Encourage and Displace?</h2>
+            <p>The Portfolio Diet doesn't just add certain foods — it also naturally crowds out foods that tend to raise LDL cholesterol. Here's a practical breakdown:</p>
+
+            <div class="food-grid">
+                <div class="food-card encouraged">
+                    <h3>✓ Foods to Embrace</h3>
+                    <ul>
+                        <li>Oats and oat bran (porridge, overnight oats)</li>
+                        <li>Barley (in soups, as a grain side dish)</li>
+                        <li>Beans and lentils (any variety)</li>
+                        <li>Psyllium husk (added to smoothies or water)</li>
+                        <li>Apples, pears, and berries</li>
+                        <li>Almonds, walnuts, pistachios</li>
+                        <li>Tofu, edamame, tempeh</li>
+                        <li>Soy milk and soy yogurt</li>
+                        <li>Sterol-enriched margarine (e.g., Becel Pro-activ)</li>
+                        <li>Olive oil (as primary cooking fat)</li>
+                        <li>Avocados</li>
+                        <li>Vegetables — all types, generously</li>
+                        <li>Whole grains (whole wheat, rye bread)</li>
+                    </ul>
+                </div>
+                <div class="food-card displaced">
+                    <h3>✗ Foods Naturally Crowded Out</h3>
+                    <ul>
+                        <li>Red and processed meats (beef, pork, deli meats)</li>
+                        <li>Full-fat dairy (butter, hard cheeses, cream)</li>
+                        <li>Tropical oils (coconut oil, palm oil)</li>
+                        <li>Pastries, cakes, and commercially baked goods</li>
+                        <li>White bread and refined grains</li>
+                        <li>Fried foods</li>
+                        <li>Eggs in large quantities (modest amounts are fine)</li>
+                        <li>Lard and animal-based cooking fats</li>
+                        <li>High-fat snack foods and chips</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-point">
+                <h3>The Displacement Effect</h3>
+                <p>One of the most underappreciated aspects of the Portfolio Diet is that the benefit comes not just from what you add, but from what naturally gets replaced. When your plate is full of beans, vegetables, tofu, oats, and nuts, there simply isn't as much room — or appetite — for the saturated-fat-heavy foods that tend to push LDL cholesterol upward.</p>
+            </div>
+
+            <h2>How Does It Compare to the Mediterranean Diet?</h2>
+            <p>The Mediterranean diet and the Portfolio Diet share a great deal of common ground — both emphasize vegetables, fruits, legumes, nuts, and olive oil. However, the Mediterranean diet also includes moderate amounts of fish, poultry, eggs, and even a little red meat and dairy, making it somewhat more flexible and easier to maintain long-term for many people.</p>
+
+            <p>The key distinction is in the evidence base. The Mediterranean diet has been tested in large, long-term clinical trials that directly measured heart attacks and deaths — and it performed well.<sup>8,9</sup> The Portfolio Diet has excellent evidence for lowering LDL cholesterol, but the larger trials linking it directly to reduced heart attacks have not yet been completed. This doesn't make the Portfolio Diet inferior — it simply reflects the realities of research funding and trial complexity.</p>
+
+            <p>For someone who prefers a lower-fat eating style, dislikes fish, or has philosophical or cultural reasons to prefer plant-forward eating, the Portfolio Diet is an excellent and evidence-informed choice.</p>
+
+            <h2>Is the Portfolio Diet Practical Day-to-Day?</h2>
+            <p>The Portfolio Diet does require some planning, and it's honest to say that following it fully takes commitment. The greatest challenge most people face is incorporating enough soy protein and plant sterols consistently. Here are some practical strategies:</p>
+
+            <ul>
+                <li><strong>Breakfast:</strong> Oatmeal with a small handful of walnuts and berries, made with soy milk, and served with sterol-enriched margarine on whole grain toast</li>
+                <li><strong>Lunch:</strong> A large salad with chickpeas or lentils, avocado, and an olive oil dressing; a piece of fruit</li>
+                <li><strong>Snack:</strong> A small handful of almonds</li>
+                <li><strong>Dinner:</strong> Tofu stir-fry with vegetables and barley, or a bean-based soup or chili</li>
+            </ul>
+
+            <p>You don't need to follow all four pillars perfectly every day. Research shows that even partial adherence brings meaningful benefit — but the closer you get to the full plan, the better the results.<sup>4,5</sup></p>
+
+            <div class="success-box">
+                <h3>A Realistic Expectation</h3>
+                <p>Most people who follow the Portfolio Diet carefully can expect their LDL cholesterol to drop by 15 to 30% within 4 to 12 weeks. This is a significant improvement achievable through food alone — and for many patients, it is enough to avoid or reduce cholesterol medication. Results are best when all four food groups are included regularly.<sup>3,4,5</sup></p>
+            </div>
+
+            <h2>The Bottom Line</h2>
+            <p>The Portfolio Diet is a scientifically grounded, plant-forward eating plan designed with one primary goal: lowering LDL cholesterol through food. It works — and works well. For people who prefer a low-fat approach to heart health, it is among the best dietary options available.</p>
+
+            <p>A few things to keep in mind as you consider this approach. LDL cholesterol is an important risk factor for heart disease, but it is not the only one, and not everyone with high LDL is at the same level of risk. A coronary artery calcium scan can provide valuable information about whether LDL is actually contributing to artery disease in your particular case, and that can help guide how aggressively to pursue any cholesterol-lowering strategy. The Portfolio Diet doesn't yet have the same long-term trial data as the Mediterranean diet, but the cholesterol-lowering evidence is strong and the foods it emphasizes are unambiguously good for you.</p>
+
+            <p>If you enjoy plant-based foods and are motivated to use diet as a tool for heart health, the Portfolio Diet offers a clear, practical, and effective road map.</p>
+
+            <div class="key-point">
+                <h3>Working With Your Healthcare Team</h3>
+                <p>If you are currently taking cholesterol-lowering medication, speak with your doctor before making major dietary changes. A successful Portfolio Diet may lower your LDL enough that your medication dose can be reduced — but this should always be done in partnership with your healthcare provider, not on your own.</p>
+            </div>
+
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+
+            <div class="reference-item">1. Jenkins DJ, Kendall CW, Marchie A, et al. Effects of a dietary portfolio of cholesterol-lowering foods vs lovastatin on serum lipids and C-reactive protein. JAMA. 2003;290(4):502-510.</div>
+
+            <div class="reference-item">2. Jenkins DJ, Jones PJ, Lamarche B, et al. Effect of a dietary portfolio of cholesterol-lowering foods given at 2 levels of intensity of dietary advice on serum lipids in hyperlipidemia: a randomized controlled trial. JAMA. 2011;306(8):831-839.</div>
+
+            <div class="reference-item">3. Chiavaroli L, Nishi SK, Khan TA, et al. Portfolio dietary pattern and cardiovascular disease: a systematic review and meta-analysis of controlled trials. Prog Cardiovasc Dis. 2018;61(1):43-53.</div>
+
+            <div class="reference-item">4. Jenkins DJ, Kendall CW, Faulkner DA, et al. Long-term effects of a plant-based dietary portfolio of cholesterol-lowering foods on blood pressure. Eur J Clin Nutr. 2008;62(6):781-788.</div>
+
+            <div class="reference-item">5. Rees K, Takeda A, Martin N, et al. Mediterranean-style diet for the primary and secondary prevention of cardiovascular disease. Cochrane Database Syst Rev. 2019;3:CD009825.</div>
+
+            <div class="reference-item">6. Blaha MJ, Cainzos-Achirica M, Greenland P, et al. Role of coronary artery calcium score of zero and other negative risk markers for cardiovascular disease: the Multi-Ethnic Study of Atherosclerosis (MESA). Circulation. 2016;133(9):849-858.</div>
+
+            <div class="reference-item">7. Nasir K, Bittencourt MS, Blaha MJ, et al. Implications of coronary artery calcium testing among statin candidates according to American College of Cardiology/American Heart Association cholesterol management guidelines. J Am Coll Cardiol. 2015;66(15):1657-1668.</div>
+
+            <div class="reference-item">8. Estruch R, Ros E, Salas-Salvadó J, et al. Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. N Engl J Med. 2018;378(25):e34.</div>
+
+            <div class="reference-item">9. Sofi F, Abbate R, Gensini GF, Casini A. Accruing evidence on benefits of adherence to the Mediterranean diet on health: an updated systematic review and meta-analysis. Am J Clin Nutr. 2010;92(5):1189-1196.</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always consult with your healthcare provider before making changes to your diet or treatment plan.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: February 2026</p>
+        </div>
+    </div>
+</body>
+</html>
