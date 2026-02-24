@@ -7,7 +7,25 @@
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
         h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .menu-container { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+        
+        /* New styling for the search bar */
+        #searchInput {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 1rem;
+            border: 1px solid #d1d8e0;
+            border-radius: 8px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+        #searchInput:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .menu-container { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
         .menu-button { 
             display: block; background-color: #ffffff; color: #2980b9; padding: 20px; 
             text-decoration: none; border-radius: 8px; border: 1px solid #d1d8e0;
@@ -23,29 +41,52 @@
     <h1>Patient Resources</h1>
     <p style="text-align: center;">Select a resource below to view on your device.</p>
 
-    <div class="menu-container">
-        <a href="insulin_resistance_handout.html" class="menu-button">Insulin Resistance Guide</a>
+    <input type="text" id="searchInput" onkeyup="filterHandouts()" placeholder="Search for a topic (e.g., Diet, Back Pain)...">
+
+    <div class="menu-container" id="handoutList">
         <a href="accutane_patient_handout.html" class="menu-button">Acne: Accutane: Guide to starting Accutane for Male Patients</a>
-        <a href="inulin_patient_handout.html" class="menu-button">Inulin: Fiber: The Fiber that Provides Protection against Fructose</a>
-        <a href="sick_day_rules.html" class="menu-button">Diabetes: Sick Day Rules for Diabetics: When to Hold your Medication</a>
-        <a href="starting_low_carb_diet.html" class="menu-button">Diet: Low Carbohydrate Diet: The Why and the How. A Comprehensive Overview.</a>
-        <a href="low_carb_heart_disease_handout.html" class="menu-button">Diet: Low Carbohydrate Diet: Does it Lower or Increase my Risk of Heart Disease? A Detailed Analysis.</a>
+        <a href="acne_handout.html" class="menu-button">Acne: Starting Treatment for Acne</a>
         <a href="wellness_visit_handout.html" class="menu-button">Annual Physical: Do I Need an Annual Physical?</a>
         <a href="acute_lower_back_pain_handout (1).html" class="menu-button">Back Pain: Understanding Acute Back Pain</a>
         <a href="chronic_back_pain_handout (2).html" class="menu-button">Back Pain: Understanding Chronic Back Pain</a>
-        <a href="sleep_disturbance_elderly.html" class="menu-button">Sleep: Understanding Sleep Disturbance When You Are Over 60</a>
-        <a href="acne_handout.html" class="menu-button">Acne: Starting Treatment for Acne</a>
-        <a href="ezetimibe_handout.html" class="menu-button">Medication for cholsterol: Understanding Ezetimibe</a>
-        <a href="portfolio_diet_handout.html" class="menu-button">Diet: Portfolio Diet. The Best Way To Lower LDL-C</a>
+        <a href="sick_day_rules.html" class="menu-button">Diabetes: Sick Day Rules for Diabetics: When to Hold your Medication</a>
+        <a href="low_carb_heart_disease_handout.html" class="menu-button">Diet: Low Carbohydrate Diet: Does it Lower or Increase my Risk of Heart Disease? A Detailed Analysis.</a>
+        <a href="starting_low_carb_diet.html" class="menu-button">Diet: Low Carbohydrate Diet: The Why and the How. A Comprehensive Overview.</a>
         <a href="mediterranean_diet_handout.html" class="menu-button">Diet: Mediterranean Diet. The Best Way To Reduce Heart Disease.</a>
-        <a href="molluscum_contagiosum_handout (3).html" class="menu-button">Molluscum: Understanding Molluscum Contagiosum</a>
+        <a href="portfolio_diet_handout.html" class="menu-button">Diet: Portfolio Diet. The Best Way To Lower LDL-C</a>
         <a href="fatigue_older_adults_handout.html" class="menu-button">Fatigue: Understand Fatigue in the "Young Elderly"</a>
-        fatigue_older_adults_handout.html
-        </div>
+        <a href="insulin_resistance_handout.html" class="menu-button">Insulin Resistance Guide</a>
+        <a href="inulin_patient_handout.html" class="menu-button">Inulin: Fiber: The Fiber that Provides Protection against Fructose</a>
+        <a href="ezetimibe_handout.html" class="menu-button">Medication for cholsterol: Understanding Ezetimibe</a>
+        <a href="molluscum_contagiosum_handout (3).html" class="menu-button">Molluscum: Understanding Molluscum Contagiosum</a>
+        <a href="sleep_disturbance_elderly.html" class="menu-button">Sleep: Understanding Sleep Disturbance When You Are Over 60</a>
+    </div>
 
     <div class="footer">
         <p>Provided for educational purposes by your care team.</p>
     </div>
+
+    <script>
+        function filterHandouts() {
+            // Get the user's search input
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            
+            // Get the list of handouts
+            let container = document.getElementById('handoutList');
+            let buttons = container.getElementsByTagName('a');
+
+            // Loop through all buttons, and hide those who don't match the search query
+            for (let i = 0; i < buttons.length; i++) {
+                let txtValue = buttons[i].textContent || buttons[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    buttons[i].style.display = ""; // Show matching items
+                } else {
+                    buttons[i].style.display = "none"; // Hide non-matching items
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
