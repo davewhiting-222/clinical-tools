@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efudex (Fluorouracil) Cream for Actinic Keratosis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .danger-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .danger-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.95em;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1.05em;
+        }
+
+        .step-content p, .step-content ul {
+            margin-bottom: 0;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 0; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.5em; }
+            .content { padding: 24px 20px; }
+            h2 { font-size: 1.4em; }
+            p { text-align: left; }
+            .references { padding: 20px; border-radius: 0; margin-top: 20px; }
+            .footer { padding: 20px; }
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Efudex (Fluorouracil) Cream</h1>
+            <p>A Patient Guide to Treating Actinic Keratosis on the Scalp</p>
+        </div>
+
+        <div class="content">
+
+            <div class="key-point">
+                <h3>What Is Efudex and Why Is It Prescribed?</h3>
+                <p>Efudex (fluorouracil 5%) is a topical prescription cream used to treat <strong>actinic keratoses (AKs)</strong> — rough, scaly, pre-cancerous skin spots caused by years of sun exposure. Efudex works by targeting and destroying abnormal, sun-damaged skin cells that have accumulated DNA damage but have not yet become cancerous. Treating AKs prevents them from progressing to squamous cell carcinoma, a type of skin cancer.</p>
+                <p style="margin-bottom:0;">Because Efudex treats the <em>entire field</em> of sun-damaged skin — not just the spots you can see — it is particularly effective for areas like the scalp, where extensive damage often exists beneath the surface.</p>
+            </div>
+
+            <h2>Treatment Schedule</h2>
+            <p>Your treatment plan has been tailored to you, but the following general guidelines apply for scalp treatment:<sup>1,2</sup></p>
+            <ul>
+                <li><strong>Frequency:</strong> Apply Efudex cream <strong>twice daily</strong> (morning and evening), unless your doctor has given you different instructions.</li>
+                <li><strong>Duration:</strong> Treatment of the scalp typically lasts <strong>2 to 4 weeks</strong>, or until the treated area has developed an intense inflammatory reaction (significant redness, crusting, and raw skin).</li>
+                <li><strong>Do not stop too early:</strong> The full inflammatory reaction must be achieved for treatment to be effective. Stopping before this point greatly reduces the benefit. Follow your doctor's specific guidance on when to stop.</li>
+                <li><strong>Treat one area at a time:</strong> Do not treat a larger area than directed, and do not treat more than one body area simultaneously, as this can cause excessive systemic absorption.</li>
+            </ul>
+
+            <!-- Timeline diagram -->
+            <div class="diagram-container">
+                <div class="diagram-title">Typical Treatment Timeline: What to Expect Week by Week</div>
+                <svg width="760" height="200" viewBox="0 0 760 200">
+                    <!-- Timeline bar -->
+                    <line x1="40" y1="90" x2="720" y2="90" stroke="#cbd5e1" stroke-width="4"/>
+
+                    <!-- Week markers -->
+                    <!-- Week 1 -->
+                    <circle cx="100" cy="90" r="18" fill="#94a3b8"/>
+                    <text x="100" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="white">1</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="12" fill="#475569" font-weight="bold">Week 1</text>
+                    <text x="100" y="142" text-anchor="middle" font-size="11" fill="#64748b">Little to no</text>
+                    <text x="100" y="157" text-anchor="middle" font-size="11" fill="#64748b">reaction</text>
+
+                    <!-- Week 2 -->
+                    <circle cx="280" cy="90" r="18" fill="#f59e0b"/>
+                    <text x="280" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="white">2</text>
+                    <text x="280" y="125" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">Week 2–3</text>
+                    <text x="280" y="142" text-anchor="middle" font-size="11" fill="#92400e">Redness, tenderness,</text>
+                    <text x="280" y="157" text-anchor="middle" font-size="11" fill="#92400e">scaling begins</text>
+
+                    <!-- Week 3-4 -->
+                    <circle cx="480" cy="90" r="18" fill="#dc2626"/>
+                    <text x="480" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="white">3</text>
+                    <text x="480" y="125" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="bold">Week 3–4</text>
+                    <text x="480" y="142" text-anchor="middle" font-size="11" fill="#991b1b">Intense reaction: burning,</text>
+                    <text x="480" y="157" text-anchor="middle" font-size="11" fill="#991b1b">crusting, erosions</text>
+                    <text x="480" y="172" text-anchor="middle" font-size="11" fill="#991b1b" font-style="italic">→ Stop as directed</text>
+
+                    <!-- Healing -->
+                    <circle cx="660" cy="90" r="18" fill="#10b981"/>
+                    <text x="660" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="white">✓</text>
+                    <text x="660" y="125" text-anchor="middle" font-size="12" fill="#065f46" font-weight="bold">Healing Phase</text>
+                    <text x="660" y="142" text-anchor="middle" font-size="11" fill="#065f46">Inflammation subsides</text>
+                    <text x="660" y="157" text-anchor="middle" font-size="11" fill="#065f46">over 4–8 weeks</text>
+
+                    <!-- Connecting arcs -->
+                    <path d="M 118 90 L 262 90" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrowOrange)"/>
+                    <path d="M 298 90 L 462 90" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+                    <path d="M 498 90 L 642 90" stroke="#10b981" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+
+                    <!-- "Treatment" label top -->
+                    <rect x="80" y="40" width="420" height="28" fill="#dbeafe" rx="6"/>
+                    <text x="290" y="59" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">← Active Treatment Period →</text>
+
+                    <defs>
+                        <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L7,3 z" fill="#f59e0b"/>
+                        </marker>
+                        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L7,3 z" fill="#dc2626"/>
+                        </marker>
+                        <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L7,3 z" fill="#10b981"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    The intense reaction in weeks 3–4 is the goal of treatment — it confirms that Efudex has reached and destroyed the abnormal cells. <strong>If you do not develop a significant reaction, the treatment may not have worked.</strong> Complete healing typically takes 4–8 weeks after stopping the cream, though some redness may linger for several months.
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h3>The Reaction Means It's Working</h3>
+                <p style="margin-bottom:0;">The redness, crusting, burning, and rawness you experience during treatment are expected and desirable — they are evidence that Efudex is destroying abnormal cells as intended. <strong>Do not stop treatment early</strong> because of this reaction unless you are experiencing a complication (see the "When to Stop and Call Your Doctor" section below).</p>
+            </div>
+
+            <h2>Step-by-Step Application Instructions</h2>
+            <p>Follow these steps carefully each time you apply Efudex to get the best results and minimize side effects:<sup>1,2</sup></p>
+
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-content">
+                    <strong>Cleanse the Area</strong>
+                    Gently wash the entire treatment area on the scalp with a mild, non-irritating soap (such as Dove Sensitive, Cetaphil Cleansing Bar, or Aveeno Moisturizing Bar) and lukewarm water. Pat the area completely dry with a clean towel. <strong>Wait 10 to 15 minutes</strong> to ensure the skin is fully dry before applying the cream — applying to damp skin increases absorption and may worsen irritation.
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-content">
+                    <strong>Protect Your Hands</strong>
+                    Wear a disposable glove or use a non-metal applicator to apply the cream. Fluorouracil is a chemotherapy agent and should not be absorbed through your fingertips unnecessarily. If you use bare fingers, <strong>wash your hands thoroughly with soap and water immediately afterward.</strong>
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-content">
+                    <strong>Apply a Thin Layer to the Entire Treatment Area</strong>
+                    Apply a thin, even layer of Efudex cream to the <em>entire area</em> your doctor designated — not just the visible rough spots. Sun-damaged cells invisible to the naked eye are also present in surrounding skin, and treating the full field is one of the main advantages of this approach.
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-number">4</span>
+                <div class="step-content">
+                    <strong>After Application</strong>
+                    <ul style="margin-top: 8px;">
+                        <li>Do <strong>not</strong> cover the treated area with a bandage or occlusive dressing unless specifically directed — this significantly increases absorption and irritation.</li>
+                        <li>Avoid applying the cream near your eyes, eyelids, or nostrils. If accidental contact occurs, rinse thoroughly with plenty of water and call your doctor.</li>
+                        <li>Wait at least <strong>1.5 hours before lying down for bed</strong> to allow the cream to absorb fully and prevent it from wiping off onto your pillow.</li>
+                        <li>Keep the treated area away from children and pets.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Sun Protection During and After Treatment</h2>
+            <p>Sun protection is not optional during Efudex treatment — it is a core part of the treatment plan.<sup>2,3</sup></p>
+
+            <div class="danger-box">
+                <h3>Critical: Avoid Sun Exposure</h3>
+                <p>Efudex makes your skin <strong>extremely sensitive to ultraviolet (UV) radiation</strong>. Sun exposure during treatment can cause severe burns, worsen the reaction unpredictably, and reduce treatment effectiveness. Take the following precautions during treatment and for several weeks afterward:<sup>1,2,3</sup></p>
+                <ul style="margin-bottom:0;">
+                    <li><strong>Avoid direct sun exposure</strong> during treatment, and limit exposure for at least 4–6 weeks afterward.</li>
+                    <li>Wear a <strong>wide-brimmed hat</strong> whenever you go outdoors — this is the single most effective protection for the scalp.</li>
+                    <li>Apply a <strong>zinc oxide or titanium dioxide-based sunscreen (SPF 30 or higher)</strong> to any treated area that cannot be fully covered by clothing or a hat.</li>
+                    <li>Avoid sunbeds and UV tanning devices entirely during this period.</li>
+                </ul>
+            </div>
+
+            <h2>Managing Discomfort During Treatment</h2>
+            <p>Some degree of discomfort — burning, itching, tenderness, and rawness — is expected and is not a reason to stop treatment. The following measures can help make the experience more manageable:<sup>1,2</sup></p>
+
+            <h3>Petroleum Jelly (Vaseline)</h3>
+            <p>Plain, additive-free petroleum jelly (Vaseline) can be applied to the treated area every 1–2 hours as needed, <strong>after the Efudex application has dried</strong>. It provides a protective barrier, reduces dryness and cracking, and significantly reduces discomfort without interfering with the medication.</p>
+
+            <h3>Topical Steroid Cream (If Prescribed)</h3>
+            <p>Your doctor may prescribe a mild topical steroid (such as hydrocortisone 1% cream) to use either during treatment or after you stop the Efudex to speed healing and reduce inflammation. If prescribed, apply it <strong>30 minutes after</strong> the Efudex application — not at the same time. Do not use a steroid cream on the treated area unless your doctor has specifically recommended it.</p>
+
+            <h3>General Comfort Measures</h3>
+            <ul>
+                <li>Sleep with a clean pillowcase and avoid lying directly on the treated scalp during the peak reaction phase.</li>
+                <li>Avoid scratching or picking at crusts — doing so increases infection risk and may cause scarring.</li>
+                <li>Avoid hot showers or heat exposure to the treated area during treatment.</li>
+                <li>Stay well hydrated.</li>
+            </ul>
+
+            <div class="success-box">
+                <h3>Why This Temporary Discomfort Is Worth It</h3>
+                <p style="margin-bottom:0;">Actinic keratoses carry a meaningful risk of progressing to squamous cell carcinoma over time, particularly with continued sun exposure. A single course of Efudex — despite being uncomfortable — can destroy a large number of these pre-cancerous lesions at once, including ones invisible to the naked eye, significantly reducing your future cancer risk. Most patients find the treatment worthwhile in retrospect.</p>
+            </div>
+
+            <h2>When to Stop and Contact Your Doctor</h2>
+            <p>While the inflammatory reaction is expected and necessary, there are certain warning signs that warrant stopping treatment and contacting your healthcare provider:<sup>1,2</sup></p>
+
+            <div class="warning-box">
+                <h3>Signs of Possible Infection — Contact Your Doctor</h3>
+                <p style="margin-bottom:0;">Contact your doctor promptly if you notice any of the following, as these may indicate a secondary bacterial infection:</p>
+                <ul style="margin-bottom:0; margin-top: 8px;">
+                    <li>Severe swelling or increasing pain beyond what is expected</li>
+                    <li>Foul-smelling or milky/cloudy drainage</li>
+                    <li>Pus formation</li>
+                    <li>Fever or chills</li>
+                </ul>
+            </div>
+
+            <div class="danger-box">
+                <h3>Stop Treatment Immediately and Seek Urgent Care</h3>
+                <p>Stop applying Efudex and contact your doctor or seek emergency care right away if you develop any of the following. These are rare but serious side effects that can occur if fluorouracil is absorbed systemically:<sup>1,4</sup></p>
+                <ul style="margin-bottom:0;">
+                    <li><strong>Severe abdominal problems:</strong> significant abdominal pain or cramping, bloody diarrhea, or vomiting</li>
+                    <li><strong>Mouth or tongue swelling and soreness</strong> (oral mucositis)</li>
+                    <li><strong>Deep, bleeding ulcers</strong> in the treated area that go beyond expected crusting and erosion</li>
+                    <li><strong>Signs of severe allergic reaction:</strong> hives, difficulty breathing, or swelling of the face</li>
+                </ul>
+            </div>
+
+            <h2>After Treatment: The Healing Phase</h2>
+            <p>Once you stop applying Efudex as directed, the healing phase begins. Here is what to expect:<sup>1,2</sup></p>
+            <ul>
+                <li>The inflammation, redness, and rawness will <strong>gradually subside over 4 to 8 weeks</strong>.</li>
+                <li>Some redness and pink discolouration may persist for <strong>several months</strong> before the skin returns to its baseline appearance — this is normal.</li>
+                <li>Continue applying petroleum jelly as needed to keep healing skin comfortable and protected.</li>
+                <li>Continue strict sun protection (hat and sunscreen) throughout the healing phase and indefinitely, as sun exposure is the primary driver of future actinic keratosis development.</li>
+                <li>Your doctor will schedule a follow-up appointment to assess the treatment response and evaluate for any remaining or recurrent lesions.</li>
+            </ul>
+
+            <div class="key-point">
+                <h3>Long-Term Sun Protection Remains Important</h3>
+                <p style="margin-bottom:0;">Efudex treats existing sun-damaged cells but does not repair the underlying susceptibility of your skin to UV damage. Continued sun protection — including hats, protective clothing, and regular sunscreen use — is the most important thing you can do to prevent new actinic keratoses from forming in the future.<sup>3</sup></p>
+            </div>
+
+            <h2>Quick Reference Summary</h2>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Efudex Treatment At a Glance</div>
+                <svg width="720" height="320" viewBox="0 0 720 320">
+                    <!-- Column 1: Do -->
+                    <rect x="20" y="20" width="320" height="280" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="10"/>
+                    <rect x="20" y="20" width="320" height="46" fill="#10b981" rx="10"/>
+                    <rect x="20" y="50" width="320" height="16" fill="#10b981"/>
+                    <text x="180" y="49" text-anchor="middle" font-size="17" font-weight="bold" fill="white">✓ DO</text>
+
+                    <text x="45" y="90" font-size="13" fill="#065f46">• Apply twice daily to the full treatment area</text>
+                    <text x="45" y="113" font-size="13" fill="#065f46">• Wait 10–15 min after washing before applying</text>
+                    <text x="45" y="136" font-size="13" fill="#065f46">• Use gloves or wash hands immediately after</text>
+                    <text x="45" y="159" font-size="13" fill="#065f46">• Apply petroleum jelly for comfort after drying</text>
+                    <text x="45" y="182" font-size="13" fill="#065f46">• Wear a wide-brimmed hat outdoors</text>
+                    <text x="45" y="205" font-size="13" fill="#065f46">• Continue until the full reaction is achieved</text>
+                    <text x="45" y="228" font-size="13" fill="#065f46">• Wait 1.5 hrs before lying down after application</text>
+                    <text x="45" y="251" font-size="13" fill="#065f46">• Contact your doctor if infection is suspected</text>
+                    <text x="45" y="274" font-size="13" fill="#065f46">• Use SPF 30+ sunscreen on exposed treated skin</text>
+
+                    <!-- Column 2: Don't -->
+                    <rect x="380" y="20" width="320" height="280" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="10"/>
+                    <rect x="380" y="20" width="320" height="46" fill="#dc2626" rx="10"/>
+                    <rect x="380" y="50" width="320" height="16" fill="#dc2626"/>
+                    <text x="540" y="49" text-anchor="middle" font-size="17" font-weight="bold" fill="white">✗ DO NOT</text>
+
+                    <text x="405" y="90" font-size="13" fill="#991b1b">• Stop treatment early before the full reaction</text>
+                    <text x="405" y="113" font-size="13" fill="#991b1b">• Apply to damp or wet skin</text>
+                    <text x="405" y="136" font-size="13" fill="#991b1b">• Cover with bandages or occlusive dressings</text>
+                    <text x="405" y="159" font-size="13" fill="#991b1b">• Apply near eyes, eyelids, or nostrils</text>
+                    <text x="405" y="182" font-size="13" fill="#991b1b">• Expose treated skin to direct sunlight</text>
+                    <text x="405" y="205" font-size="13" fill="#991b1b">• Treat more than one body area at a time</text>
+                    <text x="405" y="228" font-size="13" fill="#991b1b">• Scratch or pick at crusts</text>
+                    <text x="405" y="251" font-size="13" fill="#991b1b">• Use sunbeds or UV tanning devices</text>
+                    <text x="405" y="274" font-size="13" fill="#991b1b">• Allow children or pets to contact cream</text>
+                </svg>
+            </div>
+
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+            <div class="reference-item">1. Pfenninger JL, Fowler GC. Procedures for Primary Care. 3rd ed. Philadelphia, PA: Elsevier Mosby; 2011. Chapter on topical fluorouracil for actinic keratosis.</div>
+            <div class="reference-item">2. Lebwohl M, Dinehart S, Whiting D, et al. Imiquimod 5% cream for the treatment of actinic keratosis: results from two phase III, randomized, double-blind, parallel group, vehicle-controlled trials. J Am Acad Dermatol. 2004;50(5):714-721.</div>
+            <div class="reference-item">3. Dodds A, Chia A, Shumack S. Actinic keratosis: rationale and management. Dermatol Ther (Heidelb). 2014;4(1):11-31.</div>
+            <div class="reference-item">4. Stockfleth E, Ferrandiz C, Grob JJ, et al. Development of a treatment algorithm for actinic keratoses: a European consensus. Eur J Dermatol. 2008;18(6):651-659.</div>
+            <div class="reference-item">5. Werner RN, Stockfleth E, Connolly SM, et al. Evidence- and consensus-based (S3) guidelines for the treatment of actinic keratosis — International League of Dermatological Societies in cooperation with the European Dermatology Forum. J Eur Acad Dermatol Venereol. 2015;29(11):2069-2079.</div>
+            <div class="reference-item">6. Gupta AK, Paquet M, Villanueva E, Brintnell W. Interventions for actinic keratoses. Cochrane Database Syst Rev. 2012;12:CD004415.</div>
+            <div class="reference-item">7. Canadian Dermatology Association. Actinic keratosis clinical practice guidelines. Available at: https://www.dermatology.ca. Accessed February 2026.</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always follow the specific instructions provided by your healthcare provider, which may differ from the general guidance in this handout.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: February 2026</p>
+        </div>
+    </div>
+</body>
+</html>
