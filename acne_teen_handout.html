@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Skin, Your Questions: Understanding Acne</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.7em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.2em;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.15em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .danger-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .danger-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 28px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        /* Timeline steps */
+        .timeline {
+            margin: 25px 0;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+
+        .timeline-badge {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .timeline-body {
+            padding-top: 6px;
+        }
+
+        .timeline-body strong {
+            color: #1e3a8a;
+            font-size: 1.05em;
+        }
+
+        /* Routine grid */
+        .routine-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .routine-card {
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid;
+        }
+
+        .routine-card.morning {
+            background-color: #fffbeb;
+            border-color: #fbbf24;
+        }
+
+        .routine-card.evening {
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+        }
+
+        .routine-card h3 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 1.1em;
+        }
+
+        .routine-card.morning h3 { color: #b45309; }
+        .routine-card.evening h3 { color: #1e40af; }
+
+        .routine-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 700;
+            color: white;
+            margin-top: 1px;
+        }
+
+        .morning .step-num { background-color: #f59e0b; }
+        .evening .step-num { background-color: #3b82f6; }
+
+        /* Myth vs fact table */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            min-width: 480px;
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 11px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+            font-size: 1.4em;
+        }
+
+        .reference-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.88em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 650px) {
+            body { padding: 0; }
+            .header { padding: 28px 18px; }
+            .header h1 { font-size: 1.5em; }
+            .content { padding: 22px 18px; }
+            h2 { font-size: 1.35em; }
+            .routine-grid { grid-template-columns: 1fr; }
+            .references { padding: 20px; border-radius: 0; }
+            .footer { padding: 18px; }
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1>Your Skin, Your Questions</h1>
+        <p>A straightforward guide to understanding acne and what actually helps</p>
+    </div>
+
+    <div class="content">
+
+        <div class="key-point">
+            <h3>The first thing to know</h3>
+            <p>Acne has nothing to do with being dirty, lazy about washing your face, or eating the wrong things. It's a medical condition driven by hormones and biology — the same biology that's behind almost every other change happening in your body right now. It's incredibly common, it's treatable, and it's not your fault.</p>
+        </div>
+
+        <h2>What is acne, exactly?</h2>
+        <p>Acne happens when tiny hair follicles in your skin get blocked. Your skin produces an oil called <strong>sebum</strong> — it's there to keep your skin moisturized. But when too much oil mixes with dead skin cells, the pore gets plugged. Bacteria that normally live harmlessly on your skin start to multiply inside that blocked pore, and your immune system responds by causing redness and swelling. That's the pimple you see.<sup>1,2</sup></p>
+
+        <p>Acne shows up in a few different ways:<sup>1,2</sup></p>
+        <ul>
+            <li><strong>Blackheads and whiteheads</strong> — blocked pores without infection. Blackheads are open to the air (which turns them dark); whiteheads are closed under a thin layer of skin.</li>
+            <li><strong>Papules</strong> — small, raised red bumps. The follicle is inflamed but there's no pus yet.</li>
+            <li><strong>Pustules</strong> — the classic "pimple" — a red bump with a white or yellow tip of pus.</li>
+            <li><strong>Nodules and cysts</strong> — larger, deeper, and more painful lumps under the skin. These are the type most likely to leave a scar if left untreated.</li>
+        </ul>
+
+        <h2>Why does acne happen during the teenage years?</h2>
+        <p>The honest answer: hormones. During puberty, your body produces more <strong>androgens</strong> — a group of hormones (including testosterone) that are present in everyone, regardless of gender. Androgens signal the oil glands in your skin to get bigger and produce more sebum. More oil means more blocked pores, which means more acne.<sup>3,4</sup></p>
+
+        <p>This is also why acne tends to flare up around your period, during stressful times like exams (stress hormones have a similar effect), or seemingly at random. It's not something you did — it's your hormones doing what hormones do at this stage of life.<sup>3,4</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">How a pimple forms — the four steps</div>
+            <svg width="720" height="220" viewBox="0 0 720 220">
+                <defs>
+                    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+                    </marker>
+                </defs>
+
+                <!-- Step 1 -->
+                <rect x="10" y="30" width="150" height="130" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+                <text x="85" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">① Hormones</text>
+                <circle cx="85" cy="90" r="30" fill="#fed7aa" stroke="#f59e0b" stroke-width="2"/>
+                <text x="85" y="86" text-anchor="middle" font-size="11" fill="#7c2d12" font-weight="bold">Oil gland</text>
+                <text x="85" y="100" text-anchor="middle" font-size="11" fill="#7c2d12">ramps up</text>
+                <text x="85" y="145" text-anchor="middle" font-size="10" fill="#92400e">Androgens tell oil</text>
+                <text x="85" y="158" text-anchor="middle" font-size="10" fill="#92400e">glands: make more!</text>
+
+                <path d="M 162 95 L 188 95" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+                <!-- Step 2 -->
+                <rect x="190" y="30" width="150" height="130" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+                <text x="265" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#713f12">② Blocked pore</text>
+                <rect x="250" y="58" width="30" height="60" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+                <ellipse cx="265" cy="58" rx="15" ry="8" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+                <text x="265" y="145" text-anchor="middle" font-size="10" fill="#713f12">Oil + dead skin cells</text>
+                <text x="265" y="158" text-anchor="middle" font-size="10" fill="#713f12">plug the follicle</text>
+
+                <path d="M 342 95 L 368 95" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+                <!-- Step 3 -->
+                <rect x="370" y="30" width="150" height="130" rx="10" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+                <text x="445" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#9d174d">③ Bacteria multiply</text>
+                <circle cx="425" cy="88" r="10" fill="#f9a8d4" stroke="#ec4899" stroke-width="1.5"/>
+                <circle cx="445" cy="78" r="10" fill="#f9a8d4" stroke="#ec4899" stroke-width="1.5"/>
+                <circle cx="465" cy="90" r="10" fill="#f9a8d4" stroke="#ec4899" stroke-width="1.5"/>
+                <circle cx="435" cy="103" r="10" fill="#f9a8d4" stroke="#ec4899" stroke-width="1.5"/>
+                <text x="445" y="87" text-anchor="middle" font-size="9" fill="#9d174d" font-weight="bold">C.acnes</text>
+                <text x="445" y="145" text-anchor="middle" font-size="10" fill="#9d174d">Bacteria thrive in the</text>
+                <text x="445" y="158" text-anchor="middle" font-size="10" fill="#9d174d">blocked, oily follicle</text>
+
+                <path d="M 522 95 L 548 95" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+                <!-- Step 4 -->
+                <rect x="550" y="30" width="155" height="130" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+                <text x="627" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">④ Inflammation</text>
+                <circle cx="627" cy="88" r="32" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/>
+                <text x="627" y="84" text-anchor="middle" font-size="11" fill="#7f1d1d" font-weight="bold">Immune</text>
+                <text x="627" y="98" text-anchor="middle" font-size="11" fill="#7f1d1d">response</text>
+                <text x="627" y="145" text-anchor="middle" font-size="10" fill="#991b1b">Redness, swelling,</text>
+                <text x="627" y="158" text-anchor="middle" font-size="10" fill="#991b1b">and a visible pimple</text>
+            </svg>
+            <p style="margin-top:14px; font-size:0.9em; color:#64748b; max-width:680px; margin-left:auto; margin-right:auto;">
+                This is why effective treatment targets more than one step at once — blocking just one step is often not enough.
+            </p>
+        </div>
+
+        <h2>Common myths — let's clear these up</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>What people say</th>
+                    <th>What's actually true</th>
+                </tr>
+                <tr>
+                    <td><strong>"You just need to wash your face more"</strong></td>
+                    <td>Over-washing actually irritates your skin and can make acne worse. Twice a day is enough — with a gentle cleanser, not a harsh scrub.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Chocolate and greasy food cause breakouts"</strong></td>
+                    <td>The evidence here is weak. Diet has a very small role compared to hormones. Cutting out your favourite foods won't clear your skin.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Squeezing spots will clear them up faster"</strong></td>
+                    <td>Squeezing pushes bacteria deeper and inflames the surrounding skin. It's also the main way acne leaves permanent scars. Please don't.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Sun exposure dries out pimples"</strong></td>
+                    <td>Sun can temporarily mask redness, but UV damage makes acne worse over time — and if you're on any acne treatment, your skin is extra sensitive to burning.</td>
+                </tr>
+                <tr>
+                    <td><strong>"If you just waited it out, it would go away"</strong></td>
+                    <td>Mild acne sometimes does. But moderate to severe acne treated early is less likely to scar. There's no reason to suffer through it when good treatments exist.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Toothpaste on a pimple overnight works"</strong></td>
+                    <td>It doesn't — and the ingredients in toothpaste can actually burn and irritate skin. The products we prescribe are far more effective and won't damage your skin.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>What we're recommending for your skin</h2>
+        <p>There is no single magic product that fixes acne — effective treatment combines two or three things that each target a different part of the problem. Here is what we typically use, and why each piece matters.<sup>5,6</sup></p>
+
+        <h3>Benzoyl peroxide — your most important tool</h3>
+        <p>Benzoyl peroxide (BPO) works by releasing oxygen directly into blocked follicles, which kills the acne-causing bacteria. Unlike antibiotics, bacteria can't become resistant to it — which is why it's a cornerstone of almost every acne treatment plan.<sup>7,8</sup></p>
+        <p>We prescribe a 5% strength, which is stronger than what you'll find over the counter. Apply it once daily in the evening to clean, dry skin.</p>
+
+        <div class="danger-box">
+            <h3>⚠️ Benzoyl peroxide will bleach fabric — this is important</h3>
+            <p>Benzoyl peroxide will permanently bleach towels, pillowcases, and clothing if it touches them. Switch to white towels and a white (or very light) pillowcase. Let the product dry fully before going to bed or resting your face on anything.</p>
+        </div>
+
+        <h3>Doxycycline — the oral antibiotic</h3>
+        <p>For moderate acne, we often add an oral antibiotic called doxycycline. It works in two ways: it reduces the bacteria causing the breakouts, and it has a separate anti-inflammatory effect that calms down existing spots more quickly than topical products alone.<sup>5,9</sup></p>
+        <p>Take it with food and a full glass of water. Don't lie down for 30 minutes after taking it. We typically prescribe it for 3 to 6 months, then taper off while you continue topical maintenance.</p>
+
+        <div class="key-point">
+            <h3>Why we always use doxycycline together with benzoyl peroxide — not alone</h3>
+            <p>Using an antibiotic by itself can cause bacteria to develop resistance over time, meaning the antibiotic stops working. Combining it with benzoyl peroxide prevents this from happening, because the BPO kills bacteria in a completely different way that they can't adapt to.<sup>7,8</sup> This combination is recommended in all major guidelines.</p>
+        </div>
+
+        <h3>Topical retinoids — if we add a third layer</h3>
+        <p>If benzoyl peroxide and doxycycline aren't fully doing the job after a couple of months, we may add a topical retinoid (like tretinoin or adapalene). Retinoids work differently from everything else — they normalize the way your skin cells turn over, preventing the follicle from getting blocked in the first place. They're especially good for blackheads and whiteheads.<sup>10</sup> They are applied at night and take a little patience while your skin adjusts — we'll guide you through that if we get there.</p>
+
+        <h2>Your daily routine</h2>
+        <p>The products we prescribe work much better when your skin care routine supports them. The goal is simple, consistent, and gentle — not a 12-step regime.<sup>11,12</sup></p>
+
+        <div class="routine-grid">
+            <div class="routine-card morning">
+                <h3>☀️ Morning</h3>
+                <div class="routine-step">
+                    <div class="step-num">1</div>
+                    <div><strong>Gentle cleanser</strong><br>Lukewarm water. No scrubbing.</div>
+                </div>
+                <div class="routine-step">
+                    <div class="step-num">2</div>
+                    <div><strong>Moisturiser</strong><br>Oil-free, non-comedogenic.</div>
+                </div>
+                <div class="routine-step">
+                    <div class="step-num">3</div>
+                    <div><strong>SPF 30+ sunscreen</strong><br>Essential if you're on any acne treatment.</div>
+                </div>
+            </div>
+            <div class="routine-card evening">
+                <h3>🌙 Evening</h3>
+                <div class="routine-step">
+                    <div class="step-num">1</div>
+                    <div><strong>Gentle cleanser</strong><br>Pat dry with a clean, white towel.</div>
+                </div>
+                <div class="routine-step">
+                    <div class="step-num">2</div>
+                    <div><strong>Benzoyl peroxide</strong><br>Apply to affected areas. Let absorb fully.</div>
+                </div>
+                <div class="routine-step">
+                    <div class="step-num">3</div>
+                    <div><strong>Moisturiser</strong><br>After BPO has dried (1–2 min).</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Choosing a cleanser</h3>
+        <p>Go gentle. Harsh foaming cleansers and scrubs strip your skin's natural barrier, which makes your skin produce more oil — the opposite of what you want. Look for a mild, fragrance-free gel or lotion cleanser labelled "for sensitive skin." Good examples: <strong>Cetaphil Gentle Skin Cleanser</strong>, <strong>CeraVe Hydrating Cleanser</strong>, or <strong>La Roche-Posay Toleriane Hydrating Gentle Cleanser</strong>. Wash twice a day — morning and evening, and after sport.<sup>11</sup></p>
+
+        <h3>Choosing a moisturiser — yes, even for oily skin</h3>
+        <p>A lot of people with acne skip moisturiser because they think it'll make oily skin worse. It won't — and when you're using benzoyl peroxide or a retinoid, your skin needs it. Look for something labelled <strong>oil-free</strong> and <strong>non-comedogenic</strong> (meaning it won't clog pores). Lightweight gel-creams work well. Good options: <strong>CeraVe PM Facial Moisturising Lotion</strong>, <strong>Neutrogena Hydro Boost Water Gel</strong>, or <strong>La Roche-Posay Effaclar Mat</strong>.<sup>11</sup></p>
+
+        <h3>Sunscreen</h3>
+        <p>Acne treatments make your skin more sensitive to sun. Unprotected sun exposure can also darken any post-pimple marks (post-inflammatory hyperpigmentation) and make them last much longer. Use a non-comedogenic, oil-free SPF 30 or higher every single morning. Mineral sunscreens (with zinc oxide or titanium dioxide) tend to sit better on acne-prone skin than chemical ones.<sup>12</sup></p>
+
+        <h2>What to expect — and when</h2>
+        <p>One of the main reasons acne treatment doesn't work is stopping too early. These treatments interrupt biological processes that have been building for weeks — they don't work like paracetamol. Here's a realistic timeline:<sup>5,6</sup></p>
+
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color:#94a3b8;">Wk 1–2</div>
+                <div class="timeline-body">
+                    <strong>Your skin is adjusting.</strong> Some initial dryness or redness from benzoyl peroxide is normal. You may even notice a short-term increase in spots — this is called "purging" and means the treatment is bringing blocked material to the surface. It's a sign things are working, not failing. Keep going.
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color:#60a5fa;">Wk 2–4</div>
+                <div class="timeline-body">
+                    <strong>Early signs of improvement.</strong> New inflamed spots start to appear less often, and existing ones begin clearing faster. Your skin may feel calmer overall.
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color:#3b82f6;">Wk 4–8</div>
+                <div class="timeline-body">
+                    <strong>Clearer improvement.</strong> This is when most people feel the treatment is properly working — fewer breakouts, less redness, spots resolving more quickly.
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color:#1d4ed8;">Mo 3–6</div>
+                <div class="timeline-body">
+                    <strong>Maximum benefit from antibiotics.</strong> We'll reassess at this point and may taper off the doxycycline while continuing topical maintenance to keep the results going.
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color:#1e3a8a;">Long-term</div>
+                <div class="timeline-body">
+                    <strong>Maintenance.</strong> Continuing with benzoyl peroxide (and a retinoid if we've added one) helps prevent acne from returning. Many people achieve long-term clear skin with a simple maintenance routine.
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h3>Please don't stop treatment without talking to us first</h3>
+            <p>The most common reason acne comes back is stopping treatment too early or when things start looking better. If you're having side effects, struggling with the routine, or not seeing progress after 6–8 weeks, come and talk to us — there is always a next step and we can adjust your plan. Just don't stop quietly.</p>
+        </div>
+
+        <h2>The things that make acne worse</h2>
+        <ul>
+            <li><strong>Picking and squeezing.</strong> We know this is hard, but picking is the single biggest cause of acne scarring. It also spreads bacteria and inflames the surrounding skin. The spot will clear faster if you leave it alone.</li>
+            <li><strong>Over-washing your face.</strong> More than twice a day strips your skin barrier and signals it to produce more oil. More washing does not equal clearer skin.</li>
+            <li><strong>Harsh scrubs and exfoliants.</strong> Physical scrubbing inflames skin that is already inflamed. Avoid these while you're on treatment.</li>
+            <li><strong>Heavy, pore-blocking products.</strong> Check that any makeup, sunscreen, or hair product you use is labelled "non-comedogenic." Hair pomades and heavy oils that touch your forehead or temples are a common trigger.</li>
+            <li><strong>Stopping treatment when things look better.</strong> Acne comes back when maintenance stops. Think of it like brushing teeth — the whole point is the ongoing habit.</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>Signs your treatment is working</h3>
+            <p>Look for these — they're easy to miss week-to-week but significant over a month:</p>
+            <ul style="margin-bottom:0;">
+                <li>Fewer new spots forming each week</li>
+                <li>Existing spots clearing faster than before</li>
+                <li>Less redness and swelling overall</li>
+                <li>Skin feeling less oily through the day</li>
+                <li>Improvement in overall skin texture, even between active spots</li>
+            </ul>
+        </div>
+
+        <h2>A note on how acne feels</h2>
+        <p>Acne can genuinely affect how you feel about yourself. Research consistently shows it affects confidence, social situations, and mood — and that's entirely understandable. We take it seriously, which is why we've put together a proper treatment plan rather than just telling you to "wash your face more."</p>
+        <p>If your acne is causing significant distress or affecting your mental health, please mention it. It matters and it changes how we approach treatment. You deserve to feel comfortable in your skin.</p>
+
+        <div class="key-point">
+            <h3>We're here when you need us</h3>
+            <p>Acne treatment isn't set-and-forget. If you're experiencing significant irritation, the routine isn't fitting your life, or your skin isn't responding after 6–8 weeks, come back in. There is always something more we can try — including, if needed, a referral to a dermatologist or a conversation about isotretinoin (Accutane), which we cover in a separate handout. You don't need to manage this on your own.</p>
+        </div>
+
+    </div><!-- end content -->
+
+    <div class="references">
+        <h2>References</h2>
+        <div class="reference-item">1. Zaenglein AL, Pathy AL, Schlosser BJ, et al. Guidelines of care for the management of acne vulgaris. J Am Acad Dermatol. 2016;74(5):945–973.</div>
+        <div class="reference-item">2. Williams HC, Dellavalle RP, Garner S. Acne vulgaris. Lancet. 2012;379(9813):361–372.</div>
+        <div class="reference-item">3. Thiboutot D, Gollnick H, Bettoli V, et al. New insights into the management of acne: an update from the Global Alliance to Improve Outcomes in Acne group. J Am Acad Dermatol. 2009;60(5 Suppl):S1–S50.</div>
+        <div class="reference-item">4. Goulden V, Clark SM, Cunliffe WJ. Post-adolescent acne: a review of clinical features. Br J Dermatol. 1997;136(1):66–70.</div>
+        <div class="reference-item">5. Nast A, Dréno B, Bettoli V, et al. European evidence-based (S3) guideline for the treatment of acne – update 2016 – short version. J Eur Acad Dermatol Venereol. 2016;30(8):1261–1268.</div>
+        <div class="reference-item">6. Garner SE, Eady A, Bennett C, Newton JN, Thomas K, Popescu CM. Minocycline for acne vulgaris: efficacy and safety. Cochrane Database Syst Rev. 2012;(8):CD002086.</div>
+        <div class="reference-item">7. Walsh TR, Efthimiou J, Dréno B. Systematic review of antibiotic resistance in acne: an increasing topical and oral threat. Lancet Infect Dis. 2016;16(3):e23–e33.</div>
+        <div class="reference-item">8. Leyden JJ, Del Rosso JQ, Webster GF. Clinical considerations in the treatment of acne vulgaris and other inflammatory skin disorders: focus on antibiotic resistance. Cutis. 2007;79(6 Suppl):9–25.</div>
+        <div class="reference-item">9. Simonart T, Dramaix M, De Maertelaer V. Efficacy of tetracyclines in the treatment of acne vulgaris: a review. Br J Dermatol. 2008;158(2):208–216.</div>
+        <div class="reference-item">10. Leyden J, Stein-Gold L, Weiss J. Why topical retinoids are mainstay of therapy for acne. Dermatol Ther (Heidelb). 2017;7(3):293–304.</div>
+        <div class="reference-item">11. Chularojanamontri L, Tuchinda P, Kulthanan K, Pongparit K. Moisturizers for acne: what are their constituents? J Clin Aesthet Dermatol. 2014;7(5):36–44.</div>
+        <div class="reference-item">12. Kraft J, Freiman A. Management of acne. CMAJ. 2011;183(7):E430–E435.</div>
+        <div class="reference-item">13. Tan JKL, Bhate K. A global perspective on the epidemiology of acne. Br J Dermatol. 2015;172(Suppl 1):3–12.</div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always talk to your healthcare provider before changing or stopping any treatment.</p>
+        <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: March 2026</p>
+    </div>
+
+</div>
+</body>
+</html>
