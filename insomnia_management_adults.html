@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding and Managing Insomnia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            color: #1e40af;
+            font-size: 1.1em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .caution-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #ef4444;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .caution-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .mindset-box {
+            background-color: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .mindset-box h3 {
+            color: #5b21b6;
+            margin-top: 0;
+        }
+
+        .technique-box {
+            background-color: #f0f9ff;
+            border: 2px solid #bae6fd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .technique-box h4 {
+            color: #0369a1;
+            margin-top: 0;
+            font-size: 1.15em;
+        }
+
+        .thought-reframe {
+            display: flex;
+            margin: 15px 0;
+            gap: 15px;
+            align-items: stretch;
+        }
+
+        .thought-reframe .thought-old {
+            flex: 1;
+            background-color: #fee2e2;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #fecaca;
+        }
+
+        .thought-reframe .thought-arrow {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            color: #10b981;
+            font-weight: bold;
+            min-width: 30px;
+            justify-content: center;
+        }
+
+        .thought-reframe .thought-new {
+            flex: 1;
+            background-color: #d1fae5;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #a7f3d0;
+        }
+
+        .thought-reframe .label {
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .thought-old .label { color: #991b1b; }
+        .thought-new .label { color: #065f46; }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        table th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        table tr:hover {
+            background-color: #eff6ff;
+        }
+
+        .sleep-diary {
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .sleep-diary th {
+            font-size: 0.85em;
+            padding: 10px 8px;
+        }
+
+        .sleep-diary td {
+            padding: 18px 8px;
+            text-align: center;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 0;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .content {
+                padding: 24px 20px;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            h3 {
+                font-size: 1.15em;
+            }
+            p {
+                text-align: left;
+            }
+            .thought-reframe {
+                flex-direction: column;
+            }
+            .thought-reframe .thought-arrow {
+                transform: rotate(90deg);
+                min-width: auto;
+                padding: 5px 0;
+            }
+            .references {
+                padding: 20px;
+                border-radius: 0;
+                margin-top: 20px;
+            }
+            .footer {
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+            .thought-reframe {
+                break-inside: avoid;
+            }
+            h2 {
+                break-after: avoid;
+            }
+            .technique-box, .key-point, .warning-box, .success-box, .mindset-box, .caution-box {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Understanding and Managing Insomnia</h1>
+            <p>Evidence-Based Strategies That Work Better Than Sleeping Pills</p>
+        </div>
+
+        <div class="content">
+            <div class="key-point">
+                <h3>The Key Message</h3>
+                <p>Insomnia is one of the most common health complaints — and one of the most treatable. The most effective treatment is <strong>not medication</strong>. It is a set of proven behavioural and cognitive strategies called <strong>CBT-I</strong> (Cognitive Behavioural Therapy for Insomnia), recommended as the first-line treatment by every major medical guideline. These strategies produce better long-term results than sleeping pills, with no side effects.<sup>1,2,3</sup></p>
+            </div>
+
+            <h2>What Is Insomnia?</h2>
+            <p>Insomnia is defined as difficulty falling asleep, difficulty staying asleep, or waking too early, combined with daytime consequences such as fatigue, difficulty concentrating, or mood disturbance. To be considered chronic insomnia, these symptoms must occur at least three nights per week for three months or more.<sup>1,4</sup></p>
+
+            <p>Insomnia is remarkably common. Approximately 10–15% of adults meet criteria for chronic insomnia disorder, and up to 30–50% experience insomnia symptoms at some point in their lives. It is more common in women and tends to increase in prevalence with age, though it affects adults of all ages.<sup>4,5</sup></p>
+
+            <div class="key-point">
+                <h3>An Important Distinction: Sleep Need Varies</h3>
+                <p>There is no single "correct" amount of sleep. While most adults need approximately 7–9 hours, this varies considerably between individuals. Some people function well on 6 hours; others genuinely need 9. The key indicator of whether you're getting enough sleep is not a number on the clock — it's <strong>how you feel and function during the day.</strong> If you feel rested and alert, your sleep is likely adequate, regardless of the exact duration.<sup>6</sup></p>
+            </div>
+
+            <h2>Understanding How Sleep Works</h2>
+            <p>Understanding the basic biology of sleep can help you work <em>with</em> your body rather than against it. Two key systems regulate your sleep:<sup>6,7</sup></p>
+
+            <h3>1. Sleep Pressure (the Homeostatic Drive)</h3>
+            <p>From the moment you wake up, a chemical called adenosine gradually accumulates in your brain. The longer you've been awake, the more adenosine builds up, and the stronger your drive to sleep becomes. This is "sleep pressure." It's the reason you feel progressively sleepier as the day goes on, and it's why staying in bed for extended periods or napping during the day can actually make it harder to fall asleep at night — because these behaviours reduce the sleep pressure you've built up.<sup>6,7</sup></p>
+
+            <h3>2. The Circadian Clock (Your Body's Timer)</h3>
+            <p>Your brain has an internal clock — the suprachiasmatic nucleus — that runs on a roughly 24-hour cycle. This clock regulates when you feel alert and when you feel sleepy, largely through the hormone melatonin. Bright light exposure (especially morning light) is the most powerful signal that keeps this clock synchronized. When your circadian rhythm is disrupted — by irregular schedules, shift work, or limited light exposure — sleep suffers.<sup>6,7</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">The Two Forces That Regulate Sleep</div>
+                <svg width="760" height="340" viewBox="0 0 760 340">
+                    <!-- Sleep Pressure graph -->
+                    <text x="190" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e3a8a">Sleep Pressure (Adenosine)</text>
+
+                    <!-- Axes -->
+                    <line x1="50" y1="50" x2="50" y2="230" stroke="#64748b" stroke-width="2"/>
+                    <line x1="50" y1="230" x2="350" y2="230" stroke="#64748b" stroke-width="2"/>
+                    <text x="15" y="140" font-size="11" fill="#64748b" transform="rotate(-90 15 140)">Sleep Drive</text>
+
+                    <!-- Rising pressure line -->
+                    <path d="M 50 220 L 170 120 L 190 200 L 350 60" stroke="#3b82f6" stroke-width="3" fill="none"/>
+                    <!-- Nap dip annotation -->
+                    <path d="M 170 120 L 190 200" stroke="#ef4444" stroke-width="3" fill="none" stroke-dasharray="6,3"/>
+                    <text x="200" y="170" font-size="10" fill="#ef4444" font-weight="600">Nap reduces</text>
+                    <text x="200" y="182" font-size="10" fill="#ef4444" font-weight="600">sleep pressure</text>
+
+                    <!-- Time labels -->
+                    <text x="55" y="248" font-size="10" fill="#64748b">7 AM</text>
+                    <text x="130" y="248" font-size="10" fill="#64748b">Noon</text>
+                    <text x="220" y="248" font-size="10" fill="#64748b">6 PM</text>
+                    <text x="315" y="248" font-size="10" fill="#64748b">11 PM</text>
+
+                    <!-- Peak annotation -->
+                    <circle cx="350" cy="60" r="5" fill="#1e3a8a"/>
+                    <text x="310" y="50" font-size="11" fill="#1e3a8a" font-weight="600">Peak drive</text>
+
+                    <!-- Divider -->
+                    <line x1="390" y1="30" x2="390" y2="260" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4"/>
+
+                    <!-- Circadian graph -->
+                    <text x="570" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#7c3aed">Circadian Alertness</text>
+
+                    <!-- Axes -->
+                    <line x1="420" y1="50" x2="420" y2="230" stroke="#64748b" stroke-width="2"/>
+                    <line x1="420" y1="230" x2="720" y2="230" stroke="#64748b" stroke-width="2"/>
+                    <text x="385" y="140" font-size="11" fill="#64748b" transform="rotate(-90 385 140)">Alertness</text>
+
+                    <!-- Sinusoidal alertness curve -->
+                    <path d="M 420 160 Q 470 60, 520 80 Q 560 95, 580 120 Q 600 90, 640 70 Q 680 110, 720 210" stroke="#7c3aed" stroke-width="3" fill="none"/>
+
+                    <!-- Afternoon dip annotation -->
+                    <circle cx="580" cy="120" r="4" fill="#f59e0b"/>
+                    <text x="555" y="145" font-size="10" fill="#92400e" font-weight="600">Afternoon</text>
+                    <text x="565" y="157" font-size="10" fill="#92400e" font-weight="600">dip</text>
+
+                    <!-- Evening peak -->
+                    <circle cx="640" cy="70" r="4" fill="#7c3aed"/>
+                    <text x="645" y="63" font-size="10" fill="#5b21b6" font-weight="600">Evening</text>
+                    <text x="645" y="75" font-size="10" fill="#5b21b6" font-weight="600">alertness</text>
+
+                    <!-- Night dip -->
+                    <circle cx="720" cy="210" r="4" fill="#7c3aed"/>
+                    <text x="695" y="205" font-size="10" fill="#5b21b6" font-weight="600">Sleep</text>
+
+                    <!-- Time labels -->
+                    <text x="425" y="248" font-size="10" fill="#64748b">7 AM</text>
+                    <text x="505" y="248" font-size="10" fill="#64748b">Noon</text>
+                    <text x="590" y="248" font-size="10" fill="#64748b">6 PM</text>
+                    <text x="685" y="248" font-size="10" fill="#64748b">11 PM</text>
+
+                    <!-- Bottom summary -->
+                    <rect x="80" y="275" width="600" height="50" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="8"/>
+                    <text x="380" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Good sleep = high sleep pressure + low circadian alertness</text>
+                    <text x="380" y="315" text-anchor="middle" font-size="12" fill="#1e3a8a">CBT-I works by optimizing both of these systems</text>
+                </svg>
+                <p style="margin-top: 10px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <strong>Left:</strong> Sleep pressure builds throughout the day. Napping or spending too long in bed reduces this pressure. <strong>Right:</strong> Your circadian rhythm creates natural peaks and dips in alertness, including the well-known "afternoon slump." Sleep comes most easily when high sleep pressure coincides with your circadian dip in alertness.<sup>6,7</sup>
+                </p>
+            </div>
+
+            <h2>What Keeps Insomnia Going?</h2>
+            <p>Many things can <em>trigger</em> insomnia — stress, illness, a life change, shift work, pain, or a new baby. But what keeps insomnia going long after the initial trigger has resolved is usually a combination of <strong>behavioural habits</strong> and <strong>thought patterns</strong> that develop in response to poor sleep.<sup>8,9</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">The Insomnia Cycle: How Short-Term Sleep Problems Become Chronic</div>
+                <svg width="720" height="440" viewBox="0 0 720 440">
+                    <!-- Trigger box -->
+                    <rect x="260" y="15" width="200" height="65" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" rx="8"/>
+                    <text x="360" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#475569">Initial Trigger</text>
+                    <text x="360" y="58" text-anchor="middle" font-size="11" fill="#64748b">(stress, illness, life event)</text>
+
+                    <!-- Arrow down -->
+                    <path d="M 360 80 L 360 110" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrowgrey)"/>
+
+                    <!-- Poor sleep box -->
+                    <rect x="260" y="110" width="200" height="55" fill="#fee2e2" stroke="#ef4444" stroke-width="2" rx="8"/>
+                    <text x="360" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">Poor Sleep</text>
+                    <text x="360" y="152" text-anchor="middle" font-size="11" fill="#991b1b">Difficulty falling/staying asleep</text>
+
+                    <!-- Arrow down to worry -->
+                    <path d="M 360 165 L 360 200" stroke="#dc2626" stroke-width="2.5" fill="none" marker-end="url(#arrowred)"/>
+
+                    <!-- Worry box -->
+                    <rect x="245" y="200" width="230" height="55" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="8"/>
+                    <text x="360" y="222" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">Worry About Sleep</text>
+                    <text x="360" y="240" text-anchor="middle" font-size="11" fill="#92400e">"What if I can't sleep again tonight?"</text>
+
+                    <!-- Arrow to right: compensating behaviours -->
+                    <path d="M 475 227 L 560 227" stroke="#dc2626" stroke-width="2.5" fill="none" marker-end="url(#arrowred)"/>
+
+                    <!-- Behaviours box -->
+                    <rect x="560" y="185" width="145" height="85" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="8"/>
+                    <text x="632" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Compensating</text>
+                    <text x="632" y="226" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Behaviours</text>
+                    <text x="632" y="244" text-anchor="middle" font-size="10" fill="#1e3a8a">Lying in bed longer</text>
+                    <text x="632" y="257" text-anchor="middle" font-size="10" fill="#1e3a8a">Napping, sleeping in</text>
+
+                    <!-- Arrow from behaviours up -->
+                    <path d="M 632 185 Q 632 130, 460 130" stroke="#dc2626" stroke-width="2.5" fill="none" marker-end="url(#arrowred)"/>
+                    <text x="570" y="135" font-size="10" fill="#991b1b" font-weight="600">Reduce sleep pressure</text>
+
+                    <!-- Arrow to left: hyperarousal -->
+                    <path d="M 245 227 L 165 227" stroke="#dc2626" stroke-width="2.5" fill="none" marker-end="url(#arrowred)"/>
+
+                    <!-- Arousal box -->
+                    <rect x="15" y="190" width="150" height="75" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+                    <text x="90" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b21b6">Hyperarousal</text>
+                    <text x="90" y="233" text-anchor="middle" font-size="10" fill="#5b21b6">Stress response</text>
+                    <text x="90" y="246" text-anchor="middle" font-size="10" fill="#5b21b6">Racing mind</text>
+                    <text x="90" y="259" text-anchor="middle" font-size="10" fill="#5b21b6">Physical tension</text>
+
+                    <!-- Arrow from arousal up -->
+                    <path d="M 90 190 Q 90 130, 260 130" stroke="#dc2626" stroke-width="2.5" fill="none" marker-end="url(#arrowred)"/>
+                    <text x="145" y="135" font-size="10" fill="#991b1b" font-weight="600">Makes sleep harder</text>
+
+                    <!-- Arrow from poor sleep down to bed association -->
+                    <path d="M 360 255 L 360 310" stroke="#dc2626" stroke-width="2.5" fill="none" marker-end="url(#arrowred)"/>
+
+                    <!-- Conditioned association box -->
+                    <rect x="225" y="310" width="270" height="55" fill="#fed7aa" stroke="#ea580c" stroke-width="2" rx="8"/>
+                    <text x="360" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#7c2d12">Bed = Wakefulness</text>
+                    <text x="360" y="350" text-anchor="middle" font-size="11" fill="#7c2d12">Brain learns to associate bed with frustration</text>
+
+                    <!-- Arrow from bed association back to poor sleep -->
+                    <path d="M 225 340 Q 130 340, 130 137 Q 130 130, 260 130" stroke="#dc2626" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
+
+                    <!-- Bottom insight box -->
+                    <rect x="130" y="390" width="460" height="40" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="8"/>
+                    <text x="360" y="415" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">CBT-I breaks this cycle at every point</text>
+
+                    <!-- Arrow definitions -->
+                    <defs>
+                        <marker id="arrowred" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+                        </marker>
+                        <marker id="arrowgrey" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top: 10px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    A stressful event triggers poor sleep. The worry and compensating behaviours that follow create a self-reinforcing cycle that keeps insomnia going even after the original trigger is gone. CBT-I targets each component of this cycle.<sup>8,9</sup>
+                </p>
+            </div>
+
+            <h2>When to See Your Doctor</h2>
+            <p>Before focusing on behavioural strategies, it's worth checking whether a treatable medical condition is contributing to your sleep difficulties. See your healthcare provider if:<sup>4,10</sup></p>
+            <ul>
+                <li>Your sleep problems have persisted for more than three months</li>
+                <li>You experience <strong>loud snoring, gasping, or breathing pauses</strong> during sleep — these may indicate obstructive sleep apnea, which is common and highly treatable</li>
+                <li>You have <strong>uncomfortable sensations in your legs</strong> when resting, or a compelling urge to move them (restless legs syndrome)</li>
+                <li>You experience <strong>excessive daytime sleepiness</strong> that interferes with work, driving, or daily activities</li>
+                <li>Your insomnia coincides with significant <strong>mood changes</strong>, as depression and anxiety both disrupt sleep and may need specific treatment</li>
+            </ul>
+
+            <p>Several common medical conditions and medications can contribute to or worsen insomnia:<sup>4,10,11</sup></p>
+
+            <table>
+                <tr>
+                    <th style="width: 35%;">Factor</th>
+                    <th>How It Affects Sleep</th>
+                </tr>
+                <tr>
+                    <td><strong>Chronic pain</strong></td>
+                    <td>Pain worsens when lying still; disrupts sleep onset and causes awakenings</td>
+                </tr>
+                <tr>
+                    <td><strong>Depression and anxiety</strong></td>
+                    <td>Difficulty falling asleep, early morning awakening, rumination, non-restorative sleep</td>
+                </tr>
+                <tr>
+                    <td><strong>Gastroesophageal reflux (GERD)</strong></td>
+                    <td>Acid reflux worsens when lying flat; causes discomfort and awakenings</td>
+                </tr>
+                <tr>
+                    <td><strong>Restless legs syndrome</strong></td>
+                    <td>Uncomfortable leg sensations and urge to move; worse in the evening</td>
+                </tr>
+                <tr>
+                    <td><strong>Sleep apnea</strong></td>
+                    <td>Repeated breathing interruptions cause fragmented, non-restorative sleep; often undiagnosed</td>
+                </tr>
+                <tr>
+                    <td><strong>Thyroid disorders</strong></td>
+                    <td>Overactive thyroid increases arousal and disrupts sleep; underactive thyroid causes fatigue</td>
+                </tr>
+                <tr>
+                    <td><strong>Medications</strong></td>
+                    <td>Many common medications affect sleep — including some blood pressure pills, corticosteroids, stimulants, certain antidepressants (SSRIs), and decongestants</td>
+                </tr>
+                <tr>
+                    <td><strong>Caffeine and alcohol</strong></td>
+                    <td>Caffeine blocks adenosine (sleep pressure); alcohol fragments the second half of the night</td>
+                </tr>
+            </table>
+
+            <p>Treating an underlying medical cause is often more effective than treating the insomnia directly. If you suspect a contributing factor, discuss it with your doctor before focusing solely on behavioural strategies.<sup>4,10</sup></p>
+
+            <h2>The Role of Your Thoughts About Sleep</h2>
+            <p>One of the most powerful — and often overlooked — factors in insomnia is <strong>how you think about sleep.</strong> This isn't about telling you that the problem is "all in your head." Sleep difficulties are real, and the frustration they cause is completely understandable. However, research consistently shows that our thoughts and beliefs about sleep can either help us sleep better or keep us trapped in a cycle of worsening insomnia.<sup>8,12,13</sup></p>
+
+            <div class="mindset-box">
+                <h3>A Common and Understandable Pattern</h3>
+                <p>After a few poor nights, it's perfectly natural to start worrying. You might think: <em>"If I don't get 8 hours tonight, I won't be able to cope tomorrow."</em> This kind of thinking is completely understandable — but it actually makes sleep harder, not easier. The worry activates your stress response (cortisol, adrenaline, muscle tension), which is the opposite of what your brain needs to fall asleep.<sup>8,12</sup></p>
+                <p style="margin-bottom: 0;">This creates a frustrating cycle: poor sleep → worry about sleep → stress response → even worse sleep. The good news is that this cycle can be broken — and the strategies in this handout are specifically designed to do that.</p>
+            </div>
+
+            <h3>Thought Patterns That Can Worsen Insomnia</h3>
+            <p>Certain thought patterns, while completely understandable, can amplify sleep difficulties. Recognizing these patterns is the first step to changing them:<sup>12,13,14</sup></p>
+
+            <ul>
+                <li><strong>Predicting the worst:</strong> "I won't be able to function at all tomorrow" — In reality, most people manage reasonably well after a poor night, even if it doesn't feel great</li>
+                <li><strong>Overgeneralizing:</strong> "I never sleep well anymore" — Looking at a sleep diary often reveals that some nights are actually better than others</li>
+                <li><strong>Rigid expectations:</strong> "I absolutely must get 8 hours" — Sleep needs vary, and placing rigid demands on sleep creates pressure that paradoxically makes sleep harder</li>
+                <li><strong>Monitoring and calculating:</strong> Constantly checking the clock and calculating remaining sleep hours increases alertness when you most need to relax</li>
+                <li><strong>Blaming everything on sleep:</strong> "I feel lousy because I didn't sleep" — While sleep matters, other factors like nutrition, activity, mood, and overall health also influence how you feel</li>
+            </ul>
+
+            <h3>Reframing Your Thinking</h3>
+            <p>Reframing doesn't mean pretending everything is fine — it means finding a more <strong>balanced and accurate</strong> perspective. Here are some examples:<sup>12,13,14</sup></p>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">Understandable but unhelpful</div>
+                    <p style="margin-bottom: 0; text-align: left;">"I <em>have</em> to fall asleep right now or tomorrow will be a disaster."</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">More balanced perspective</div>
+                    <p style="margin-bottom: 0; text-align: left;">"I've managed after poor sleep before. My body knows how to sleep — I can let it happen naturally."</p>
+                </div>
+            </div>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">Understandable but unhelpful</div>
+                    <p style="margin-bottom: 0; text-align: left;">"I've been awake for hours — this is terrible and it's only getting worse."</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">More balanced perspective</div>
+                    <p style="margin-bottom: 0; text-align: left;">"Even resting quietly is beneficial for my body. I don't need to force sleep — it will come when I'm ready."</p>
+                </div>
+            </div>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">Understandable but unhelpful</div>
+                    <p style="margin-bottom: 0; text-align: left;">"I woke up again at 3 AM — my sleep is completely broken."</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">More balanced perspective</div>
+                    <p style="margin-bottom: 0; text-align: left;">"Brief awakenings during the night are normal. I've fallen back to sleep after waking before, and I can do it again."</p>
+                </div>
+            </div>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">Understandable but unhelpful</div>
+                    <p style="margin-bottom: 0; text-align: left;">"Everyone else seems to sleep fine — there must be something seriously wrong with me."</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">More balanced perspective</div>
+                    <p style="margin-bottom: 0; text-align: left;">"Insomnia is extremely common — I'm not alone in this. It's a pattern that can be changed, not a permanent condition."</p>
+                </div>
+            </div>
+
+            <h2>CBT-I: The Gold Standard Treatment for Insomnia</h2>
+            <p>Cognitive Behavioural Therapy for Insomnia (CBT-I) is recommended as the <strong>first-line treatment for chronic insomnia</strong> in adults by the American College of Physicians, the American Academy of Sleep Medicine, the European Sleep Research Society, and the Canadian Sleep Society. It is more effective than sleeping pills in the long run and has no side effects.<sup>1,2,3</sup></p>
+
+            <p>CBT-I works by addressing the behavioural and thinking patterns that perpetuate insomnia. It typically involves 4–8 sessions, but many people see improvement within 2–4 weeks. The five core techniques are described below.<sup>1,2</sup></p>
+
+            <h3>Technique 1: Sleep Restriction Therapy</h3>
+            <div class="technique-box">
+                <h4>What It Is</h4>
+                <p>This is the most powerful component of CBT-I, despite sounding counterintuitive. Sleep restriction temporarily limits the time you spend in bed to match the time you're actually sleeping. This builds up strong sleep pressure, making sleep deeper and more consolidated.<sup>1,2,15</sup></p>
+
+                <h4>How It Works</h4>
+                <ol>
+                    <li><strong>Track your sleep for 1–2 weeks</strong> using the sleep diary below. Calculate your average total sleep time. For example, if you're in bed for 9 hours but only sleeping about 6 hours, your total sleep time is 6 hours.</li>
+                    <li><strong>Set your "sleep window"</strong> to match your total sleep time (minimum 5 hours). Choose a fixed wake-up time and count backward. If your average sleep time is 6 hours and you want to wake at 6:30 AM, your bedtime would be 12:30 AM.</li>
+                    <li><strong>Get up at the same time every day</strong> — including weekends. This is critical for resetting your body clock.</li>
+                    <li><strong>Don't go to bed until your scheduled bedtime</strong>, even if you feel sleepy earlier.</li>
+                    <li><strong>Gradually expand your sleep window</strong> by 15–30 minutes once you're sleeping for 85–90% of the time you're in bed (this is called "sleep efficiency"). Continue expanding until you reach a satisfying amount of sleep.</li>
+                </ol>
+
+                <h4>Why It Works</h4>
+                <p>By spending less time lying awake in bed, you build strong sleep pressure and retrain your brain to associate the bed with sleep rather than wakefulness. Most people find their sleep becomes deeper and more satisfying within 2–3 weeks, even though the first week can be challenging.<sup>1,15</sup></p>
+            </div>
+
+            <div class="warning-box">
+                <h3>Important Note on Sleep Restriction</h3>
+                <p>Sleep restriction can cause temporary daytime sleepiness in the first 1–2 weeks. If you have a history of <strong>seizures or bipolar disorder</strong>, discuss this technique with your healthcare provider before starting. If you drive or operate machinery, be especially cautious during the initial adjustment period. Do not reduce total time in bed below 5 hours.<sup>2,15</sup></p>
+            </div>
+
+            <h3>Technique 2: Stimulus Control</h3>
+            <div class="technique-box">
+                <h4>What It Is</h4>
+                <p>Stimulus control re-establishes the mental connection between your bed and sleep. If you've spent many hours lying awake in bed, your brain may have learned to associate the bed with wakefulness, frustration, and worry rather than with sleep. Stimulus control reverses this.<sup>1,2,16</sup></p>
+
+                <h4>The Rules</h4>
+                <ol>
+                    <li><strong>Use the bed only for sleep and intimacy.</strong> No reading, watching TV, scrolling your phone, eating, or working in bed.</li>
+                    <li><strong>Go to bed only when you're sleepy</strong> — not just because it's "bedtime." Sleepiness means heavy eyelids, yawning, and difficulty staying awake — not just feeling tired.</li>
+                    <li><strong>If you can't fall asleep within roughly 20 minutes</strong> (don't watch the clock — estimate), get out of bed and go to another room. Do something quiet and relaxing in dim light: read a book, listen to calm music, do a puzzle. Return to bed only when you feel sleepy again.</li>
+                    <li><strong>Repeat step 3 as many times as needed</strong> during the night. This may happen several times in the first week — that's completely normal and expected.</li>
+                    <li><strong>Wake at the same time every morning</strong> regardless of how much you slept.</li>
+                    <li><strong>Avoid napping</strong>, or limit naps to 20–30 minutes before 2:00 PM.</li>
+                </ol>
+
+                <h4>Why It Works</h4>
+                <p>Your brain learns through association. By consistently pairing the bed with sleep (and getting out when you're not sleeping), you retrain your brain to "switch off" when you lie down. This is one of the most researched and effective techniques in sleep medicine.<sup>1,16</sup></p>
+            </div>
+
+            <h3>Technique 3: Sleep Hygiene</h3>
+            <div class="technique-box">
+                <h4>What It Is</h4>
+                <p>Sleep hygiene refers to environmental and behavioural practices that support good sleep. On its own, sleep hygiene is usually <strong>not enough to fix insomnia</strong> — but combined with the techniques above, it creates optimal conditions for sleep.<sup>1,2</sup></p>
+
+                <h4>Environmental Factors</h4>
+                <ul>
+                    <li><strong>Keep your bedroom cool</strong> (18–20°C / 65–68°F). Your core body temperature needs to drop for sleep onset — a cool room helps this happen.</li>
+                    <li><strong>Make it dark.</strong> Use blackout curtains or a sleep mask. Even small amounts of light can suppress melatonin production and disrupt your circadian clock.</li>
+                    <li><strong>Minimize noise.</strong> Use earplugs or a white noise machine if needed.</li>
+                    <li><strong>Reserve the bedroom for sleep.</strong> If possible, avoid working, eating, or spending leisure time in the bedroom.</li>
+                </ul>
+
+                <h4>Behavioural Factors</h4>
+                <ul>
+                    <li><strong>Limit caffeine after noon.</strong> Caffeine's half-life is 5–7 hours, meaning half the caffeine from an afternoon coffee is still active in your brain at bedtime. Some people metabolize caffeine more slowly and may need to stop even earlier.</li>
+                    <li><strong>Limit alcohol.</strong> While alcohol may help you fall asleep faster, it significantly disrupts the second half of the night — causing fragmented, non-restorative sleep, increased awakenings, and suppressed REM sleep.</li>
+                    <li><strong>Avoid large meals within 2–3 hours of bedtime.</strong> A small snack is fine if hunger is an issue.</li>
+                    <li><strong>Limit screen time before bed.</strong> The blue light from phones, tablets, and computers suppresses melatonin. If you must use screens in the evening, use blue-light filtering settings and dim the brightness.</li>
+                    <li><strong>Avoid nicotine close to bedtime.</strong> Nicotine is a stimulant that increases arousal and can delay sleep onset.</li>
+                </ul>
+            </div>
+
+            <h3>Technique 4: Relaxation Training</h3>
+            <div class="technique-box">
+                <h4>What It Is</h4>
+                <p>Relaxation techniques reduce the physical tension and mental arousal that can prevent sleep. These are skills that improve with practice — don't expect them to work perfectly the first time.<sup>1,2,17</sup></p>
+
+                <h4>Progressive Muscle Relaxation (PMR)</h4>
+                <p>This technique involves systematically tensing and then releasing muscle groups throughout your body:<sup>17</sup></p>
+                <ol>
+                    <li>Lie down comfortably and take a few slow, deep breaths.</li>
+                    <li>Starting with your feet, tense the muscles firmly (but not painfully) for 5–10 seconds.</li>
+                    <li>Release suddenly and notice the contrast between tension and relaxation. Rest for 15–20 seconds.</li>
+                    <li>Move upward through your body: calves → thighs → abdomen → chest → hands → arms → shoulders → neck → face.</li>
+                    <li>After completing all muscle groups, take a few minutes to enjoy the feeling of whole-body relaxation.</li>
+                </ol>
+                <p>Practice PMR daily, ideally both during the day and at bedtime. Many people find it becomes noticeably more effective after 1–2 weeks of regular practice.</p>
+
+                <h4>Diaphragmatic (Belly) Breathing</h4>
+                <p>Slow, deep breathing activates your parasympathetic nervous system — the "rest and digest" system that counteracts the stress response:<sup>17</sup></p>
+                <ol>
+                    <li>Place one hand on your chest and one on your belly.</li>
+                    <li>Breathe in slowly through your nose for 4 seconds, allowing your belly (not your chest) to rise.</li>
+                    <li>Pause briefly.</li>
+                    <li>Exhale slowly through your mouth for 6 seconds, letting your belly fall.</li>
+                    <li>Repeat for 5–10 minutes.</li>
+                </ol>
+
+                <h4>The Body Scan</h4>
+                <p>A gentler alternative to PMR:<sup>17</sup></p>
+                <ol>
+                    <li>Lie comfortably and close your eyes.</li>
+                    <li>Slowly direct your attention to each part of your body, starting at your toes.</li>
+                    <li>Simply notice any sensations — warmth, tingling, tension — without trying to change them.</li>
+                    <li>Imagine each body part becoming heavy and relaxed as your attention moves through it.</li>
+                    <li>Move slowly from toes to head over 10–20 minutes.</li>
+                </ol>
+            </div>
+
+            <h3>Technique 5: Cognitive Restructuring</h3>
+            <div class="technique-box">
+                <h4>What It Is</h4>
+                <p>This is the structured approach to identifying and reframing the unhelpful thoughts about sleep discussed earlier. It helps you develop a more realistic and less stressful relationship with sleep.<sup>12,13,14</sup></p>
+
+                <h4>How to Practice</h4>
+                <ol>
+                    <li><strong>Notice the thought.</strong> When you catch yourself thinking something stressful about sleep, pause and identify the specific thought. Write it down if you can.</li>
+                    <li><strong>Examine the evidence.</strong> Ask yourself: Is this thought completely true? What is the actual evidence? Have I managed okay after a poor night before?</li>
+                    <li><strong>Consider alternatives.</strong> What would I say to a friend who had this same worry? What's a more balanced way to look at this?</li>
+                    <li><strong>Replace with a balanced thought.</strong> Develop a realistic alternative that acknowledges the difficulty without exaggerating it.</li>
+                </ol>
+
+                <h4>Helpful Reminders</h4>
+                <ul>
+                    <li>One poor night of sleep does not cause lasting harm — your body has powerful recovery mechanisms</li>
+                    <li>Quiet rest (even without sleep) provides significant physical restoration</li>
+                    <li>People routinely underestimate how much they actually slept — research shows insomnia sufferers often sleep more than they think<sup>18</sup></li>
+                    <li>Sleep drive is one of the most powerful biological drives — if you're tired enough, your body <em>will</em> sleep</li>
+                    <li>Trying harder to sleep is counterproductive — sleep comes most easily when you stop chasing it</li>
+                </ul>
+            </div>
+
+            <h2>Building a Wind-Down Routine</h2>
+            <p>A consistent pre-sleep routine signals to your brain that it's time to transition from wakefulness to sleep. Think of it as a "landing approach" — gradually reducing stimulation over 30–60 minutes before bed.<sup>1,2</sup></p>
+
+            <div class="success-box">
+                <h3>Sample Wind-Down Routine</h3>
+                <p><strong>60 minutes before bed:</strong> Turn off screens. Dim the lights in your home. Switch to relaxing activities.</p>
+                <p><strong>45 minutes before bed:</strong> Have a warm bath or shower. The subsequent drop in body temperature as you cool down promotes sleepiness.</p>
+                <p><strong>30 minutes before bed:</strong> Light reading, gentle stretching, or listening to calm music or a podcast.</p>
+                <p><strong>15 minutes before bed:</strong> Practice your relaxation technique (PMR, breathing, or body scan).</p>
+                <p style="margin-bottom: 0;"><strong>Bedtime:</strong> Lights off only when you feel genuinely sleepy.</p>
+            </div>
+
+            <h2>The Importance of Daytime Habits</h2>
+            <p>What you do during the day has a profound effect on how you sleep at night. These daytime strategies are just as important as what you do at bedtime:<sup>6,7,19</sup></p>
+
+            <h3>Morning Light Exposure</h3>
+            <p>Bright light exposure — especially in the morning — is one of the most powerful tools for regulating your circadian rhythm. Aim for <strong>30 minutes of bright outdoor light within 1–2 hours of waking</strong>. Even on a cloudy day, outdoor light is many times brighter than indoor lighting. This helps anchor your internal clock and promotes natural melatonin release in the evening.<sup>6,7</sup></p>
+
+            <h3>Physical Activity</h3>
+            <p>Regular exercise is one of the most evidence-supported strategies for improving sleep quality. Key points:<sup>19,20</sup></p>
+            <ul>
+                <li>Even 20–30 minutes of moderate activity most days makes a meaningful difference</li>
+                <li>Morning or afternoon exercise is ideal; vigorous exercise within 2–3 hours of bedtime may delay sleep onset in some people</li>
+                <li>The sleep benefit of exercise accumulates over weeks — keep at it even if you don't notice immediate improvement</li>
+                <li>Any movement counts — walking, cycling, swimming, yoga, gardening</li>
+            </ul>
+
+            <h3>Napping Guidelines</h3>
+            <p>Napping is a common response to poor nighttime sleep, but it reduces the sleep pressure you need to fall asleep at night. If you do nap:<sup>6,7</sup></p>
+            <ul>
+                <li>Keep naps to <strong>20–30 minutes maximum</strong></li>
+                <li>Nap <strong>before 2:00 PM only</strong></li>
+                <li>If you're trying to implement sleep restriction therapy, avoid naps entirely during the initial phase</li>
+            </ul>
+
+            <h2>Using a Sleep Diary</h2>
+            <p>A sleep diary is an essential tool for understanding your sleep patterns and tracking improvement. Fill it in each morning — it takes only 2 minutes. Don't use it as a reason to watch the clock at night; rough estimates are perfectly fine.<sup>1,2</sup></p>
+
+            <div class="sleep-diary">
+                <table style="margin: 0;">
+                    <tr>
+                        <th>Day</th>
+                        <th>Bedtime</th>
+                        <th>Time to Fall Asleep (est.)</th>
+                        <th>Night Awakenings</th>
+                        <th>Final Wake Time</th>
+                        <th>Out of Bed Time</th>
+                        <th>Total Sleep (est.)</th>
+                        <th>Sleep Quality (1–5)</th>
+                    </tr>
+                    <tr><td>Mon</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Tue</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Wed</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Thu</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Fri</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Sat</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Sun</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </table>
+            </div>
+            <p style="font-size: 0.9em; color: #64748b; text-align: center;">Sleep Quality Scale: 1 = Very poor, 2 = Poor, 3 = Fair, 4 = Good, 5 = Very good</p>
+
+            <p>After 1–2 weeks, calculate your <strong>sleep efficiency</strong>: (total sleep time ÷ total time in bed) × 100. A sleep efficiency above 85% is considered good. If yours is lower, this is a clear signal that sleep restriction therapy can help.<sup>1,15</sup></p>
+
+            <h2>Why Medication Is Not the First Choice</h2>
+            <p>It's natural to want a quick solution for sleep problems, and sleeping pills may seem like the obvious answer. However, for most adults with chronic insomnia, the risks and limitations of sleep medications mean they are not recommended as the first approach:<sup>2,3,21,22</sup></p>
+
+            <div class="caution-box">
+                <h3>Limitations and Risks of Sleep Medications</h3>
+                <p><strong>Benzodiazepines and "Z-drugs"</strong> (zopiclone, zolpidem) are the most commonly prescribed sleep medications. Here is what the evidence shows:<sup>21,22,23</sup></p>
+                <ul>
+                    <li><strong>Modest actual benefit:</strong> On average, sleeping pills add only about 20–30 minutes of sleep per night — far less than most people expect.</li>
+                    <li><strong>Dependence and tolerance:</strong> The body adapts to these medications within weeks, requiring higher doses for the same effect. Stopping them after regular use often causes withdrawal symptoms and rebound insomnia.</li>
+                    <li><strong>Next-day impairment:</strong> These medications commonly cause residual morning drowsiness, impaired coordination, and reduced alertness — which can affect driving, work performance, and safety.</li>
+                    <li><strong>Cognitive effects:</strong> Impaired memory formation during the medication's active period is well-documented. Concerns about long-term cognitive effects with prolonged use are the subject of ongoing research.</li>
+                    <li><strong>No treatment of the underlying problem:</strong> Sleeping pills suppress symptoms while you take them but do not address the behavioural and cognitive patterns that maintain insomnia. When the medication is stopped, the insomnia typically returns.</li>
+                </ul>
+                <p style="margin-bottom: 0;">Both Choosing Wisely Canada and the American Academy of Sleep Medicine recommend CBT-I — not medication — as the first-line treatment for chronic insomnia in adults.<sup>2,3,23</sup></p>
+            </div>
+
+            <p>CBT-I, by contrast, produces equal or better short-term results and <strong>superior long-term outcomes</strong> compared to medication — without any of these risks. The effects of CBT-I are durable, meaning they last long after treatment ends, while the effects of medication stop when you stop taking them.<sup>1,2,3</sup></p>
+
+            <div class="key-point">
+                <h3>If You're Currently Taking Sleep Medication</h3>
+                <p>If you're already using sleep medication, <strong>do not stop it abruptly.</strong> Work with your healthcare provider to develop a gradual tapering plan, ideally while simultaneously implementing CBT-I techniques. Many people successfully reduce or eliminate sleep medication while actually sleeping better through behavioural strategies.<sup>2,22</sup></p>
+            </div>
+
+            <h2>Accessing CBT-I</h2>
+            <p>CBT-I can be delivered in several ways:<sup>1,2,3</sup></p>
+            <ul>
+                <li><strong>In-person with a trained therapist:</strong> Psychologists or therapists trained in CBT-I offer individual or group sessions (typically 4–8 sessions). Ask your healthcare provider for a referral.</li>
+                <li><strong>Digital CBT-I programs:</strong> App-based programs such as <em>Insomnia Coach</em> (free, from the U.S. Department of Veterans Affairs) and <em>HALEO</em> (available to some Canadian residents) offer structured CBT-I guidance and have been shown to be effective in clinical trials.</li>
+                <li><strong>Self-directed:</strong> Using the techniques in this handout consistently for 4–6 weeks. While working with a therapist is ideal, self-directed CBT-I can still produce meaningful improvements.</li>
+            </ul>
+
+            <h2>Putting It All Together</h2>
+            <p>Improving sleep is a process, not an overnight fix. Here's a practical roadmap:<sup>1,2</sup></p>
+
+            <div class="success-box">
+                <h3>Your 6-Week Plan</h3>
+                <p><strong><span class="step-number">1</span> Weeks 1–2: Assess and Prepare</strong></p>
+                <ul>
+                    <li>Keep a sleep diary to establish your baseline</li>
+                    <li>Implement sleep hygiene changes (environment, caffeine, alcohol, screens)</li>
+                    <li>Begin practicing a relaxation technique daily</li>
+                    <li>Address any medical factors with your healthcare provider</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong><span class="step-number">2</span> Weeks 3–4: Core CBT-I Techniques</strong></p>
+                <ul>
+                    <li>Start stimulus control (bed = sleep only; get up if awake)</li>
+                    <li>Begin sleep restriction based on your diary data</li>
+                    <li>Practice cognitive restructuring when you notice unhelpful thoughts</li>
+                    <li>Maintain your wind-down routine</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong><span class="step-number">3</span> Weeks 5–6: Adjust and Consolidate</strong></p>
+                <ul>
+                    <li>Gradually expand your sleep window as sleep efficiency improves above 85%</li>
+                    <li>Continue refining your routine based on what works for you</li>
+                    <li>Review your sleep diary for trends and improvements</li>
+                    <li>Discuss progress with your healthcare provider</li>
+                </ul>
+
+                <p style="margin-top: 15px; margin-bottom: 0;"><strong>Be patient with yourself.</strong> Most people notice meaningful improvements by weeks 3–4. Some techniques, especially sleep restriction, may feel harder before they feel better. This is normal — stick with the plan.</p>
+            </div>
+
+            <h2>The Bottom Line</h2>
+            <p>Insomnia is common, treatable, and <strong>not something you simply have to live with.</strong> The most effective treatment is not a pill — it's the proven behavioural and cognitive strategies of CBT-I, which address the root causes of insomnia rather than masking the symptoms.<sup>1,2,3</sup></p>
+
+            <p>The path to better sleep involves understanding how sleep works, changing the habits that keep insomnia going, being kind to yourself about the process, and working with your body's natural rhythms rather than fighting them. Small, consistent changes really do add up to meaningful improvement.</p>
+
+            <div class="mindset-box">
+                <h3>A Final Thought</h3>
+                <p style="margin-bottom: 0;">Your body has been falling asleep successfully every night of your life. It hasn't forgotten how. Sometimes it just needs a bit of help getting out of its own way. By reducing the pressure you put on sleep and creating the right conditions, you're giving your body the best chance to do what it already knows how to do.</p>
+            </div>
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+            <div class="reference-item">1. Edinger JD, Arnedt JT, Bertisch SM, et al. Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2021;17(2):255-262.</div>
+            <div class="reference-item">2. Qaseem A, Kansagara D, Forciea MA, Cooke M, Denberg TD; Clinical Guidelines Committee of the American College of Physicians. Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians. Ann Intern Med. 2016;165(2):125-133.</div>
+            <div class="reference-item">3. Mitchell MD, Gehrman P, Perlis M, Umscheid CA. Comparative effectiveness of cognitive behavioral therapy for insomnia: a systematic review. BMC Fam Pract. 2012;13:40.</div>
+            <div class="reference-item">4. Morin CM, Benca R. Chronic insomnia. Lancet. 2012;379(9821):1129-1141.</div>
+            <div class="reference-item">5. Roth T. Insomnia: definition, prevalence, etiology, and consequences. J Clin Sleep Med. 2007;3(5 Suppl):S7-S10.</div>
+            <div class="reference-item">6. Borbély AA, Daan S, Wirz-Justice A, Deboer T. The two-process model of sleep regulation: a reappraisal. J Sleep Res. 2016;25(2):131-143.</div>
+            <div class="reference-item">7. Czeisler CA, Gooley JJ. Sleep and circadian rhythms in humans. Cold Spring Harb Symp Quant Biol. 2007;72:579-597.</div>
+            <div class="reference-item">8. Harvey AG. A cognitive model of insomnia. Behav Res Ther. 2002;40(8):869-893.</div>
+            <div class="reference-item">9. Spielman AJ, Caruso LS, Glovinsky PB. A behavioral perspective on insomnia treatment. Psychiatr Clin North Am. 1987;10(4):541-553.</div>
+            <div class="reference-item">10. Sateia MJ, Buysse DJ, Krystal AD, Neubauer DN, Heald JL. Clinical practice guideline for the pharmacologic treatment of chronic insomnia in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2017;13(2):307-349.</div>
+            <div class="reference-item">11. Katz DA, McHorney CA. The relationship between insomnia and health-related quality of life in patients with chronic illness. J Fam Pract. 2002;51(3):229-235.</div>
+            <div class="reference-item">12. Morin CM, Stone J, Trinkle D, Mercer J, Remsberg S. Dysfunctional beliefs and attitudes about sleep among older adults with and without insomnia complaints. Psychol Aging. 1993;8(3):463-467.</div>
+            <div class="reference-item">13. Carney CE, Edinger JD. Identifying critical beliefs about sleep in primary insomnia. Sleep. 2006;29(3):342-350.</div>
+            <div class="reference-item">14. Ong JC, Ulmer CS, Manber R. Improving sleep with mindfulness and acceptance: a metacognitive model of insomnia. Behav Res Ther. 2012;50(11):651-660.</div>
+            <div class="reference-item">15. Miller CB, Espie CA, Epstein DR, et al. The evidence base of sleep restriction therapy for treating insomnia disorder. Sleep Med Rev. 2014;18(5):415-424.</div>
+            <div class="reference-item">16. Bootzin RR, Epstein DR. Understanding and treating insomnia. Annu Rev Clin Psychol. 2011;7:435-458.</div>
+            <div class="reference-item">17. Lichstein KL, Riedel BW, Wilson NM, Lester KW, Aguillard RN. Relaxation and sleep compression for late-life insomnia: a placebo-controlled trial. J Consult Clin Psychol. 2001;69(2):227-239.</div>
+            <div class="reference-item">18. Harvey AG, Tang NK. (Mis)perception of sleep in insomnia: a puzzle and a resolution. Psychol Bull. 2012;138(1):77-101.</div>
+            <div class="reference-item">19. Kredlow MA, Capozzoli MC, Hearon BA, Calkins AW, Otto MW. The effects of physical activity on sleep: a meta-analytic review. J Behav Med. 2015;38(3):427-449.</div>
+            <div class="reference-item">20. Passos GS, Poyares D, Santana MG, et al. Effects of moderate aerobic exercise training on chronic primary insomnia. Sleep Med. 2011;12(10):1018-1027.</div>
+            <div class="reference-item">21. Wilt TJ, MacDonald R, Brasure M, et al. Pharmacologic treatment of insomnia disorder: an evidence report for a clinical practice guideline by the American College of Physicians. Ann Intern Med. 2016;165(2):103-112.</div>
+            <div class="reference-item">22. Glass J, Lanctôt KL, Herrmann N, Sproule BA, Busto UE. Sedative hypnotics in older people with insomnia: meta-analysis of risks and benefits. BMJ. 2005;331(7526):1169.</div>
+            <div class="reference-item">23. Choosing Wisely Canada. Psychiatry: Don't use benzodiazepines or other sedative-hypnotics in older adults as first choice for insomnia. Available at: choosingwiselycanada.org.</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always consult with your healthcare provider before making changes to your sleep routine or treatment plan.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: March 2026</p>
+        </div>
+    </div>
+</body>
+</html>

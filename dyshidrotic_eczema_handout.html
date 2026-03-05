@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Dyshidrotic Eczema (Pompholyx)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .danger-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .danger-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .step-card {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .step-card h4 {
+            color: #0369a1;
+            font-size: 1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-number {
+            background: #0369a1;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-card p {
+            font-size: 0.92em;
+            color: #475569;
+            margin: 0;
+            text-align: left;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            min-width: 520px;
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 0; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.5em; }
+            .content { padding: 24px 20px; }
+            h2 { font-size: 1.4em; }
+            p { text-align: left; }
+            .step-grid { grid-template-columns: 1fr; }
+            .references { padding: 20px; border-radius: 0; margin-top: 20px; }
+            .footer { padding: 20px; }
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1>Dyshidrotic Eczema (Pompholyx)</h1>
+        <p>Understanding Your Condition: Causes, Natural Course, and How to Manage It</p>
+    </div>
+
+    <div class="content">
+
+        <div class="key-point">
+            <h3>What You Need to Know First</h3>
+            <p>Dyshidrotic eczema is a <strong>common, non-contagious inflammatory skin condition</strong> that causes intensely itchy blisters on the hands and feet. While it can be uncomfortable and recurrent, it is <strong>not dangerous</strong>, and most flare-ups resolve within 3 to 4 weeks with appropriate care. Understanding your triggers and protecting your skin barrier are the foundations of long-term control.</p>
+        </div>
+
+        <h2>What Is Dyshidrotic Eczema?</h2>
+        <p>Dyshidrotic eczema — also called <strong>pompholyx</strong> (from the Greek word for "bubble") — is a form of eczema that causes small, deep-seated fluid-filled blisters (called <em>vesicles</em>) to erupt on the palms of the hands, the sides and undersides of the fingers, and sometimes the soles of the feet. It accounts for roughly 5–20% of all cases of hand eczema seen in clinical practice.<sup>1,2</sup></p>
+
+        <p>Despite the name, dyshidrotic eczema is <strong>not actually caused by abnormal sweating</strong> (the "dyshidrosis" theory has largely been abandoned), though sweating and moisture can act as triggers. The underlying problem is a combination of immune-mediated inflammation and a disrupted skin barrier, closely related to other forms of atopic dermatitis.<sup>1,3</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">How Dyshidrotic Eczema Develops: Skin Cross-Section</div>
+            <svg width="760" height="320" viewBox="0 0 760 320">
+
+                <!-- === NORMAL SKIN === -->
+                <text x="190" y="22" text-anchor="middle" font-size="16" font-weight="bold" fill="#10b981">HEALTHY SKIN</text>
+
+                <!-- Skin layers -->
+                <rect x="30" y="35" width="320" height="55" fill="#fde68a" rx="6"/>
+                <text x="190" y="56" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350f">Stratum Corneum (Barrier Layer)</text>
+                <text x="190" y="72" text-anchor="middle" font-size="11" fill="#92400e">Tight, intact — keeps irritants OUT, moisture IN</text>
+
+                <rect x="30" y="90" width="320" height="50" fill="#fed7aa" rx="0"/>
+                <text x="190" y="120" text-anchor="middle" font-size="12" fill="#7c2d12">Epidermis — normal immune activity</text>
+
+                <rect x="30" y="140" width="320" height="55" fill="#fecaca" rx="0"/>
+                <text x="190" y="172" text-anchor="middle" font-size="12" fill="#7c2d12">Dermis — calm, no inflammation</text>
+
+                <!-- Moisture arrows pointing inward (retained) -->
+                <text x="190" y="215" text-anchor="middle" font-size="11" fill="#0369a1">💧 Moisture retained &nbsp;&nbsp; 🚫 Irritants blocked</text>
+
+                <!-- === DYSHIDROTIC SKIN === -->
+                <text x="570" y="22" text-anchor="middle" font-size="16" font-weight="bold" fill="#dc2626">DYSHIDROTIC ECZEMA</text>
+
+                <!-- Broken barrier -->
+                <rect x="410" y="35" width="320" height="55" fill="#fef08a" rx="6" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3"/>
+                <text x="570" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350f">Disrupted Barrier</text>
+                <text x="570" y="68" text-anchor="middle" font-size="11" fill="#92400e">Gaps allow allergens &amp; irritants to penetrate</text>
+                <!-- Crack lines in barrier -->
+                <line x1="500" y1="35" x2="510" y2="90" stroke="#dc2626" stroke-width="2"/>
+                <line x1="570" y1="35" x2="565" y2="90" stroke="#dc2626" stroke-width="2"/>
+                <line x1="640" y1="35" x2="648" y2="90" stroke="#dc2626" stroke-width="2"/>
+
+                <!-- Inflamed epidermis -->
+                <rect x="410" y="90" width="320" height="50" fill="#fca5a5" rx="0"/>
+                <text x="570" y="120" text-anchor="middle" font-size="12" fill="#7c2d12">Epidermis — immune cells activated &amp; flooding in</text>
+
+                <!-- Vesicles -->
+                <ellipse cx="480" cy="88" rx="18" ry="12" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="480" y="92" text-anchor="middle" font-size="10" fill="#1e40af">fluid</text>
+                <ellipse cx="535" cy="85" rx="14" ry="10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="535" y="89" text-anchor="middle" font-size="10" fill="#1e40af">fluid</text>
+                <ellipse cx="600" cy="88" rx="20" ry="13" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="600" y="92" text-anchor="middle" font-size="10" fill="#1e40af">fluid</text>
+                <ellipse cx="660" cy="86" rx="16" ry="11" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="660" y="90" text-anchor="middle" font-size="10" fill="#1e40af">fluid</text>
+
+                <!-- Inflamed dermis -->
+                <rect x="410" y="140" width="320" height="55" fill="#fda4af" rx="0"/>
+                <text x="570" y="170" text-anchor="middle" font-size="12" fill="#7c2d12">Dermis — inflamed, dilated blood vessels</text>
+
+                <!-- Vesicle label -->
+                <text x="570" y="215" text-anchor="middle" font-size="11" fill="#1e40af">🔵 Vesicles (blisters) = fluid trapped under disrupted epidermis</text>
+
+                <!-- Dividing line -->
+                <line x1="380" y1="30" x2="380" y2="250" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8,4"/>
+
+                <!-- Caption -->
+                <text x="380" y="275" text-anchor="middle" font-size="12" fill="#475569">A disrupted skin barrier allows triggers to activate immune cells, producing the characteristic deep-seated blisters of dyshidrotic eczema.</text>
+            </svg>
+        </div>
+
+        <h3>What Does It Look Like?</h3>
+        <p>The blisters of dyshidrotic eczema are distinctive. They are typically described as looking like "tapioca pudding" beneath the skin — small, deep, and translucent. They almost never rupture spontaneously on their own; instead they gradually dry out over 1 to 3 weeks, leaving behind dry, scaly skin that may crack and peel. The cycle of blistering, drying, and peeling can be uncomfortable and cosmetically distressing.<sup>1,2</sup></p>
+
+        <ul>
+            <li><strong>Location:</strong> Palms, lateral and ventral surfaces of the fingers, and soles of the feet</li>
+            <li><strong>Size:</strong> Usually 1 to 5 mm — tiny, but can coalesce into larger bullae in severe cases</li>
+            <li><strong>Sensation:</strong> Intense itching or a burning feeling often precedes blisters by several hours</li>
+            <li><strong>Progression:</strong> Blisters → dry out → peeling, cracking, fissuring → resolution (then cycle may repeat)</li>
+        </ul>
+
+        <h2>What Causes It?</h2>
+        <p>The exact cause is not fully understood, but dyshidrotic eczema is best thought of as the result of <strong>an underlying atopic tendency meeting a specific trigger</strong>. It is not a single disease with a single cause — it is a pattern of skin inflammation that can be provoked by a variety of factors.<sup>1,3,4</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">Common Triggers and Contributing Factors</div>
+            <svg width="700" height="360" viewBox="0 0 700 360">
+
+                <!-- Central node -->
+                <ellipse cx="350" cy="180" rx="90" ry="55" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+                <text x="350" y="173" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">Dyshidrotic</text>
+                <text x="350" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">Eczema Flare</text>
+
+                <!-- Spoke 1: Atopy (top left) -->
+                <line x1="270" y1="140" x2="170" y2="70" stroke="#6366f1" stroke-width="2.5"/>
+                <rect x="60" y="30" width="155" height="60" fill="#ede9fe" stroke="#6366f1" stroke-width="2" rx="8"/>
+                <text x="137" y="53" text-anchor="middle" font-size="13" font-weight="bold" fill="#4338ca">Atopic History</text>
+                <text x="137" y="70" text-anchor="middle" font-size="11" fill="#4338ca">Eczema, asthma,</text>
+                <text x="137" y="84" text-anchor="middle" font-size="11" fill="#4338ca">hay fever</text>
+
+                <!-- Spoke 2: Stress (top) -->
+                <line x1="340" y1="125" x2="320" y2="55" stroke="#dc2626" stroke-width="2.5"/>
+                <rect x="240" y="15" width="155" height="55" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="8"/>
+                <text x="317" y="38" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Emotional Stress</text>
+                <text x="317" y="55" text-anchor="middle" font-size="11" fill="#991b1b">A well-documented</text>
+                <text x="317" y="68" text-anchor="middle" font-size="11" fill="#991b1b">and common trigger</text>
+
+                <!-- Spoke 3: Metals (top right) -->
+                <line x1="430" y1="140" x2="510" y2="70" stroke="#0369a1" stroke-width="2.5"/>
+                <rect x="485" y="28" width="165" height="60" fill="#e0f2fe" stroke="#0369a1" stroke-width="2" rx="8"/>
+                <text x="567" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">Metal Allergens</text>
+                <text x="567" y="67" text-anchor="middle" font-size="11" fill="#0369a1">Nickel, cobalt,</text>
+                <text x="567" y="81" text-anchor="middle" font-size="11" fill="#0369a1">chromate</text>
+
+                <!-- Spoke 4: Moisture / irritants (right) -->
+                <line x1="440" y1="185" x2="530" y2="185" stroke="#0369a1" stroke-width="2.5"/>
+                <rect x="530" y="158" width="165" height="58" fill="#e0f2fe" stroke="#0369a1" stroke-width="2" rx="8"/>
+                <text x="612" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">Moisture &amp; Irritants</text>
+                <text x="612" y="196" text-anchor="middle" font-size="11" fill="#0369a1">Soaps, detergents,</text>
+                <text x="612" y="210" text-anchor="middle" font-size="11" fill="#0369a1">frequent wet work</text>
+
+                <!-- Spoke 5: Seasonal (bottom right) -->
+                <line x1="420" y1="225" x2="510" y2="295" stroke="#0369a1" stroke-width="2.5"/>
+                <rect x="485" y="278" width="165" height="55" fill="#e0f2fe" stroke="#0369a1" stroke-width="2" rx="8"/>
+                <text x="567" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">Seasonal Changes</text>
+                <text x="567" y="317" text-anchor="middle" font-size="11" fill="#0369a1">Warm/humid weather;</text>
+                <text x="567" y="330" text-anchor="middle" font-size="11" fill="#0369a1">seasonal peaks common</text>
+
+                <!-- Spoke 6: Sweating (bottom left) -->
+                <line x1="270" y1="220" x2="180" y2="295" stroke="#6366f1" stroke-width="2.5"/>
+                <rect x="40" y="278" width="180" height="55" fill="#ede9fe" stroke="#6366f1" stroke-width="2" rx="8"/>
+                <text x="130" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#4338ca">Hyperhidrosis</text>
+                <text x="130" y="318" text-anchor="middle" font-size="11" fill="#4338ca">Excessive sweating traps</text>
+                <text x="130" y="331" text-anchor="middle" font-size="11" fill="#4338ca">moisture against skin</text>
+
+            </svg>
+            <p style="margin-top: 10px; font-size: 0.95em; color: #64748b; max-width: 650px; margin-left: auto; margin-right: auto;">
+                Multiple factors converge to trigger a flare. Identifying your personal triggers is key to reducing how often flares occur.
+            </p>
+        </div>
+
+        <div class="warning-box">
+            <h3>A Note About Nickel and Diet</h3>
+            <p>Some patients with dyshidrotic eczema — particularly those with documented nickel allergy on patch testing — find that a <strong>low-nickel diet</strong> can help reduce flare frequency. High-nickel foods include whole grains, legumes, nuts, seeds, and chocolate. This dietary approach is most relevant if patch testing confirms nickel sensitization, and should be discussed with your doctor before pursuing it.<sup>5</sup></p>
+        </div>
+
+        <h2>Natural History: What to Expect Over Time</h2>
+        <p>Dyshidrotic eczema is, for most people, a <strong>chronic, relapsing condition</strong> — meaning it tends to come and go in flares rather than resolving permanently after a single episode. Understanding this natural course will help you manage expectations and plan ahead.<sup>1,2,4</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">The Typical Dyshidrotic Eczema Flare Timeline</div>
+            <svg width="720" height="200" viewBox="0 0 720 200">
+
+                <!-- Timeline bar -->
+                <rect x="30" y="90" width="660" height="20" fill="#e2e8f0" rx="10"/>
+
+                <!-- Phase fills -->
+                <!-- Phase 1: Itch/prodrome 0-3 days -->
+                <rect x="30" y="90" width="80" height="20" fill="#fde68a" rx="10 0 0 10"/>
+                <!-- Phase 2: Active blistering 3-14 days -->
+                <rect x="110" y="90" width="200" height="20" fill="#fca5a5"/>
+                <!-- Phase 3: Drying/peeling 14-21 days -->
+                <rect x="310" y="90" width="160" height="20" fill="#fed7aa"/>
+                <!-- Phase 4: Resolution 21-28 days -->
+                <rect x="470" y="90" width="220" height="20" fill="#d1fae5" rx="0 10 10 0"/>
+
+                <!-- Phase labels above -->
+                <text x="70" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350f">Prodrome</text>
+                <text x="70" y="66" text-anchor="middle" font-size="10" fill="#78350f">Itch / burning</text>
+
+                <text x="210" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">Active Blistering</text>
+                <text x="210" y="66" text-anchor="middle" font-size="10" fill="#991b1b">Intense itch, vesicles appear</text>
+
+                <text x="390" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#c2410c">Drying &amp; Peeling</text>
+                <text x="390" y="66" text-anchor="middle" font-size="10" fill="#c2410c">Blisters dry, skin cracks</text>
+
+                <text x="580" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">Resolution</text>
+                <text x="580" y="66" text-anchor="middle" font-size="10" fill="#065f46">Skin heals, may recur</text>
+
+                <!-- Day markers -->
+                <line x1="30" y1="112" x2="30" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="30" y="144" text-anchor="middle" font-size="11" fill="#64748b">Day 0</text>
+
+                <line x1="110" y1="112" x2="110" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="110" y="144" text-anchor="middle" font-size="11" fill="#64748b">Day 2–3</text>
+
+                <line x1="310" y1="112" x2="310" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="310" y="144" text-anchor="middle" font-size="11" fill="#64748b">Days 7–14</text>
+
+                <line x1="470" y1="112" x2="470" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="470" y="144" text-anchor="middle" font-size="11" fill="#64748b">Days 14–21</text>
+
+                <line x1="690" y1="112" x2="690" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="690" y="144" text-anchor="middle" font-size="11" fill="#64748b">Days 21–28</text>
+
+                <!-- Key complications note -->
+                <text x="360" y="180" text-anchor="middle" font-size="11" fill="#6b7280">Most flares resolve within 3–4 weeks. Scratching prolongs healing and increases infection risk.</text>
+            </svg>
+        </div>
+
+        <p>Some people have a single episode that never recurs; many others experience repeated flares over months or years. Severe or frequent scratching during a flare can lead to two important complications:<sup>1,2</sup></p>
+
+        <ul>
+            <li><strong>Lichenification:</strong> The skin becomes thickened, leathery, and hyperpigmented from chronic rubbing and scratching. This can become self-perpetuating — thickened skin itches more, which causes more scratching.</li>
+            <li><strong>Secondary bacterial infection:</strong> The disrupted skin barrier is vulnerable to infection, most commonly with <em>Staphylococcus aureus</em>. Signs of infection include increasing redness, warmth, swelling, yellow crusting, or pus. This requires prompt medical attention.</li>
+        </ul>
+
+        <h2>Treatment: A Layered Approach</h2>
+        <p>There is no permanent cure for dyshidrotic eczema, but a combination of medical treatment during flares and ongoing skin barrier protection between flares can dramatically reduce both the severity and frequency of episodes. Treatment decisions should be tailored to the severity of your condition.<sup>1,3,6</sup></p>
+
+        <h3>Medical Treatments</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Treatment</th>
+                    <th>When It's Used</th>
+                    <th>Key Points</th>
+                </tr>
+                <tr>
+                    <td><strong>High-Potency Topical Corticosteroids</strong><br><em>(e.g., clobetasol, betamethasone)</em></td>
+                    <td>First-line treatment during active flares</td>
+                    <td>Most effective when applied early, during the blistering phase. Apply thinly to affected areas once or twice daily. Short courses (1–2 weeks) minimize skin-thinning side effects. Ointments penetrate better than creams on thick palmar skin.<sup>6,7</sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Topical Calcineurin Inhibitors</strong><br><em>(tacrolimus 0.1%, pimecrolimus 1%)</em></td>
+                    <td>Maintenance therapy; steroid-sparing option</td>
+                    <td>Non-steroidal — safe for longer-term use without risk of skin thinning. Particularly useful for patients who require frequent treatment or have sensitive skin. May cause initial burning sensation.<sup>6,7</sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Oral Corticosteroids</strong><br><em>(prednisone)</em></td>
+                    <td>Severe or widespread flares not responding to topical treatment</td>
+                    <td>Short-course only (typically 1–2 weeks). Rapid and effective for acute severe episodes. Not suitable for long-term or frequent use due to systemic side effects.<sup>6</sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Phototherapy (UV Light Therapy)</strong><br><em>(Narrowband UVB or PUVA)</em></td>
+                    <td>Chronic, frequently relapsing cases</td>
+                    <td>Delivered in a dermatology setting, typically 2–3 sessions per week. Strong evidence for reducing flare frequency in chronic dyshidrotic eczema. Requires referral. In BC, covered by MSP with appropriate referral.<sup>8</sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Systemic Immunosuppressants</strong><br><em>(cyclosporine, methotrexate, dupilumab)</em></td>
+                    <td>Refractory cases with significant impact on quality of life</td>
+                    <td>Reserved for severe, treatment-resistant disease. Dupilumab (a biologic) shows emerging evidence for hand eczema including pompholyx. Requires specialist management. Note: dupilumab requires private prescription in BC unless criteria met for coverage.<sup>9</sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Botulinum Toxin Injections</strong></td>
+                    <td>Cases where hyperhidrosis (excessive sweating) is a dominant trigger</td>
+                    <td>Reduces sweating in affected areas. Evidence suggests benefit in sweat-triggered dyshidrotic eczema. Requires private prescription in BC as this indication is generally not covered by MSP.<sup>10</sup></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Self-Care and Skin Barrier Protection</h3>
+        <p>Medical treatment addresses the flare, but <strong>consistent daily skin care between flares is equally important</strong> — it is what prevents the next flare from occurring. The goal is to reinforce the skin barrier so that triggers cannot penetrate easily.<sup>3,6</sup></p>
+
+        <div class="step-grid">
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Gentle Cleansing Only</h4>
+                <p>Use lukewarm — never hot — water. Choose soap-free, fragrance-free cleansers (e.g., Cetaphil, Dove Sensitive, Aveeno). Pat skin <em>gently</em> dry; do not rub.</p>
+            </div>
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Moisturize Immediately After Washing</h4>
+                <p>Apply a thick, fragrance-free emollient within 3 minutes of washing ("soak and seal"). Ointments (petroleum jelly, Aquaphor) outperform creams and lotions on the hands.</p>
+            </div>
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Protect Your Skin Barrier</h4>
+                <p>Wear cotton-lined waterproof gloves whenever using cleaning products, dishwashing, or handling irritants. Remove rings before wet work — moisture trapped under rings is a common trigger.</p>
+            </div>
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Use Cold Compresses During Flares</h4>
+                <p>Cool, damp compresses applied for 10–15 minutes several times daily soothe itching and help dry active blisters. Apply your topical steroid immediately after.</p>
+            </div>
+            <div class="step-card">
+                <h4><span class="step-number">5</span> Do Not Burst Blisters</h4>
+                <p>Intact blisters protect the skin beneath. Bursting them increases the risk of secondary bacterial infection and prolongs healing time.</p>
+            </div>
+            <div class="step-card">
+                <h4><span class="step-number">6</span> Manage Stress Actively</h4>
+                <p>Stress is a key physiological trigger. Regular sleep, exercise, and evidence-based stress reduction techniques (e.g., mindfulness) can meaningfully reduce flare frequency over time.</p>
+            </div>
+        </div>
+
+        <h3>Identifying and Avoiding Your Triggers</h3>
+        <p>Keeping a <strong>simple trigger diary</strong> — noting what you were doing, wearing, eating, or experiencing emotionally in the days before a flare — can reveal patterns that are not obvious otherwise. Common triggers worth considering systematically include:<sup>1,3,5</sup></p>
+        <ul>
+            <li>Soaps, shampoos, hand sanitizers, or cleaning products — consider switching to hypoallergenic alternatives</li>
+            <li>Jewelry (nickel and cobalt are the most common metal allergens — consider patch testing if this is suspected)</li>
+            <li>Occupational exposures (hairdressers, healthcare workers, and food handlers have higher rates of hand eczema)</li>
+            <li>Seasonal humidity changes — a humidifier in winter and avoidance of prolonged sweating in summer may help</li>
+            <li>Dietary nickel (relevant only if patch testing confirms nickel allergy)</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>What to Expect With Good Management</h3>
+            <p>With a consistent skin care routine, early treatment at the first sign of a flare, and identified triggers avoided or minimized, many patients experience:<sup>1,6</sup></p>
+            <ul>
+                <li><strong>Shorter flares</strong> — treating early, before full blistering develops, can cut flare duration significantly</li>
+                <li><strong>Fewer flares per year</strong> — trigger avoidance and daily moisturization reduce recurrence rates</li>
+                <li><strong>No scarring or permanent skin damage</strong> — when scratching is minimized and infection avoided, dyshidrotic eczema heals cleanly</li>
+                <li><strong>Long-term remission</strong> — some patients find the condition fades substantially over several years, especially as triggers are better controlled</li>
+            </ul>
+        </div>
+
+        <h2>When to See Your Doctor</h2>
+        <p>Most flares can be managed at home using the approach described above. However, please contact your healthcare provider if any of the following occur:<sup>1,2</sup></p>
+
+        <div class="danger-box">
+            <h3>Seek Prompt Medical Attention If:</h3>
+            <ul>
+                <li><strong>Signs of infection appear:</strong> increasing redness, warmth, significant swelling, yellow or green crusting, pus, or fever — this may indicate a bacterial skin infection requiring antibiotics</li>
+                <li>Your prescribed topical treatment is <strong>not controlling the flare after 7–10 days</strong> of consistent use</li>
+                <li>Itching is so severe it is <strong>significantly disrupting sleep or daily function</strong></li>
+                <li>You develop <strong>rapidly spreading redness</strong> beyond the original blister area</li>
+                <li>You are concerned about <strong>allergic triggers</strong> and would like <strong>patch testing</strong> to identify specific sensitivities</li>
+            </ul>
+        </div>
+
+        <div class="key-point">
+            <h3>Consider Dermatology Referral If:</h3>
+            <ul style="margin-bottom:0;">
+                <li>Flares are frequent (more than 4–6 per year) and significantly affecting quality of life</li>
+                <li>Standard topical treatments are not providing adequate control</li>
+                <li>You are a candidate for phototherapy (narrowband UVB)</li>
+                <li>Systemic or biologic treatment is being considered</li>
+                <li>Formal patch testing to identify contact allergens is warranted</li>
+            </ul>
+        </div>
+
+        <h2>Summary</h2>
+        <p>Dyshidrotic eczema is a common, manageable, and non-contagious skin condition. It tends to follow a cycle of flares and remissions. With an understanding of your personal triggers, a consistent daily skin care routine, prompt treatment of flares with appropriate topical medications, and barrier protection against irritants, the majority of people with this condition can achieve good control and maintain an excellent quality of life. It is rarely a permanent problem — and it never leaves permanent damage when managed appropriately.</p>
+
+        <div class="success-box">
+            <h3>Your Action Plan Between Appointments</h3>
+            <ul style="margin-bottom:0;">
+                <li>Apply thick fragrance-free moisturizer at least twice daily — especially after handwashing</li>
+                <li>Use cotton-lined gloves for all wet work and cleaning</li>
+                <li>Begin your prescribed topical steroid <em>at the first sign of itching</em> — do not wait for blisters to appear</li>
+                <li>Keep a flare diary to identify your personal triggers</li>
+                <li>Book a follow-up if signs of infection develop or if treatment is not working after 10 days</li>
+            </ul>
+        </div>
+
+    </div><!-- end .content -->
+
+    <div class="references">
+        <h2>References</h2>
+        <div class="reference-item">1. Agner T, Elsner P. Hand eczema: epidemiology, prognosis and prevention. J Eur Acad Dermatol Venereol. 2020;34(Suppl 1):4-12.</div>
+        <div class="reference-item">2. Lehucher-Michel MP, Koeppel MC, Lanteaume A, Sayag J. Dyshidrotic eczema and occupation: a descriptive study. Contact Dermatitis. 2000;43(3):149-155.</div>
+        <div class="reference-item">3. Lofgren SM, Warshaw EM. Dyshidrosis: epidemiology, clinical characteristics, and therapy. Dermatitis. 2006;17(4):165-181.</div>
+        <div class="reference-item">4. Wollina U. Pompholyx: a review of clinical features, differential diagnosis, and management. Am J Clin Dermatol. 2010;11(5):305-314.</div>
+        <div class="reference-item">5. Stuckert J, Nedorost S. Low-cobalt diet for dyshidrotic eczema patients. Contact Dermatitis. 2008;59(6):361-365.</div>
+        <div class="reference-item">6. Diepgen TL, Agner T, Aberer W, et al. Management of chronic hand eczema. Contact Dermatitis. 2007;57(4):203-210.</div>
+        <div class="reference-item">7. Ruzicka T, Lynde CW, Jemec GB, et al. Efficacy and safety of oral alitretinoin (9-cis retinoic acid) in patients with severe chronic hand eczema refractory to topical corticosteroids: results of a randomized, double-blind, placebo-controlled, multicentre trial. Br J Dermatol. 2008;158(4):808-817.</div>
+        <div class="reference-item">8. Tzaneva S, Kittler H, Thallinger C, Hönigsmann H, Tanew A. Oral vs. bath PUVA using 8-methoxypsoralen for chronic palmoplantar eczema. Photodermatol Photoimmunol Photomed. 2009;25(2):101-105.</div>
+        <div class="reference-item">9. Napolitano M, Fabbrocini G, Scalvenzi M, Neri I, Gelmetti C, Patruno C. Effectiveness of dupilumab for the treatment of generalized prurigo nodularis phenotype of adult atopic dermatitis. Dermatitis. 2020;31(3):207-211.</div>
+        <div class="reference-item">10. Swartling C, Naver H, Lindberg M, Anveden I. Treatment of dyshidrotic hand dermatitis with intradermal botulinum toxin. J Am Acad Dermatol. 2002;47(5):667-671.</div>
+        <div class="reference-item">11. Warshaw EM, Lee G, Storrs FJ. Hand dermatitis: a review of clinical features, therapeutic options, and long-term outcomes. Am J Contact Dermat. 2003;14(3):119-137.</div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace medical advice. Always consult with your healthcare provider before making changes to your treatment plan or if you have concerns about your condition.</p>
+        <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: March 2026</p>
+    </div>
+
+</div>
+</body>
+</html>
