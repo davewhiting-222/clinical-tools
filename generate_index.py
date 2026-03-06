@@ -12,7 +12,6 @@ def get_metadata(filepath):
         with open(filepath, 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f, 'html.parser')
             title = soup.title.string if soup.title else filepath
-            # Look for <meta name="category" content="...">
             cat_tag = soup.find('meta', attrs={'name': 'category'})
             category = cat_tag['content'] if cat_tag else "Uncategorized"
             return title, category
@@ -23,16 +22,15 @@ def generate_index():
     files = [f for f in os.listdir(HANDOUTS_DIR) 
              if f.endswith('.html') and f not in EXCLUDE_FILES]
     
-    # Build a list of dictionaries for easier sorting
     handouts = []
     for file in files:
         title, category = get_metadata(os.path.join(HANDOUTS_DIR, file))
         handouts.append({'file': file, 'title': title, 'category': category})
 
-    # Sort by Category, then Title
-    handouts.sort(key=lambda x: (x['category'], x['title']))
+    # ENHANCED SORTING: This keeps "SKIN_ACNE" and "SKIN" together by 
+    # looking at the first word of the category primarily.
+    handouts.sort(key=lambda x: (x['category'].split('_')[0], x['category'], x['title']))
 
-    # Generate the Table Rows
     rows_html = ""
     for h in handouts:
         rows_html += f"""
@@ -49,25 +47,26 @@ def generate_index():
     <title>Clinical Handouts</title>
     <style>
         body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; max-width: 900px; margin: auto; background-color: #f4f7f6; }}
-        h1 {{ color: #2c3e50; }}
-        #searchInput {{ width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }}
-        table {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
-        th, td {{ padding: 12px; text-align: left; border-bottom: 1px solid #eee; }}
-        th {{ background-color: #3498db; color: white; }}
-        .badge {{ background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }}
-        a {{ text-decoration: none; color: #2c3e50; font-weight: 500; }}
+        h1 {{ color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }}
+        #searchInput {{ width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); }}
+        table {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }}
+        th, td {{ padding: 15px; text-align: left; border-bottom: 1px solid #eee; }}
+        th {{ background-color: #3498db; color: white; text-transform: uppercase; font-size: 0.85em; letter-spacing: 1px; }}
+        .badge {{ background: #e1f5fe; color: #0288d1; padding: 4px 10px; border-radius: 20px; font-size: 0.75em; font-weight: bold; border: 1px solid #b3e5fc; }}
+        tr:hover {{ background-color: #f9f9f9; }}
+        a {{ text-decoration: none; color: #2c3e50; font-weight: 500; display: block; }}
         a:hover {{ color: #3498db; }}
     </style>
 </head>
 <body>
-    <h1>Patient Handouts</h1>
+    <h1>Patient Information Handouts</h1>
     
-    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search by name or category...">
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Type to search (e.g. 'acne', 'diet', 'sleep')...">
 
     <table id="handoutTable">
         <thead>
             <tr>
-                <th style="width: 150px;">Category</th>
+                <th style="width: 180px;">Category</th>
                 <th>Handout Title</th>
             </tr>
         </thead>
