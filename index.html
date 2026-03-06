@@ -3,96 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Education Center</title>
+    <title>Patient Handouts Index</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
-        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        
-        /* New styling for the search bar */
-        #searchInput {
-            width: 100%;
-            padding: 15px;
-            margin-top: 20px;
-            font-size: 1rem;
-            border: 1px solid #d1d8e0;
-            border-radius: 8px;
-            box-sizing: border-box; /* Ensures padding doesn't affect width */
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
-        }
-        #searchInput:focus {
-            outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
-        }
-
-        .menu-container { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-        .menu-button { 
-            display: block; background-color: #ffffff; color: #2980b9; padding: 20px; 
-            text-decoration: none; border-radius: 8px; border: 1px solid #d1d8e0;
-            text-align: center; font-weight: bold; font-size: 1.1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.1s;
-        }
-        .menu-button:active { transform: scale(0.98); background-color: #f0f0f0; }
-        .footer { margin-top: 40px; text-align: center; font-size: 0.8rem; color: #7f8c8d; }
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #eee; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; padding: 10px; background: #f9f9f9; border-radius: 5px; }
+        a { text-decoration: none; color: #3498db; font-weight: bold; }
+        a:hover { color: #2980b9; }
     </style>
 </head>
 <body>
+    <h1>Patient Information Handouts</h1>
+    <p>Please select a handout from the list below:</p>
+    <ul>
+        <li><a href="accutane_patient_handout.html">Accutane (Isotretinoin) Treatment Guide</a></li>
+        <li><a href="acne_handout.html">Understanding and Treating Acne</a></li>
+        <li><a href="acne_teen_handout.html">Your Skin, Your Questions: Understanding Acne</a></li>
+        <li><a href="acute_lower_back_pain_handout (1).html">Understanding Acute Lower Back Pain</a></li>
+        <li><a href="carnivore_diet_handout.html">The Carnivore Diet: A Balanced Look at the Evidence</a></li>
+        <li><a href="chronic_back_pain_handout (2).html">Managing Chronic Lower Back Pain</a></li>
+        <li><a href="dyshidrotic_eczema_handout.html">Understanding Dyshidrotic Eczema (Pompholyx)</a></li>
+        <li><a href="efudex_actinic_keratosis_handout.html">Efudex (Fluorouracil) Cream for Actinic Keratosis</a></li>
+        <li><a href="ezetimibe_handout.html">Understanding Ezetimibe for Cholesterol Management</a></li>
+        <li><a href="fatigue_older_adults_handout.html">Understanding Fatigue in Adults 65–75: What's Really Behind Your Tiredness</a></li>
+        <li><a href="insomnia_management_adults.html">Understanding and Managing Insomnia</a></li>
+        <li><a href="insulin_resistance_handout.html">Understanding Insulin Resistance and Low-Carbohydrate Diets</a></li>
+        <li><a href="inulin_patient_handout.html">Understanding Inulin for Metabolic Health</a></li>
+        <li><a href="low_carb_heart_disease_handout.html">Low-Carbohydrate Diets and Heart Disease Risk: Understanding the Full Picture</a></li>
+        <li><a href="mediterranean_diet_handout.html">The Mediterranean Diet: Evidence-Based Guidance</a></li>
+        <li><a href="molluscum_contagiosum_handout (1).html">Molluscum Contagiosum in Children: What Parents Need to Know</a></li>
+        <li><a href="molluscum_contagiosum_handout (3).html">Molluscum Contagiosum in Children: What Parents Need to Know</a></li>
+        <li><a href="portfolio_diet_handout.html">The Portfolio Diet: A Natural Approach to Lowering Cholesterol</a></li>
+        <li><a href="sick_day_rules.html">Sick Day Rules for Diabetes: Medication Management During Illness</a></li>
+        <li><a href="skin_exam_handout.html">Comprehensive Skin Examination: What to Expect</a></li>
+        <li><a href="sleep_disturbance_elderly.html">Understanding Sleep Changes as You Age</a></li>
+        <li><a href="sleep_disturbance_elderly_japanese.html">加齢に伴う睡眠の変化を理解する</a></li>
+        <li><a href="starting_low_carb_diet.html">Starting a Low-Carbohydrate Diet: A Practical Guide</a></li>
+        <li><a href="sun_protection_handout.html">Protecting Your Skin: A Balanced Approach to Sun Safety</a></li>
+        <li><a href="wellness_visit_handout.html">Getting the Most Out of Your Health Visit: Quality Over Quantity</a></li>
 
-    <h1>Patient Resources</h1>
-    <p style="text-align: center;">Select a resource below to view on your device.</p>
-
-    <input type="text" id="searchInput" onkeyup="filterHandouts()" placeholder="Search for a topic (e.g., Diet, Back Pain)...">
-
-    <div class="menu-container" id="handoutList">
-        <a href="accutane_patient_handout.html" class="menu-button">Acne: Accutane: Guide to starting Accutane for Male Patients</a>
-        <a href="acne_handout.html" class="menu-button">Acne: Starting Treatment for Acne</a>
-        <a href="acne_teen_handout.html" class="menu-button">Acne: Understanding Acne in Teenages and Young Adults</a>
-        <a href="efudex_actinic_keratosis_handout.html" class="menu-button">Actinic Keratosis: Using Efudex to Treat Actinic Keratosis.</a>
-        <a href="wellness_visit_handout.html" class="menu-button">Annual Physical: Do I Need an Annual Physical?</a>
-        <a href="acute_lower_back_pain_handout (1).html" class="menu-button">Back Pain: Understanding Acute Back Pain</a>
-        <a href="chronic_back_pain_handout (2).html" class="menu-button">Back Pain: Understanding Chronic Back Pain</a>
-        <a href="sick_day_rules.html" class="menu-button">Diabetes: Sick Day Rules for Diabetics: When to Hold your Medication</a>
-        <a href="carnivore_diet_handout.html" class="menu-button">Diet: Carnivore Diet - the Debate. </a>" class="menu-button">Diet: Low Carbohydrate Diet: Does it Lower or Increase my Risk of Heart Disease? A Detailed Analysis.</a>
-        <a href="low_carb_heart_disease_handout.html" class="menu-button">Diet: Low Carbohydrate Diet: Does it Lower or Increase my Risk of Heart Disease? A Detailed Analysis.</a>
-        <a href="starting_low_carb_diet.html" class="menu-button">Diet: Low Carbohydrate Diet: The Why and the How. A Comprehensive Overview.</a>
-        <a href="mediterranean_diet_handout.html" class="menu-button">Diet: Mediterranean Diet. The Best Way To Reduce Heart Disease.</a>
-        <a href="portfolio_diet_handout.html" class="menu-button">Diet: Portfolio Diet. The Best Way To Lower LDL-C</a>
-        <a href="dyshidrotic_eczema_handout.html" class="menu-button">Eczema: Understanding and Managing Dishydrotic Eczema</a>
-        <a href="fatigue_older_adults_handout.html" class="menu-button">Fatigue: Understand Fatigue in the "Young Elderly"</a>
-        <a href="insulin_resistance_handout.html" class="menu-button">Insulin Resistance Guide</a>
-        <a href="inulin_patient_handout.html" class="menu-button">Inulin: Fiber: The Fiber that Provides Protection against Fructose</a>
-        <a href="ezetimibe_handout.html" class="menu-button">Medication for cholsterol: Understanding Ezetimibe</a>
-        <a href="molluscum_contagiosum_handout (3).html" class="menu-button">Molluscum: Understanding Molluscum Contagiosum</a>
-        <a href="skin_exam_handout.html" class="menu-button">Skin: Understanding your Full Skin Exanination. How to Prepare and What to Expect. </a>
-        <a href="insomnia_management_adults.html" class="menu-button">Sleep: Understanding and Managing Sleep Disturbance in Adults</a>
-        <a href="sleep_disturbance_elderly.html" class="menu-button">Sleep: Understanding Sleep Disturbance When You Are Over 60</a>
-    </div>
-
-    <div class="footer">
-        <p>Provided for educational purposes by your care team.</p>
-    </div>
-
-    <script>
-        function filterHandouts() {
-            // Get the user's search input
-            let input = document.getElementById('searchInput');
-            let filter = input.value.toUpperCase();
-            
-            // Get the list of handouts
-            let container = document.getElementById('handoutList');
-            let buttons = container.getElementsByTagName('a');
-
-            // Loop through all buttons, and hide those who don't match the search query
-            for (let i = 0; i < buttons.length; i++) {
-                let txtValue = buttons[i].textContent || buttons[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    buttons[i].style.display = ""; // Show matching items
-                } else {
-                    buttons[i].style.display = "none"; // Hide non-matching items
-                }
-            }
-        }
-    </script>
-
+    </ul>
+    <footer>
+        <p><small>Last updated: Fri Mar  6 22:23:33 UTC 2026</small></p>
+    </footer>
 </body>
 </html>
