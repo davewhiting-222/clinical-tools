@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # Configuration
 HANDOUTS_DIR = '.' 
 INDEX_FILE = 'index.html'
-EXCLUDE_FILES = [INDEX_FILE, 'generate_index.py', 'requirements.txt']
+EXCLUDE_FILES = [INDEX_FILE, 'generate_index.py', 'requirements.txt', 'README.md']
 
 def get_metadata(filepath):
     """Extracts title and category from HTML."""
@@ -13,7 +13,7 @@ def get_metadata(filepath):
             soup = BeautifulSoup(f, 'html.parser')
             title = soup.title.string if soup.title else filepath
             cat_tag = soup.find('meta', attrs={'name': 'category'})
-            category = cat_tag['content'] if cat_tag else "Uncategorized"
+            category = cat_tag['content'].strip() if cat_tag else "Uncategorized"
             return title, category
     except Exception:
         return filepath, "Uncategorized"
@@ -27,8 +27,10 @@ def generate_index():
         title, category = get_metadata(os.path.join(HANDOUTS_DIR, file))
         handouts.append({'file': file, 'title': title, 'category': category})
 
-    # ENHANCED SORTING: This keeps "SKIN_ACNE" and "SKIN" together by 
-    # looking at the first word of the category primarily.
+    # SMART SORTING LOGIC:
+    # 1. We take the category (e.g., "SKIN_ACNE") and split it by the underscore.
+    # 2. We use the FIRST part ("SKIN") as the primary group.
+    # 3. This ensures "SKIN" and "SKIN_ACNE" are always siblings.
     handouts.sort(key=lambda x: (x['category'].split('_')[0], x['category'], x['title']))
 
     rows_html = ""
@@ -46,40 +48,35 @@ def generate_index():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinical Handouts</title>
     <style>
-        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; max-width: 900px; margin: auto; background-color: #f4f7f6; }}
-        h1 {{ color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }}
-        #searchInput {{ width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); }}
-        table {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }}
-        th, td {{ padding: 15px; text-align: left; border-bottom: 1px solid #eee; }}
-        th {{ background-color: #3498db; color: white; text-transform: uppercase; font-size: 0.85em; letter-spacing: 1px; }}
-        .badge {{ background: #e1f5fe; color: #0288d1; padding: 4px 10px; border-radius: 20px; font-size: 0.75em; font-weight: bold; border: 1px solid #b3e5fc; }}
-        tr:hover {{ background-color: #f9f9f9; }}
-        a {{ text-decoration: none; color: #2c3e50; font-weight: 500; display: block; }}
-        a:hover {{ color: #3498db; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 30px; max-width: 1000px; margin: auto; background-color: #f8fafc; color: #1e293b; }}
+        h1 {{ color: #0f172a; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; margin-bottom: 30px; font-weight: 800; }}
+        #searchInput {{ width: 100%; padding: 15px; margin-bottom: 25px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 18px; outline: none; transition: border-color 0.2s; }}
+        #searchInput:focus {{ border-color: #3b82f6; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); }}
+        table {{ width: 100%; border-collapse: separate; border-spacing: 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }}
+        th {{ background-color: #f1f5f9; color: #475569; font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; padding: 15px; text-align: left; }}
+        td {{ padding: 16px; border-bottom: 1px solid #f1f5f9; }}
+        .badge {{ background: #eff6ff; color: #1d4ed8; padding: 4px 12px; border-radius: 9999px; font-size: 11px; font-weight: 700; border: 1px solid #dbeafe; display: inline-block; }}
+        tr:last-child td {{ border-bottom: none; }}
+        tr:hover td {{ background-color: #f8fafc; }}
+        a {{ text-decoration: none; color: #2563eb; font-weight: 600; font-size: 16px; }}
+        a:hover {{ color: #1d4ed8; text-decoration: underline; }}
     </style>
 </head>
 <body>
     <h1>Patient Information Handouts</h1>
-    
-    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Type to search (e.g. 'acne', 'diet', 'sleep')...">
-
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search handouts (e.g., 'diet', 'skin', 'sleep')..." autofocus>
     <table id="handoutTable">
         <thead>
-            <tr>
-                <th style="width: 180px;">Category</th>
-                <th>Handout Title</th>
-            </tr>
+            <tr><th style="width: 200px;">Category</th><th>Handout Title</th></tr>
         </thead>
         <tbody>
             {rows_html}
         </tbody>
     </table>
-
     <script>
     function filterTable() {{
         let input = document.getElementById("searchInput").value.toLowerCase();
         let rows = document.querySelectorAll(".handout-row");
-        
         rows.forEach(row => {{
             let text = row.textContent.toLowerCase();
             row.style.display = text.includes(input) ? "" : "none";
