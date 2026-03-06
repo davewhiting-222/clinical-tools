@@ -3,48 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Handouts Index</title>
+    <title>Clinical Handouts</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; padding: 10px; background: #f9f9f9; border-radius: 5px; }
-        a { text-decoration: none; color: #3498db; font-weight: bold; }
-        a:hover { color: #2980b9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; max-width: 900px; margin: auto; background-color: #f4f7f6; }
+        h1 { color: #2c3e50; }
+        #searchInput { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #3498db; color: white; }
+        .badge { background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+        a { text-decoration: none; color: #2c3e50; font-weight: 500; }
+        a:hover { color: #3498db; }
     </style>
 </head>
 <body>
-    <h1>Patient Information Handouts</h1>
-    <p>Please select a handout from the list below:</p>
-    <ul>
-        <li><a href="accutane_patient_handout.html">Accutane (Isotretinoin) Treatment Guide for Males</a></li>
-        <li><a href="acne_handout.html">Understanding and Treating Acne</a></li>
-        <li><a href="acne_teen_handout.html">Your Skin, Your Questions: Understanding Acne for Teens</a></li>
-        <li><a href="acute_lower_back_pain_handout (1).html">Understanding Acute Lower Back Pain</a></li>
-        <li><a href="carnivore_diet_handout.html">The Carnivore Diet: A Balanced Look at the Evidence</a></li>
-        <li><a href="chronic_back_pain_handout (2).html">Managing Chronic Lower Back Pain</a></li>
-        <li><a href="dyshidrotic_eczema_handout.html">Understanding Dyshidrotic Eczema (Pompholyx)</a></li>
-        <li><a href="efudex_actinic_keratosis_handout.html">Efudex (Fluorouracil) Cream for Actinic Keratosis</a></li>
-        <li><a href="ezetimibe_handout.html">Understanding Ezetimibe for Cholesterol Management</a></li>
-        <li><a href="fatigue_older_adults_handout.html">Understanding Fatigue in Adults 65–75: What's Really Behind Your Tiredness</a></li>
-        <li><a href="insomnia_management_adults.html">Understanding and Managing Insomnia</a></li>
-        <li><a href="insulin_resistance_handout.html">Understanding Insulin Resistance and Low-Carbohydrate Diets</a></li>
-        <li><a href="inulin_patient_handout.html">Understanding Inulin for Metabolic Health</a></li>
-        <li><a href="low_carb_heart_disease_handout.html">Low-Carbohydrate Diets and Heart Disease Risk: Understanding the Full Picture</a></li>
-        <li><a href="mediterranean_diet_handout.html">The Mediterranean Diet: Evidence-Based Guidance</a></li>
-        <li><a href="molluscum_contagiosum_handout (1).html">Molluscum Contagiosum in Children: What Parents Need to Know</a></li>
-        <li><a href="portfolio_diet_handout.html">The Portfolio Diet: A Natural Approach to Lowering Cholesterol</a></li>
-        <li><a href="sick_day_rules.html">Sick Day Rules for Diabetes: Medication Management During Illness</a></li>
-        <li><a href="skin_exam_handout.html">Comprehensive Skin Examination: What to Expect</a></li>
-        <li><a href="sleep_disturbance_elderly.html">Understanding Sleep Changes as You Age</a></li>
-        <li><a href="sleep_disturbance_elderly_japanese.html">加齢に伴う睡眠の変化を理解する</a></li>
-        <li><a href="starting_low_carb_diet.html">Starting a Low-Carbohydrate Diet: A Practical Guide</a></li>
-        <li><a href="sun_protection_handout.html">Protecting Your Skin: A Balanced Approach to Sun Safety</a></li>
-        <li><a href="wellness_visit_handout.html">Getting the Most Out of Your Health Visit: Quality Over Quantity</a></li>
+    <h1>Patient Handouts</h1>
+    
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search by name or category...">
 
-    </ul>
-    <footer>
-        <p><small>Last updated: Fri Mar  6 22:56:54 UTC 2026</small></p>
-    </footer>
+    <table id="handoutTable">
+        <thead>
+            <tr>
+                <th style="width: 150px;">Category</th>
+                <th>Handout Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr class="handout-row" data-category="Checkup">
+            <td><span class="badge">Checkup</span></td>
+            <td><a href="wellness_visit_handout.html">Getting the Most Out of Your Health Visit: Quality Over Quantity</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Diabetes">
+            <td><span class="badge">Diabetes</span></td>
+            <td><a href="sick_day_rules.html">Sick Day Rules for Diabetes: Medication Management During Illness</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition">
+            <td><span class="badge">Nutrition</span></td>
+            <td><a href="low_carb_heart_disease_handout.html">Low-Carbohydrate Diets and Heart Disease Risk: Understanding the Full Picture</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition">
+            <td><span class="badge">Nutrition</span></td>
+            <td><a href="starting_low_carb_diet.html">Starting a Low-Carbohydrate Diet: A Practical Guide</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition">
+            <td><span class="badge">Nutrition</span></td>
+            <td><a href="mediterranean_diet_handout.html">The Mediterranean Diet: Evidence-Based Guidance</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition">
+            <td><span class="badge">Nutrition</span></td>
+            <td><a href="portfolio_diet_handout.html">The Portfolio Diet: A Natural Approach to Lowering Cholesterol</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition">
+            <td><span class="badge">Nutrition</span></td>
+            <td><a href="insulin_resistance_handout.html">Understanding Insulin Resistance and Low-Carbohydrate Diets</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition">
+            <td><span class="badge">Nutrition</span></td>
+            <td><a href="inulin_patient_handout.html">Understanding Inulin for Metabolic Health</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Nutrition_Diet">
+            <td><span class="badge">Nutrition_Diet</span></td>
+            <td><a href="carnivore_diet_handout.html">The Carnivore Diet: A Balanced Look at the Evidence</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Skin">
+            <td><span class="badge">Skin</span></td>
+            <td><a href="accutane_patient_handout.html">Accutane (Isotretinoin) Treatment Guide for Males</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Skin">
+            <td><span class="badge">Skin</span></td>
+            <td><a href="skin_exam_handout.html">Comprehensive Skin Examination: What to Expect</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Skin">
+            <td><span class="badge">Skin</span></td>
+            <td><a href="efudex_actinic_keratosis_handout.html">Efudex (Fluorouracil) Cream for Actinic Keratosis</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Skin">
+            <td><span class="badge">Skin</span></td>
+            <td><a href="molluscum_contagiosum_handout (1).html">Molluscum Contagiosum in Children: What Parents Need to Know</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Skin">
+            <td><span class="badge">Skin</span></td>
+            <td><a href="acne_handout.html">Understanding and Treating Acne</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Skin_Eczema">
+            <td><span class="badge">Skin_Eczema</span></td>
+            <td><a href="dyshidrotic_eczema_handout.html">Understanding Dyshidrotic Eczema (Pompholyx)</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Sleep">
+            <td><span class="badge">Sleep</span></td>
+            <td><a href="sleep_disturbance_elderly.html">Understanding Sleep Changes as You Age</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Sleep">
+            <td><span class="badge">Sleep</span></td>
+            <td><a href="insomnia_management_adults.html">Understanding and Managing Insomnia</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Sleep">
+            <td><span class="badge">Sleep</span></td>
+            <td><a href="sleep_disturbance_elderly_japanese.html">加齢に伴う睡眠の変化を理解する</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Uncategorized">
+            <td><span class="badge">Uncategorized</span></td>
+            <td><a href="chronic_back_pain_handout (2).html">Managing Chronic Lower Back Pain</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Uncategorized">
+            <td><span class="badge">Uncategorized</span></td>
+            <td><a href="acute_lower_back_pain_handout (1).html">Understanding Acute Lower Back Pain</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Uncategorized">
+            <td><span class="badge">Uncategorized</span></td>
+            <td><a href="ezetimibe_handout.html">Understanding Ezetimibe for Cholesterol Management</a></td>
+        </tr>
+        <tr class="handout-row" data-category="Uncategorized">
+            <td><span class="badge">Uncategorized</span></td>
+            <td><a href="fatigue_older_adults_handout.html">Understanding Fatigue in Adults 65–75: What's Really Behind Your Tiredness</a></td>
+        </tr>
+        <tr class="handout-row" data-category="skin">
+            <td><span class="badge">skin</span></td>
+            <td><a href="sun_protection_handout.html">Protecting Your Skin: A Balanced Approach to Sun Safety</a></td>
+        </tr>
+        <tr class="handout-row" data-category="skin">
+            <td><span class="badge">skin</span></td>
+            <td><a href="acne_teen_handout.html">Your Skin, Your Questions: Understanding Acne for Teens</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script>
+    function filterTable() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let rows = document.querySelectorAll(".handout-row");
+        
+        rows.forEach(row => {
+            let text = row.textContent.toLowerCase();
+            row.style.display = text.includes(input) ? "" : "none";
+        });
+    }
+    </script>
 </body>
 </html>
