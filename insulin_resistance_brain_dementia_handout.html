@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insulin Resistance and the Brain: A Guide for Patients and Families</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .caregiver-banner {
+            background: linear-gradient(135deg, #5b21b6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.0em;
+            text-align: center;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .caregiver-box {
+            background-color: #ede9fe;
+            border-left: 5px solid #7c3aed;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .caregiver-box h3 {
+            color: #4c1d95;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .caution-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .caution-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            min-width: 520px;
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 2px dashed #cbd5e1;
+            margin: 40px 0 20px 0;
+        }
+
+        .caregiver-section-label {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #7c3aed;
+            margin-bottom: 10px;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 0; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.5em; }
+            .caregiver-banner { padding: 15px 20px; }
+            .content { padding: 24px 20px; }
+            h2 { font-size: 1.4em; }
+            h3 { font-size: 1.15em; }
+            p { text-align: left; }
+            .references { padding: 20px; border-radius: 0; margin-top: 20px; }
+            .footer { padding: 20px; }
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1>Insulin Resistance and the Brain</h1>
+        <p>Understanding the Metabolic Link to Dementia — and What Nutrition Can Do</p>
+    </div>
+
+    <div class="caregiver-banner">
+        <strong>Note for families and caregivers:</strong> Sections marked with a purple border are written especially for you, with more detailed background information to help you understand and support your loved one's care.
+    </div>
+
+    <div class="content">
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: THE BRAIN'S ENERGY CRISIS -->
+        <!-- ============================================================ -->
+
+        <h2>The Brain's Energy Problem in Dementia</h2>
+
+        <p>Your brain is your body's most energy-hungry organ. Though it makes up only about 2% of your body weight, it uses roughly 20% of all the energy your body produces — around 120–130 grams of glucose every single day.<sup>1</sup></p>
+
+        <p>In Alzheimer's disease and many other forms of dementia, the brain gradually loses its ability to use glucose — its primary fuel — efficiently. Brain-imaging studies using a technique called FDG-PET (which tracks how glucose is used) have shown that certain memory-related areas of the brain can begin to show reduced glucose uptake <strong>decades before any symptoms of dementia appear.</strong><sup>2,3</sup> This energy shortfall at the level of individual brain cells is one of the most consistent biological features of Alzheimer's disease.</p>
+
+        <div class="key-point">
+            <h3>The Critical Finding: The Brain Can Still Use Ketones</h3>
+            <p>While the brain's ability to use glucose declines in Alzheimer's disease, its ability to use an alternative fuel — <strong>ketone bodies</strong> — remains largely intact, even in established dementia.<sup>2,4,5</sup> This is one of the most important and hopeful findings in dementia nutrition research. It means there is a "side door" we can use to fuel the brain when the front door (glucose) is not working well.</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WHAT IS INSULIN RESISTANCE -->
+        <!-- ============================================================ -->
+
+        <h2>What Is Insulin Resistance?</h2>
+
+        <p>Insulin is a hormone made by the pancreas. Think of it as a key that unlocks the doors of your body's cells, allowing glucose (blood sugar) to enter and be used for energy. When cells stop responding properly to insulin's signal — the way a rusty lock stops responding to a key — the condition is called <strong>insulin resistance.</strong><sup>6</sup></p>
+
+        <p>When this happens, the pancreas tries to compensate by producing more and more insulin. For a while, blood sugar stays in the normal range, but at the cost of chronically high insulin levels in the blood — a state called <strong>hyperinsulinemia.</strong> Eventually, the pancreas can no longer keep up, and blood sugar begins to rise — which is when prediabetes or type 2 diabetes is diagnosed.<sup>6,7</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">How Insulin Resistance Develops Over Time</div>
+            <svg width="800" height="220" viewBox="0 0 800 220">
+                <!-- Stage 1 -->
+                <rect x="10" y="50" width="160" height="110" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="90" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Stage 1</text>
+                <text x="90" y="100" text-anchor="middle" font-size="12" fill="#1e3a8a">High-carb diet</text>
+                <text x="90" y="117" text-anchor="middle" font-size="12" fill="#1e3a8a">frequent blood</text>
+                <text x="90" y="134" text-anchor="middle" font-size="12" fill="#1e3a8a">sugar spikes</text>
+                <text x="90" y="151" text-anchor="middle" font-size="11" fill="#3b82f6">Blood sugar: Normal</text>
+
+                <!-- Arrow 1 -->
+                <polygon points="180,105 205,95 205,115" fill="#64748b"/>
+                <line x1="170" y1="105" x2="205" y2="105" stroke="#64748b" stroke-width="3"/>
+
+                <!-- Stage 2 -->
+                <rect x="210" y="50" width="160" height="110" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                <text x="290" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">Stage 2</text>
+                <text x="290" y="100" text-anchor="middle" font-size="12" fill="#78350f">Cells become</text>
+                <text x="290" y="117" text-anchor="middle" font-size="12" fill="#78350f">less responsive;</text>
+                <text x="290" y="134" text-anchor="middle" font-size="12" fill="#78350f">pancreas works</text>
+                <text x="290" y="151" text-anchor="middle" font-size="11" fill="#d97706">Insulin rising</text>
+
+                <!-- Arrow 2 -->
+                <polygon points="380,105 405,95 405,115" fill="#64748b"/>
+                <line x1="370" y1="105" x2="405" y2="105" stroke="#64748b" stroke-width="3"/>
+
+                <!-- Stage 3 -->
+                <rect x="410" y="50" width="160" height="110" rx="10" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+                <text x="490" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#7c2d12">Stage 3</text>
+                <text x="490" y="100" text-anchor="middle" font-size="12" fill="#7c2d12">Hyperinsulinemia</text>
+                <text x="490" y="117" text-anchor="middle" font-size="12" fill="#7c2d12">Organ fat builds</text>
+                <text x="490" y="134" text-anchor="middle" font-size="12" fill="#7c2d12">Silent damage</text>
+                <text x="490" y="151" text-anchor="middle" font-size="11" fill="#ea580c">Blood sugar: still near normal</text>
+
+                <!-- Arrow 3 -->
+                <polygon points="580,105 605,95 605,115" fill="#64748b"/>
+                <line x1="570" y1="105" x2="605" y2="105" stroke="#64748b" stroke-width="3"/>
+
+                <!-- Stage 4 -->
+                <rect x="610" y="50" width="175" height="110" rx="10" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+                <text x="697" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Stage 4</text>
+                <text x="697" y="100" text-anchor="middle" font-size="12" fill="#991b1b">Pancreas failing</text>
+                <text x="697" y="117" text-anchor="middle" font-size="12" fill="#991b1b">Brain fuel crisis</text>
+                <text x="697" y="134" text-anchor="middle" font-size="12" fill="#991b1b">Cognitive symptoms</text>
+                <text x="697" y="151" text-anchor="middle" font-size="11" fill="#dc2626">Blood sugar: elevated</text>
+
+                <!-- Timeline label -->
+                <text x="400" y="200" text-anchor="middle" font-size="12" fill="#64748b" font-style="italic">This process typically unfolds over 10–20 years before a dementia diagnosis</text>
+            </svg>
+        </div>
+
+        <p>Critically, research shows that insulin resistance typically begins <strong>10 to 15 years before</strong> type 2 diabetes is diagnosed — and brain changes linked to insulin resistance can begin even earlier.<sup>7,8</sup> By the time memory problems appear, this metabolic process has usually been silently underway for a long time.</p>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: BRAIN INSULIN RESISTANCE -->
+        <!-- ============================================================ -->
+
+        <h2>When the Brain Becomes Insulin Resistant: "Type 3 Diabetes"</h2>
+
+        <p>Just as the muscles and liver can become resistant to insulin, so can the brain. Researchers have found compelling evidence of <strong>brain insulin resistance (BIR)</strong> in Alzheimer's disease — and crucially, this appears to occur even in people who do not have diabetes.<sup>8,9</sup></p>
+
+        <p>This connection is so strong that some researchers have proposed calling Alzheimer's disease <em>"Type 3 Diabetes"</em> — a form of insulin resistance and insulin deficiency that is localized to the brain.<sup>10,11</sup> While this is still a research concept rather than an official medical diagnosis, the underlying evidence is substantial and growing.</p>
+
+        <div class="caregiver-box">
+            <h3>&#128203; For Families and Caregivers: The Deeper Science</h3>
+            <p>Post-mortem studies of Alzheimer's brain tissue have found dramatically reduced expression of insulin receptors and downstream insulin-signalling proteins in brain regions responsible for memory — particularly the hippocampus — compared to brains of people who died without dementia. These changes were found even in individuals who had no diabetes during their lifetime.<sup>10,11</sup></p>
+
+            <p>Researchers at the Joslin Diabetes Center (Dr. Konrad Talbot and colleagues) provided direct laboratory evidence of brain insulin resistance in living Alzheimer's patients: they found abnormal phosphorylation of a key insulin-signalling protein (IRS-1) in the hippocampus, and the severity of this abnormality correlated directly with cognitive decline — independent of classic Alzheimer's markers like amyloid plaques and tau tangles.<sup>12</sup></p>
+
+            <p>This matters because it means that <strong>metabolic dysfunction may be contributing to cognitive decline through a pathway separate from — and possibly upstream of — the protein accumulation</strong> that has dominated Alzheimer's research for decades. Brain insulin resistance:</p>
+            <ul>
+                <li>Reduces the brain's ability to take up and use glucose for energy</li>
+                <li>Impairs the clearance of toxic amyloid-beta protein, because insulin and amyloid compete for the same degrading enzyme (insulin-degrading enzyme, or IDE)<sup>13</sup></li>
+                <li>Promotes abnormal phosphorylation of tau protein — the process that produces the neurofibrillary tangles seen in Alzheimer's brains<sup>14</sup></li>
+                <li>Triggers neuroinflammation and oxidative stress that damage synapses — the connection points between neurons where memory formation occurs<sup>9,14</sup></li>
+            </ul>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: THREE PATHWAYS SVG -->
+        <!-- ============================================================ -->
+
+        <h2>Three Ways Metabolic Dysfunction Harms the Brain</h2>
+
+        <div class="diagram-container">
+            <div class="diagram-title">Pathways from Insulin Resistance to Brain Damage</div>
+            <svg width="760" height="380" viewBox="0 0 760 380">
+                <!-- Central source box -->
+                <rect x="255" y="10" width="250" height="70" rx="10" fill="#fecaca" stroke="#dc2626" stroke-width="2.5"/>
+                <text x="380" y="40" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">Insulin Resistance &amp;</text>
+                <text x="380" y="62" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">Hyperinsulinemia</text>
+
+                <!-- Arrow to left -->
+                <line x1="290" y1="80" x2="155" y2="155" stroke="#dc2626" stroke-width="2.5"/>
+                <polygon points="155,155 145,138 163,141" fill="#dc2626"/>
+
+                <!-- Arrow to centre -->
+                <line x1="380" y1="80" x2="380" y2="150" stroke="#dc2626" stroke-width="2.5"/>
+                <polygon points="380,153 370,138 390,138" fill="#dc2626"/>
+
+                <!-- Arrow to right -->
+                <line x1="470" y1="80" x2="610" y2="155" stroke="#dc2626" stroke-width="2.5"/>
+                <polygon points="610,155 597,141 616,138" fill="#dc2626"/>
+
+                <!-- Left pathway: Inflammation -->
+                <rect x="30" y="160" width="230" height="90" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                <text x="145" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">Neuroinflammation</text>
+                <text x="145" y="204" text-anchor="middle" font-size="12" fill="#78350f">Visceral fat releases</text>
+                <text x="145" y="220" text-anchor="middle" font-size="12" fill="#78350f">inflammatory signals that</text>
+                <text x="145" y="236" text-anchor="middle" font-size="12" fill="#78350f">damage brain cells</text>
+
+                <!-- Centre pathway: Energy -->
+                <rect x="265" y="155" width="230" height="90" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="380" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Energy Crisis</text>
+                <text x="380" y="199" text-anchor="middle" font-size="12" fill="#1e3a8a">Brain cells can't use</text>
+                <text x="380" y="215" text-anchor="middle" font-size="12" fill="#1e3a8a">glucose; synapses fail</text>
+                <text x="380" y="231" text-anchor="middle" font-size="12" fill="#1e3a8a">and neurons shrink</text>
+
+                <!-- Right pathway: Vascular -->
+                <rect x="505" y="160" width="230" height="90" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+                <text x="620" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#831843">Vascular Damage</text>
+                <text x="620" y="204" text-anchor="middle" font-size="12" fill="#831843">High blood sugar</text>
+                <text x="620" y="220" text-anchor="middle" font-size="12" fill="#831843">weakens blood vessels</text>
+                <text x="620" y="236" text-anchor="middle" font-size="12" fill="#831843">and the blood-brain barrier</text>
+
+                <!-- Arrows down -->
+                <line x1="145" y1="250" x2="145" y2="285" stroke="#64748b" stroke-width="2"/>
+                <polygon points="145,288 138,273 152,273" fill="#64748b"/>
+                <line x1="380" y1="245" x2="380" y2="285" stroke="#64748b" stroke-width="2"/>
+                <polygon points="380,288 373,273 387,273" fill="#64748b"/>
+                <line x1="620" y1="250" x2="620" y2="285" stroke="#64748b" stroke-width="2"/>
+                <polygon points="620,288 613,273 627,273" fill="#64748b"/>
+
+                <!-- Final outcomes -->
+                <rect x="30" y="290" width="700" height="70" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+                <text x="380" y="315" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Consequences: Amyloid accumulation · Tau tangles · Hippocampal shrinkage</text>
+                <text x="380" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Memory loss · Executive function decline · Accelerated neurodegeneration</text>
+            </svg>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: KETONES AS ALTERNATIVE FUEL -->
+        <!-- ============================================================ -->
+
+        <h2>Ketone Bodies: The Brain's Alternative Fuel</h2>
+
+        <p>Ketone bodies are small molecules produced naturally by the liver when carbohydrate intake is low and the body begins burning fat for fuel. The three ketone bodies are <strong>beta-hydroxybutyrate (BHB)</strong>, acetoacetate, and acetone. BHB is the most important for brain function.</p>
+
+        <p>In a normal diet, the body runs almost entirely on glucose. But when carbohydrates are severely reduced — as in a low-carbohydrate or ketogenic diet — the liver converts stored fat into ketones, which circulate in the blood and are taken up by many tissues, including the brain, as an energy source.<sup>15</sup></p>
+
+        <div class="key-point">
+            <h3>Why Ketones Are Especially Important in Alzheimer's Disease</h3>
+            <p>PET scan studies have confirmed a critical finding: in Alzheimer's disease, the brain's ability to take up and metabolize <em>glucose</em> is severely impaired — but its ability to take up and use <em>ketones</em> remains essentially normal, even in patients with established dementia.<sup>2,4,5</sup> Providing the brain with ketones may therefore bypass the broken glucose pathway and restore cellular energy supply to neurons that are otherwise starving.</p>
+        </div>
+
+        <h3>What Ketones Do in the Brain — Beyond Just Fuel</h3>
+        <p>Beta-hydroxybutyrate is not simply a passive energy source. Research has revealed that it acts as a biologically active signalling molecule with several important effects on the brain:<sup>16,17,18,19</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">The Multiple Brain Benefits of Beta-Hydroxybutyrate (BHB)</div>
+            <svg width="720" height="400" viewBox="0 0 720 400">
+                <!-- Central BHB molecule -->
+                <circle cx="360" cy="200" r="65" fill="#d1fae5" stroke="#10b981" stroke-width="3"/>
+                <text x="360" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#065f46">Beta-</text>
+                <text x="360" y="211" text-anchor="middle" font-size="15" font-weight="bold" fill="#065f46">Hydroxy-</text>
+                <text x="360" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">butyrate</text>
+
+                <!-- Top: Alternative fuel -->
+                <rect x="255" y="15" width="210" height="65" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+                <text x="360" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Alternative Brain Fuel</text>
+                <text x="360" y="57" text-anchor="middle" font-size="11" fill="#1e3a8a">Bypasses broken glucose</text>
+                <text x="360" y="72" text-anchor="middle" font-size="11" fill="#1e3a8a">pathway to power neurons</text>
+                <line x1="360" y1="80" x2="360" y2="135" stroke="#3b82f6" stroke-width="2"/>
+                <polygon points="360,137 354,124 366,124" fill="#3b82f6"/>
+
+                <!-- Right: Anti-inflammatory -->
+                <rect x="560" y="130" width="155" height="65" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                <text x="637" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">Anti-Inflammatory</text>
+                <text x="637" y="169" text-anchor="middle" font-size="11" fill="#78350f">Blocks NLRP3</text>
+                <text x="637" y="184" text-anchor="middle" font-size="11" fill="#78350f">inflammasome</text>
+                <line x1="557" y1="167" x2="425" y2="200" stroke="#f59e0b" stroke-width="2"/>
+                <polygon points="425,200 437,193 432,207" fill="#f59e0b"/>
+
+                <!-- Bottom-right: Amyloid/Tau -->
+                <rect x="530" y="300" width="185" height="75" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+                <text x="622" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#831843">Protein Clearance</text>
+                <text x="622" y="340" text-anchor="middle" font-size="11" fill="#831843">Helps clear amyloid-beta</text>
+                <text x="622" y="356" text-anchor="middle" font-size="11" fill="#831843">and pathological tau</text>
+                <line x1="530" y1="325" x2="415" y2="250" stroke="#db2777" stroke-width="2"/>
+                <polygon points="415,250 425,260 428,246" fill="#db2777"/>
+
+                <!-- Bottom-left: BDNF -->
+                <rect x="10" y="300" width="185" height="75" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+                <text x="102" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#4c1d95">Boosts BDNF</text>
+                <text x="102" y="340" text-anchor="middle" font-size="11" fill="#4c1d95">Stimulates brain growth</text>
+                <text x="102" y="356" text-anchor="middle" font-size="11" fill="#4c1d95">factor for new connections</text>
+                <line x1="190" y1="325" x2="305" y2="252" stroke="#7c3aed" stroke-width="2"/>
+                <polygon points="305,252 292,252 298,265" fill="#7c3aed"/>
+
+                <!-- Left: Mitochondria -->
+                <rect x="10" y="130" width="160" height="65" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+                <text x="90" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">Mitochondrial</text>
+                <text x="90" y="168" text-anchor="middle" font-size="11" fill="#065f46">Repair</text>
+                <text x="90" y="183" text-anchor="middle" font-size="11" fill="#065f46">Restores cell power plants</text>
+                <line x1="170" y1="163" x2="295" y2="200" stroke="#10b981" stroke-width="2"/>
+                <polygon points="295,200 282,195 286,209" fill="#10b981"/>
+            </svg>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #64748b; max-width: 680px; margin-left: auto; margin-right: auto;">
+                BHB acts through multiple protective pathways simultaneously — making nutritional ketosis a uniquely broad-spectrum intervention for the metabolically impaired brain.
+            </p>
+        </div>
+
+        <div class="caregiver-box">
+            <h3>&#128203; For Families and Caregivers: The Evidence on Ketones and Dementia</h3>
+            <p>The evidence that ketones benefit the Alzheimer's brain comes from several converging lines of research:</p>
+            <ul>
+                <li><strong>PET imaging studies</strong> have shown that MCT-supplemented diets in patients with mild-to-moderate Alzheimer's disease significantly increase <em>brain ketone (acetoacetate) metabolism</em> across both cortical and subcortical regions, while glucose uptake remains unchanged — confirming that ketone supply to the brain can be increased without affecting the underlying glucose deficit.<sup>4</sup></li>
+                <li><strong>A 2024 meta-analysis</strong> of 10 randomized controlled trials (691 patients with Alzheimer's disease) found that ketogenic dietary interventions significantly improved standardized cognitive scores: MMSE improved by an average of 1.25 points, and ADAS-Cog (the standard Alzheimer's clinical trial cognitive scale) improved by 3.43 points compared to control groups.<sup>20</sup></li>
+                <li><strong>A 15-month Canadian randomized trial</strong> using MCT oil (up to 42 g/day) found that 80% of participants showed stabilization or improvement in cognitive assessment scores — a finding that is striking given that dementia scores are typically expected to <em>decline</em> over a 15-month period without intervention.<sup>21</sup></li>
+                <li><strong>Anti-inflammatory mechanism:</strong> BHB directly blocks the NLRP3 inflammasome — a key molecular trigger of neuroinflammation in Alzheimer's disease — reducing microglial activation, amyloid plaque formation, and apoptosis in multiple experimental models.<sup>17</sup></li>
+                <li><strong>BDNF stimulation:</strong> BHB has been shown to upregulate brain-derived neurotrophic factor (BDNF), a protein that supports the survival of existing neurons and the growth of new ones — a pathway also stimulated by exercise.<sup>18</sup></li>
+            </ul>
+            <p style="margin-bottom: 0;">It is important to note that most current trials have methodological limitations, and results are more consistent in people who do not carry the APOE ε4 genetic variant. The evidence is promising but not definitive. That said, a low-carbohydrate or ketogenic approach carries very little risk when properly supervised, making the therapeutic trial reasonable for many patients.</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: NUTRITION APPROACH -->
+        <!-- ============================================================ -->
+
+        <h2>The Nutritional Approach: Low-Carbohydrate and Ketogenic Eating</h2>
+
+        <p>Because of the brain's preserved ability to use ketones and the metabolic benefits of reducing insulin demand, a <strong>low-carbohydrate or ketogenic diet</strong> is the most directly evidence-supported nutritional strategy for addressing both insulin resistance and brain energy deficit in dementia.</p>
+
+        <p>The two most relevant approaches are:</p>
+        <ul>
+            <li><strong>Low-carbohydrate diet (LCD):</strong> Typically 50–130 grams of carbohydrates per day. Reduces insulin spikes and modestly raises ketone levels. Generally easier to maintain.</li>
+            <li><strong>Ketogenic diet (KD):</strong> Very low carbohydrate intake (usually under 20–50 grams per day), high fat, moderate protein. Produces nutritional ketosis — consistently elevated blood ketone levels (typically 0.5–2.0 mmol/L). More demanding but produces the greatest ketone benefit for the brain.</li>
+        </ul>
+
+        <div class="warning-box">
+            <h3>&#9888; Important Note About Dementia and Dietary Change</h3>
+            <p>Implementing a significant dietary change for a person with dementia is different from doing so in a cognitively well individual. The person with dementia cannot manage this change themselves — <strong>the caregiver is the one who makes it happen,</strong> through what they purchase, cook, and serve. Practical support, meal planning guidance, and regular check-ins with a healthcare provider or registered dietitian are highly recommended. Changes to medications — especially those for diabetes or blood pressure — may be needed as metabolic parameters improve.</p>
+        </div>
+
+        <h3>Practical Dietary Framework</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Food Category</th>
+                    <th>Emphasize</th>
+                    <th>Limit or Avoid</th>
+                </tr>
+                <tr>
+                    <td><strong>Proteins</strong></td>
+                    <td>Eggs, fish (especially fatty fish: salmon, mackerel, sardines), poultry, meat, full-fat cheese, plain Greek yogurt</td>
+                    <td>Highly processed deli meats with added sugars</td>
+                </tr>
+                <tr>
+                    <td><strong>Fats</strong></td>
+                    <td>Olive oil, avocado oil, butter, coconut oil, avocados, nuts, seeds, MCT oil (see below)</td>
+                    <td>Industrial seed oils (canola, soybean, corn oil in large amounts), trans fats</td>
+                </tr>
+                <tr>
+                    <td><strong>Vegetables</strong></td>
+                    <td>All non-starchy vegetables: leafy greens, broccoli, cauliflower, zucchini, asparagus, peppers, cucumber</td>
+                    <td>Potatoes, sweet corn, parsnips (in large amounts)</td>
+                </tr>
+                <tr>
+                    <td><strong>Fruit</strong></td>
+                    <td>Berries (blueberries, raspberries, strawberries) in moderation — lowest sugar, highest antioxidants</td>
+                    <td>Tropical fruits (mango, banana, pineapple), fruit juice</td>
+                </tr>
+                <tr>
+                    <td><strong>Grains &amp; Starches</strong></td>
+                    <td>Small amounts of legumes if desired; seeds (flaxseed, chia)</td>
+                    <td>Bread, rice, pasta, cereals, crackers, pastries, baked goods, oatmeal</td>
+                </tr>
+                <tr>
+                    <td><strong>Beverages</strong></td>
+                    <td>Water, sparkling water, plain tea, black coffee (caffeinated in moderation), bone broth</td>
+                    <td>Juice, pop/soda, sweetened tea or coffee, sports drinks, alcohol</td>
+                </tr>
+                <tr>
+                    <td><strong>Sweeteners</strong></td>
+                    <td>None needed; small amounts of stevia or erythritol if required</td>
+                    <td>Sugar, honey, maple syrup, agave, high-fructose corn syrup</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>MCT Oil: A Practical Ketone Supplement</h3>
+        <p>Medium-chain triglycerides (MCTs) are a special type of fat found in coconut oil and palm kernel oil. Unlike regular dietary fat, MCTs are rapidly absorbed and converted by the liver into ketone bodies, producing a measurable rise in blood ketone levels within 1–2 hours of consumption — even without a fully ketogenic diet.<sup>22,23</sup></p>
+
+        <p>This makes MCT oil a particularly useful tool for people with dementia, because it can raise brain ketone availability as part of a standard low-carbohydrate meal plan, without requiring strict dietary adherence for every meal.</p>
+
+        <div class="success-box">
+            <h3>How to Introduce MCT Oil</h3>
+            <ul>
+                <li><strong>Start low, go slow:</strong> Begin with 1 teaspoon (about 5 ml) per day with a meal. Increase by 1 teaspoon every 3–5 days as tolerated, up to 1–3 tablespoons (15–45 ml) daily in divided doses.</li>
+                <li><strong>Always take with food</strong> to reduce gastrointestinal side effects (nausea, loose stools — the most common complaint).</li>
+                <li><strong>C8 (caprylic acid) MCT oil</strong> is the most efficiently converted to ketones and generally better tolerated than coconut oil. It is available at health food stores and online.</li>
+                <li><strong>Add to coffee, smoothies, salad dressings, scrambled eggs,</strong> or cook lightly with it (do not use for high-heat cooking).</li>
+                <li>Coconut oil is a lower-cost and more widely available alternative that contains approximately 60% MCTs.</li>
+            </ul>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WHAT TO EXPECT -->
+        <!-- ============================================================ -->
+
+        <h2>What to Realistically Expect</h2>
+
+        <p>It is important to approach this with honest expectations. A low-carbohydrate or ketogenic diet is <strong>not a cure for Alzheimer's disease or other dementias.</strong> However, it may:</p>
+        <ul>
+            <li>Slow the rate of cognitive decline</li>
+            <li>Improve energy levels, alertness, and mood in some patients</li>
+            <li>Reduce metabolic risk factors (blood sugar, triglycerides, blood pressure, waist circumference) that accelerate brain damage</li>
+            <li>Provide the brain with an alternative fuel source that it can still use effectively</li>
+        </ul>
+
+        <p>Evidence suggests the benefit is greatest in individuals with <strong>early to moderate dementia,</strong> and in those who do not carry the APOE ε4 genetic variant (which affects how the body responds to certain fats).<sup>20,22</sup> It is worth discussing with your doctor whether APOE genotype testing may be informative in your situation.</p>
+
+        <p>The KDRAFT pilot study found that cognitive test scores <strong>improved significantly</strong> over a 3-month ketogenic intervention in people with mild Alzheimer's disease — and then returned to baseline one month after stopping the diet, suggesting the benefit requires ongoing adherence.<sup>24</sup></p>
+
+        <div class="success-box">
+            <h3>What Some Families Notice</h3>
+            <p>In clinical experience and published case reports, caregivers of individuals with early dementia who have adopted a ketogenic or MCT-supplemented low-carbohydrate diet sometimes report improvements in:</p>
+            <ul>
+                <li>Alertness and engagement during the day</li>
+                <li>Word-finding and recognition of familiar people</li>
+                <li>Reduced irritability and agitation</li>
+                <li>Better sleep patterns</li>
+                <li>Improved appetite and stable weight</li>
+            </ul>
+            <p style="margin-bottom: 0;">These are not guaranteed outcomes, and improvement will be modest at best in established dementia. The goal is slowing decline and optimizing the quality of remaining function — not reversal.</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 8: OTHER LIFESTYLE FACTORS -->
+        <!-- ============================================================ -->
+
+        <h2>Other Important Lifestyle Factors (That Are Feasible in Dementia)</h2>
+
+        <p>While a ketogenic or low-carbohydrate diet is the central focus of this handout, it does not exist in isolation. Several other lifestyle measures meaningfully support metabolic brain health and are appropriate for older adults with dementia.</p>
+
+        <h3>Gentle, Regular Movement</h3>
+        <p>Formal high-intensity exercise programs are not appropriate for most people with dementia, but <strong>daily walking</strong> — even 20–30 minutes at a comfortable pace — has meaningful benefits. Movement improves insulin sensitivity, promotes blood flow to the brain, and stimulates the release of BDNF (the same growth factor promoted by ketones).<sup>25</sup> Walking together also supports social engagement and mood. Aim for daily movement, even if brief.</p>
+
+        <h3>Sleep Quality</h3>
+        <p>Deep sleep is the brain's cleaning cycle — during sleep, the glymphatic system clears metabolic waste products including amyloid-beta from brain tissue. Chronic poor sleep directly worsens insulin resistance and accelerates cognitive decline.<sup>26</sup> Prioritizing a regular sleep schedule, darkened bedroom, and good sleep hygiene is medically important, not optional.</p>
+
+        <h3>Managing Other Vascular Risk Factors</h3>
+        <p>High blood pressure, elevated triglycerides, and high blood sugar all directly damage the small blood vessels that supply the brain. A low-carbohydrate diet tends to improve all of these — but medications may also be needed, and should be reviewed regularly as metabolic parameters change with dietary improvement.</p>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 9: CAREGIVER-SPECIFIC SECTION -->
+        <!-- ============================================================ -->
+
+        <hr class="section-divider">
+        <div class="caregiver-section-label">&#128100; Section for Caregivers and Spouses</div>
+
+        <h2>A Closer Look at Insulin Resistance: For the Family</h2>
+
+        <p>If you are the spouse or primary caregiver of someone with dementia, you are likely carrying the work of any dietary change almost entirely yourself. Understanding the science more deeply may help you feel that this effort is worthwhile.</p>
+
+        <h3>The Silent Years Before Diagnosis</h3>
+        <p>Insulin resistance typically develops silently over many years. During this time, blood sugar tests may be entirely normal — yet the process of metabolic dysfunction is already underway. The standard fasting blood glucose and HbA1c tests that are routinely done in primary care <strong>do not detect insulin resistance in its early stages.</strong> A patient can have a normal fasting glucose and a normal HbA1c and still have significantly elevated insulin levels and active insulin resistance.<sup>6,7</sup></p>
+
+        <div class="caregiver-box">
+            <h3>&#128203; What Tests Can Assess Insulin Resistance More Sensitively?</h3>
+            <p>Ask your doctor about the following, which may reveal insulin resistance before blood sugar becomes abnormal:</p>
+            <ul>
+                <li><strong>Fasting insulin level:</strong> A simple blood test. A fasting insulin above approximately 60–70 pmol/L (roughly 10–12 mIU/L) suggests insulin resistance, even with normal blood sugar. Note that this test is not covered by BC MSP and requires private payment, but is widely available.</li>
+                <li><strong>HOMA-IR (Homeostatic Model Assessment of Insulin Resistance):</strong> Calculated from fasting glucose and fasting insulin. A value above 1.9–2.5 suggests significant insulin resistance.</li>
+                <li><strong>Triglyceride-to-HDL ratio:</strong> One of the most clinically accessible surrogates for insulin resistance. In Canadian units (mmol/L), a ratio above 1.5–2.0 is suggestive; above 2.5 is strongly suggestive of insulin resistance.</li>
+                <li><strong>Waist circumference:</strong> A waist measurement above 88 cm (35 inches) in women or 102 cm (40 inches) in men is a simple clinical marker of metabolically active visceral fat and insulin resistance.</li>
+                <li><strong>HbA1c:</strong> Still useful. Values in the 5.7–6.4% range (prediabetes) reflect years of impaired glucose handling. Values above 6.5% indicate diabetes. However, a normal HbA1c does not exclude insulin resistance.</li>
+            </ul>
+        </div>
+
+        <h3>The Hyperinsulinemia Problem — Why High Insulin Is Not Just a Number</h3>
+        <p>Most people understand that high blood sugar causes damage. Far fewer understand that chronically high insulin — the body's compensatory response to insulin resistance — is itself harmful. This state of hyperinsulinemia can persist for many years while blood sugar remains normal, and during this time it contributes to:<sup>7,8,27</sup></p>
+        <ul>
+            <li><strong>Competition with amyloid clearance:</strong> Insulin and amyloid-beta compete for the same enzyme that breaks them down (insulin-degrading enzyme). When insulin levels are chronically high, this enzyme becomes occupied — and amyloid-beta accumulates in the brain faster.<sup>13</sup></li>
+            <li><strong>Vascular damage:</strong> Hyperinsulinemia promotes arterial stiffness, hypertension, and damage to the small blood vessels that supply brain tissue — worsening both vascular and Alzheimer's-type dementia.</li>
+            <li><strong>Fat accumulation in the liver:</strong> Chronic hyperinsulinemia drives fatty liver disease (NAFLD), which is itself associated with an approximately 2-fold increase in dementia risk.<sup>28</sup></li>
+            <li><strong>Increased inflammation:</strong> Adipose tissue in insulin-resistant individuals releases pro-inflammatory cytokines (TNF-alpha, IL-6) that cross the blood-brain barrier and activate neuroinflammatory pathways.</li>
+        </ul>
+
+        <h3>Why Reducing Dietary Carbohydrate Is the Most Direct Intervention</h3>
+        <p>Of all the dietary levers available, reducing carbohydrate intake directly targets the root of the insulin-resistance cycle: it reduces the frequency and magnitude of blood sugar and insulin spikes, allowing insulin levels to fall, cells to regain insulin sensitivity, and the liver to transition from fat-storing to fat-burning mode.<sup>29</sup> This is the only dietary approach that simultaneously:</p>
+        <ul>
+            <li>Lowers insulin demand and restores insulin sensitivity</li>
+            <li>Produces ketone bodies that can directly fuel the insulin-resistant brain</li>
+            <li>Reduces visceral and liver fat — the metabolic drivers of systemic inflammation</li>
+            <li>Improves triglycerides, HDL cholesterol, and blood pressure without medication in many patients</li>
+        </ul>
+
+        <div class="caregiver-box">
+            <h3>&#128203; What About Exercise? Is Walking Enough?</h3>
+            <p>Formal high-intensity exercise programs have been shown in research to powerfully improve insulin sensitivity and even restore brain glucose metabolism — in people who are able to participate in them. For most individuals with established dementia, high-intensity interval training (HIIT) and vigorous aerobic programs are not realistic or safe.</p>
+            <p style="margin-bottom: 0;">However, <strong>even gentle movement meaningfully matters.</strong> Studies show that 30 minutes of moderate walking per day significantly improves insulin sensitivity and reduces inflammatory markers over weeks. More importantly, regular walking in older adults with dementia has been associated with preserved hippocampal volume (the memory centre of the brain) compared to sedentary individuals.<sup>25</sup> As a caregiver, building a daily walk into the routine — whatever the weather allows — is one of the most evidence-supported things you can do.</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 10: PRACTICAL MEAL IDEAS -->
+        <!-- ============================================================ -->
+
+        <h2>Practical Low-Carbohydrate Meal Ideas for Dementia Care</h2>
+
+        <p>When cooking for a person with dementia, simplicity, familiarity, and consistency matter. Here are practical starting points that are low in carbohydrates, ketone-supportive, and manageable to prepare.</p>
+
+        <h3>Simple Breakfast Options</h3>
+        <ul>
+            <li>Scrambled or poached eggs (2–3) cooked in butter, with smoked salmon or avocado</li>
+            <li>Full-fat Greek yogurt (plain) with a small handful of blueberries and walnuts</li>
+            <li>Omelette with cheese, spinach, and mushrooms</li>
+            <li>Coconut-cream "smoothie" with MCT oil, almond butter, berries, and ice (blended)</li>
+        </ul>
+
+        <h3>Simple Lunch Options</h3>
+        <ul>
+            <li>Tuna or egg salad with leafy greens and olive oil, served in lettuce wraps</li>
+            <li>Hearty vegetable soup (no potato/noodles) with a piece of poached chicken</li>
+            <li>Sardines on cucumber rounds with full-fat cream cheese</li>
+        </ul>
+
+        <h3>Simple Dinner Options</h3>
+        <ul>
+            <li>Baked salmon or cod with roasted broccoli or cauliflower in olive oil</li>
+            <li>Roast chicken thighs (skin on) with green beans and butter</li>
+            <li>Ground beef or lamb cooked with onion, garlic, and tomatoes over steamed cauliflower "rice"</li>
+        </ul>
+
+        <h3>Adding MCT Oil to Daily Meals</h3>
+        <ul>
+            <li>Start with 1 teaspoon in morning coffee or tea</li>
+            <li>Drizzle over scrambled eggs or cooked vegetables at the table</li>
+            <li>Add to a small smoothie with almond milk and berries</li>
+            <li>Mix into salad dressing (olive oil + MCT + lemon + herbs)</li>
+        </ul>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 11: SAFETY -->
+        <!-- ============================================================ -->
+
+        <div class="caution-box">
+            <h3>&#9888; Safety Considerations — Please Read</h3>
+            <ul>
+                <li><strong>Medication review is essential:</strong> A low-carbohydrate diet can significantly lower blood sugar and blood pressure within days to weeks. If your loved one takes diabetes medications (especially insulin or sulfonylureas) or blood pressure medications, doses may need to be reduced to prevent hypoglycemia or low blood pressure. This must be coordinated with your doctor.</li>
+                <li><strong>Kidney disease:</strong> Higher protein intakes may need to be moderated in individuals with chronic kidney disease. Discuss this with your physician before starting.</li>
+                <li><strong>Weight and nutrition:</strong> People with advanced dementia are often at risk of weight loss and malnutrition. A ketogenic diet should not restrict calories — the goal is replacing carbohydrates with fat and protein, not eating less overall. Monitor weight.</li>
+                <li><strong>MCT oil and gastrointestinal effects:</strong> Too much MCT oil too quickly causes nausea, cramping, and diarrhea. Always increase slowly with food.</li>
+                <li><strong>Constipation:</strong> A low-carbohydrate diet can cause constipation. Adequate hydration, non-starchy vegetables, and fiber sources (chia seeds, psyllium) should be included. Magnesium supplementation may also help.</li>
+                <li><strong>This is not appropriate for Type 1 diabetes</strong> without very close specialist supervision (risk of ketoacidosis).</li>
+            </ul>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 12: BOTTOM LINE -->
+        <!-- ============================================================ -->
+
+        <h2>Summary: The Core Message</h2>
+
+        <p>Insulin resistance and its consequences — chronically elevated insulin, impaired glucose metabolism, neuroinflammation, and vascular damage — appear to be centrally involved in the brain changes that cause and accelerate dementia. This process typically begins years or decades before diagnosis.</p>
+
+        <p>The brain in Alzheimer's disease has a broken glucose engine, but the ketone pathway is intact. A low-carbohydrate or ketogenic diet, supplemented with MCT oil, is the most evidence-supported nutritional approach to:</p>
+        <ul>
+            <li>Reduce insulin resistance and lower chronically elevated insulin</li>
+            <li>Provide an alternative fuel (ketone bodies) that the dementia brain can still use</li>
+            <li>Reduce neuroinflammation, support mitochondrial function, and promote clearance of amyloid and tau</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>The Realistic Goal</h3>
+            <p style="margin-bottom: 0;">This is not a cure, and expectations must be honest. The goal is to slow the progression of decline, preserve the quality of the time remaining, reduce suffering, and address a modifiable metabolic factor that conventional dementia care has historically overlooked. Even modest stabilization — in a disease that otherwise relentlessly progresses — represents meaningful benefit for both patient and family. The approach is safe, affordable, and worth trying under appropriate medical supervision.</p>
+        </div>
+
+    </div><!-- end .content -->
+
+    <!-- ============================================================ -->
+    <!-- REFERENCES -->
+    <!-- ============================================================ -->
+
+    <div class="references">
+        <h2>Key References</h2>
+
+        <div class="reference-item">1. Owen OE, Morgan AP, Kemp HG, Sullivan JM, Herrera MG, Cahill GF Jr. Brain metabolism during fasting. J Clin Invest. 1967;46(10):1589–1595.</div>
+
+        <div class="reference-item">2. Cunnane SC, Nugent S, Roy M, et al. Brain fuel metabolism, aging, and Alzheimer's disease. Nutrition. 2011;27(1):3–20.</div>
+
+        <div class="reference-item">3. Castellano CA, Nugent S, Paquet N, et al. Lower brain 18F-fluorodeoxyglucose uptake but normal 11C-acetoacetate metabolism in mild Alzheimer's disease. J Alzheimers Dis. 2015;43(4):1343–1353.</div>
+
+        <div class="reference-item">4. Fortier M, Castellano CA, Croteau E, et al. A ketogenic drink improves brain energy and some measures of cognition in mild cognitive impairment. Alzheimers Dement. 2019;15(5):625–634.</div>
+
+        <div class="reference-item">5. Croteau E, Castellano CA, Cunnane SC. Ketones in human brain metabolism: findings from brain imaging studies. Front Aging Neurosci. 2018;10:396.</div>
+
+        <div class="reference-item">6. Freeman AM, Acevedo LA, Pennings N. Insulin Resistance. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2024. Updated 2023 Aug 17.</div>
+
+        <div class="reference-item">7. Shanik MH, Xu Y, Škrha J, Dankner R, Zick Y, Roth J. Insulin resistance and hyperinsulinemia: is hyperinsulinemia the cart or the horse? Diabetes Care. 2008;31(Suppl 2):S262–S268.</div>
+
+        <div class="reference-item">8. Ferreira LSS, Fernandes CS, Vieira MNN, De Felice FG. Insulin resistance in Alzheimer's disease. Front Neurosci. 2018;12:830.</div>
+
+        <div class="reference-item">9. Arnold SE, Arvanitakis Z, Macauley-Rambach SL, et al. Brain insulin resistance in type 2 diabetes and Alzheimer disease: concepts and conundrums. Nat Rev Neurol. 2018;14(3):168–181.</div>
+
+        <div class="reference-item">10. de la Monte SM, Wands JR. Alzheimer's disease is type 3 diabetes — evidence reviewed. J Diabetes Sci Technol. 2008;2(6):1101–1113.</div>
+
+        <div class="reference-item">11. Steen E, Terry BM, Rivera EJ, et al. Impaired insulin and insulin-like growth factor expression and signaling mechanisms in Alzheimer's disease — is this type 3 diabetes? J Alzheimers Dis. 2005;7(1):63–80.</div>
+
+        <div class="reference-item">12. Talbot K, Wang HY, Kazi H, et al. Demonstrated brain insulin resistance in Alzheimer's disease patients is associated with IGF-1 resistance, IRS-1 dysregulation, and cognitive decline. J Clin Invest. 2012;122(4):1316–1338.</div>
+
+        <div class="reference-item">13. Qiu WQ, Walsh DM, Ye Z, et al. Insulin-degrading enzyme regulates extracellular levels of amyloid beta-protein by degradation. J Biol Chem. 1998;273(49):32730–32738.</div>
+
+        <div class="reference-item">14. De Felice FG, Vieira MN, Bomfim TR, et al. Protection of synapses against Alzheimer's-linked toxins: insulin signaling prevents the pathogenic binding of Aβ oligomers. Proc Natl Acad Sci USA. 2009;106(6):1971–1976.</div>
+
+        <div class="reference-item">15. Cahill GF Jr. Fuel metabolism in starvation. Annu Rev Nutr. 2006;26:1–22.</div>
+
+        <div class="reference-item">16. Newman JC, Verdin E. Ketone bodies as signaling metabolites. Trends Endocrinol Metab. 2014;25(1):42–52.</div>
+
+        <div class="reference-item">17. Shippy DC, Wilhelm C, Viharkumar PA, Raife TJ, Bhattacharya A. β-Hydroxybutyrate inhibits inflammasome activation to attenuate Alzheimer's disease pathology. J Neuroinflammation. 2020;17(1):280.</div>
+
+        <div class="reference-item">18. Kim DY, Marosi K, Mattson M. Ketone beta-hydroxybutyrate up-regulates BDNF expression through NF-κB as an adaptive response against ROS, which may improve neuronal bioenergetics and enhance neuroprotection. Neurology. 2017;88(16 Suppl):P3.090.</div>
+
+        <div class="reference-item">19. Yin JX, Maalouf M, Han P, et al. Ketones block amyloid entry and improve cognition in an Alzheimer's model. Neurobiol Aging. 2016;39:25–37.</div>
+
+        <div class="reference-item">20. Rong L, Peng Y, Shen Q, Chen K, Fang B, Li W. Effects of ketogenic diet on cognitive function of patients with Alzheimer's disease: a systematic review and meta-analysis. J Nutr Health Aging. 2024;28(8):100306.</div>
+
+        <div class="reference-item">21. Juby AG, Blackburn TJ, Mager DR. Use of medium chain triglyceride (MCT) oil in subjects with Alzheimer's disease: a randomized, double-blind, placebo-controlled, crossover study, with an open-label extension. Alzheimers Dement (N Y). 2022;8(1):e12259.</div>
+
+        <div class="reference-item">22. Sun J, Jing W, Ji M, Wang J. The effects of medium chain triglyceride for Alzheimer's disease related cognitive impairment: a systematic review and meta-analysis. J Nutr Health Aging. 2023;27(8):685–694.</div>
+
+        <div class="reference-item">23. Avgerinos KI, Egan JM, Mattson MP, Kapogiannis D. Medium chain triglycerides induce mild ketosis and may improve cognition in Alzheimer's disease: a systematic review and meta-analysis. Ageing Res Rev. 2020;58:101001.</div>
+
+        <div class="reference-item">24. Taylor MK, Sullivan DK, Mahnken JD, Burns JM, Swerdlow RH. Feasibility and efficacy data from a ketogenic diet intervention in Alzheimer's disease. Alzheimers Dement (N Y). 2018;4:28–36.</div>
+
+        <div class="reference-item">25. Larson EB, Wang L, Bowen JD, et al. Exercise is associated with reduced risk for incident dementia among persons 65 years of age and older. Ann Intern Med. 2006;144(2):73–81.</div>
+
+        <div class="reference-item">26. Irwin MR, Vitiello MV. Implications of sleep disturbance and inflammation for Alzheimer's disease dementia. Lancet Neurol. 2019;18(3):296–306.</div>
+
+        <div class="reference-item">27. Templeman NM, Clee SM, Johnson JD. Hyperinsulinemia: an early indicator of metabolic dysfunction. J Endocr Soc. 2019;3(9):1727–1747.</div>
+
+        <div class="reference-item">28. Weinstein G, Zelber-Sagi S, Golan D, et al. Association of nonalcoholic fatty liver disease with lower hippocampal volume and poorer memory performance in middle-aged and older adults. Diabetes Care. 2018;41(3):470–476.</div>
+
+        <div class="reference-item">29. Hyde PN, Sapper TN, Crabtree CD, et al. Dietary carbohydrate restriction improves metabolic syndrome independent of weight loss. JCI Insight. 2019;4(12):e128308.</div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace individualized medical advice. Dietary changes of this magnitude — particularly in a patient with dementia and other medical conditions — should be undertaken in consultation with a physician and, ideally, a registered dietitian. Medications may need adjustment as metabolic parameters improve.</p>
+        <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | David Kitching, MD | Kelowna, BC | Last Updated: March 2026</p>
+    </div>
+
+</div><!-- end .container -->
+</body>
+</html>
