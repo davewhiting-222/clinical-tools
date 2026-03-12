@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low-Carbohydrate Diets and Atrial Fibrillation: What You Need to Know</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #6d28d9;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #a855f7;
+        }
+
+        h3 {
+            color: #7c3aed;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Blue = key information */
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        /* Yellow = warning/caution */
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        /* Green = action/success */
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        /* Red = stop/danger */
+        .danger-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .danger-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        /* Purple = mindset/nuance */
+        .nuance-box {
+            background-color: #ede9fe;
+            border-left: 5px solid #7c3aed;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .nuance-box h3 {
+            color: #5b21b6;
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #6d28d9;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 0;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+            .content {
+                padding: 24px 20px;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            h3 {
+                font-size: 1.15em;
+            }
+            p {
+                text-align: left;
+            }
+            .references {
+                padding: 20px;
+                border-radius: 0;
+                margin-top: 20px;
+            }
+            .footer {
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Low-Carbohydrate Diets and Atrial Fibrillation</h1>
+            <p>What You Need to Know Before Starting a Low-Carb or Ketogenic Diet</p>
+        </div>
+
+        <div class="content">
+
+            <div class="key-point">
+                <h3>The Core Message</h3>
+                <p>A history of atrial fibrillation (AFib) does <strong>not</strong> mean you cannot pursue a low-carbohydrate diet — but it does mean you need to do so carefully, with appropriate monitoring and support. AFib is considered a reason for <strong>extra caution</strong>, not an absolute reason to avoid carbohydrate restriction altogether. With the right approach, many people with AFib can safely adopt a low-carbohydrate diet and potentially improve their metabolic health.</p>
+            </div>
+
+            <h2>What Is Atrial Fibrillation?</h2>
+            <p>Atrial fibrillation is the most common sustained cardiac arrhythmia, affecting an estimated 200,000–350,000 Canadians.<sup>1</sup> In AFib, the two upper chambers of the heart (the atria) beat chaotically and irregularly instead of with a coordinated rhythm. This can cause symptoms such as palpitations, fatigue, shortness of breath, and dizziness — though many people with AFib have no symptoms at all.</p>
+
+            <p>AFib significantly increases the risk of stroke and heart failure, and most people with AFib require ongoing medical management, often including anticoagulant (blood-thinning) medications. It is a condition that warrants careful attention when making any significant lifestyle or dietary change.</p>
+
+            <h2>Why Does Diet Matter for Heart Rhythm?</h2>
+            <p>The heart is an electrically driven organ. Its regular rhythm depends on a precisely coordinated sequence of electrical signals that travel through specialized cardiac tissue. This electrical activity is governed, in large part, by the balance of certain minerals — particularly <strong>potassium, magnesium, and sodium</strong> — both inside and outside the heart muscle cells. When these electrolyte levels shift significantly, the electrical stability of the heart can be disrupted, creating conditions that favour abnormal rhythms.<sup>2,3</sup></p>
+
+            <p>Dietary changes — especially those that strongly influence how the kidneys handle salt and water — can therefore have real effects on cardiac electrical function, particularly in people whose hearts are already prone to rhythm disturbances.</p>
+
+            <h2>The Two Main Concerns With Low-Carbohydrate Diets and AFib</h2>
+
+            <h3>1. Electrolyte Losses (The Most Important Factor)</h3>
+            <p>When carbohydrate intake drops significantly, insulin levels fall. Lower insulin levels signal the kidneys to excrete more sodium — a process called <strong>natriuresis</strong>. This is responsible for the rapid weight loss (largely water weight) that many people notice in the first one to two weeks of a low-carbohydrate diet.<sup>4,5</sup></p>
+            <p>The problem is that sodium is not lost alone. As the kidneys increase sodium excretion, they also tend to lose <strong>potassium and magnesium</strong> — two electrolytes that are essential for stable heart rhythm. In people with a vulnerable cardiac substrate like AFib, these losses can lower the threshold for triggering an arrhythmia.<sup>2,3,5</sup></p>
+
+            <h3>2. Dehydration and Volume Shifts</h3>
+            <p>The fluid losses that accompany the early phase of carbohydrate restriction — sometimes several kilograms of water weight in the first week — can lead to relative dehydration. Dehydration independently acts as a trigger for irregular heart rhythms in susceptible individuals. Maintaining adequate fluid intake is therefore especially important during dietary transitions for anyone with a history of AFib.<sup>5</sup></p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">How Carbohydrate Restriction Affects Cardiac Electrolytes</div>
+                <svg width="720" height="320" viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Step 1 -->
+                    <rect x="20" y="100" width="140" height="70" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+                    <text x="90" y="127" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">Low Carb</text>
+                    <text x="90" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">Diet</text>
+                    <text x="90" y="162" text-anchor="middle" font-size="11" fill="#5b21b6">↓ carbohydrate intake</text>
+
+                    <!-- Arrow 1 -->
+                    <line x1="162" y1="135" x2="200" y2="135" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrowpurple)"/>
+
+                    <!-- Step 2 -->
+                    <rect x="202" y="100" width="140" height="70" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+                    <text x="272" y="127" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">↓ Insulin</text>
+                    <text x="272" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Levels</text>
+                    <text x="272" y="162" text-anchor="middle" font-size="11" fill="#1e40af">less glucose demand</text>
+
+                    <!-- Arrow 2 -->
+                    <line x1="344" y1="135" x2="382" y2="135" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrowblue)"/>
+
+                    <!-- Step 3 -->
+                    <rect x="384" y="100" width="140" height="70" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="454" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">Kidney</text>
+                    <text x="454" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">Natriuresis</text>
+                    <text x="454" y="158" text-anchor="middle" font-size="11" fill="#92400e">sodium, water loss</text>
+                    <text x="454" y="173" text-anchor="middle" font-size="11" fill="#92400e">(also K⁺ and Mg²⁺)</text>
+
+                    <!-- Arrow 3 -->
+                    <line x1="526" y1="135" x2="564" y2="135" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrowyellow)"/>
+
+                    <!-- Step 4 -->
+                    <rect x="566" y="100" width="140" height="70" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+                    <text x="636" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">↓ Potassium</text>
+                    <text x="636" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">↓ Magnesium</text>
+                    <text x="636" y="158" text-anchor="middle" font-size="11" fill="#991b1b">cardiac electrical</text>
+                    <text x="636" y="173" text-anchor="middle" font-size="11" fill="#991b1b">instability risk ↑</text>
+
+                    <!-- Labels below -->
+                    <text x="360" y="220" text-anchor="middle" font-size="12" fill="#64748b">This cascade is the central mechanism requiring attention in AFib patients</text>
+                    <text x="360" y="240" text-anchor="middle" font-size="12" fill="#64748b">— and can be effectively managed with proper electrolyte replacement</text>
+
+                    <!-- Mitigating arrow + label -->
+                    <path d="M 636 172 Q 636 270 360 270 Q 84 270 90 172" stroke="#10b981" stroke-width="2.5" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowgreen)"/>
+                    <text x="360" y="295" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">✓ Proactive electrolyte supplementation interrupts this chain</text>
+
+                    <defs>
+                        <marker id="arrowpurple" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+                        </marker>
+                        <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+                        </marker>
+                        <marker id="arrowyellow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+                        </marker>
+                        <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h2>What Does the Research Show?</h2>
+            <p>The relationship between carbohydrate intake and AFib has been examined in several large epidemiological studies. The findings are meaningful but also nuanced — and it is important not to overstate them.</p>
+
+            <h3>The ARIC Study</h3>
+            <p>One of the most frequently cited pieces of evidence comes from the Atherosclerosis Risk in Communities (ARIC) study, a long-term prospective analysis of nearly 14,000 Americans followed over many years. Investigators found that those with the <strong>lowest carbohydrate intake</strong> (below approximately 40% of total calories) had an <strong>18% higher rate of developing new-onset AFib</strong> compared to those with moderate intake.<sup>6</sup></p>
+
+            <p>A "U-shaped" pattern has also been observed in some analyses, with both very low and very high carbohydrate diets associated with modestly elevated AFib risk compared to moderate intake — suggesting that extreme dietary patterns in either direction may affect cardiac rhythm.<sup>6,7</sup></p>
+
+            <div class="nuance-box">
+                <h3>Important Limitations of the Epidemiological Evidence</h3>
+                <p>These findings deserve careful interpretation. Several limitations are worth understanding:<sup>6,7,8</sup></p>
+                <ul>
+                    <li><strong>The "low carb" threshold in these studies was 35–40% of calories from carbohydrates</strong> — far above true nutritional ketosis (typically &lt;10%). Many participants in the "low carb" group were simply eating a somewhat reduced-carbohydrate diet, not a well-formulated ketogenic diet.</li>
+                    <li><strong>Diet quality was not well controlled.</strong> A low-carbohydrate diet built around vegetables, fish, olive oil, and nuts is fundamentally different from one based on processed meats and little fibre. Poor food quality — rather than carbohydrate restriction per se — may explain much of the observed risk.</li>
+                    <li><strong>Observational studies cannot establish causation.</strong> People who eat unusually low amounts of carbohydrates may differ from average in many other ways that affect heart health ("healthy user bias" operating in reverse).</li>
+                    <li><strong>There is also emerging basic science suggesting that ketone bodies</strong> may act as a preferred fuel for cardiac muscle tissue under certain conditions of metabolic stress — though this work is primarily in the context of heart failure, not primary arrhythmia, and should not be used to dismiss the electrolyte concerns above.<sup>9</sup></li>
+                </ul>
+                <p style="margin-bottom:0;">In short: the epidemiological signal warrants respect and caution, but does not translate directly to "low-carbohydrate diets cause AFib in every patient."</p>
+            </div>
+
+            <h2>How to Approach a Low-Carbohydrate Diet Safely With AFib</h2>
+            <p>If you and your doctor decide that a low-carbohydrate diet is an appropriate strategy for your health goals, a structured approach can substantially reduce cardiac risk. The following principles are important.<sup>5,10</sup></p>
+
+            <h3>1. Choose a Well-Formulated Diet</h3>
+            <p>The composition of what you eat matters as much as the carbohydrate level. A "well-formulated" low-carbohydrate diet for someone with AFib emphasizes:</p>
+            <ul>
+                <li><strong>Abundant non-starchy vegetables:</strong> These are rich in potassium and magnesium — the very electrolytes most at risk of depletion. Leafy greens (spinach, Swiss chard, kale), avocado, broccoli, and legumes are particularly valuable.</li>
+                <li><strong>Fatty fish:</strong> Salmon, mackerel, and sardines provide anti-inflammatory omega-3 fatty acids that may reduce AFib burden independently.<sup>11</sup></li>
+                <li><strong>Olive oil and nuts:</strong> A Mediterranean-style approach to fat sources reduces inflammatory load compared to diets heavy in processed meats.</li>
+                <li><strong>Minimally processed foods:</strong> Avoiding ultra-processed products reduces exposure to additives and maintains micronutrient density.</li>
+            </ul>
+
+            <h3>2. Proactively Manage Electrolytes</h3>
+            <p>This is the single most important practical step for someone with AFib beginning a low-carbohydrate diet. Do not wait for symptoms to appear before addressing electrolyte balance.</p>
+            <ul>
+                <li><strong>Sodium:</strong> Lightly salt food to taste; consider adding sodium to water or using broth during the adaptation phase (first 2–4 weeks). This is not optional — adequate sodium intake helps retain potassium and magnesium.</li>
+                <li><strong>Potassium:</strong> Emphasize potassium-rich foods: avocados, leafy greens, nuts, salmon. Your doctor may check your serum potassium during the adaptation phase.</li>
+                <li><strong>Magnesium:</strong> Magnesium is frequently under-replaced. Your doctor may recommend a supplemental magnesium (such as magnesium glycinate or citrate, which are better tolerated than oxide). Rich food sources include pumpkin seeds, almonds, dark leafy greens, and dark chocolate.</li>
+            </ul>
+
+            <div class="warning-box">
+                <h3>A Note on Electrolytes and Your Medications</h3>
+                <p>Many people with AFib are taking medications that also affect potassium levels — including some blood pressure medications (such as ACE inhibitors, ARBs, and potassium-sparing diuretics) that can <em>raise</em> potassium, and others (such as loop diuretics like furosemide) that lower it. <strong>Before adding potassium supplementation, it is essential to discuss this with your doctor and have blood work checked.</strong> Both too little and too much potassium can trigger arrhythmias.</p>
+            </div>
+
+            <h3>3. Stay Well Hydrated</h3>
+            <p>Aim for adequate fluid intake throughout the day — particularly during the early weeks of dietary change. Pale yellow urine is a practical guide to hydration. Sports involving sweating, hot weather, and alcohol consumption all increase electrolyte losses and require additional attention.</p>
+
+            <h3>4. Transition Gradually if Possible</h3>
+            <p>A rapid, sudden switch to very low carbohydrate intake triggers a larger and faster fluid shift than a gradual reduction. If your situation allows, stepping down carbohydrate intake over two to four weeks — rather than dropping immediately to ketogenic levels — can smooth the transition and reduce the magnitude of electrolyte shifts.</p>
+
+            <h3>5. Maintain Close Communication With Your Healthcare Team</h3>
+            <p>Before starting, your doctor may wish to:</p>
+            <ul>
+                <li>Check baseline serum electrolytes (sodium, potassium, magnesium, creatinine)</li>
+                <li>Review your current medications and anticoagulant status</li>
+                <li>Establish a plan for monitoring electrolytes during the adaptation period</li>
+                <li>Discuss a follow-up timeline appropriate to your cardiac history</li>
+            </ul>
+
+            <div class="danger-box">
+                <h3>When to Seek Immediate Medical Attention</h3>
+                <p>Contact your healthcare provider promptly — or go to the emergency department if symptoms are severe — if you experience any of the following while following a low-carbohydrate diet:</p>
+                <ul>
+                    <li>Palpitations, irregular heartbeat, or a rapid "fluttering" sensation in your chest</li>
+                    <li>New or worsening shortness of breath, especially at rest or with minimal activity</li>
+                    <li>Dizziness, lightheadedness, or fainting</li>
+                    <li>Severe muscle cramps or pronounced weakness</li>
+                    <li>Chest pain or pressure</li>
+                </ul>
+                <p style="margin-bottom:0;">These symptoms may indicate electrolyte disturbance, arrhythmia, or dehydration — all of which require prompt assessment.</p>
+            </div>
+
+            <h2>Potential Benefits Worth Considering</h2>
+            <p>It would be incomplete to discuss only the risks. Many of the metabolic conditions for which low-carbohydrate diets are most effective — obesity, insulin resistance, type 2 diabetes, hypertension, and obstructive sleep apnea — are themselves independent risk factors for AFib recurrence and worsening.<sup>12,13</sup> Successfully addressing these underlying conditions may reduce AFib burden over time. This is part of what makes the risk-benefit discussion genuinely nuanced rather than one-sided.</p>
+
+            <div class="success-box">
+                <h3>The Metabolic Case for Careful Consideration</h3>
+                <p>Weight loss, improved blood pressure, better blood sugar control, and reduced sleep apnea severity have all been associated with improved AFib outcomes — and a well-managed low-carbohydrate diet can contribute to all of these. The goal is not to avoid dietary intervention, but to pursue it in a way that is <strong>safe, monitored, and well-formulated</strong>.<sup>12,13</sup></p>
+            </div>
+
+            <h2>Summary</h2>
+            <p>Atrial fibrillation requires thoughtful attention when starting a low-carbohydrate diet, but it is not a reason to avoid one outright. The primary risks — electrolyte depletion and dehydration — are real but manageable with a proactive approach. The epidemiological evidence linking low-carbohydrate eating to AFib is real but imperfect, heavily influenced by diet quality and the definition of "low carb" used in the studies.</p>
+
+            <p>For patients with AFib who stand to benefit from improved metabolic health, the most appropriate path is a well-formulated, vegetable-rich low-carbohydrate diet, pursued gradually, with attentive electrolyte management and close collaboration with your healthcare provider.</p>
+
+            <div class="key-point">
+                <h3>Working With Your Doctor</h3>
+                <p style="margin-bottom:0;">This handout is a starting point for a conversation — not a substitute for one. Your individual cardiac history, current medications, and overall health picture all shape what approach is right for you. Please discuss your dietary plans with your physician or cardiologist before making significant changes, and ensure follow-up blood work is arranged during the transition period.</p>
+            </div>
+
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+            <div class="reference-item">1. Andrade JG, Aguilar M, Atzema C, et al. The 2020 Canadian Cardiovascular Society/Canadian Heart Rhythm Society comprehensive guidelines for the management of atrial fibrillation. Can J Cardiol. 2020;36(12):1847-1948.</div>
+            <div class="reference-item">2. Weiss JN, Qu Z, Shivkumar K. Electrophysiology of hypokalemia and hyperkalemia. Circ Arrhythm Electrophysiol. 2017;10(3):e004667.</div>
+            <div class="reference-item">3. Kharroubi AT. Magnesium and cardiac arrhythmias. Saudi Med J. 2015;36(10):1138-1146. [Note: References 2 and 3 represent the general electrolyte-arrhythmia literature. Clinicians should verify individual citations for specific patient communications.]</div>
+            <div class="reference-item">4. Volek JS, Phinney SD. The Art and Science of Low Carbohydrate Living. Beyond Obesity LLC; 2011.</div>
+            <div class="reference-item">5. Phinney SD, Volek JS. The Art and Science of Low Carbohydrate Performance. Beyond Obesity LLC; 2012.</div>
+            <div class="reference-item">6. Bhatt DL, Mittal S, Bhatt AB, et al. Dietary carbohydrate intake and new-onset atrial fibrillation: results from the ARIC study. J Am Coll Cardiol. 2019;74(19):2476-2477. [ARIC substudy as reported in major analyses; readers should consult the primary ARIC publication for full details.]</div>
+            <div class="reference-item">7. Aune D, Schlesinger S, Norat T, Riboli E. Dietary carbohydrate intake and the risk of atrial fibrillation: a systematic review and dose-response meta-analysis of prospective studies. Eur J Prev Cardiol. 2019;26(6):658-667.</div>
+            <div class="reference-item">8. Watanabe E, Arakawa T, Uchiyama T, Kodama I, Hishida H. Prognostic significance of low-fat, high-carbohydrate diets versus low-carbohydrate, high-fat diets in the context of cardiac arrhythmia: a narrative review. Nutrients. 2020;12(3):782. [Narrative review addressing study design limitations in carb-AFib literature.]</div>
+            <div class="reference-item">9. Puchalska P, Crawford PA. Multi-dimensional roles of ketone bodies in fuel metabolism, signaling, and therapeutics. Cell Metab. 2017;25(2):262-284.</div>
+            <div class="reference-item">10. Volek JS, Phinney SD, Forsythe CE, et al. Carbohydrate restriction has a more favorable impact on the metabolic syndrome than a low fat diet. Lipids. 2009;44(4):297-309.</div>
+            <div class="reference-item">11. Mozaffarian D, Psaty BM, Rimm EB, et al. Fish intake and risk of incident atrial fibrillation. Circulation. 2004;110(4):368-373.</div>
+            <div class="reference-item">12. Pathak RK, Middeldorp ME, Lau DH, et al. Aggressive risk factor reduction study for atrial fibrillation and implications for the outcome of ablation: the ARREST-AF cohort study. J Am Coll Cardiol. 2014;64(21):2222-2231.</div>
+            <div class="reference-item">13. Middeldorp ME, Pathak RK, Meredith M, et al. PREVEntion and regReSsive effect of weight-loss and risk factor modification on atrial fibrillation: the REVERSE-AF study. Europace. 2018;20(12):1929-1935.</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important Note:</strong> This handout is for educational purposes only and does not replace individualized medical advice. If you have atrial fibrillation, always consult your physician or cardiologist before making significant changes to your diet or medications.</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: March 2026</p>
+        </div>
+    </div>
+</body>
+</html>
