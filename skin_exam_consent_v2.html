@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Examination: Consent and Preferences</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        /* Patient info */
+        .patient-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .field-group label {
+            display: block;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+
+        .sig-line-input {
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid #94a3b8;
+            padding: 6px 2px;
+            font-size: 1em;
+            font-family: inherit;
+            background: transparent;
+            color: #333;
+        }
+
+        .sig-line-input:focus {
+            outline: none;
+            border-bottom-color: #3b82f6;
+        }
+
+        /* Section headers */
+        .section-header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 10px 16px;
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .section-body {
+            border: 1.5px solid #cbd5e1;
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            padding: 18px 20px;
+            margin-bottom: 22px;
+        }
+
+        .section-note {
+            font-size: 0.9em;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+
+        /* Radio options — table layout to prevent checkbox/text wrapping issues */
+        .option-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .option-list li {
+            display: table;
+            width: 100%;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 5px;
+            padding: 10px 14px;
+            background-color: #f8fafc;
+            margin-bottom: 0;
+        }
+
+        .option-list li:hover {
+            border-color: #93c5fd;
+            background-color: #eff6ff;
+            cursor: pointer;
+        }
+
+        .option-list li label {
+            display: table;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .option-list li input[type="radio"] {
+            display: table-cell;
+            vertical-align: top;
+            padding-top: 3px;
+            width: 18px;
+            accent-color: #1e3a8a;
+            cursor: pointer;
+        }
+
+        .option-text {
+            display: table-cell;
+            padding-left: 10px;
+            font-size: 0.96em;
+            color: #334155;
+            line-height: 1.5;
+            vertical-align: top;
+        }
+
+        /* Consent block */
+        .consent-text {
+            font-size: 0.95em;
+            color: #334155;
+            line-height: 1.65;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        /* Signature section */
+        .sig-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .sig-field label {
+            display: block;
+            font-size: 0.82em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .sig-underline {
+            border-bottom: 1.5px solid #64748b;
+            height: 36px;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 0; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.5em; }
+            .content { padding: 24px 20px; }
+            .patient-row { grid-template-columns: 1fr; gap: 16px; }
+            .sig-grid { grid-template-columns: 1fr; gap: 20px; }
+            .footer { padding: 20px; }
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; }
+            .content { padding: 24px; }
+            .section-body { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Skin Examination</h1>
+            <p>Consent and Preferences</p>
+        </div>
+
+        <div class="content">
+
+            <!-- Patient info -->
+            <div class="patient-row">
+                <div class="field-group">
+                    <label for="p-name">Patient name</label>
+                    <input class="sig-line-input" type="text" id="p-name" autocomplete="off"/>
+                </div>
+                <div class="field-group">
+                    <label for="p-date">Date</label>
+                    <input class="sig-line-input" type="text" id="p-date" autocomplete="off"/>
+                </div>
+            </div>
+
+            <!-- SECTION 1: Chest and Breasts -->
+            <div class="section-header">1 &nbsp;·&nbsp; Chest and Breasts</div>
+            <div class="section-body">
+                <p class="section-note">Examining the front of the chest requires full exposure. Removing the bra is recommended — examining over or around it significantly limits what can be seen.</p>
+                <ul class="option-list">
+                    <li><label>
+                        <input type="radio" name="chest" value="bra-off"/>
+                        <span class="option-text">I will remove my bra for the chest examination.</span>
+                    </label></li>
+                    <li><label>
+                        <input type="radio" name="chest" value="bra-on"/>
+                        <span class="option-text">I prefer to keep my bra on. I understand this will limit examination of the chest area.</span>
+                    </label></li>
+                    <li><label>
+                        <input type="radio" name="chest" value="omit"/>
+                        <span class="option-text">Please omit the chest and breasts from today's examination.</span>
+                    </label></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 2: Buttocks and Lower Abdomen -->
+            <div class="section-header">2 &nbsp;·&nbsp; Buttocks and Lower Abdomen</div>
+            <div class="section-body">
+                <p class="section-note">Melanoma can occur in these areas. If underwear is kept on, the physician will need to briefly adjust the fabric to view the skin underneath.</p>
+                <ul class="option-list">
+                    <li><label>
+                        <input type="radio" name="buttocks" value="adjust"/>
+                        <span class="option-text">I give permission to adjust my underwear as needed to examine these areas.</span>
+                    </label></li>
+                    <li><label>
+                        <input type="radio" name="buttocks" value="omit"/>
+                        <span class="option-text">Please omit this area from today's examination.</span>
+                    </label></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 3: Inner Thigh -->
+            <div class="section-header">3 &nbsp;·&nbsp; Inner Thigh</div>
+            <div class="section-body">
+                <p class="section-note">Examining the inner thigh requires adjusting the position of your legs.</p>
+                <ul class="option-list">
+                    <li><label>
+                        <input type="radio" name="thigh" value="yes"/>
+                        <span class="option-text">I consent to examination of the inner thigh.</span>
+                    </label></li>
+                    <li><label>
+                        <input type="radio" name="thigh" value="omit"/>
+                        <span class="option-text">Please omit the inner thigh — proceed directly to the lower legs and feet.</span>
+                    </label></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 4: Chaperone -->
+            <div class="section-header">4 &nbsp;·&nbsp; Chaperone</div>
+            <div class="section-body">
+                <ul class="option-list">
+                    <li><label>
+                        <input type="radio" name="chaperone" value="yes"/>
+                        <span class="option-text">I would like a chaperone present during the examination.</span>
+                    </label></li>
+                    <li><label>
+                        <input type="radio" name="chaperone" value="no"/>
+                        <span class="option-text">I do not require a chaperone.</span>
+                    </label></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 5: Consent -->
+            <div class="section-header">5 &nbsp;·&nbsp; Consent</div>
+            <div class="section-body">
+                <p class="consent-text">
+                    I have read the information handout and understand the purpose of this skin examination. I understand that even with dermoscopy, this examination cannot detect every skin cancer, and that I should report any new, changing, bleeding, or non-healing lesion to my physician promptly. My preferences above will be respected throughout, and I may withdraw or modify my consent at any time without affecting my care.
+                    <br><br>
+                    <strong>I consent to today's skin examination in accordance with my preferences above.</strong>
+                </p>
+
+                <div class="sig-grid">
+                    <div class="sig-field">
+                        <label>Patient signature</label>
+                        <div class="sig-underline"></div>
+                    </div>
+                    <div class="sig-field">
+                        <label>Date</label>
+                        <div class="sig-underline"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end .content -->
+
+        <div class="footer">
+            <p>Skin Examination — Consent and Preferences &nbsp;|&nbsp; Patient Administrative Form &nbsp;|&nbsp; Last Updated: February 2026</p>
+        </div>
+
+    </div>
+</body>
+</html>
