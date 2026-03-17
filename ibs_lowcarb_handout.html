@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low-Carbohydrate Diet for Irritable Bowel Syndrome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Teal/green accent to distinguish from other handouts */
+        .header {
+            background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #065f46;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #059669;
+        }
+
+        h3 {
+            color: #047857;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Blue — key information */
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        /* Yellow — warnings/cautions */
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        /* Red — danger/stop */
+        .danger-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .danger-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        /* Green — success/motivational */
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        /* Purple — nuance/mindset */
+        .nuance-box {
+            background-color: #ede9fe;
+            border-left: 5px solid #7c3aed;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .nuance-box h3 {
+            color: #4c1d95;
+            margin-top: 0;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Phase steps */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .phase-card {
+            border: 2px solid #d1fae5;
+            border-radius: 10px;
+            padding: 20px;
+            background: #f0fdf4;
+        }
+
+        .phase-card .phase-label {
+            font-size: 0.85em;
+            font-weight: 700;
+            color: #059669;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .phase-card h4 {
+            color: #065f46;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .phase-card p {
+            font-size: 0.95em;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        /* Meal table */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            min-width: 520px;
+        }
+
+        th {
+            background-color: #065f46;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        /* Symptom log */
+        .log-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .log-field {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .log-field label {
+            display: block;
+            font-size: 0.8em;
+            font-weight: 700;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+
+        .log-line {
+            border-bottom: 1px solid #94a3b8;
+            height: 24px;
+            margin-bottom: 6px;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 0; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.5em; }
+            .header p { font-size: 1em; }
+            .content { padding: 24px 20px; }
+            h2 { font-size: 1.4em; }
+            h3 { font-size: 1.15em; }
+            p { text-align: left; }
+            .references { padding: 20px; border-radius: 0; margin-top: 20px; }
+            .footer { padding: 20px; }
+            .phase-grid { grid-template-columns: 1fr; }
+            .log-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1>A Low-Carbohydrate Diet for IBS</h1>
+        <p>A Practical Guide to the Transition, Managing Side Effects, and Reintroducing Foods</p>
+    </div>
+
+    <div class="content">
+
+        <div class="key-point">
+            <h3>Why This Approach Makes Sense for You</h3>
+            <p>You have had a thorough assessment — including colonoscopy and specialist review — and your IBS diagnosis is well established. You have already tried the low-FODMAP diet with some benefit, which confirms that fermentable carbohydrates are a significant driver of your symptoms. A very low-carbohydrate (ketogenic) diet takes the next step: by removing virtually all fermentable sugars and starches from the diet, it eliminates the primary fuel source for gas-producing gut bacteria, often producing faster and more complete symptom relief than a low-FODMAP approach alone.<sup>1,2</sup></p>
+        </div>
+
+        <h2>The Evidence Base</h2>
+
+        <p>Reducing dietary carbohydrates as a treatment for IBS is not simply an extrapolation from general low-carb enthusiasm — it is increasingly supported by clinical trial evidence. In 2024, the landmark <strong>CARIBS trial</strong> (Lancet Gastroenterology &amp; Hepatology) randomized 294 adults with moderate-to-severe IBS to either a low-FODMAP diet, a low-carbohydrate high-fat diet, or optimized medical treatment. After four weeks, <strong>71% of the low-carbohydrate group</strong> achieved a clinically meaningful reduction in IBS Symptom Severity Score — comparable to the 76% response in the FODMAP group, and significantly better than the 58% in the medication group.<sup>3</sup></p>
+
+        <p>An earlier pilot study of a very low-carbohydrate diet (20 g/day) in diarrhea-predominant IBS found that all 13 completers reported adequate symptom relief, with significant improvements in stool frequency, consistency, abdominal pain, and quality of life.<sup>4</sup> Because IBS symptoms arise largely from bacterial fermentation of unabsorbed carbohydrates in the colon — producing gas, osmotic fluid shifts, and luminal distension — reducing the carbohydrate substrate available for fermentation targets the mechanism directly.<sup>5,6</sup></p>
+
+        <div class="nuance-box">
+            <h3>An Honest Note on the Evidence</h3>
+            <p>The evidence for a low-carbohydrate diet in IBS is promising but still relatively limited compared to the extensive evidence base for the low-FODMAP diet. Most trials are short (4 weeks), conducted in specialist centres, and have not yet compared long-term outcomes. Your experience on the low-FODMAP diet already suggests you are a likely responder to carbohydrate restriction. The approach described here is evidence-informed and rational, but it is being used with an understanding that it is still an emerging first-line option and that individual responses vary.</p>
+        </div>
+
+        <h2>The 3-Step Transition ("On-Ramp")</h2>
+
+        <p>Rather than cutting all carbohydrates abruptly — which can cause significant fatigue and GI disturbance — a gradual, phased approach over 4–6 weeks allows your digestive system, gut microbiome, and metabolism to adapt smoothly.<sup>7</sup> Move to the next phase every two weeks as you feel comfortable.</p>
+
+        <div class="phase-grid">
+            <div class="phase-card">
+                <div class="phase-label">Phase 1 · Weeks 1–2</div>
+                <h4>"Stop Drinking Your Carbs"</h4>
+                <p>Change nothing about food yet — only drinks. <strong>Stop:</strong> juice, soft drinks, iced tea, sports drinks, alcohol, and flavoured waters. <strong>Start:</strong> still or sparkling water, black coffee, or plain herbal tea. This single step often reduces bloating noticeably within days.</p>
+            </div>
+            <div class="phase-card">
+                <div class="phase-label">Phase 2 · Weeks 3–4</div>
+                <h4>"The Savoury Breakfast"</h4>
+                <p>Eliminate sugar and starch before noon. Eat eggs, bacon, smoked salmon, avocado, or leftover dinner meat. A savoury, protein-rich breakfast stabilizes blood sugar and insulin and removes the morning carbohydrate spike that can trigger IBS symptoms hours later.</p>
+            </div>
+            <div class="phase-card">
+                <div class="phase-label">Phase 3 · Week 5+</div>
+                <h4>"Ditch the Wrapper"</h4>
+                <p>Eat the filling — discard the carbohydrate "delivery vehicle." Burger without the bun. Sandwich fillings in a lettuce wrap or bowl. Pasta sauce over zucchini noodles or green beans. Soup without bread or crackers. You are now at a full very low-carbohydrate intake.</p>
+            </div>
+        </div>
+
+        <div class="diagram-container">
+            <div class="diagram-title">From FODMAP to Very Low-Carbohydrate: What Changes</div>
+            <svg width="760" height="280" viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- Left column: FODMAP -->
+                <rect x="20" y="20" width="220" height="240" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+                <text x="130" y="48" text-anchor="middle" font-size="14" font-weight="bold" fill="#4c1d95">Low-FODMAP Diet</text>
+                <text x="130" y="65" text-anchor="middle" font-size="11" fill="#6d28d9">(What you've been doing)</text>
+                <text x="35" y="92" font-size="12" fill="#4c1d95">✓ Removes lactose, fructose,</text>
+                <text x="35" y="110" font-size="12" fill="#4c1d95">  fructans, GOS, polyols</text>
+                <text x="35" y="130" font-size="12" fill="#4c1d95">✓ Grains/bread still allowed</text>
+                <text x="35" y="150" font-size="12" fill="#4c1d95">  (if low-FODMAP variety)</text>
+                <text x="35" y="170" font-size="12" fill="#4c1d95">✓ Some starchy vegetables OK</text>
+                <text x="35" y="190" font-size="12" fill="#4c1d95">✓ Rice, oats, rice cakes</text>
+                <text x="35" y="215" font-size="12" fill="#6d28d9">Total carbs: ~150–200 g/day</text>
+                <text x="35" y="235" font-size="12" fill="#6d28d9">Fermentable residue: moderate</text>
+
+                <!-- Arrow -->
+                <defs>
+                    <marker id="arrowG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#059669"/>
+                    </marker>
+                </defs>
+                <path d="M 255 140 L 310 140" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowG)"/>
+                <text x="283" y="130" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">Next</text>
+                <text x="283" y="155" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">step</text>
+
+                <!-- Middle column: Very Low Carb -->
+                <rect x="315" y="20" width="220" height="240" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2.5"/>
+                <text x="425" y="48" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">Very Low-Carb (Keto)</text>
+                <text x="425" y="65" text-anchor="middle" font-size="11" fill="#047857">(New approach)</text>
+                <text x="330" y="92" font-size="12" fill="#065f46">✓ All FODMAP restrictions kept</text>
+                <text x="330" y="112" font-size="12" fill="#065f46">✓ ALL grains removed</text>
+                <text x="330" y="132" font-size="12" fill="#065f46">✓ Starchy vegetables removed</text>
+                <text x="330" y="152" font-size="12" fill="#065f46">✓ Most fruit removed</text>
+                <text x="330" y="172" font-size="12" fill="#065f46">✓ Low-FODMAP veg still OK</text>
+                <text x="330" y="215" font-size="12" fill="#047857" font-weight="bold">Total carbs: 20–50 g/day</text>
+                <text x="330" y="235" font-size="12" fill="#047857" font-weight="bold">Fermentable residue: minimal</text>
+
+                <!-- Arrow -->
+                <path d="M 550 140 L 605 140" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowG)"/>
+                <text x="578" y="130" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">Goal</text>
+
+                <!-- Right column: Result -->
+                <rect x="610" y="20" width="130" height="240" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+                <text x="675" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">Result</text>
+                <text x="675" y="80" text-anchor="middle" font-size="12" fill="#047857">↓ Bloating</text>
+                <text x="675" y="105" text-anchor="middle" font-size="12" fill="#047857">↓ Gas</text>
+                <text x="675" y="130" text-anchor="middle" font-size="12" fill="#047857">↓ Cramping</text>
+                <text x="675" y="155" text-anchor="middle" font-size="12" fill="#047857">↑ Stool</text>
+                <text x="675" y="172" text-anchor="middle" font-size="12" fill="#047857">regularity</text>
+                <text x="675" y="200" text-anchor="middle" font-size="12" fill="#047857">↑ Quality</text>
+                <text x="675" y="217" text-anchor="middle" font-size="12" fill="#047857">of life</text>
+            </svg>
+            <p style="margin-top: 15px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                A very low-carbohydrate diet retains all the restrictions you already know from the low-FODMAP diet and goes further by removing all grains, starches, and most sugars — leaving almost no substrate for bacterial fermentation.
+            </p>
+        </div>
+
+        <h2>Managing Fluids and Electrolytes</h2>
+
+        <p>When carbohydrate intake drops sharply, the kidneys excrete more sodium and water — a predictable and manageable effect. Your body stores roughly 3 grams of water for every gram of glycogen (stored carbohydrate); as glycogen is depleted in the first 1–2 weeks, you will lose this water and the electrolytes dissolved in it.<sup>7,8</sup> This is the main cause of the so-called "keto flu" — and it is entirely preventable with attention to hydration and electrolytes.</p>
+
+        <div class="warning-box">
+            <h3>The "Keto Flu" — and How to Prevent It</h3>
+            <p>In the first 5–10 days, some people experience headaches, fatigue, light-headedness, or muscle cramps. This is almost always due to sodium and magnesium depletion rather than anything inherently harmful about low-carb eating. These symptoms are <strong>not inevitable</strong> and can be prevented or resolved quickly.<sup>7,8</sup></p>
+            <ul>
+                <li><strong>Sodium:</strong> Add a generous pinch of salt to your food or drinks each day. Olives, pickles, and broth are excellent sodium-rich snacks. Do not restrict salt on this diet.</li>
+                <li><strong>Magnesium:</strong> Most people benefit from a supplemental magnesium glycinate or citrate (200–400 mg at night). This also helps with sleep and muscle cramps.</li>
+                <li><strong>Potassium:</strong> Eat avocado, leafy greens, and salmon regularly. Potassium supplements are generally not needed if diet is adequate.</li>
+                <li><strong>Fluid:</strong> Aim for 2–3 litres of water, sparkling water, herbal tea, or broth daily. Thirst is a reliable guide once you are past the first week.</li>
+            </ul>
+        </div>
+
+        <div class="danger-box">
+            <h3>Important: If You Take Certain Medications</h3>
+            <p>Please inform your doctor before starting this diet if you take any of the following, as dose adjustments may be needed as your diet changes:<sup>8</sup></p>
+            <ul>
+                <li><strong>Blood pressure medications</strong> (especially diuretics) — increased fluid and sodium loss on a low-carb diet can cause blood pressure to drop significantly</li>
+                <li><strong>Diabetes medications</strong> — blood sugar can fall rapidly; hypoglycemia risk is real if insulin or sulfonylurea doses are not adjusted</li>
+                <li><strong>Lithium</strong> — sodium depletion affects lithium levels</li>
+            </ul>
+            <p style="margin-bottom:0;">During any illness with vomiting or diarrhea, dehydration can occur rapidly. Be especially vigilant about fluids and contact your doctor early if you are unwell.</p>
+        </div>
+
+        <h2>3-Day Sample Menu</h2>
+
+        <p>The following meal plan is designed around foods that are both very low in total carbohydrates and low in FODMAPs — a deliberate overlap that applies your existing food knowledge to the new framework. Portion sizes are not rigidly defined; eat to comfortable fullness. Add fat (butter, olive oil, avocado) generously — this is your primary fuel source and will prevent hunger.<sup>9</sup></p>
+
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+                <tr>
+                    <td><strong>Day 1</strong></td>
+                    <td>2–3 eggs scrambled in butter with bacon or sausage. Black coffee or herbal tea.</td>
+                    <td><strong>Burger Bowl:</strong> two beef patties over lettuce with cheddar, pickles, mustard, and mayo. No bun.</td>
+                    <td><strong>Steak Night:</strong> grilled sirloin with asparagus and sautéed mushrooms in butter and garlic-infused oil.</td>
+                </tr>
+                <tr>
+                    <td><strong>Day 2</strong></td>
+                    <td><strong>Yogurt Bowl:</strong> plain full-fat Greek yogurt (lactose-free if needed) with 2 tbsp walnuts and a few strawberries or blueberries.</td>
+                    <td><strong>Tuna Salad:</strong> canned tuna with mayo, celery, and a squeeze of lemon, served on sliced cucumber or romaine leaves.</td>
+                    <td><strong>Baked Salmon:</strong> salmon fillet with lemon, dill, and olive oil, served with roasted broccoli and a green salad.</td>
+                </tr>
+                <tr>
+                    <td><strong>Day 3</strong></td>
+                    <td><strong>On-the-Go:</strong> 2 hard-boiled eggs and a small handful of macadamia or pecan nuts.</td>
+                    <td><strong>Sub in a Bowl:</strong> roast beef, turkey, Swiss cheese, sliced peppers, olives, and mustard in a bowl — all the filling, none of the bread.</td>
+                    <td><strong>Zucchini Noodles:</strong> meat sauce (ground beef, canned tomatoes, garlic-infused oil, herbs) over spiralized zucchini or green beans.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="success-box">
+            <h3>Practical Tips for Success</h3>
+            <ul>
+                <li><strong>Fat is not the enemy:</strong> Increase fat gradually over the first 3–5 days to allow your gallbladder and digestive enzymes to adapt. If you experience loose stools early on, you may have added fat too quickly — slow down slightly.</li>
+                <li><strong>Meal prep is your best friend:</strong> Batch-cook proteins (hard-boiled eggs, roasted chicken, cooked ground meat) at the start of the week. This prevents the situation where there's "nothing to eat" and carbohydrates are the only quick option.</li>
+                <li><strong>Snacks to keep on hand:</strong> olives, cheese, boiled eggs, nuts (macadamias, pecans, walnuts are lower in FODMAPs), cucumber slices, canned fish.</li>
+                <li><strong>Reading labels:</strong> Many processed "low-carb" products contain sugar alcohols (sorbitol, mannitol, xylitol) that are high-FODMAP — avoid these.</li>
+                <li><strong>Eating out:</strong> Ask for your meal without the starch; most restaurants will substitute extra salad or vegetables. Grilled proteins with salad are available almost everywhere.</li>
+            </ul>
+        </div>
+
+        <h2>How Long Should You Stay on the Low-Carbohydrate Diet?</h2>
+
+        <p>There is no rigid universal timeline, but clinical experience and the available evidence suggest the following framework:<sup>3,4,10</sup></p>
+
+        <div class="diagram-container">
+            <div class="diagram-title">Treatment Timeline</div>
+            <svg width="720" height="220" viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <marker id="arrowT" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#059669"/>
+                    </marker>
+                </defs>
+
+                <!-- Timeline bar -->
+                <line x1="40" y1="110" x2="680" y2="110" stroke="#d1d5db" stroke-width="4"/>
+
+                <!-- Segment 1: Weeks 1-2 -->
+                <line x1="40" y1="100" x2="40" y2="120" stroke="#059669" stroke-width="3"/>
+                <text x="40" y="95" text-anchor="middle" font-size="12" fill="#065f46" font-weight="bold">Start</text>
+
+                <!-- Marker 2 weeks -->
+                <line x1="160" y1="103" x2="160" y2="117" stroke="#059669" stroke-width="2"/>
+                <text x="160" y="95" text-anchor="middle" font-size="11" fill="#047857">2 wks</text>
+
+                <!-- Segment early response -->
+                <rect x="40" y="120" width="120" height="50" rx="5" fill="#bbf7d0" stroke="#059669" stroke-width="1.5"/>
+                <text x="100" y="142" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">Early response</text>
+                <text x="100" y="158" text-anchor="middle" font-size="10" fill="#047857">bloating/gas ↓</text>
+
+                <!-- Marker 4 weeks -->
+                <line x1="280" y1="103" x2="280" y2="117" stroke="#059669" stroke-width="2"/>
+                <text x="280" y="95" text-anchor="middle" font-size="11" fill="#047857">4 wks</text>
+
+                <!-- Segment stabilization -->
+                <rect x="160" y="120" width="120" height="50" rx="5" fill="#6ee7b7" stroke="#059669" stroke-width="1.5"/>
+                <text x="220" y="142" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">Stabilization</text>
+                <text x="220" y="158" text-anchor="middle" font-size="10" fill="#047857">assess response</text>
+
+                <!-- Marker 8-12 weeks -->
+                <line x1="430" y1="103" x2="430" y2="117" stroke="#059669" stroke-width="2"/>
+                <text x="430" y="95" text-anchor="middle" font-size="11" fill="#047857">8–12 wks</text>
+
+                <!-- Segment consolidation -->
+                <rect x="280" y="120" width="150" height="50" rx="5" fill="#34d399" stroke="#059669" stroke-width="1.5"/>
+                <text x="355" y="142" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">Consolidation</text>
+                <text x="355" y="158" text-anchor="middle" font-size="10" fill="#065f46">gut healing, stable Sx</text>
+
+                <!-- Marker 12+ weeks -->
+                <line x1="560" y1="103" x2="560" y2="117" stroke="#059669" stroke-width="2"/>
+                <text x="560" y="95" text-anchor="middle" font-size="11" fill="#047857">12+ wks</text>
+
+                <!-- Segment reintroduction -->
+                <rect x="430" y="120" width="250" height="50" rx="5" fill="#a7f3d0" stroke="#10b981" stroke-width="1.5"/>
+                <text x="555" y="142" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">Reintroduction phase</text>
+                <text x="555" y="158" text-anchor="middle" font-size="10" fill="#047857">slow, one food at a time</text>
+
+                <!-- Annotations below -->
+                <text x="100" y="188" text-anchor="middle" font-size="10" fill="#6b7280">Symptom log daily</text>
+                <text x="355" y="188" text-anchor="middle" font-size="10" fill="#6b7280">Review with your doctor</text>
+                <text x="555" y="188" text-anchor="middle" font-size="10" fill="#6b7280">If well-controlled ≥4 weeks</text>
+            </svg>
+            <p style="margin-top: 15px; font-size: 0.95em; color: #64748b; max-width: 680px; margin-left: auto; margin-right: auto;">
+                Most people experience a clear improvement in bloating, gas, and abdominal pain within 2–4 weeks. The consolidation phase allows the gut lining to heal and symptoms to fully stabilize before reintroduction begins.
+            </p>
+        </div>
+
+        <h3>Minimum Duration Before Reintroduction</h3>
+        <p>The general clinical recommendation is to remain on the strict very low-carbohydrate phase until:<sup>3,10</sup></p>
+        <ul>
+            <li>Your core IBS symptoms (bloating, gas, pain, bowel irregularity) have been <strong>well controlled for at least 4 consecutive weeks</strong>, and</li>
+            <li>You are at least <strong>8–12 weeks</strong> into the diet (to allow gut mucosal recovery), and</li>
+            <li>You feel ready — there is no benefit to rushing</li>
+        </ul>
+        <p>If symptoms have not meaningfully improved after 6–8 weeks of genuine adherence, reintroduction of carbohydrates is unlikely to help, and a discussion with your doctor about alternative strategies would be appropriate.</p>
+
+        <h2>How to Reintroduce Carbohydrates</h2>
+
+        <p>Reintroduction is not about returning to your previous eating patterns — it is a structured, systematic process designed to identify your personal carbohydrate tolerance and find a sustainable long-term diet. The approach mirrors what you may already know from the FODMAP reintroduction phase: one food at a time, with careful tracking.<sup>6,10</sup></p>
+
+        <div class="nuance-box">
+            <h3>The Goal of Reintroduction</h3>
+            <p>The objective is not to eat as many carbohydrates as possible, but to identify the <em>minimum</em> level of carbohydrate that keeps your IBS well controlled. Most people with IBS who respond to a low-carbohydrate diet find a "sweet spot" — a carbohydrate threshold below which they remain symptom-free. This is highly individual. Some people tolerate 80–100 g/day; others need to stay closer to 30–50 g/day for ongoing control.</p>
+        </div>
+
+        <h3>The Reintroduction Protocol</h3>
+        <ol>
+            <li><strong>Choose one food to test.</strong> Start with single-ingredient, lower-risk foods: rice, oats, or a root vegetable (potato, sweet potato, carrots) are good first candidates because they are lower in FODMAPs than wheat or legumes.</li>
+            <li><strong>Introduce a small serving.</strong> A serving is roughly ½ cup cooked grain or ½ medium potato. Eat it alongside your usual very low-carbohydrate foods.</li>
+            <li><strong>Wait 3 days.</strong> Do not introduce any new foods during this window. Record any change in symptoms — including bloating, gas, stool frequency, stool consistency, and pain — in your symptom log.</li>
+            <li><strong>If no symptoms:</strong> You may try a slightly larger serving or move on to the next test food after the 3-day wait.</li>
+            <li><strong>If symptoms return:</strong> Remove that food and return to baseline low-carbohydrate eating until symptoms settle (usually 2–5 days). Then try a different food, or try the same food in a smaller amount.</li>
+            <li><strong>High-FODMAP foods last.</strong> Reintroduce wheat, rye, garlic, onion, legumes, and high-fructose foods last — these are most likely to trigger symptoms and combining your existing FODMAP knowledge here is important.</li>
+        </ol>
+
+        <div class="warning-box">
+            <h3>Reintroduction Pitfalls to Avoid</h3>
+            <ul>
+                <li><strong>Do not introduce multiple foods at once</strong> — if symptoms return, you won't know which food caused them</li>
+                <li><strong>Do not reintroduce during a period of high stress, travel, illness, or hormonal fluctuation</strong> — results will be unreliable</li>
+                <li><strong>Do not assume that tolerance is permanent</strong> — some foods may be tolerated in small amounts but not large; keep tracking</li>
+                <li><strong>Do not abandon the core framework</strong> — the high-quality proteins, fats, and non-starchy vegetables remain the foundation even if some carbohydrates are successfully reintroduced</li>
+            </ul>
+        </div>
+
+        <h2>Your Symptom Log</h2>
+
+        <p>Keeping a simple daily record during the elimination and reintroduction phases is the single most useful tool you have. It does not need to be elaborate — what matters is that you record it at roughly the same time each day (evening works well, reviewing the past 24 hours).<sup>3,10</sup></p>
+
+        <div style="background:#f8fafc; border:2px solid #d1d5db; border-radius:10px; padding:24px; margin:20px 0;">
+            <p style="font-weight:700; color:#065f46; font-size:1.05em; margin-bottom:16px;">Daily Symptom Log — Sample Entry</p>
+            <div class="log-grid">
+                <div class="log-field">
+                    <label>Date</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Phase (Wk #)</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>New food today?</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Serving size</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Bloating (0–10)</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Gas (0–10)</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Abdominal pain (0–10)</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Bowel movements (#)</label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Stool consistency<br><span style="font-weight:400; text-transform:none; font-size:0.9em;">(Bristol 1–7)</span></label>
+                    <div class="log-line"></div>
+                </div>
+                <div class="log-field">
+                    <label>Overall wellbeing (0–10)</label>
+                    <div class="log-line"></div>
+                </div>
+            </div>
+            <div class="log-field" style="margin-top:12px;">
+                <label>Notes (stress, sleep, other symptoms, medications)</label>
+                <div class="log-line"></div>
+                <div class="log-line"></div>
+            </div>
+            <p style="font-size:0.85em; color:#64748b; margin-top:12px; margin-bottom:0;">Bristol Stool Scale: 1–2 = hard/constipated · 3–4 = normal · 5–6 = soft/loose · 7 = watery diarrhea</p>
+        </div>
+
+        <div class="success-box">
+            <h3>What to Expect: A Realistic Timeline</h3>
+            <ul>
+                <li><strong>Days 1–5:</strong> Possible keto flu symptoms (headache, fatigue) — managed with salt and fluids. Some patients notice early reduction in bloating.</li>
+                <li><strong>Week 2:</strong> Energy typically improves; most people notice meaningful reduction in gas and abdominal distension.</li>
+                <li><strong>Weeks 3–4:</strong> Bowel habits often normalize significantly. The CARIBS trial found a >50-point improvement on the IBS Symptom Severity Score in 71% of patients by week 4.<sup>3</sup></li>
+                <li><strong>Weeks 8–12:</strong> If the diet is working, symptom control should be consistent. This is the appropriate point to begin structured reintroduction if desired.</li>
+                <li><strong>Long-term:</strong> Most people find a personal "carbohydrate floor" they can sustain. The foundation of high-quality proteins, fats, and low-FODMAP vegetables remains in place indefinitely as your dietary framework.</li>
+            </ul>
+        </div>
+
+        <div class="key-point">
+            <h3>Working With Your Healthcare Team</h3>
+            <p>Please let your doctor know when you begin this diet so that any medications can be reviewed. Book a follow-up at 4–6 weeks to review your symptom log and discuss whether the diet is working as expected. If you are losing more weight than you want or are finding the diet very difficult to sustain, that is also important information — there may be modifications that help. You do not need to navigate this alone.</p>
+        </div>
+
+    </div><!-- end content -->
+
+    <div class="references">
+        <h2>References</h2>
+
+        <div class="reference-item">1. Austin GL, Dalton CB, Hu Y, et al. A very low-carbohydrate diet improves symptoms and quality of life in diarrhea-predominant irritable bowel syndrome. Clin Gastroenterol Hepatol. 2009;7(6):706-708.</div>
+
+        <div class="reference-item">2. Eswaran S, Muir J, Chey WD. Fiber and functional gastrointestinal disorders. Am J Gastroenterol. 2013;108(5):718-727.</div>
+
+        <div class="reference-item">3. Nybacka S, Törnblom H, Josefsson A, et al. A low FODMAP diet plus traditional dietary advice versus a low-carbohydrate diet versus pharmacological treatment in irritable bowel syndrome (CARIBS): a single-centre, single-blind, randomised controlled trial. Lancet Gastroenterol Hepatol. 2024;9(6):507-520.</div>
+
+        <div class="reference-item">4. Austin GL, Dalton CB, Hu Y, et al. A very low-carbohydrate diet improves symptoms and quality of life in diarrhea-predominant irritable bowel syndrome. Clin Gastroenterol Hepatol. 2009;7(6):706-708.</div>
+
+        <div class="reference-item">5. Gibson PR, Shepherd SJ. Evidence-based dietary management of functional gastrointestinal symptoms: the FODMAP approach. J Gastroenterol Hepatol. 2010;25(2):252-258.</div>
+
+        <div class="reference-item">6. Lacy BE, Pimentel M, Brenner DM, et al. ACG Clinical Guideline: management of irritable bowel syndrome. Am J Gastroenterol. 2021;116(1):17-44.</div>
+
+        <div class="reference-item">7. Phinney SD, Volek JS. The Art and Science of Low Carbohydrate Living. Beyond Obesity LLC; 2011. [Standard clinical reference for electrolyte management on very low-carbohydrate diets.]</div>
+
+        <div class="reference-item">8. Hamdy O, Horton ES. Protein content in diabetes nutrition plan. Curr Diab Rep. 2011;11(2):111-119. [Includes discussion of electrolyte and fluid shifts on dietary carbohydrate restriction.]</div>
+
+        <div class="reference-item">9. Staudacher HM, Whelan K. The low FODMAP diet: recent advances in understanding its mechanisms and efficacy in IBS. Gut. 2017;66(8):1517-1527.</div>
+
+        <div class="reference-item">10. Halmos EP, Gibson PR. Controversies and reality of the FODMAP diet for patients with irritable bowel syndrome. J Gastroenterol Hepatol. 2019;34(7):1134-1142.</div>
+
+        <div class="reference-item">11. Böhn L, Störsrud S, Liljebo T, et al. Diet low in FODMAPs reduces symptoms of irritable bowel syndrome as well as traditional dietary advice: a randomized controlled trial. Gastroenterology. 2015;149(6):1399-1407.</div>
+
+        <div class="reference-item">12. Nanayakkara WS, Skidmore PM, O'Brien L, Wilkinson TJ, Gearry RB. Efficacy of the low FODMAP diet for treating irritable bowel syndrome: the evidence to date. Clin Exp Gastroenterol. 2016;9:131-142.</div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Important Note:</strong> This handout is for educational purposes and is intended to complement — not replace — advice from your healthcare provider. Always discuss dietary changes with your doctor, particularly if you take medications for blood pressure, diabetes, or other conditions.</p>
+        <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Patient Education Handout | Last Updated: March 2026</p>
+    </div>
+
+</div>
+</body>
+</html>
