@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Prevention">
+    <title>Nicotinamide (Vitamin B3) for Skin Cancer Prevention</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2.5rem;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .dosage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .dosage-table th {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .dosage-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .dosage-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .checklist {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .checklist h4 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            padding: 0.5rem;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 1rem;
+            min-width: 18px;
+            min-height: 18px;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 1.875rem;
+            margin-top: 2rem;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            margin-left: 1rem;
+        }
+
+        .references li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 1.25rem 2.5rem;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer {
+                padding: 1rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nicotinamide (Vitamin B3) for Skin Cancer Prevention</h1>
+            <small>Prepared by your family doctor</small>
+            <time>December 2024</time>
+        </div>
+
+        <div class="content">
+            <div class="key-point">
+                <strong>Why this matters:</strong> If you've had squamous cell carcinoma or actinic keratoses (precancerous spots), nicotinamide can reduce your risk of developing new skin cancers by up to 23%.
+            </div>
+
+            <h2>What is Nicotinamide?</h2>
+            <p>Nicotinamide is a specific form of Vitamin B3 (also called niacinamide). It works differently from regular niacin and doesn't cause uncomfortable skin flushing. Research shows it helps your skin cells:</p>
+            <ul>
+                <li>Repair DNA damage caused by sun exposure</li>
+                <li>Strengthen your skin's immune system</li>
+                <li>Identify and clear precancerous cells before they become cancer</li>
+            </ul>
+
+            <div class="caution-box">
+                <strong>Important:</strong> You must use <strong>nicotinamide</strong> or <strong>niacinamide</strong> — NOT regular niacin or nicotinic acid. These other forms cause flushing and haven't been proven effective for skin cancer prevention.
+            </div>
+
+            <h2>Recommended Dosage & Instructions</h2>
+            <table class="dosage-table">
+                <thead>
+                    <tr>
+                        <th>Timing</th>
+                        <th>Dose</th>
+                        <th>Instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Morning</td>
+                        <td>500 mg</td>
+                        <td>Take with breakfast to reduce stomach upset</td>
+                    </tr>
+                    <tr>
+                        <td>Evening</td>
+                        <td>500 mg</td>
+                        <td>Take with dinner</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Daily</strong></td>
+                        <td><strong>1000 mg</strong></td>
+                        <td>Available over-the-counter at most pharmacies</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>What to Expect</h2>
+            <h3>Timing of Benefits</h3>
+            <ul>
+                <li><strong>Best results:</strong> When started early after your first skin cancer diagnosis</li>
+                <li><strong>Maximum protection:</strong> Achieved after taking consistently for several months</li>
+                <li><strong>Protection stops:</strong> Benefits disappear within 6 months of stopping the supplement</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Good news:</strong> Clinical studies show a 23% reduction in new squamous cell carcinomas and a 20% reduction in actinic keratoses in high-risk patients.
+            </div>
+
+            <h3>Side Effects</h3>
+            <p>Nicotinamide is generally very well tolerated. The most common side effects are:</p>
+            <ul>
+                <li>Mild stomach upset or nausea (taking with food helps)</li>
+                <li>Occasional headache</li>
+                <li>Rare digestive issues</li>
+            </ul>
+
+            <h2>Important Monitoring</h2>
+            <div class="warning-box">
+                <strong>Special considerations:</strong>
+                <ul style="margin: 0;">
+                    <li><strong>Diabetes:</strong> Monitor blood sugar levels closely when starting, as nicotinamide can occasionally affect glucose control</li>
+                    <li><strong>Kidney disease:</strong> Discuss with your doctor before starting — dosage may need adjustment</li>
+                </ul>
+            </div>
+
+            <h3>Regular Follow-Up Care</h3>
+            <ul>
+                <li><strong>Skin exams:</strong> Continue seeing your doctor or dermatologist every 3-6 months</li>
+                <li><strong>Self-checks:</strong> Examine your skin monthly for new or changing spots</li>
+                <li><strong>No routine blood tests needed:</strong> Unlike some medications, healthy individuals don't need regular lab monitoring</li>
+            </ul>
+
+            <h2>Action Plan Checklist</h2>
+            <div class="checklist">
+                <h4>Getting Started</h4>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Purchase nicotinamide (500mg tablets) from pharmacy</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">Verify it says "nicotinamide" or "niacinamide" — NOT niacin</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">Start with one 500mg tablet twice daily with meals</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check4">
+                    <label for="check4">Set phone reminders for morning and evening doses</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check5">
+                    <label for="check5">Schedule next skin exam appointment</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check6">
+                    <label for="check6">Continue daily sunscreen and sun protection</label>
+                </div>
+            </div>
+
+            <div class="mindset-box">
+                <strong>Remember:</strong> Nicotinamide is a prevention tool, not a cure. It works best as part of a complete sun-safe lifestyle that includes daily sunscreen (SPF 30+), protective clothing, and avoiding peak sun hours.
+            </div>
+
+            <h2>When to Contact Your Doctor</h2>
+            <p>Call your healthcare provider if you experience:</p>
+            <ul>
+                <li>Persistent stomach upset or nausea</li>
+                <li>Any new or changing skin spots</li>
+                <li>If you have diabetes: unusual blood sugar readings</li>
+                <li>Questions about continuing the supplement long-term</li>
+            </ul>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Chen AC, Martin AJ, Choy B, et al. A Phase 3 Randomized Trial of Nicotinamide for Skin-Cancer Chemoprevention. N Engl J Med. 2015;373(17):1618-1626.</li>
+                    <li>Breglio KF, Geller AC, Braun RP, et al. Nicotinamide for Skin Cancer Chemoprevention: A Retrospective Cohort Study. JAMA Dermatol. 2025;161(11):1140-1147.</li>
+                    <li>Chen AC, Damian DL, Halliday GM. Oral nicotinamide for skin cancer chemoprevention in solid organ transplant recipients (ONTRANS): A randomised, double-blind, placebo-controlled, phase 3 trial. Lancet. 2023;402(10415):1815-1824.</li>
+                    <li>Surjana D, Halliday GM, Martin AJ, et al. Oral nicotinamide reduces actinic keratoses in phase II double-blinded randomized controlled trials. J Invest Dermatol. 2012;132(5):1497-1500.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </div>
+    </div>
+</body>
+</html>
