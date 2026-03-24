@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Chronic Disease">
+    <title>Understanding Squamous Cell Cancer in Situ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        p, li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+        }
+        
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .checklist {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .checklist h4 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .checklist ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .checklist li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        
+        .references h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+        
+        .references ol {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .references li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .header, .content {
+                padding: 20px;
+            }
+            
+            .footer {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Understanding Squamous Cell Cancer in Situ</h1>
+            <small>Prepared by your family doctor</small>
+        </div>
+        
+        <div class="content">
+            <time datetime="2024-12-19">December 19, 2024</time>
+            
+            <div class="key-point">
+                <strong>What you need to know:</strong> Squamous cell cancer in situ (also called squamous cell carcinoma in situ or SCCIS) is a very early form of skin cancer where abnormal cells are found only in the top layer of your skin. The key word is "in situ," which means "in place" — the cancer cells haven't spread deeper or to other parts of your body.
+            </div>
+
+            <h2>What Is Squamous Cell Cancer in Situ?</h2>
+            
+            <p>Think of your skin like a layered cake. Squamous cell cancer in situ affects only the very top layer — the icing, if you will. The abnormal cells stay exactly where they started and don't invade deeper layers of skin or spread elsewhere in your body.<sup>1</sup></p>
+
+            <p>This condition is also sometimes called:</p>
+            <ul>
+                <li>Bowen's disease (when it appears as a scaly patch)</li>
+                <li>Erythroplasia of Queyrat (when it affects genital areas)</li>
+                <li>Squamous cell carcinoma in situ</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Good news:</strong> When caught at this stage, squamous cell cancer in situ is highly treatable with excellent outcomes. It's like catching a problem before it becomes a bigger problem.
+            </div>
+
+            <h2>What Does It Look Like?</h2>
+
+            <p>Squamous cell cancer in situ can appear in several ways:<sup>2</sup></p>
+
+            <ul>
+                <li><strong>Scaly, red patches:</strong> Often mistaken for eczema or dry skin</li>
+                <li><strong>Crusted or warty growths:</strong> May bleed easily when scratched</li>
+                <li><strong>Flat, discoloured areas:</strong> Can be pink, red, or brown</li>
+                <li><strong>Slowly growing spots:</strong> That don't heal like normal cuts or scrapes</li>
+            </ul>
+
+            <h3>Common Locations</h3>
+            <p>These lesions most often develop on sun-exposed areas:</p>
+            <ul>
+                <li>Face and ears</li>
+                <li>Hands and forearms</li>
+                <li>Lower legs (especially in women)</li>
+                <li>Scalp (in men with hair loss)</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>When to see your doctor:</strong> Any new skin growth, or existing spot that changes in size, shape, colour, or texture should be evaluated. Don't wait if something doesn't look right to you.
+            </div>
+
+            <h2>Why Does This Happen?</h2>
+
+            <p>The main cause is cumulative damage from ultraviolet (UV) radiation over many years.<sup>3</sup> Other risk factors include:</p>
+
+            <ul>
+                <li><strong>Age:</strong> More common after age 50</li>
+                <li><strong>Fair skin:</strong> Less natural protection from UV rays</li>
+                <li><strong>Sun exposure history:</strong> Years of outdoor work or recreation</li>
+                <li><strong>Previous skin damage:</strong> History of sunburns or tanning</li>
+                <li><strong>Weakened immune system:</strong> From medications or medical conditions</li>
+                <li><strong>Human papillomavirus (HPV):</strong> Especially for genital lesions</li>
+            </ul>
+
+            <h2>Treatment Options</h2>
+
+            <p>The good news is that you have several effective treatment choices. Your doctor will recommend the best option based on the location, size, and your individual situation.<sup>4</sup></p>
+
+            <h3>Surgical Treatments</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Treatment</th>
+                        <th>How It Works</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Excision</strong></td>
+                        <td>Surgical removal with local anesthetic</td>
+                        <td>Most lesions, provides tissue for analysis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mohs Surgery</strong></td>
+                        <td>Precise removal examined under microscope</td>
+                        <td>Face, areas where tissue preservation matters</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Curettage</strong></td>
+                        <td>Scraping away abnormal tissue</td>
+                        <td>Small, well-defined lesions</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Non-Surgical Treatments</h3>
+
+            <ul>
+                <li><strong>Topical chemotherapy (5-fluorouracil cream):</strong> Applied daily for several weeks</li>
+                <li><strong>Imiquimod cream:</strong> Stimulates your immune system to fight abnormal cells</li>
+                <li><strong>Photodynamic therapy:</strong> Light treatment after applying special medication</li>
+                <li><strong>Cryotherapy:</strong> Freezing with liquid nitrogen</li>
+                <li><strong>Radiation therapy:</strong> For patients who can't have surgery</li>
+            </ul>
+
+            <div class="mindset-box">
+                <strong>Treatment decision-making:</strong> There's no single "best" treatment for everyone. Your doctor will consider the location, your age, medical history, and your preferences. Don't hesitate to ask questions about the pros and cons of each option.
+            </div>
+
+            <h2>What to Expect During Treatment</h2>
+
+            <h3>Before Treatment</h3>
+            <ul>
+                <li>Your doctor may take a small sample (biopsy) to confirm the diagnosis</li>
+                <li>Discuss your medical history and current medications</li>
+                <li>Review treatment options and what to expect</li>
+            </ul>
+
+            <h3>During Treatment</h3>
+            <ul>
+                <li>Most treatments are done in your doctor's office</li>
+                <li>Local anesthetic is used for surgical procedures</li>
+                <li>Topical treatments require regular application at home</li>
+            </ul>
+
+            <h3>After Treatment</h3>
+            <ul>
+                <li>Follow wound care instructions carefully</li>
+                <li>Watch for signs of infection (increased redness, warmth, pus)</li>
+                <li>Keep follow-up appointments to monitor healing</li>
+            </ul>
+
+            <div class="checklist">
+                <h4>Your Treatment Recovery Checklist</h4>
+                <ul>
+                    <li>Keep the treated area clean and dry</li>
+                    <li>Apply prescribed ointments as directed</li>
+                    <li>Protect from sun exposure</li>
+                    <li>Don't pick at scabs or healing tissue</li>
+                    <li>Call if you notice signs of infection</li>
+                    <li>Attend all follow-up appointments</li>
+                    <li>Ask questions if something doesn't seem right</li>
+                </ul>
+            </div>
+
+            <h2>Will It Come Back?</h2>
+
+            <p>When completely removed, squamous cell cancer in situ rarely returns in the same spot. However, having one lesion means you're at higher risk for developing others.<sup>5</sup> This is why regular skin checks are so important.</p>
+
+            <div class="success-box">
+                <strong>Long-term outlook:</strong> With proper treatment, the cure rate for squamous cell cancer in situ is over 95%. Most people go on to live normal, healthy lives with no complications from their treatment.
+            </div>
+
+            <h2>Preventing Future Problems</h2>
+
+            <p>Since sun damage is the main cause, protecting your skin is crucial:</p>
+
+            <ul>
+                <li><strong>Use sunscreen:</strong> SPF 30+ daily, even on cloudy days</li>
+                <li><strong>Seek shade:</strong> Especially between 10 AM and 4 PM</li>
+                <li><strong>Wear protective clothing:</strong> Long sleeves, wide-brimmed hats</li>
+                <li><strong>Avoid tanning beds:</strong> They increase cancer risk</li>
+                <li><strong>Check your skin monthly:</strong> Look for changes in existing spots or new growths</li>
+                <li><strong>See your doctor regularly:</strong> For professional skin examinations</li>
+            </ul>
+
+            <h2>When to Call Your Doctor</h2>
+
+            <div class="caution-box">
+                <strong>Call immediately if you notice:</strong>
+                <ul>
+                    <li>Signs of infection (fever, increasing pain, pus, red streaking)</li>
+                    <li>Excessive bleeding that doesn't stop with pressure</li>
+                    <li>Severe or worsening pain</li>
+                    <li>Any concerns about how your treatment site is healing</li>
+                </ul>
+            </div>
+
+            <h2>Questions to Ask Your Doctor</h2>
+
+            <p>Don't hesitate to ask:</p>
+            <ul>
+                <li>Which treatment option do you recommend and why?</li>
+                <li>What are the risks and benefits of each treatment?</li>
+                <li>How long will it take to heal?</li>
+                <li>What will the scar look like?</li>
+                <li>How often should I have skin checks in the future?</li>
+                <li>What should I watch for at home?</li>
+                <li>Are there any activities I should avoid during healing?</li>
+            </ul>
+
+            <div class="mindset-box">
+                <strong>Remember:</strong> Being diagnosed with squamous cell cancer in situ can feel overwhelming, but you've caught it at the earliest, most treatable stage. With proper treatment and sun protection going forward, your outlook is excellent.
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Canadian Dermatology Association. Skin Cancer. Available at: https://dermatology.ca/public-patients/skin/skin-cancer/</li>
+                    <li>Alam M, Ratner D. Cutaneous squamous-cell carcinoma. N Engl J Med. 2001;344(13):975-983.</li>
+                    <li>Karia PS, Han J, Schmults CD. Cutaneous squamous cell carcinoma: estimated incidence of disease, nodal metastasis, and deaths from disease in the United States, 2012. J Am Acad Dermatol. 2013;68(6):957-966.</li>
+                    <li>Work Group; Invited Reviewers, Kim JYS, Kozlow JH, Mittal B, Moyer J, Olenecki T, Rodgers P. Guidelines of care for the management of cutaneous squamous cell carcinoma. J Am Acad Dermatol. 2018;78(3):560-578.</li>
+                    <li>Canadian Cancer Society. Squamous cell carcinoma of the skin. Available at: https://cancer.ca/en/cancer-information/cancer-types/skin-squamous-cell-carcinoma</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </div>
+    </div>
+</body>
+</html>
