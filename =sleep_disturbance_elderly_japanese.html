@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加齢に伴う睡眠の変化を理解する</title>
+    <meta name="category" content="Uncategorized">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            color: #1e40af;
+            font-size: 1.1em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .caution-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #ef4444;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .caution-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .mindset-box {
+            background-color: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .mindset-box h3 {
+            color: #5b21b6;
+            margin-top: 0;
+        }
+
+        .technique-box {
+            background-color: #f0f9ff;
+            border: 2px solid #bae6fd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .technique-box h4 {
+            color: #0369a1;
+            margin-top: 0;
+            font-size: 1.15em;
+        }
+
+        .thought-reframe {
+            display: flex;
+            margin: 15px 0;
+            gap: 15px;
+            align-items: stretch;
+        }
+
+        .thought-reframe .thought-old {
+            flex: 1;
+            background-color: #fee2e2;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #fecaca;
+        }
+
+        .thought-reframe .thought-arrow {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            color: #10b981;
+            font-weight: bold;
+            min-width: 30px;
+            justify-content: center;
+        }
+
+        .thought-reframe .thought-new {
+            flex: 1;
+            background-color: #d1fae5;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #a7f3d0;
+        }
+
+        .thought-reframe .label {
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .thought-old .label { color: #991b1b; }
+        .thought-new .label { color: #065f46; }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        table th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        table tr:hover {
+            background-color: #eff6ff;
+        }
+
+        .sleep-diary {
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .sleep-diary th {
+            font-size: 0.85em;
+            padding: 10px 8px;
+        }
+
+        .sleep-diary td {
+            padding: 18px 8px;
+            text-align: center;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .references h2 {
+            border-bottom: 3px solid #64748b;
+            color: #475569;
+        }
+
+        .reference-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-right: 8px;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px;
+            }
+            .thought-reframe {
+                break-inside: avoid;
+            }
+            h2 {
+                break-after: avoid;
+            }
+            .technique-box, .key-point, .warning-box, .success-box, .mindset-box, .caution-box {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>加齢に伴う睡眠の変化を理解する</h1>
+            <p>60歳を過ぎると睡眠はなぜ変わるのか — そして何ができるのか</p>
+        </div>
+
+        <div class="content">
+            <div class="key-point">
+                <h3>大切なメッセージ</h3>
+                <p>加齢とともに睡眠は変化します — これは<strong>正常な生理的変化</strong>であり、何か問題が起きているサインではありません。多くの方が年齢を重ねるにつれ、眠りが浅くなったり、早く目が覚めたり、夜中に何度か目が覚めたりするようになります。良いお知らせは、科学的に実証された非薬物療法によって、睡眠の質と日中の調子を大幅に改善できるということです。<sup>1,2</sup></p>
+            </div>
+
+            <h2>加齢に伴う睡眠の変化</h2>
+            <p>年齢を重ねると、脳の睡眠調節のしくみが自然と変化します。これらの変化を理解することは安心につながり、身体に逆らうのではなく、<em>身体と協調して</em>取り組む助けになります。<sup>1,2,3</sup></p>
+
+            <h3>正常な加齢に伴う睡眠の変化</h3>
+            <p>以下の変化は<strong>加齢に伴う正常な変化</strong>であり、ほとんどの方に起こることが研究で一貫して示されています：<sup>1,2,3,4</sup></p>
+            <ul>
+                <li><strong>深い睡眠（徐波睡眠）の減少：</strong>深い回復的な睡眠の量は30代から徐々に減少します。60歳までに、深い睡眠は総睡眠時間の10%未満になることがありますが、若い成人では約20%です。</li>
+                <li><strong>中途覚醒の増加：</strong>夜中に何度か目が覚めることは一般的です。高齢者は通常、一晩に3〜5回の短い覚醒を経験しますが、これは正常です。</li>
+                <li><strong>睡眠・覚醒リズムの前進：</strong>体内時計（概日リズム）が自然に早い方向にシフトし、夕方に早く眠くなり、朝も早く目が覚めるようになります。</li>
+                <li><strong>全体的に浅い眠り：</strong>浅い睡眠段階で過ごす時間が増え、騒音、不快感、トイレの必要などで目が覚めやすくなります。</li>
+                <li><strong>総睡眠時間のわずかな減少：</strong>睡眠の必要量はわずかに減少します。ほとんどの高齢者に必要な睡眠時間は約7〜8時間で、若い成人の7〜9時間と比べてやや短くなります。</li>
+            </ul>
+
+            <div class="diagram-container">
+                <div class="diagram-title">加齢に伴う睡眠構造の変化</div>
+                <svg width="780" height="420" viewBox="0 0 780 420">
+                    <!-- 若年成人 -->
+                    <text x="200" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#2563eb">若年成人（25〜35歳）</text>
+
+                    <rect x="50" y="45" width="300" height="35" fill="#1e3a8a" rx="4"/>
+                    <text x="200" y="67" text-anchor="middle" font-size="13" fill="white" font-weight="600">深い睡眠（N3）：約20%</text>
+
+                    <rect x="50" y="85" width="300" height="35" fill="#3b82f6" rx="4"/>
+                    <text x="200" y="107" text-anchor="middle" font-size="13" fill="white" font-weight="600">浅い睡眠（N1+N2）：約55%</text>
+
+                    <rect x="50" y="125" width="300" height="35" fill="#7c3aed" rx="4"/>
+                    <text x="200" y="147" text-anchor="middle" font-size="13" fill="white" font-weight="600">レム睡眠：約25%</text>
+
+                    <rect x="50" y="165" width="300" height="25" fill="#e2e8f0" stroke="#94a3b8" rx="4"/>
+                    <text x="200" y="182" text-anchor="middle" font-size="12" fill="#475569" font-weight="600">中途覚醒：0〜2回/晩</text>
+
+                    <!-- 高齢者 -->
+                    <text x="580" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#2563eb">高齢者（65歳以上）</text>
+
+                    <rect x="430" y="45" width="300" height="22" fill="#1e3a8a" rx="4"/>
+                    <text x="580" y="61" text-anchor="middle" font-size="12" fill="white" font-weight="600">深い睡眠（N3）：約8%</text>
+
+                    <rect x="430" y="72" width="300" height="50" fill="#3b82f6" rx="4"/>
+                    <text x="580" y="101" text-anchor="middle" font-size="13" fill="white" font-weight="600">浅い睡眠（N1+N2）：約65%</text>
+
+                    <rect x="430" y="127" width="300" height="30" fill="#7c3aed" rx="4"/>
+                    <text x="580" y="147" text-anchor="middle" font-size="13" fill="white" font-weight="600">レム睡眠：約20%</text>
+
+                    <rect x="430" y="162" width="300" height="28" fill="#fecaca" stroke="#f87171" rx="4"/>
+                    <text x="580" y="181" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="600">中途覚醒：3〜5回/晩</text>
+
+                    <line x1="390" y1="35" x2="390" y2="200" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4"/>
+
+                    <rect x="100" y="220" width="580" height="80" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="10"/>
+                    <text x="390" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">これらの変化は正常で予想されるものです。</text>
+                    <text x="390" y="270" text-anchor="middle" font-size="13" fill="#1e3a8a">中途覚醒が増え、眠りが浅くなっても、睡眠が「壊れた」わけではありません。</text>
+                    <text x="390" y="290" text-anchor="middle" font-size="13" fill="#1e3a8a">ほとんどの高齢者は十分な回復的睡眠を得ています。</text>
+
+                    <rect x="120" y="325" width="18" height="18" fill="#1e3a8a" rx="3"/>
+                    <text x="145" y="339" font-size="12" fill="#333">深い睡眠</text>
+                    <rect x="240" y="325" width="18" height="18" fill="#3b82f6" rx="3"/>
+                    <text x="265" y="339" font-size="12" fill="#333">浅い睡眠</text>
+                    <rect x="360" y="325" width="18" height="18" fill="#7c3aed" rx="3"/>
+                    <text x="385" y="339" font-size="12" fill="#333">レム睡眠</text>
+                    <rect x="480" y="325" width="18" height="18" fill="#e2e8f0" stroke="#94a3b8" rx="3"/>
+                    <text x="505" y="339" font-size="12" fill="#333">中途覚醒</text>
+                </svg>
+                <p style="margin-top: 10px; font-size: 0.95em; color: #64748b; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    加齢に伴い睡眠構造は変化します：深い睡眠が減少し、浅い睡眠が増加し、中途覚醒がより頻繁になります。これらの変化は誰にでも起こるものであり、それだけでは睡眠障害を意味するものではありません。<sup>1,3</sup>
+                </p>
+            </div>
+
+            <h2>睡眠の変化が問題になるとき</h2>
+            <p>多くの睡眠の変化は正常ですが、注意が必要なパターンもあります。重要な問いは、<em>どれだけ</em>眠れたかではなく、<strong>日中どのように感じているか</strong>です。<sup>2,5</sup></p>
+
+            <p>以下の症状がある場合は、医療提供者にご相談ください：<sup>5,6</sup></p>
+            <ul>
+                <li><strong>持続的な日中の眠気</strong>が活動に支障をきたしたり、安全上の問題（居眠り運転など）を引き起こす場合</li>
+                <li><strong>大きないびき、あえぎ、窒息感</strong> — 治療可能であり高齢者に多い睡眠時無呼吸症候群の可能性があります</li>
+                <li><strong>安静時の脚の不快な感覚</strong>や脚を動かしたいという衝動（むずむず脚症候群）</li>
+                <li><strong>夢を行動で表現したり</strong>、睡眠中の激しい動き</li>
+                <li>生活の質に影響を及ぼす<strong>睡眠に関する大きな苦痛</strong></li>
+            </ul>
+
+            <div class="warning-box">
+                <h3>睡眠時無呼吸症候群について</h3>
+                <p>閉塞性睡眠時無呼吸症候群は<strong>加齢とともにより一般的</strong>になり、高齢者の最大50%にある程度影響します。<sup>7</sup> 睡眠中に繰り返し呼吸が中断し、睡眠の質の低下や日中の疲労につながります。ベッドパートナーが大きないびきや呼吸停止を指摘している場合、または十分な睡眠時間にもかかわらず朝すっきりしない場合は、睡眠検査について医療提供者に相談してください。睡眠時無呼吸症候群は治療効果が高く、治療によりエネルギー、気分、心血管系の健康が劇的に改善することがあります。<sup>7,8</sup></p>
+            </div>
+
+            <h2>睡眠を妨げる一般的な医学的原因</h2>
+            <p>行動療法に焦点を当てる前に、治療可能な医学的状態が睡眠の質に影響していないか確認することが大切です。高齢者に多い以下の疾患は、睡眠を大きく妨げることがあります：<sup>5,6,9</sup></p>
+
+            <table>
+                <tr>
+                    <th style="width: 35%;">疾患</th>
+                    <th>睡眠への影響</th>
+                </tr>
+                <tr>
+                    <td><strong>慢性疼痛</strong>（関節炎、腰痛）</td>
+                    <td>横になると痛みが悪化し、入眠困難や中途覚醒の原因になる</td>
+                </tr>
+                <tr>
+                    <td><strong>夜間頻尿</strong></td>
+                    <td>一晩に2回以上トイレに起きること。非常に一般的で、多くの場合治療可能</td>
+                </tr>
+                <tr>
+                    <td><strong>胃食道逆流症（GERD）</strong></td>
+                    <td>横になると胃酸逆流が悪化し、不快感や覚醒を引き起こす</td>
+                </tr>
+                <tr>
+                    <td><strong>うつ病・不安症</strong></td>
+                    <td>入眠困難、早朝覚醒、回復感のない睡眠</td>
+                </tr>
+                <tr>
+                    <td><strong>むずむず脚症候群</strong></td>
+                    <td>脚の不快な感覚と動かしたい衝動。夕方に悪化する</td>
+                </tr>
+                <tr>
+                    <td><strong>心不全・肺疾患</strong></td>
+                    <td>横になると息切れがする。咳や覚醒の原因になることがある</td>
+                </tr>
+                <tr>
+                    <td><strong>薬剤</strong></td>
+                    <td>多くの一般的な薬剤が睡眠に影響する — 一部の降圧薬、利尿薬、ステロイド、特定の抗うつ薬、充血除去薬など</td>
+                </tr>
+            </table>
+
+            <p>医学的状態が睡眠の問題に寄与していると思われる場合は、医師にご相談ください。根本原因を治療することが、不眠症を直接治療するよりも効果的なことが多くあります。<sup>5,6</sup></p>
+
+            <h2>睡眠に対する考え方の役割</h2>
+            <p>睡眠困難において最も影響力がありながら見落とされがちな要因の一つは、<strong>睡眠に対する考え方</strong>です。これは問題が「気のせい」だと言っているのではありません。睡眠の困難は現実のものであり、それが引き起こすフラストレーションは完全に理解できます。しかし、研究は一貫して、睡眠に対する考え方や信念が、より良い睡眠を助けるか、不眠の悪循環に閉じ込めるかのどちらかになることを示しています。<sup>10,11,12</sup></p>
+
+            <div class="mindset-box">
+                <h3>よくある自然な反応パターン</h3>
+                <p>数晩眠れない夜が続くと、心配し始めるのは全く自然なことです。「今夜8時間眠れなかったら、明日は最悪だ」と考えるかもしれません。この種の考えは完全に理解できるものですが、実際には睡眠を楽にするどころか、より困難にしてしまいます。心配はストレス反応を活性化させますが、これは脳が眠りに入るために必要な状態の正反対です。<sup>10,11</sup></p>
+                <p style="margin-bottom: 0;">これによりフラストレーションのたまる悪循環が生まれます：睡眠不良 → 睡眠への心配 → ストレス反応 → さらに悪い睡眠。良いお知らせは、この悪循環は断ち切ることができるということです — このハンドアウトに記載された方法は、まさにそのために設計されています。</p>
+            </div>
+
+            <h3>睡眠を悪化させうる考え方のパターン</h3>
+            <p>ある種の考え方のパターンは、完全に理解できるものですが、睡眠の困難を増幅させることがあります。これらのパターンに気づくことが、変化への第一歩です：<sup>10,11,12</sup></p>
+
+            <ul>
+                <li><strong>最悪の結果を予測する：</strong>「明日は全く機能できないだろう」— 実際には、ほとんどの方は寝不足の翌日でも、快適ではないにしても、それなりに機能できています</li>
+                <li><strong>過度の一般化：</strong>「もう全然眠れなくなった」— 睡眠日誌を見返すと、実際には良い夜もあることがわかることが多いです</li>
+                <li><strong>固定的な期待：</strong>「絶対に8時間眠らなければならない」— 睡眠の必要量は個人差があり、睡眠に対して厳格な要求を課すと、逆説的に睡眠がより困難になります</li>
+                <li><strong>監視と計算：</strong>常に時計を確認し、残りの睡眠時間を計算することは、最もリラックスが必要な時に覚醒度を高めてしまいます</li>
+                <li><strong>すべてを睡眠のせいにする：</strong>「体調が悪いのは眠れなかったから」— 睡眠は重要ですが、栄養、活動、気分、全般的な健康状態も体調に影響します</li>
+            </ul>
+
+            <h3>考え方を見直す</h3>
+            <p>考え方を見直すとは、すべてが大丈夫だと装うことではありません — より<strong>バランスの取れた正確な</strong>視点を見つけることです。以下にいくつかの例を示します：<sup>10,11,12</sup></p>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">理解できるが役に立たない考え</div>
+                    <p style="margin-bottom: 0; text-align: left;">「今すぐ眠らなければ、明日は大変なことになる。」</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">よりバランスの取れた見方</div>
+                    <p style="margin-bottom: 0; text-align: left;">「以前も寝不足の後でもなんとかやれた。私の身体は眠り方を知っている — 自然に任せよう。」</p>
+                </div>
+            </div>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">理解できるが役に立たない考え</div>
+                    <p style="margin-bottom: 0; text-align: left;">「もう何時間も起きている — ひどい状態で、どんどん悪くなっている。」</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">よりバランスの取れた見方</div>
+                    <p style="margin-bottom: 0; text-align: left;">「静かに休んでいるだけでも、身体には良い影響がある。無理に眠ろうとしなくていい — 準備ができれば自然に眠れる。」</p>
+                </div>
+            </div>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">理解できるが役に立たない考え</div>
+                    <p style="margin-bottom: 0; text-align: left;">「また目が覚めた — 私の睡眠は完全に壊れている。」</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">よりバランスの取れた見方</div>
+                    <p style="margin-bottom: 0; text-align: left;">「夜中に目が覚めるのは、この年齢では普通のこと。ほとんどの人が何度か目覚める — また自然に眠りに戻ればいい。」</p>
+                </div>
+            </div>
+
+            <div class="thought-reframe">
+                <div class="thought-old">
+                    <div class="label">理解できるが役に立たない考え</div>
+                    <p style="margin-bottom: 0; text-align: left;">「昔は完璧に眠れていたのに — 何か深刻な問題があるに違いない。」</p>
+                </div>
+                <div class="thought-arrow">→</div>
+                <div class="thought-new">
+                    <div class="label">よりバランスの取れた見方</div>
+                    <p style="margin-bottom: 0; text-align: left;">「睡眠は身体の他の部分と同じように、加齢とともに変化する。浅い眠りは正常なこと — 何か問題があるわけではない。」</p>
+                </div>
+            </div>
+
+            <h2>CBT-I：不眠症治療のゴールドスタンダード</h2>
+            <p>不眠症に対する認知行動療法（CBT-I）は、米国内科学会（ACP）やカナダ睡眠学会を含むほぼすべての主要な医療ガイドラインにより、高齢者の慢性不眠症に対する<strong>第一選択治療</strong>として推奨されています。長期的には睡眠薬よりも効果的であり、副作用もありません。<sup>13,14,15</sup></p>
+
+            <p>CBT-Iは、不眠症を持続させる行動パターンと考え方のパターンに働きかけます。通常4〜8回のセッションで行われますが、多くの方は2〜4週間で改善を実感します。以下に主要な技法を説明します。<sup>13,14</sup></p>
+
+            <h3>技法1：睡眠制限療法</h3>
+            <div class="technique-box">
+                <h4>概要</h4>
+                <p>直感に反するように聞こえるかもしれませんが、これはCBT-Iの最も強力な要素です。睡眠制限療法は、一時的にベッドで過ごす時間を、実際に眠っている時間に合わせて制限します。これにより「睡眠圧」— 身体の自然な睡眠への欲求 — が高まり、より深く凝集した睡眠が得られるようになります。<sup>13,14,16</sup></p>
+
+                <h4>方法</h4>
+                <ol>
+                    <li><strong>1〜2週間、睡眠日誌で睡眠を記録します</strong>（下記参照）。平均総睡眠時間を計算します。例えば、9時間ベッドにいるが実際に眠っているのは約6時間であれば、総睡眠時間は6時間です。</li>
+                    <li><strong>「睡眠の窓」を設定します</strong>。総睡眠時間に合わせます（高齢者の最低は5.5時間）。固定の起床時間を決め、そこから逆算します。平均睡眠時間が6時間で6時30分に起きたい場合、就寝時間は0時30分になります。</li>
+                    <li><strong>毎日同じ時間に起きます</strong> — 週末も含めて。これは体内時計をリセットするために極めて重要です。</li>
+                    <li>早く眠くなっても、<strong>決められた就寝時間まではベッドに入りません</strong>。</li>
+                    <li>ベッドにいる時間の85〜90%眠れるようになったら、<strong>睡眠の窓を15〜30分ずつ徐々に広げます</strong>。満足できる睡眠量になるまで拡大を続けます。</li>
+                </ol>
+
+                <h4>なぜ効果があるのか</h4>
+                <p>ベッドの中で起きている時間を減らすことで、強い睡眠圧が蓄積され、脳がベッドを覚醒ではなく睡眠と結びつけるように再学習します。最初の1週間はつらいことがありますが、ほとんどの方が2〜3週間以内に、より深く質の高い睡眠を実感します。<sup>13,16</sup></p>
+            </div>
+
+            <div class="warning-box">
+                <h3>睡眠制限療法に関する重要な注意</h3>
+                <p>睡眠制限療法は、最初の1〜2週間に一時的な日中の眠気を引き起こすことがあります。<strong>てんかん、双極性障害の既往がある方、または転倒リスクの高い方</strong>は、開始前に医療提供者にご相談ください。ベッドでの総時間を5.5時間未満に減らさないでください。車を運転される方は、最初の調整期間中は特にご注意ください。<sup>14,16</sup></p>
+            </div>
+
+            <h3>技法2：刺激制御法</h3>
+            <div class="technique-box">
+                <h4>概要</h4>
+                <p>刺激制御法は、ベッドと睡眠の間の精神的なつながりを再構築します。長時間ベッドの中で起きている状態が続くと、脳はベッドを睡眠ではなく、覚醒、フラストレーション、心配と関連づけるようになることがあります。<sup>13,14,17</sup></p>
+
+                <h4>ルール</h4>
+                <ol>
+                    <li><strong>ベッドは睡眠と性行為のためだけに使います。</strong>ベッドで読書、テレビ、スマートフォンの操作、心配事を考えることはしません。</li>
+                    <li><strong>眠い時にだけベッドに入ります</strong> — 「就寝時間だから」ではなく。眠気とは、まぶたが重い、あくびが出る、起きているのが難しい状態のことで、単に「疲れた」とは異なります。</li>
+                    <li><strong>約20分で眠れない場合</strong>（時計を見ないで、おおよその感覚で）、ベッドから出て別の部屋に行きます。薄暗い中で静かなリラックスできることをします：読書、穏やかな音楽を聴く、パズルをするなど。再び眠くなった時にだけベッドに戻ります。</li>
+                    <li>夜中に<strong>必要なだけステップ3を繰り返します</strong>。最初の1週間は何度もこれを繰り返すかもしれませんが、それは全く正常で予想されることです。</li>
+                    <li>どれだけ眠れたかに関係なく、<strong>毎朝同じ時間に起きます</strong>。</li>
+                    <li><strong>昼寝を避けるか</strong>、午後2時前に20〜30分以内に制限します。</li>
+                </ol>
+
+                <h4>なぜ効果があるのか</h4>
+                <p>脳は関連づけを通じて学習します。ベッドと睡眠を一貫して結びつけ（眠れない時はベッドから出ることで）、脳が横になったら「スイッチオフ」するように再学習させます。これは睡眠医学で最も研究され、効果が実証された技法の一つです。<sup>13,17</sup></p>
+            </div>
+
+            <h3>技法3：睡眠衛生</h3>
+            <div class="technique-box">
+                <h4>概要</h4>
+                <p>睡眠衛生とは、良い睡眠を支える環境的・行動的な習慣を指します。睡眠衛生だけでは通常<strong>不眠症を改善するには不十分</strong>ですが、上記の技法と組み合わせることで、睡眠のための最適な条件を作ります。<sup>13,14</sup></p>
+
+                <h4>環境要因</h4>
+                <ul>
+                    <li><strong>寝室を涼しく保ちます</strong>（18〜20℃）。入眠には深部体温が下がる必要があります。</li>
+                    <li><strong>暗くします。</strong>遮光カーテンやアイマスクを使用します。わずかな光でもメラトニン産生を妨げることがあります。</li>
+                    <li><strong>騒音を最小限にします。</strong>必要に応じて耳栓やホワイトノイズマシンを使用します。</li>
+                    <li><strong>快適さに投資します。</strong>体を支える良いマットレスと枕は、健康への価値ある投資です。</li>
+                </ul>
+
+                <h4>行動要因</h4>
+                <ul>
+                    <li><strong>正午以降のカフェインを制限します。</strong>カフェインの半減期は5〜7時間で、午後のコーヒーのカフェインの半分は就寝時にまだ体内に残っています。高齢者はカフェインの代謝がより遅くなります。</li>
+                    <li><strong>アルコールを制限します。</strong>アルコールは入眠を早めるかもしれませんが、夜の後半の睡眠を著しく妨げ、断片的で回復感のない睡眠を引き起こします。</li>
+                    <li><strong>就寝前2〜3時間以内の大食を避けます。</strong>空腹が問題であれば、軽い軽食は構いません。</li>
+                    <li>夜間のトイレ回数を減らすため、<strong>夕方の水分摂取を控えめにします</strong>。</li>
+                    <li><strong>就寝前のスクリーン時間を制限します。</strong>スマートフォン、タブレット、テレビのブルーライトはメラトニンを抑制します。画面を使用する必要がある場合は、ブルーライトフィルター設定を検討してください。</li>
+                </ul>
+            </div>
+
+            <h3>技法4：リラクセーション訓練</h3>
+            <div class="technique-box">
+                <h4>概要</h4>
+                <p>リラクセーション技法は、睡眠を妨げる身体的な緊張と精神的な覚醒を軽減します。これらは練習で上達するスキルです — 最初から完璧にできることを期待しないでください。<sup>13,14,18</sup></p>
+
+                <h4>漸進的筋弛緩法（PMR）</h4>
+                <p>この技法は、全身の筋肉群を順番に緊張させてから弛緩させるものです：<sup>18</sup></p>
+                <ol>
+                    <li>楽な姿勢で横になり、ゆっくりと深呼吸を数回します。</li>
+                    <li>足から始めて、筋肉をしっかりと（痛くない程度に）5〜10秒間緊張させます。</li>
+                    <li>突然力を抜き、緊張と弛緩のコントラストに注意を向けます。15〜20秒間休みます。</li>
+                    <li>身体を上方へ向かって進みます：ふくらはぎ → 太もも → 腹部 → 胸 → 手 → 腕 → 肩 → 首 → 顔。</li>
+                    <li>すべての筋肉群を終えたら、数分間、全身がリラックスした感覚を味わいます。</li>
+                </ol>
+                <p>PMRは毎日、できれば日中と就寝時の両方で練習してください。多くの方が1〜2週間の定期的な練習で、より効果を実感するようになります。</p>
+
+                <h4>腹式呼吸法</h4>
+                <p>ゆっくりとした深い呼吸は、副交感神経系 — 「休息と消化」のシステム — を活性化します：<sup>18</sup></p>
+                <ol>
+                    <li>片手を胸に、もう片方の手をお腹に置きます。</li>
+                    <li>4秒かけて鼻からゆっくり息を吸い、お腹（胸ではなく）が膨らむようにします。</li>
+                    <li>少し息を止めます。</li>
+                    <li>6秒かけて口からゆっくり息を吐き、お腹がへこむようにします。</li>
+                    <li>5〜10分間繰り返します。</li>
+                </ol>
+
+                <h4>ボディスキャン</h4>
+                <p>PMRよりも穏やかな方法で、痛みや運動制限がある方に適しています：<sup>18</sup></p>
+                <ol>
+                    <li>楽な姿勢で横になり、目を閉じます。</li>
+                    <li>つま先から始めて、ゆっくりと身体の各部分に注意を向けます。</li>
+                    <li>温かさ、ピリピリ感、緊張など、感覚をただ観察します — 変えようとする必要はありません。</li>
+                    <li>注意が移動するにつれて、各部分が重く、リラックスしていくことをイメージします。</li>
+                    <li>つま先から頭まで、10〜20分かけてゆっくり進みます。</li>
+                </ol>
+            </div>
+
+            <h3>技法5：認知再構成</h3>
+            <div class="technique-box">
+                <h4>概要</h4>
+                <p>これは、先ほど説明した睡眠に関する役に立たない考え方を特定し、見直すための体系的なアプローチです。睡眠に対するより現実的で、ストレスの少ない関係を築く手助けをします。<sup>10,11,12,13</sup></p>
+
+                <h4>実践方法</h4>
+                <ol>
+                    <li><strong>考えに気づく。</strong>睡眠について何かストレスのある考えが浮かんだら、立ち止まって、その具体的な考えを特定します。できれば書き出してみましょう。</li>
+                    <li><strong>根拠を検討する。</strong>自分に問いかけます：この考えは完全に正しいだろうか？実際の根拠は？以前、睡眠不足の後でもなんとかできたことはあったか？</li>
+                    <li><strong>別の見方を考える。</strong>同じ心配を抱えている友人に何と言うだろうか？もっとバランスの取れた見方は何だろうか？</li>
+                    <li><strong>バランスの取れた考えに置き換える。</strong>困難を認めつつも、誇張しない現実的な代替の考えを見つけます。</li>
+                </ol>
+
+                <h4>役に立つ気づき</h4>
+                <ul>
+                    <li>一晩の睡眠不足が永続的な害を及ぼすことはありません — 身体には強力な回復メカニズムがあります</li>
+                    <li>静かに休むこと（眠れなくても）は、身体に大きな回復効果をもたらします</li>
+                    <li>研究によると、不眠症の方は実際の睡眠時間を過小評価する傾向があります — 実際には思っているよりも多く眠れていることが多いのです<sup>19</sup></li>
+                    <li>睡眠欲求は最も強力な生物学的欲求の一つです — 十分に疲れていれば、身体は<em>必ず</em>眠ります</li>
+                    <li>眠ろうと頑張れば頑張るほど逆効果です — 睡眠は追いかけるのをやめた時に最も自然にやってきます</li>
+                </ul>
+            </div>
+
+            <h2>就寝前のルーティンを作る</h2>
+            <p>一貫した就寝前のルーティンは、脳に覚醒から睡眠への移行の時間であることを知らせます。就寝前30〜60分にわたって徐々に刺激を減らす「着陸態勢」のようなものと考えてください。<sup>13,14</sup></p>
+
+            <div class="success-box">
+                <h3>就寝前ルーティンの例</h3>
+                <p><strong>就寝60分前：</strong>スクリーンをオフにします。家の照明を暗くします。リラックスできる活動に切り替えます。</p>
+                <p><strong>就寝45分前：</strong>温かい入浴やシャワーを浴びます。その後の体温低下が眠気を促進します。</p>
+                <p><strong>就寝30分前：</strong>軽い読書、ゆるやかなストレッチ、穏やかな音楽やポッドキャストを聴くなど。</p>
+                <p><strong>就寝15分前：</strong>リラクセーション技法（PMR、呼吸法、またはボディスキャン）を実践します。</p>
+                <p style="margin-bottom: 0;"><strong>就寝時：</strong>本当に眠くなった時にだけ電気を消します。</p>
+            </div>
+
+            <h2>日中の習慣の重要性</h2>
+            <p>日中の行動は、夜の睡眠に大きな影響を与えます。これらの日中の戦略は、就寝時の対策と同様に重要です：<sup>2,14,20</sup></p>
+
+            <h3>光への曝露</h3>
+            <p>明るい光への曝露 — 特に朝 — は、概日リズムを調整する最も強力なツールの一つです。<strong>起床後1〜2時間以内に30分間の屋外の明るい光</strong>を浴びることを目指しましょう。曇りの日でも、屋外の光は室内の照明よりも何倍も明るいです。これは体内時計を固定し、夕方の自然なメラトニン分泌を促進します。<sup>2,20</sup></p>
+
+            <h3>身体活動</h3>
+            <p>定期的な運動は、睡眠の質を改善するための最もエビデンスに裏付けられた戦略の一つです。研究によると、定期的な中程度の活動は高齢者の睡眠の質を40〜60%改善することが示されています。ポイント：<sup>14,20,21</sup></p>
+            <ul>
+                <li>週のほとんどの日に20〜30分歩くだけでも、意味のある違いが生まれます</li>
+                <li>朝や午後の運動が理想的です。就寝前2〜3時間以内の激しい運動は、一部の方には刺激になる可能性があります</li>
+                <li>運動の睡眠への効果は数週間にわたって蓄積されます — すぐに効果を感じなくても続けてください</li>
+                <li>どんな動きも有効です — ガーデニング、家事、太極拳、水泳</li>
+            </ul>
+
+            <h3>昼寝のガイドライン</h3>
+            <p>昼寝は夜間の睡眠不足への自然な反応ですが、夜に眠りにつくために必要な睡眠圧を低下させることがあります。昼寝をする場合：<sup>2,14</sup></p>
+            <ul>
+                <li>昼寝は<strong>最大20〜30分</strong>に留めます</li>
+                <li><strong>午後2時より前</strong>にのみ昼寝をします</li>
+                <li>睡眠制限療法を実施中の場合は、初期段階では昼寝を完全に避けます</li>
+            </ul>
+
+            <h2>睡眠日誌の使い方</h2>
+            <p>睡眠日誌は、睡眠パターンを理解し改善を追跡するための必須ツールです。毎朝記入しましょう — わずか2分で終わります。夜中に時計を見る理由にしないでください。おおよその推定で構いません。<sup>13,14</sup></p>
+
+            <div class="sleep-diary">
+                <table style="margin: 0;">
+                    <tr>
+                        <th>曜日</th>
+                        <th>就寝時刻</th>
+                        <th>入眠までの時間（推定）</th>
+                        <th>中途覚醒の回数</th>
+                        <th>最終覚醒時刻</th>
+                        <th>起床時刻</th>
+                        <th>総睡眠時間（推定）</th>
+                        <th>睡眠の質（1〜5）</th>
+                    </tr>
+                    <tr>
+                        <td>月</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>火</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>水</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>木</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>金</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>土</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>日</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </table>
+            </div>
+            <p style="font-size: 0.9em; color: #64748b; text-align: center;">睡眠の質スケール：1 = 非常に悪い、2 = 悪い、3 = 普通、4 = 良い、5 = 非常に良い</p>
+
+            <h2>なぜ薬物療法が第一選択ではないのか</h2>
+            <p>睡眠の問題に対して即効性のある解決策を求めるのは自然なことであり、睡眠薬が最も明白な答えに思えるかもしれません。しかし、高齢者の場合、睡眠薬のリスクは利益を上回ることが多いのです：<sup>14,22,23,24</sup></p>
+
+            <div class="caution-box">
+                <h3>高齢者における睡眠薬のリスク</h3>
+                <p><strong>ベンゾジアゼピン系薬と「Z薬」</strong>（ゾピクロン、ゾルピデム）は、65歳以上の方に重大なリスクをもたらします：<sup>22,23,24</sup></p>
+                <ul>
+                    <li><strong>転倒と骨折：</strong>鎮静薬は転倒リスクを著しく高め、特に夜間のトイレ移動時に危険です。高齢者の転倒による股関節骨折は、生活を大きく変えてしまうことがあります。</li>
+                    <li><strong>認知機能障害：</strong>これらの薬は翌日のぼんやり感、混乱、記憶障害を引き起こします。長期使用は認知機能低下のリスク増加と関連しています。</li>
+                    <li><strong>依存性と耐性：</strong>身体がこれらの薬に適応し、同じ効果を得るためにより高用量が必要になり、急に中止すると離脱症状が起こります。</li>
+                    <li><strong>反跳性不眠：</strong>薬を中止すると一時的に睡眠が悪化することが多く、依存の悪循環を生み出します。</li>
+                    <li><strong>実際の効果は控えめ：</strong>研究によると、睡眠薬は平均して一晩あたり20〜30分の睡眠を追加するにすぎず、多くの方が期待するよりもはるかに少ない効果です。</li>
+                </ul>
+                <p style="margin-bottom: 0;">Choosing Wisely Canadaは、高齢者の不眠症に対するベンゾジアゼピン系薬および鎮静催眠薬の第一選択としての使用を明確に推奨していません。<sup>24</sup></p>
+            </div>
+
+            <p>対照的に、CBT-Iは短期的に同等以上の結果を生み出し、薬物療法と比較して<strong>長期的に優れた成果</strong>を達成します — これらのリスクは一切ありません。CBT-Iの効果は持続的であり、治療終了後も長く続きますが、薬の効果は服用をやめると消失します。<sup>13,14,15</sup></p>
+
+            <div class="key-point">
+                <h3>現在睡眠薬を服用中の方へ</h3>
+                <p>すでに睡眠薬を使用している場合は、<strong>急に中止しないでください。</strong>CBT-Iの技法を同時に実施しながら、医療提供者と協力して段階的な減薬計画を立ててください。多くの方が、行動療法により実際にはより良い睡眠を得ながら、睡眠薬を減量または中止することに成功しています。<sup>14,23</sup></p>
+            </div>
+
+            <h2>CBT-Iへのアクセス</h2>
+            <p>CBT-Iはいくつかの方法で受けることができます：<sup>13,14,15</sup></p>
+            <ul>
+                <li><strong>訓練を受けた治療者との対面セッション：</strong>CBT-Iの訓練を受けた心理士やセラピストが、個別または集団セッション（通常4〜8回）を提供します。医療提供者に紹介を依頼してください。</li>
+                <li><strong>デジタルCBT-Iプログラム：</strong><em>Insomnia Coach</em>（米国退役軍人省による無料アプリ）や<em>HALEO</em>（一部のカナダ居住者が利用可能）などのアプリベースのプログラムは、構造化されたCBT-Iガイダンスを提供し、臨床試験で有効性が示されています。</li>
+                <li><strong>自己主導型：</strong>このハンドアウトの技法を4〜6週間一貫して使用します。セラピストとの協力が理想的ですが、自己主導型のCBT-Iでも意味のある改善が得られます。</li>
+            </ul>
+
+            <h2>すべてをまとめる</h2>
+            <p>睡眠の改善はプロセスであり、一夜にして実現するものではありません。以下に実践的なロードマップを示します：<sup>13,14</sup></p>
+
+            <div class="success-box">
+                <h3>6週間プラン</h3>
+                <p><strong><span class="step-number">1</span> 第1〜2週：評価と準備</strong></p>
+                <ul>
+                    <li>睡眠日誌をつけてベースラインを把握します</li>
+                    <li>睡眠衛生の改善を実施します</li>
+                    <li>リラクセーション技法の毎日の練習を始めます</li>
+                    <li>医学的要因について医療提供者と相談します</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong><span class="step-number">2</span> 第3〜4週：CBT-Iの中核技法</strong></p>
+                <ul>
+                    <li>刺激制御法を開始します（ベッド＝睡眠のみ、起きていたらベッドを出る）</li>
+                    <li>日誌のデータに基づいて睡眠制限療法を開始します</li>
+                    <li>役に立たない考えに気づいた時に認知再構成を実践します</li>
+                    <li>就寝前ルーティンを維持します</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong><span class="step-number">3</span> 第5〜6週：調整と定着</strong></p>
+                <ul>
+                    <li>睡眠効率が改善するにつれて、睡眠の窓を徐々に広げます</li>
+                    <li>自分に合う方法をもとに、ルーティンを改善し続けます</li>
+                    <li>睡眠日誌を見直して傾向と改善を確認します</li>
+                    <li>進捗について医療提供者と話し合います</li>
+                </ul>
+
+                <p style="margin-top: 15px; margin-bottom: 0;"><strong>自分自身に忍耐を持ちましょう。</strong>ほとんどの方が第3〜4週までに意味のある改善を実感します。一部の技法、特に睡眠制限は、良くなる前につらく感じることがあります。これは正常です — 計画を続けてください。</p>
+            </div>
+
+            <h2>まとめ</h2>
+            <p>加齢に伴う睡眠の変化は、人生の正常な一部です。浅い眠り、早い起床時間、より多い中途覚醒は、睡眠が壊れたことを意味するものではありません。睡眠の困難が生じた場合、最も効果的なアプローチは<strong>薬物療法ではなく</strong>、不眠症の根本原因に対処し、睡眠薬のリスクを伴わない、科学的に実証されたCBT-Iの行動療法です。<sup>13,14,15</sup></p>
+
+            <p>より良い睡眠への道は、自分の睡眠パターンを理解し、習慣と環境を調整し、そのプロセスにおいて自分自身に優しくし、身体の自然なリズムに逆らうのではなく、協調して取り組むことです。小さくても一貫した変化は、確実に意味のある改善につながります。</p>
+
+            <div class="mindset-box">
+                <h3>最後に</h3>
+                <p style="margin-bottom: 0;">あなたの身体は、人生のすべての夜を通じて成功裏に眠りについてきました。その方法を忘れてはいません。時に、自分自身の邪魔をしないようにする少しの手助けが必要なだけです。睡眠に対するプレッシャーを減らし、適切な条件を整えることで、身体がすでに知っていることを最も行いやすくする環境を作っているのです。</p>
+            </div>
+        </div>
+
+        <div class="references">
+            <h2>参考文献</h2>
+            <div class="reference-item">1. Mander BA, Winer JR, Walker MP. Sleep and human aging. Neuron. 2017;94(1):19-36.</div>
+            <div class="reference-item">2. Li J, Vitiello MV, Gooneratne NS. Sleep in normal aging. Sleep Med Clin. 2018;13(1):1-11.</div>
+            <div class="reference-item">3. Ohayon MM, Carskadon MA, Guilleminault C, Vitiello MV. Meta-analysis of quantitative sleep parameters from childhood to old age in healthy individuals: developing normative sleep values across the human lifespan. Sleep. 2004;27(7):1255-1273.</div>
+            <div class="reference-item">4. Scullin MK, Bliwise DL. Sleep, cognition, and normal aging: integrating a half century of multidisciplinary research. Perspect Psychol Sci. 2015;10(1):97-137.</div>
+            <div class="reference-item">5. Brewster GS, Riegel B, Gehrman PR. Insomnia in the older adult. Sleep Med Clin. 2018;13(1):13-19.</div>
+            <div class="reference-item">6. Patel D, Steinberg J, Patel P. Insomnia in the elderly: a review. J Clin Sleep Med. 2018;14(6):1017-1024.</div>
+            <div class="reference-item">7. Senaratna CV, Perret JL, Lodge CJ, et al. Prevalence of obstructive sleep apnea in the general population: a systematic review. Sleep Med Rev. 2017;34:70-81.</div>
+            <div class="reference-item">8. Javaheri S, Barbe F, Campos-Rodriguez F, et al. Sleep apnea: types, mechanisms, and clinical cardiovascular consequences. J Am Coll Cardiol. 2017;69(7):841-858.</div>
+            <div class="reference-item">9. Foley DJ, Monjan AA, Brown SL, Simonsick EM, Wallace RB, Blazer DG. Sleep complaints among elderly persons: an epidemiologic study of three communities. Sleep. 1995;18(6):425-432.</div>
+            <div class="reference-item">10. Harvey AG. A cognitive model of insomnia. Behav Res Ther. 2002;40(8):869-893.</div>
+            <div class="reference-item">11. Morin CM, Stone J, Trinkle D, Mercer J, Remsberg S. Dysfunctional beliefs and attitudes about sleep among older adults with and without insomnia complaints. Psychol Aging. 1993;8(3):463-467.</div>
+            <div class="reference-item">12. Carney CE, Edinger JD. Identifying critical beliefs about sleep in primary insomnia. Sleep. 2006;29(3):342-350.</div>
+            <div class="reference-item">13. Edinger JD, Arnedt JT, Bertisch SM, et al. Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2021;17(2):255-262.</div>
+            <div class="reference-item">14. Qaseem A, Kansagara D, Forciea MA, Cooke M, Denberg TD; Clinical Guidelines Committee of the American College of Physicians. Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians. Ann Intern Med. 2016;165(2):125-133.</div>
+            <div class="reference-item">15. Mitchell MD, Gehrman P, Perlis M, Umscheid CA. Comparative effectiveness of cognitive behavioral therapy for insomnia: a systematic review. BMC Fam Pract. 2012;13:40.</div>
+            <div class="reference-item">16. Miller CB, Espie CA, Epstein DR, et al. The evidence base of sleep restriction therapy for treating insomnia disorder. Sleep Med Rev. 2014;18(5):415-424.</div>
+            <div class="reference-item">17. Bootzin RR, Epstein DR. Understanding and treating insomnia. Annu Rev Clin Psychol. 2011;7:435-458.</div>
+            <div class="reference-item">18. Lichstein KL, Riedel BW, Wilson NM, Lester KW, Aguillard RN. Relaxation and sleep compression for late-life insomnia: a placebo-controlled trial. J Consult Clin Psychol. 2001;69(2):227-239.</div>
+            <div class="reference-item">19. Harvey AG, Tang NK. (Mis)perception of sleep in insomnia: a puzzle and a resolution. Psychol Bull. 2012;138(1):77-101.</div>
+            <div class="reference-item">20. Dzierzewski JM, Buman MP, Giacobbi PR Jr, et al. Exercise and sleep in community-dwelling older adults: evidence for a reciprocal relationship. J Sleep Res. 2014;23(1):61-68.</div>
+            <div class="reference-item">21. Reid KJ, Baron KG, Lu B, Naylor E, Wolfe L, Zee PC. Aerobic exercise improves self-reported sleep and quality of life in older adults with insomnia. Sleep Med. 2010;11(9):934-940.</div>
+            <div class="reference-item">22. Glass J, Lanctôt KL, Herrmann N, Sproule BA, Busto UE. Sedative hypnotics in older people with insomnia: meta-analysis of risks and benefits. BMJ. 2005;331(7526):1169.</div>
+            <div class="reference-item">23. American Geriatrics Society 2023 updated AGS Beers Criteria® for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052-2081.</div>
+            <div class="reference-item">24. Choosing Wisely Canada. Psychiatry: Don't use benzodiazepines or other sedative-hypnotics in older adults as first choice for insomnia. Available at: choosingwiselycanada.org.</div>
+        </div>
+
+        <div class="footer">
+            <p><strong>重要事項：</strong>このハンドアウトは教育目的のみであり、医療上のアドバイスに代わるものではありません。睡眠習慣や治療計画の変更を行う前に、必ず医療提供者にご相談ください。</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">患者教育ハンドアウト｜最終更新：2026年2月</p>
+        </div>
+    </div>
+</body>
+</html>
