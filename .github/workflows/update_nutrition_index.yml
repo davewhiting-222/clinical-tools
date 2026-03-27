@@ -5,9 +5,12 @@ on:
     branches:
       - main
     paths:
-      - '**.html'
+      - '*.html'
       - 'generate_nutrition_index.py'
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["Auto-update Patient Handout Index"]
+    types:
+      - completed
 
 jobs:
   update-index:
