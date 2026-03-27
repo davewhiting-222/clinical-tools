@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="module" content="nutrition">
+    <meta name="section" content="sick-day-rules">
+    <meta name="topics" content="sick-day,sglt2,medication-safety,diabetes">
+    <meta name="diet_codes" content="">
+    <meta name="flags" content="sglt2_inhibitor">
+    <meta name="category" content="Diabetes">
+    <meta name="description" content="Sick day rules for patients taking empagliflozin (Jardiance), dapagliflozin (Forxiga), or canagliflozin (Invokana). When to hold your medication, ketone monitoring, and when to seek emergency care.">
+   
+    <title>Managing Illness Safely on Your SGLT2 Medication</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        p, li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .checklist {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .checklist h4 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            padding: 8px 0;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 4px;
+            min-width: 16px;
+            min-height: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            margin-left: 1rem;
+        }
+
+        .references li {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #374151;
+        }
+
+        time {
+            font-style: italic;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .header, .content {
+                padding: 20px;
+            }
+            
+            .footer {
+                padding: 20px;
+            }
+            
+            .references {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Managing Illness Safely on Your SGLT2 Medication</h1>
+            <small>Applies to: Jardiance (empagliflozin), Forxiga (dapagliflozin), Invokana (canagliflozin)</small>
+        </header>
+
+        <main class="content">
+            <time>December 2024</time>
+
+            <h2>Know Your Medication</h2>
+            <p>This guide applies to a class of medications called SGLT2 inhibitors. These medications are excellent for protecting your heart and kidneys while helping control blood sugar. You may be taking one of the following:</p>
+            
+            <table>
+                <tr>
+                    <th>Generic Name</th>
+                    <th>Brand Name</th>
+                    <th>Days to Stop Before Surgery</th>
+                </tr>
+                <tr>
+                    <td>Empagliflozin</td>
+                    <td>Jardiance</td>
+                    <td>3 days</td>
+                </tr>
+                <tr>
+                    <td>Dapagliflozin</td>
+                    <td>Forxiga</td>
+                    <td>3 days</td>
+                </tr>
+                <tr>
+                    <td>Canagliflozin</td>
+                    <td>Invokana</td>
+                    <td>3 days</td>
+                </tr>
+                <tr>
+                    <td>Ertugliflozin</td>
+                    <td>Steglatro</td>
+                    <td>4 days</td>
+                </tr>
+            </table>
+
+            <h2>Why Special Rules Are Necessary</h2>
+            <p>While SGLT2 inhibitors are very safe for daily use, they carry a unique risk during illness, fasting, or surgery. When combined with dehydration or not eating normally, these medications can trigger a serious condition called <strong>diabetic ketoacidosis (DKA)</strong>.</p>
+
+            <div class="caution-box">
+                <h3>The Hidden Danger</h3>
+                <p>The most dangerous aspect is that your blood sugar may stay completely normal while your blood becomes dangerously acidic. This can mask the emergency, which is why following these rules is critical for your safety.</p>
+            </div>
+
+            <h2>The SADMANS Rule for Illness</h2>
+            <p>Use this memory aid to remember when to stop your SGLT2 inhibitor:</p>
+            
+            <div class="key-point">
+                <h3>SADMANS - Stop Your Medication If You Have:</h3>
+                <ul>
+                    <li><strong>S</strong>urgery (planned procedure)</li>
+                    <li><strong>A</strong>lcohol excess</li>
+                    <li><strong>D</strong>ehydration</li>
+                    <li><strong>M</strong>alaise (feeling unwell)</li>
+                    <li><strong>A</strong>nesthesia (upcoming procedure)</li>
+                    <li><strong>N</strong>ausea or vomiting</li>
+                    <li><strong>S</strong>ick with fever, flu, or diarrhea</li>
+                </ul>
+            </div>
+
+            <h3>When to Stop During Illness</h3>
+            <p><strong>Immediately stop taking your SGLT2 inhibitor</strong> if you develop:</p>
+            <ul>
+                <li>Flu symptoms or fever</li>
+                <li>Vomiting or diarrhea</li>
+                <li>Any illness causing dehydration</li>
+                <li>Inability to eat or drink normally</li>
+            </ul>
+
+            <h3>When to Restart After Illness</h3>
+            <div class="success-box">
+                <p><strong>Only restart your medication when:</strong></p>
+                <ul>
+                    <li>You feel completely well</li>
+                    <li>You've been eating and drinking normally for <strong>24 hours</strong></li>
+                    <li>You're staying well-hydrated</li>
+                </ul>
+            </div>
+
+            <h2>The SSTOP Protocol for Procedures</h2>
+            <p>Fasting for medical procedures creates the same risks as illness. You must plan ahead:</p>
+
+            <div class="warning-box">
+                <h3>Before Any Procedure Requiring Fasting</h3>
+                <ul>
+                    <li><strong>Jardiance, Forxiga, Invokana:</strong> Stop 3 days before</li>
+                    <li><strong>Steglatro (ertugliflozin):</strong> Stop 4 days before</li>
+                    <li>This includes surgery, colonoscopy, or any procedure requiring you not to eat</li>
+                    <li>Inform your surgeon and anesthesiologist about this medication</li>
+                </ul>
+            </div>
+
+            <h2>Emergency Warning Signs</h2>
+            <div class="caution-box">
+                <h3>Go to Emergency Immediately If You Experience:</h3>
+                <ul>
+                    <li>Nausea or vomiting (especially with normal blood sugar)</li>
+                    <li>Abdominal pain</li>
+                    <li>Extreme fatigue or weakness</li>
+                    <li>Shortness of breath or rapid breathing</li>
+                    <li>Feeling very unwell despite normal glucose readings</li>
+                </ul>
+                <p><strong>Golden Rule:</strong> If you feel nauseous and sick but your blood sugar is normal, assume this could be a drug-related emergency until proven otherwise.</p>
+            </div>
+
+            <h2>Your Action Plan</h2>
+            <div class="checklist">
+                <h4>Illness Checklist</h4>
+                <div class="checklist-item">
+                    <input type="checkbox" id="stop-med">
+                    <label for="stop-med">Stop SGLT2 inhibitor immediately when I become ill</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="stay-hydrated">
+                    <label for="stay-hydrated">Focus on staying hydrated</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="monitor-symptoms">
+                    <label for="monitor-symptoms">Monitor for warning signs</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="contact-doctor">
+                    <label for="contact-doctor">Contact my doctor if illness persists</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="restart-safely">
+                    <label for="restart-safely">Wait 24 hours of normal eating/drinking before restarting</label>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <h4>Surgery/Procedure Checklist</h4>
+                <div class="checklist-item">
+                    <input type="checkbox" id="plan-ahead">
+                    <label for="plan-ahead">Stop medication 3-4 days before procedure (see table above)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="inform-team">
+                    <label for="inform-team">Inform surgical team about this medication</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="confirm-restart">
+                    <label for="confirm-restart">Confirm with doctor when to restart after procedure</label>
+                </div>
+            </div>
+
+            <h2>Key Messages to Remember</h2>
+            <div class="mindset-box">
+                <ul>
+                    <li>SGLT2 inhibitors are excellent medications when used properly</li>
+                    <li>Following sick day rules prevents serious complications</li>
+                    <li>When in doubt, stop the medication and contact your healthcare team</li>
+                    <li>Always inform healthcare providers that you take an SGLT2 inhibitor</li>
+                    <li>Normal blood sugar during illness doesn't mean you're safe if taking these medications</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h3>Questions for Your Next Appointment</h3>
+                <ul>
+                    <li>Do I have emergency contact information if I become ill?</li>
+                    <li>Should I have ketone testing strips at home?</li>
+                    <li>What other medications should I stop during illness?</li>
+                    <li>How do I manage my other diabetes medications during sick days?</li>
+                </ul>
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Diabetes Canada Clinical Practice Guidelines Expert Committee. Diabetes Canada 2018 Clinical Practice Guidelines for the Prevention and Management of Diabetes in Canada. Can J Diabetes. 2018;42(Suppl 1):S1-S325.</li>
+                    <li>Goldenberg RM, Berard LD, Cheng AYY, et al. SGLT2 inhibitor-associated diabetic ketoacidosis: clinical review and practice recommendations. Diabetes Res Clin Pract. 2019;155:107797.</li>
+                    <li>Burke KR, Schumacher CA, Harpe SE. SGLT2 inhibitors: a systematic review of diabetic ketoacidosis and related risk factors in the primary literature. Pharmacotherapy. 2017;37(2):187-194.</li>
+                    <li>Canadian Agency for Drugs and Technologies in Health. SGLT2 inhibitors for type 2 diabetes: a review of clinical effectiveness and safety. Ottawa: CADTH; 2019.</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <div class="disclaimer">
+                This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
