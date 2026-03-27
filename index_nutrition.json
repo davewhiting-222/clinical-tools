@@ -3,6 +3,23 @@
   "generated": "auto",
   "handouts": [
     {
+      "filename": "electrolyte_replacement_on_a_ketogenic_diet_handout.html",
+      "title": "Electrolyte Replacement on a Ketogenic Diet",
+      "topics": [
+        "keto",
+        "electrolytes",
+        "keto-flu",
+        "symptom-management"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med"
+      ],
+      "flags": [],
+      "section": "keto-support",
+      "description": "How to maintain healthy electrolyte levels on a ketogenic diet. Covers sodium, potassium, and magnesium \u2014 food sources, supplement options, and how to manage keto flu symptoms."
+    },
+    {
       "filename": "generate_a_keto_guide_for_patients_consider_the_source_material_handout.html",
       "title": "Your Guide to the Ketogenic Diet",
       "topics": [
