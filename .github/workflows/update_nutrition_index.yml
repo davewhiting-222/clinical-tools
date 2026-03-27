@@ -1,0 +1,40 @@
+name: Update Nutrition Index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - 'generate_nutrition_index.py'
+  workflow_dispatch:
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate nutrition index
+        run: python generate_nutrition_index.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "actions-user"
+          git add index_nutrition.json
+          if git diff --staged --quiet; then
+            echo "No changes to index_nutrition.json"
+          else
+            git commit -m "Automated nutrition index update"
+            git push
+          fi
