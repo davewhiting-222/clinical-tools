@@ -221,6 +221,32 @@
       "description": "Evidence-based explanation of why LDL cholesterol may rise on a low-carbohydrate or ketogenic diet. Covers LDL particle size, the triglyceride to HDL ratio as a better cardiovascular marker, why total LDL is not the whole story, and when a rising LDL warrants further investigation."
     },
     {
+      "filename": "myth_busters_will_i_be_deficient_in_vitamins_and_minerals_handout.html",
+      "title": "MYTH-BUSTERS: Will I Be Deficient in Vitamins and Minerals?",
+      "topics": [
+        "myth-buster",
+        "vitamins",
+        "minerals",
+        "micronutrients",
+        "supplements",
+        "evidence-based",
+        "nutrition-science"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "myth-busters",
+      "description": "Evidence-based answers to the question: will I be deficient in vitamins and minerals on a low-carbohydrate or ketogenic diet? Covers the micronutrient density of low-carb foods, electrolytes, magnesium and potassium on keto, what to monitor, and when supplementation makes clinical sense."
+    },
+    {
       "filename": "myth_busters_won_t_a_high_fat_diet_give_me_a_heart_attack_handout.html",
       "title": "MYTH-BUSTERS: Won't a High Fat Diet Give Me a Heart Attack?",
       "topics": [
