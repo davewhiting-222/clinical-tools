@@ -126,6 +126,32 @@
       "description": "Evidence-based answers to the question: is it safe to follow a low-carbohydrate or ketogenic diet with diabetes? Covers how low-carb diets lower blood sugar, why medication adjustment is essential, what monitoring is required, and what the clinical trial evidence shows."
     },
     {
+      "filename": "myth_busters_why_is_my_ldl_going_up_handout.html",
+      "title": "MYTH-BUSTERS: Why is my LDL going up?",
+      "topics": [
+        "myth-buster",
+        "cholesterol",
+        "LDL",
+        "triglycerides",
+        "HDL",
+        "cardiovascular",
+        "evidence-based"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "myth-busters",
+      "description": "Evidence-based explanation of why LDL cholesterol may rise on a low-carbohydrate or ketogenic diet. Covers LDL particle size, the triglyceride to HDL ratio as a better cardiovascular marker, why total LDL is not the whole story, and when a rising LDL warrants further investigation."
+    },
+    {
       "filename": "myth_busters_won_t_a_high_fat_diet_give_me_a_heart_attack_handout.html",
       "title": "MYTH-BUSTERS: Won't a High Fat Diet Give Me a Heart Attack?",
       "topics": [
