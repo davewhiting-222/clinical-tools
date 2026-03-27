@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="module" content="nutrition">
+    <meta name="section" content="getting-started">
+    <meta name="topics" content="carb-target,net-carbs,practical-skills,low-carb,keto,portion-guide">
+    <meta name="diet_codes" content="keto,spanish_med,therapeutic_lc,moderate_lc,liberal_lc,spanish_therapeutic_lc,spanish_moderate_lc,spanish_liberal_lc">
+    <meta name="flags" content="">
+    <meta name="category" content="Nutrition_Diet">
+    <meta name="description" content="Understanding your prescribed carbohydrate target. Covers net carb calculation, what your daily target means in practical food terms, how carbs are distributed across meals, and what to do if you go over your target.">
+
+    <title>Understanding My Carbohydrate Targets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+            margin: 1.5rem 0;
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point {
+            background-color: #dbeafe;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+        }
+
+        .caution-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #ef4444;
+        }
+
+        .success-box {
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+        }
+
+        .mindset-box {
+            background-color: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .portion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .portion-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .portion-item strong {
+            display: block;
+            color: #1e3a8a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .references {
+            background-color: #f1f5f9;
+            padding: 30px;
+            margin-top: 2rem;
+        }
+
+        .references h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            margin-left: 1.5rem;
+        }
+
+        .references li {
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-style: italic;
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+
+            .references {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Understanding My Carbohydrate Targets</h1>
+            <small>Prepared by your family doctor</small>
+        </header>
+
+        <main class="content">
+            <time datetime="2024-12-19">December 19, 2024</time>
+
+            <div class="key-point">
+                <strong>Your portal shows a carb target number — this handout explains what that means for your daily meals and snacks.</strong>
+            </div>
+
+            <h2>What is a "Net Carb"?</h2>
+            <p>Net carbs are the carbs that actually affect your blood sugar. Here's the simple formula:</p>
+            
+            <div class="success-box">
+                <strong>Net Carbs = Total Carbs - Fibre</strong><br>
+                Fibre doesn't count because your body can't digest it into sugar.
+            </div>
+
+            <p>For example, one cup of broccoli has 6g total carbs and 2g fibre, so it's only 4g net carbs. This is why you can eat plenty of high-fibre vegetables without worrying about your carb target.</p>
+
+            <h2>What Does Your Target Mean?</h2>
+            <p>Your portal shows one of these targets based on your health goals:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Target Level</th>
+                        <th>Daily Net Carbs</th>
+                        <th>What It Achieves</th>
+                        <th>Example Day</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Liberal Low-Carb</strong></td>
+                        <td>100-130g</td>
+                        <td>Moderate blood sugar improvement</td>
+                        <td>2 slices toast + 1 cup rice + 1 apple + vegetables</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moderate Low-Carb</strong></td>
+                        <td>80-100g</td>
+                        <td>Better metabolic control</td>
+                        <td>1 slice toast + ½ cup rice + berries + vegetables</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Therapeutic Low-Carb</strong></td>
+                        <td>50-80g</td>
+                        <td>Significant blood sugar stabilization</td>
+                        <td>Mostly vegetables, protein, healthy fats + small fruit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ketogenic</strong></td>
+                        <td>&lt;50g</td>
+                        <td>Maximum metabolic benefits</td>
+                        <td>Mainly leafy greens, protein, fats + minimal fruit</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Why This Target Was Chosen for You</h2>
+            <p>Your carb target wasn't picked randomly. Your nurse and physician considered:</p>
+            <ul>
+                <li>Your current health conditions (like diabetes or pre-diabetes)</li>
+                <li>Your medications and how they work with different carb levels</li>
+                <li>Your personal health goals</li>
+                <li>What's realistic and sustainable for your lifestyle</li>
+            </ul>
+
+            <div class="mindset-box">
+                <strong>Remember:</strong> This target is personalized medical guidance, not a one-size-fits-all diet rule.
+            </div>
+
+            <h2>How to Distribute Carbs Across Your Day</h2>
+            <p>A good rule of thumb is to spread your carbs roughly equally across three meals:</p>
+            
+            <ul>
+                <li><strong>Breakfast:</strong> About 1/3 of your daily target</li>
+                <li><strong>Lunch:</strong> About 1/3 of your daily target</li>
+                <li><strong>Dinner:</strong> About 1/3 of your daily target</li>
+                <li><strong>Snacks:</strong> Count toward your total — nothing is "free"</li>
+            </ul>
+
+            <div class="key-point">
+                <strong>Example:</strong> If your target is 90g net carbs per day, aim for about 30g at each meal. A small snack would mean slightly less at meals.
+            </div>
+
+            <h2>Practical Portion Guide</h2>
+            <p>Here's what common foods look like in carb terms:</p>
+
+            <div class="portion-grid">
+                <div class="portion-item">
+                    <strong>1 slice bread</strong>
+                    ~15g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>1 cup cooked rice</strong>
+                    ~45g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>1 medium apple</strong>
+                    ~25g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>1 cup pasta</strong>
+                    ~40g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>1 cup broccoli</strong>
+                    ~4g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>½ cup berries</strong>
+                    ~6g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>1 medium potato</strong>
+                    ~35g net carbs
+                </div>
+                <div class="portion-item">
+                    <strong>2 cups leafy greens</strong>
+                    ~2g net carbs
+                </div>
+            </div>
+
+            <h3>High-Fibre Foods You Can Eat Freely</h3>
+            <p>These foods are so low in net carbs that you don't need to worry about portions:</p>
+            <ul>
+                <li>Leafy greens (spinach, lettuce, kale)</li>
+                <li>Cucumbers and celery</li>
+                <li>Bell peppers and zucchini</li>
+                <li>Asparagus and green beans</li>
+                <li>Cauliflower and cabbage</li>
+            </ul>
+
+            <h2>What Happens If You Go Over Your Target?</h2>
+            <div class="success-box">
+                <strong>One day over your target doesn't undo your progress.</strong> What matters is the pattern over time, not perfection every single day.
+            </div>
+
+            <p>If you go over your target:</p>
+            <ul>
+                <li>Don't stress — just get back on track with your next meal</li>
+                <li>Notice what led to going over (was it a social event? skipped meal? stress eating?)</li>
+                <li>Use it as learning for next time</li>
+                <li>Focus on the positive changes you're making overall</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>If you're on diabetes medications:</strong> Going significantly over your carb target can affect your blood sugar. Monitor more closely and contact us if you have concerns.
+            </div>
+
+            <h2>If You're on the Ketogenic Pathway</h2>
+            <p>Keto patients start with a higher target that steps down gradually over several weeks. Your portal always shows your current target for this week. Don't worry about the final keto goal yet — just focus on today's number.</p>
+            
+            <div class="key-point">
+                <strong>Keto patients:</strong> Refer to your separate "Ketogenic Diet Guide" for detailed stepping instructions and what to expect during the transition.
+            </div>
+
+            <h2>Quick Reference Checklist</h2>
+            <div class="success-box">
+                <strong>Daily Success Checklist:</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>Check my carb target on the portal</li>
+                    <li>Plan roughly equal carbs at each meal</li>
+                    <li>Count net carbs (total carbs minus fibre)</li>
+                    <li>Fill half my plate with low-carb vegetables</li>
+                    <li>Track my intake if recommended</li>
+                    <li>Stay hydrated and take my medications as prescribed</li>
+                </ul>
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Diabetes Canada Clinical Practice Guidelines Expert Committee. Diabetes Canada 2018 Clinical Practice Guidelines for the Prevention and Management of Diabetes in Canada. Can J Diabetes. 2018;42(Suppl 1):S1-S325.</li>
+                    <li>Kirkpatrick CF, Bolick JP, Kris-Etherton PM, et al. Review of current evidence and clinical recommendations on the effects of low-carbohydrate and very-low-carbohydrate (including ketogenic) diets for the management of body weight and other cardiometabolic risk factors. J Clin Lipidol. 2019;13(5):689-711.</li>
+                    <li>Evert AB, Dennison M, Gardner CD, et al. Nutrition therapy for adults with diabetes or prediabetes: a consensus report. Diabetes Care. 2019;42(5):731-754.</li>
+                    <li>Health Canada. Canada's Food Guide. Ottawa: Health Canada; 2019. Available from: https://food-guide.canada.ca/</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div>David Whiting, MBChB CCFP | Kelowna, BC</div>
+            <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+        </footer>
+    </div>
+</body>
+</html>
