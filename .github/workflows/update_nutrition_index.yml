@@ -38,6 +38,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to index_nutrition.json"
           else
-            git commit -m "Automated nutrition index update"
+            git commit -m "Automated nutrition index update [skip ci]"
             git push
           fi
