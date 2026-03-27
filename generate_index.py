@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # Configuration
 HANDOUTS_DIR = '.' 
 INDEX_FILE = 'index.html'
-# Change this part in generate_index.py
+# We exclude the new nutrition files so they don't show up in the patient list
 EXCLUDE_FILES = [
     INDEX_FILE, 
     'generate_index.py', 
@@ -18,7 +18,7 @@ def get_metadata(filepath):
     """Extracts title and category from HTML."""
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
-            soup = BeautifulSoup(f, 'html.parser')
+            soup = BeautifulSoup(f, 'utf-8', features="html.parser")
             title = soup.title.string if soup.title else filepath
             cat_tag = soup.find('meta', attrs={'name': 'category'})
             category = cat_tag['content'].strip() if cat_tag else "Uncategorized"
@@ -35,10 +35,7 @@ def generate_index():
         title, category = get_metadata(os.path.join(HANDOUTS_DIR, file))
         handouts.append({'file': file, 'title': title, 'category': category})
 
-    # SMART SORTING LOGIC:
-    # 1. We take the category (e.g., "SKIN_ACNE") and split it by the underscore.
-    # 2. We use the FIRST part ("SKIN") as the primary group.
-    # 3. This ensures "SKIN" and "SKIN_ACNE" are always siblings.
+    # Sorts by parent category (the part before the underscore) first
     handouts.sort(key=lambda x: (x['category'].split('_')[0], x['category'], x['title']))
 
     rows_html = ""
