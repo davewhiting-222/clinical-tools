@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="module" content="nutrition">
+    <meta name="section" content="myth-busters">
+    <meta name="topics" content="myth-buster,vitamins,minerals,micronutrients,supplements,evidence-based,nutrition-science">
+    <meta name="diet_codes" content="keto,spanish_med,therapeutic_lc,moderate_lc,liberal_lc,spanish_therapeutic_lc,spanish_moderate_lc,spanish_liberal_lc">
+    <meta name="flags" content="">
+    <meta name="category" content="Nutrition_Diet">
+    <meta name="description" content="Evidence-based answers to the question: will I be deficient in vitamins and minerals on a low-carbohydrate or ketogenic diet? Covers the micronutrient density of low-carb foods, electrolytes, magnesium and potassium on keto, what to monitor, and when supplementation makes clinical sense.">
+
+    <title>MYTH-BUSTERS: Will I Be Deficient in Vitamins and Minerals?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            margin-left: 1rem;
+        }
+
+        .references li {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header, .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .footer {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>MYTH-BUSTERS: Will I Be Deficient in Vitamins and Minerals?</h1>
+            <small>Prepared by your family doctor</small>
+            <time datetime="2024-12-19">December 19, 2024</time>
+        </header>
+
+        <div class="content">
+            <div class="key-point">
+                <strong>The Bottom Line:</strong> A well-planned low-carbohydrate diet can provide most essential nutrients. Understanding which foods are nutrient-dense and monitoring key electrolytes helps prevent deficiencies while supporting your health goals.
+            </div>
+
+            <h2>The Nutrient Density Advantage</h2>
+            
+            <p>Many people worry that cutting carbs means cutting nutrition. The truth is quite the opposite. Low-carb foods are often among the most nutrient-dense foods available.</p>
+
+            <div class="success-box">
+                <strong>Why This Matters:</strong> Nutrient density measures how many vitamins and minerals you get per calorie. Animal proteins, leafy greens, and healthy fats pack more nutrition per bite than processed carbs.
+            </div>
+
+            <h3>Top Nutrient-Dense Low-Carb Foods</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Category</th>
+                        <th>Key Nutrients</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Organ Meats</td>
+                        <td>B vitamins, iron, zinc, vitamin A</td>
+                        <td>Liver, heart, kidney</td>
+                    </tr>
+                    <tr>
+                        <td>Fatty Fish</td>
+                        <td>Omega-3s, vitamin D, B12, selenium</td>
+                        <td>Salmon, sardines, mackerel</td>
+                    </tr>
+                    <tr>
+                        <td>Leafy Greens</td>
+                        <td>Folate, vitamin K, magnesium, potassium</td>
+                        <td>Spinach, kale, Swiss chard</td>
+                    </tr>
+                    <tr>
+                        <td>Eggs</td>
+                        <td>Choline, B12, selenium, vitamin D</td>
+                        <td>Whole eggs (especially yolks)</td>
+                    </tr>
+                    <tr>
+                        <td>Nuts & Seeds</td>
+                        <td>Vitamin E, magnesium, healthy fats</td>
+                        <td>Almonds, walnuts, pumpkin seeds</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>The Electrolyte Connection</h2>
+
+            <p>When you reduce carbohydrates, your body processes sodium and water differently. This affects three key electrolytes that deserve special attention.</p>
+
+            <h3>Sodium: Your Foundation Electrolyte</h3>
+
+            <div class="key-point">
+                <strong>Target:</strong> 2,300-3,000mg daily (about 1-1.5 teaspoons of salt)<br>
+                <strong>Why:</strong> Low-carb eating reduces insulin, which tells your kidneys to release more sodium. You need to replace what you're losing.
+            </div>
+
+            <p><strong>Best sources:</strong> Sea salt, pink salt, bone broth, olives, pickled vegetables</p>
+
+            <h3>Potassium: The Cellular Partner</h3>
+
+            <div class="key-point">
+                <strong>Target:</strong> 3,500-4,700mg daily<br>
+                <strong>Why:</strong> Works with sodium to maintain proper fluid balance and muscle function.
+            </div>
+
+            <p><strong>Best low-carb sources:</strong> Avocado (975mg), spinach (840mg per cup), salmon (628mg per 100g), mushrooms (428mg per cup)</p>
+
+            <h3>Magnesium: The Relaxation Mineral</h3>
+
+            <div class="key-point">
+                <strong>Target:</strong> 400-420mg for men, 310-320mg for women<br>
+                <strong>Why:</strong> Supports over 300 enzyme reactions, including energy production and muscle function.
+            </div>
+
+            <p><strong>Best sources:</strong> Pumpkin seeds (156mg per ounce), dark chocolate (95mg per ounce), almonds (80mg per ounce), spinach (78mg per cup)</p>
+
+            <h2>What to Watch For</h2>
+
+            <div class="warning-box">
+                <strong>Early Warning Signs of Electrolyte Imbalance:</strong>
+                <ul>
+                    <li>Headaches or dizziness</li>
+                    <li>Muscle cramps or weakness</li>
+                    <li>Fatigue or brain fog</li>
+                    <li>Heart palpitations</li>
+                    <li>Constipation</li>
+                </ul>
+            </div>
+
+            <h3>Nutrients That Need Extra Attention</h3>
+
+            <p><strong>Fiber:</strong> Focus on non-starchy vegetables, nuts, and seeds. Aim for 25-35g daily from whole food sources.</p>
+
+            <p><strong>B Vitamins:</strong> Abundant in meat, fish, and eggs. Vegetarians on low-carb diets should monitor B12 levels closely.</p>
+
+            <p><strong>Vitamin D:</strong> Limited food sources regardless of diet. Most Canadians need supplementation, especially in winter.</p>
+
+            <h2>When Supplementation Makes Sense</h2>
+
+            <div class="mindset-box">
+                <strong>Food First Philosophy:</strong> Aim to get nutrients from whole foods whenever possible. Supplements should fill specific gaps, not replace a balanced approach to eating.
+            </div>
+
+            <h3>Consider These Supplements:</h3>
+
+            <ol>
+                <li><strong>Magnesium glycinate or citrate:</strong> 200-400mg daily if you can't meet needs through food</li>
+                <li><strong>Vitamin D3:</strong> 1,000-4,000 IU daily (especially October-April in Canada)</li>
+                <li><strong>Electrolyte powder:</strong> During the first few weeks or during illness/exercise</li>
+                <li><strong>B12:</strong> If you're over 50 or following a plant-based low-carb approach</li>
+            </ol>
+
+            <div class="caution-box">
+                <strong>Before Starting Supplements:</strong> Discuss with your healthcare provider, especially if you take medications or have health conditions. Some supplements can interact with prescriptions or affect medical test results.
+            </div>
+
+            <h2>Your Action Plan</h2>
+
+            <div class="success-box">
+                <strong>Week 1-2: Foundation Building</strong>
+                <ul>
+                    <li>Add ½ teaspoon salt to your water bottle</li>
+                    <li>Include one serving of leafy greens daily</li>
+                    <li>Choose fatty fish twice per week</li>
+                    <li>Track how you feel - energy, sleep, digestion</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <strong>Month 1-3: Fine-Tuning</strong>
+                <ul>
+                    <li>Request bloodwork including B12, magnesium, and vitamin D</li>
+                    <li>Experiment with organ meats (start with pâté or liverwurst)</li>
+                    <li>Consider a high-quality multivitamin as insurance</li>
+                    <li>Monitor symptoms and adjust electrolyte intake accordingly</li>
+                </ul>
+            </div>
+
+            <h3>Red Flags: When to Call Your Doctor</h3>
+
+            <div class="caution-box">
+                Contact your healthcare provider if you experience:
+                <ul>
+                    <li>Persistent fatigue after 4-6 weeks</li>
+                    <li>Irregular heartbeat or chest pain</li>
+                    <li>Severe muscle cramps or weakness</li>
+                    <li>Significant hair loss or brittle nails</li>
+                    <li>Any concerning symptoms that worry you</li>
+                </ul>
+            </div>
+
+            <div class="key-point">
+                <strong>Remember:</strong> Your body is remarkably adaptable. Most people feel better on a well-planned low-carb diet, not worse. Trust the process, listen to your body, and don't hesitate to ask for support when you need it.
+            </div>
+        </div>
+
+        <div class="references">
+            <h3>References</h3>
+            <ol>
+                <li>Feinman RD, Pogozelski WK, Astrup A, et al. Dietary carbohydrate restriction as the first approach in diabetes management: critical review and evidence base. Nutrition. 2015;31(1):1-13.</li>
+                <li>Phinney SD. Metabolic effects of the very-low-carbohydrate diets: misunderstood "villains" of human metabolism. J Lipid Res. 2004;45(8):1519-1526.</li>
+                <li>Kirkpatrick CF, Bolick JP, Kris-Etherton PM, et al. Review of current evidence and clinical recommendations on the effects of low-carbohydrate and very-low-carbohydrate (including ketogenic) diets for the management of body weight and other cardiometabolic risk factors. J Clin Lipidol. 2019;13(5):689-711.</li>
+                <li>Health Canada. Dietary Reference Intakes Tables. Ottawa: Health Canada; 2019. Available from: https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/dietary-reference-intakes/tables.html</li>
+                <li>Volek JS, Phinney SD. The Art and Science of Low Carbohydrate Living. Miami: Beyond Obesity LLC; 2011.</li>
+            </ol>
+        </div>
+
+        <footer class="footer">
+            <div>David Whiting, MBChB CCFP | Kelowna, BC</div>
+            <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+        </footer>
+    </div>
+</body>
+</html>
