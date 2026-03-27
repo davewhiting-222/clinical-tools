@@ -150,6 +150,25 @@
       "description": "How to read food labels on a low-carbohydrate or ketogenic diet. Covers net carb calculation, hidden sugars, misleading health claims, and how to compare products at a glance."
     },
     {
+      "filename": "spanish_mediterranean_diet_handout.html",
+      "title": "Spanish Mediterranean Diet Guide",
+      "topics": [
+        "spanish-mediterranean",
+        "mediterranean",
+        "diet-guide",
+        "onboarding"
+      ],
+      "diet_codes": [
+        "spanish_med",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "diet-guides",
+      "description": "A practical guide to the Spanish Mediterranean diet. Covers the principles of traditional Spanish Mediterranean eating, key food choices, what to avoid, olive oil as the primary fat source, and the role of fish, legumes, and vegetables in this diet pattern."
+    },
+    {
       "filename": "two_line_title_approach_managing_illness_safely_on_your_sglt2_medication_applies_to_jardiance_empagliflozin_forxiga_dapagliflozin_invokana_canagliflozin_handout.html",
       "title": "Managing Illness Safely on Your SGLT2 Medication",
       "topics": [
