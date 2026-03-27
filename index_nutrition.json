@@ -95,6 +95,31 @@
       "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
     },
     {
+      "filename": "myth_busters_won_t_a_high_fat_diet_give_me_a_heart_attack_handout.html",
+      "title": "MYTH-BUSTERS: Won't a High Fat Diet Give Me a Heart Attack?",
+      "topics": [
+        "myth-buster",
+        "heart-health",
+        "fat",
+        "cholesterol",
+        "cardiovascular",
+        "evidence-based"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "myth-busters",
+      "description": "Evidence-based answers to the question: won't a high fat diet give me a heart attack? Covers the history of dietary fat and heart disease, LDL particle size, triglyceride to HDL ratio, and what the current evidence actually shows about low-carbohydrate diets and cardiovascular risk."
+    },
+    {
       "filename": "peri_procedural_rules_handout.html",
       "title": "Peri-Procedural Rules for Low-Carb/Keto Diabetic Patients",
       "topics": [
