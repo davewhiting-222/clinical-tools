@@ -95,6 +95,37 @@
       "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
     },
     {
+      "filename": "myth_busters_is_it_safe_to_eat_this_way_if_i_have_diabetes_handout.html",
+      "title": "MYTH-BUSTERS: Is it Safe to Eat Low-Carb with Diabetes?",
+      "topics": [
+        "myth-buster",
+        "diabetes",
+        "safety",
+        "insulin",
+        "blood-sugar",
+        "evidence-based"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [
+        "has_diabetes",
+        "short_acting_insulin",
+        "long_acting_insulin",
+        "sulfonylurea",
+        "sglt2_inhibitor"
+      ],
+      "section": "myth-busters",
+      "description": "Evidence-based answers to the question: is it safe to follow a low-carbohydrate or ketogenic diet with diabetes? Covers how low-carb diets lower blood sugar, why medication adjustment is essential, what monitoring is required, and what the clinical trial evidence shows."
+    },
+    {
       "filename": "myth_busters_won_t_a_high_fat_diet_give_me_a_heart_attack_handout.html",
       "title": "MYTH-BUSTERS: Won't a High Fat Diet Give Me a Heart Attack?",
       "topics": [
