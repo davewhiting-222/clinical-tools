@@ -7,10 +7,6 @@ on:
     paths:
       - '*.html'
       - 'generate_nutrition_index.py'
-  workflow_run:
-    workflows: ["Auto-update Patient Handout Index"]
-    types:
-      - completed
 
 jobs:
   update-index:
