@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Nutrition_Diet">
+    <meta name="module" content="nutrition">
+    <meta name="section" content="diet-guides"> 
+    <meta name="topics" content="keto,diet-guide,onboarding"> 
+    <meta name="diet_codes" content="keto,spanish_med"> 
+    <meta name="flags" content=""> 
+    
+    <title>Your Guide to the Ketogenic Diet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .small {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+            min-height: 44px;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        .checklist {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            min-height: 44px;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 4px;
+            min-width: 16px;
+            min-height: 16px;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .references ol {
+            margin-left: 1rem;
+        }
+
+        .references li {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Guide to the Ketogenic Lifestyle</h1>
+            <div class="small">Prepared by your family doctor</div>
+            <time>December 2024</time>
+        </div>
+
+        <div class="content">
+            <div class="key-point">
+                <strong>What You'll Learn:</strong> This guide will help you understand ketosis, make informed food choices, and choose the approach that best supports your health goals - whether that's standard whole-food keto or the heart-protective Spanish Ketogenic Mediterranean Diet.
+            </div>
+
+            <h2>Understanding Ketosis: Your Body's Alternative Fuel System</h2>
+
+            <p>Think of your body as a hybrid vehicle that can run on two different types of fuel: sugar (glucose) or fat. Normally, your body relies on glucose from carbohydrates for energy.</p>
+
+            <div class="mindset-box">
+                <strong>Ketosis Simplified:</strong> Ketosis is a natural metabolic state where your body shifts its primary fuel source from burning glucose to burning stored body fat and dietary fat. When you significantly restrict carbohydrates, your liver begins converting fatty acids into molecules called ketone bodies (such as beta-hydroxybutyrate). These ketones act as a highly efficient, clean-burning fuel for your brain, heart, and muscles.
+            </div>
+
+            <p>By making this shift, you naturally lower your insulin levels, which allows your body to unlock and burn stored fat while dramatically reducing hunger.</p>
+
+            <h2>How to Achieve Ketosis</h2>
+
+            <p>To successfully signal your body to switch fuel tanks, you must systematically reduce the carbohydrates that spike your blood sugar and insulin.</p>
+
+            <h3>The Three Key Rules:</h3>
+
+            <table>
+                <tr>
+                    <th>Rule</th>
+                    <th>Action</th>
+                    <th>Why It Matters</th>
+                </tr>
+                <tr>
+                    <td><strong>The Carbohydrate Limit</strong></td>
+                    <td>Restrict carbohydrates to 20-50 grams per day (less than 10% of total daily calories)</td>
+                    <td>Forces your body to switch to fat-burning mode</td>
+                </tr>
+                <tr>
+                    <td><strong>The "Above-Ground" Rule</strong></td>
+                    <td>Get carbs only from low-glycemic vegetables that grow above ground (spinach, broccoli, zucchini)</td>
+                    <td>Provides nutrients without blood sugar spikes</td>
+                </tr>
+                <tr>
+                    <td><strong>Stop Liquid Sugar</strong></td>
+                    <td>Eliminate soda, fruit juice, and sweet coffees completely</td>
+                    <td>Liquid sugars flood the liver and instantly turn into fat</td>
+                </tr>
+            </table>
+
+            <h2>Your Food Guide: What to Eat and What to Avoid</h2>
+
+            <div class="success-box">
+                <h4>Foods to Enjoy (Eat to Satiety):</h4>
+                <ul>
+                    <li><strong>Healthy Fats:</strong> Extra virgin olive oil, avocados, macadamia nuts, walnuts, olives, and natural fats from meat or dairy</li>
+                    <li><strong>Quality Proteins:</strong> Fatty fish (salmon, sardines, mackerel), eggs, poultry, and unprocessed meats</li>
+                    <li><strong>Non-Starchy Vegetables:</strong> Leafy greens (spinach, arugula, kale), cruciferous vegetables (broccoli, cauliflower), and salads</li>
+                </ul>
+            </div>
+
+            <div class="caution-box">
+                <h4>Foods to Strictly Avoid:</h4>
+                <ul>
+                    <li><strong>The "White Foods":</strong> Bread, pasta, rice, potatoes, flour, and sugar</li>
+                    <li><strong>Industrial Seed Oils:</strong> Soybean, corn, canola, cottonseed, and sunflower oils (highly processed and pro-inflammatory)</li>
+                    <li><strong>Processed Meats:</strong> Hot dogs, commercial bacon, and salami (often contain added sugars and harmful curing agents)</li>
+                </ul>
+            </div>
+
+            <h3>The Importance of Whole Foods</h3>
+
+            <div class="warning-box">
+                <strong>Avoid the "Dirty Keto" Trap:</strong> Don't rely on processed "keto-friendly" bars, breads, and treats. You must prioritize single-ingredient, whole foods. Ultra-processed foods are engineered to bypass your body's natural fullness signals, forcing you to overeat. Many processed keto snacks contain synthetic fibres or hidden sugar alcohols that can still spike your blood sugar, stalling your progress.
+            </div>
+
+            <h2>Choosing Your Path: Two Proven Approaches</h2>
+
+            <p>While restricting carbohydrates is the foundation, the types of fat you consume will determine your long-term heart health and cholesterol levels.</p>
+
+            <h3>Option 1: Standard Whole-Food Keto</h3>
+            <p>This approach relies heavily on saturated fats like butter, tallow, high-fat dairy, and red meat. While effective for weight loss and reversing diabetes, a diet high in saturated fat can cause a significant increase in LDL ("bad") cholesterol and ApoB in some individuals.</p>
+
+            <h3>Option 2: Spanish Ketogenic Mediterranean Diet (SKMD)</h3>
+
+            <div class="success-box">
+                <p><strong>The Gold Standard Protocol:</strong> The SKMD merges the fat-burning power of ketosis with the heart-protecting benefits of the Mediterranean diet.</p>
+                
+                <h4>The SKMD Rules:</h4>
+                <ul>
+                    <li>Replace saturated fats with monounsaturated and polyunsaturated fats (MUFAs and PUFAs)</li>
+                    <li>Consume at least <strong>30 mL (2 tablespoons) of virgin olive oil daily</strong> as the primary fat</li>
+                    <li>Make <strong>fish your main protein source</strong> (at least 4 days per week)</li>
+                    <li>Limit carbohydrates entirely to green vegetables and salads</li>
+                    <li>Allow moderate red wine intake (1 glass/day) if desired</li>
+                </ul>
+
+                <h4>The Benefits:</h4>
+                <p>Clinical trials show that while standard keto can raise LDL cholesterol, the SKMD actually <strong>lowers LDL cholesterol</strong> and triglycerides, raises "good" HDL cholesterol, and is highly sustainable due to its rich, flavourful variety.</p>
+            </div>
+
+            <h2>Your Action Plan</h2>
+
+            <div class="checklist">
+                <h4>Week 1-2: Getting Started</h4>
+                <div class="checklist-item">
+                    <input type="checkbox" id="clear-pantry">
+                    <label for="clear-pantry">Clear out processed foods, grains, and sugary items from your kitchen</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="stock-fats">
+                    <label for="stock-fats">Stock up on healthy fats (olive oil, avocados, nuts)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="plan-meals">
+                    <label for="plan-meals">Plan your first week of meals around protein and vegetables</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="track-carbs">
+                    <label for="track-carbs">Start tracking your daily carbohydrate intake</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="choose-approach">
+                    <label for="choose-approach">Decide between standard keto or SKMD approach</label>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <h4>Ongoing Success Strategies</h4>
+                <div class="checklist-item">
+                    <input type="checkbox" id="meal-prep">
+                    <label for="meal-prep">Prepare meals in advance to avoid processed food temptations</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="monitor-energy">
+                    <label for="monitor-energy">Monitor your energy levels and how you feel</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="follow-up">
+                    <label for="follow-up">Schedule follow-up appointments to monitor your progress</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lab-work">
+                    <label for="lab-work">Get blood work done to track cholesterol and metabolic markers</label>
+                </div>
+            </div>
+
+            <h2>Common Questions</h2>
+
+            <h3>How long does it take to enter ketosis?</h3>
+            <p>Most people enter ketosis within 2-4 days of restricting carbohydrates to under 50 grams per day. You may experience some fatigue initially as your body adapts.</p>
+
+            <h3>What about the "keto flu"?</h3>
+            <p>Some people experience headaches, fatigue, or irritability in the first week. This is temporary and often related to electrolyte imbalances. Ensure adequate salt, potassium, and magnesium intake.</p>
+
+            <h3>Can I exercise on keto?</h3>
+            <p>Yes, but allow 2-3 weeks for your body to adapt before intense exercise. Your performance may temporarily decrease before improving.</p>
+
+            <div class="key-point">
+                <strong>Remember:</strong> This is a lifestyle change, not a quick fix. Work closely with your healthcare provider to monitor your progress and adjust your approach based on your individual response and health markers.
+            </div>
+        </div>
+
+        <div class="references">
+            <h3>References</h3>
+            <ol>
+                <li>Paoli A, Rubini A, Volek JS, Grimaldi KA. Beyond weight loss: a review of the therapeutic uses of very-low-carbohydrate (ketogenic) diets. Eur J Clin Nutr. 2013;67(8):789-796.</li>
+                <li>Bueno NB, de Melo IS, de Oliveira SL, da Rocha Ataide T. Very-low-carbohydrate ketogenic diet v. low-fat diet for long-term weight loss: a meta-analysis of randomised controlled trials. Br J Nutr. 2013;110(7):1178-1187.</li>
+                <li>Mansoor N, Vinknes KJ, Veierød MB, Retterstøl K. Effects of low-carbohydrate diets v. low-fat diets on body weight and cardiovascular risk factors: a meta-analysis of randomised controlled trials. Br J Nutr. 2016;115(3):466-479.</li>
+                <li>Pérez-Guisado J, Muñoz-Serrano A, Alonso-Moraga Á. Spanish Ketogenic Mediterranean Diet: a healthy cardiovascular diet for weight loss. Nutr J. 2008;7:30.</li>
+                <li>Harvey CJC, Schofield GM, Zinn C, Thornley SJ, Crofts C, Merien FLR. Low-carbohydrate diets differing in carbohydrate restriction improve cardiometabolic and anthropometric markers in healthy adults: A randomised controlled trial. PeerJ. 2019;7:e6273.</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </div>
+    </div>
+</body>
+</html>
