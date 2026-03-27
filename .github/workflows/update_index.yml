@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - '*.html'
+      - '!index_nutrition.json'
 concurrency:
   group: index-update
   cancel-in-progress: false
@@ -39,6 +40,6 @@ jobs:
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to index.html"
           else
-            git commit -m "Automated index update"
+            git commit -m "Automated index update [skip ci]"
             git push origin main
           fi
