@@ -120,6 +120,31 @@
       "description": "Evidence-based answers to the question: won't a high fat diet give me a heart attack? Covers the history of dietary fat and heart disease, LDL particle size, triglyceride to HDL ratio, and what the current evidence actually shows about low-carbohydrate diets and cardiovascular risk."
     },
     {
+      "filename": "myth_busters_won_t_this_damage_my_kidneys_handout.html",
+      "title": "Myth-Busters: Won't This Damage My Kidneys?",
+      "topics": [
+        "myth-buster",
+        "kidneys",
+        "renal",
+        "protein",
+        "evidence-based",
+        "safety"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "myth-busters",
+      "description": "Evidence-based answers to the question: won't a high protein or low-carbohydrate diet damage my kidneys? Covers the protein-kidney myth, what the evidence shows for healthy kidneys, when CKD is a genuine concern, and what monitoring is appropriate."
+    },
+    {
       "filename": "peri_procedural_rules_handout.html",
       "title": "Peri-Procedural Rules for Low-Carb/Keto Diabetic Patients",
       "topics": [
