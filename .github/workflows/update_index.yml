@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,18 +28,17 @@ jobs:
       - name: Run index generator
         run: python generate_index.py
       - name: Commit and push if index changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set +e
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add index.html
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to index.html"
           else
+            git fetch origin main
+            git rebase origin/main
             git commit -m "Automated index update"
-            git push
-            if [ $? -ne 0 ]; then
-              git pull --rebase
-              git push
-            fi
+            git push origin main
           fi
