@@ -1,0 +1,49 @@
+name: Unified Handout Indexing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.html'
+      - 'generate_index.py'
+      - 'generate_nutrition_index.py'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install beautifulsoup4
+
+    - name: Run HTML Index Generator
+      run: python generate_index.py
+
+    - name: Run Nutrition JSON Generator
+      run: python generate_nutrition_index.py
+
+    - name: Commit and push all changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "github-actions"
+        git add index.html index_nutrition.json
+        # Only commit if something actually changed
+        if git diff --staged --quiet; then
+          echo "No changes to index files."
+        else
+          git commit -m "Automated update of HTML and JSON indices [skip ci]"
+          git push
+        fi
