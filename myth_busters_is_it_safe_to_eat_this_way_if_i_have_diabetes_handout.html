@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <meta name="module" content="nutrition">
+   <meta name="section" content="myth-busters">
+   <meta name="topics" content="myth-buster,diabetes,safety,insulin,blood-sugar,evidence-based">
+   <meta name="diet_codes" content="keto,spanish_med,therapeutic_lc,moderate_lc,liberal_lc,spanish_therapeutic_lc,spanish_moderate_lc,spanish_liberal_lc">
+   <meta name="flags" content="has_diabetes,short_acting_insulin,long_acting_insulin,sulfonylurea,sglt2_inhibitor">
+   <meta name="category" content="Nutrition_Diet">
+   <meta name="description" content="Evidence-based answers to the question: is it safe to follow a low-carbohydrate or ketogenic diet with diabetes? Covers how low-carb diets lower blood sugar, why medication adjustment is essential, what monitoring is required, and what the clinical trial evidence shows.">
+
+    <title>MYTH-BUSTERS: Is it Safe to Eat Low-Carb with Diabetes?</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2.5rem;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+        }
+
+        .checklist {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .checklist h4 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2rem;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 1.875rem;
+            margin-top: 2rem;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 1.25rem 2.5rem;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        time {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            .header, .content, .footer {
+                padding: 1.5rem;
+            }
+            
+            .references {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header, .content, .footer {
+                padding: 1rem;
+            }
+            
+            .references {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>MYTH-BUSTERS: Is it Safe to Eat Low-Carb with Diabetes?</h1>
+            <small>Prepared by your family doctor</small>
+            <br>
+            <time>December 2024</time>
+        </header>
+
+        <main class="content">
+            <div class="mindset-box">
+                <p><strong>The Bottom Line:</strong> Low-carbohydrate diets can be safe and highly effective for managing diabetes when done properly with medical supervision. The key is understanding how to adjust medications and monitor your blood sugars safely.</p>
+            </div>
+
+            <h2>The Science: How Low-Carb Diets Help Diabetes</h2>
+            
+            <p>When you eat fewer carbohydrates, your blood sugar naturally stays more stable. Here's what happens in your body:</p>
+
+            <ul>
+                <li><strong>Less glucose enters your bloodstream</strong> because carbs break down into sugar</li>
+                <li><strong>Your body needs less insulin</strong> to handle the smaller amount of sugar</li>
+                <li><strong>Your cells become more sensitive to insulin</strong> over time</li>
+                <li><strong>Your liver produces less glucose</strong> when not constantly dealing with dietary carbs</li>
+            </ul>
+
+            <div class="key-point">
+                <p><strong>Research Results:</strong> The landmark Virta Health study showed that 60% of people with type 2 diabetes achieved remission (normal blood sugars without medication) after one year on a medically supervised low-carb diet.¹</p>
+            </div>
+
+            <h2>Why Medication Adjustment is Critical</h2>
+
+            <p>Here's the most important safety point: if you take diabetes medications, especially insulin or sulfonylureas (glyburide, gliclazide), your doses may need to be reduced quickly when you start eating low-carb.</p>
+
+            <div class="caution-box">
+                <p><strong>Warning:</strong> Taking your usual diabetes medication doses while eating very few carbs can cause dangerous low blood sugar (hypoglycemia). This is why medical supervision is essential.</p>
+            </div>
+
+            <h3>Medications That May Need Adjustment</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medication Type</th>
+                        <th>Examples</th>
+                        <th>Risk Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Insulin</td>
+                        <td>All types</td>
+                        <td>HIGH - requires immediate adjustment</td>
+                    </tr>
+                    <tr>
+                        <td>Sulfonylureas</td>
+                        <td>Glyburide, gliclazide</td>
+                        <td>HIGH - may cause low blood sugar</td>
+                    </tr>
+                    <tr>
+                        <td>Metformin</td>
+                        <td>Glucophage</td>
+                        <td>LOW - usually safe to continue</td>
+                    </tr>
+                    <tr>
+                        <td>SGLT2 inhibitors</td>
+                        <td>Empagliflozin, canagliflozin</td>
+                        <td>MODERATE - monitor for ketones</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Essential Monitoring Requirements</h2>
+
+            <p>When starting a low-carb diet with diabetes, more frequent monitoring helps ensure your safety:</p>
+
+            <div class="checklist">
+                <h4>Daily Monitoring Checklist</h4>
+                <ul>
+                    <li>Check blood glucose 4+ times daily for the first few weeks</li>
+                    <li>Test for ketones if blood sugar is above 14 mmol/L</li>
+                    <li>Record your carb intake and blood sugar patterns</li>
+                    <li>Watch for symptoms of low blood sugar</li>
+                    <li>Stay well hydrated (8+ glasses of water daily)</li>
+                </ul>
+            </div>
+
+            <h3>Signs to Watch For</h3>
+
+            <div class="warning-box">
+                <p><strong>Call your doctor immediately if you experience:</strong></p>
+                <ul>
+                    <li>Blood sugar below 4 mmol/L repeatedly</li>
+                    <li>Symptoms of low blood sugar: shaking, sweating, confusion, rapid heartbeat</li>
+                    <li>High ketones with nausea or vomiting</li>
+                    <li>Persistent blood sugars above 20 mmol/L</li>
+                </ul>
+            </div>
+
+            <h2>The Research Evidence</h2>
+
+            <p>Multiple high-quality studies have demonstrated the safety and effectiveness of low-carb diets for diabetes:</p>
+
+            <ul>
+                <li><strong>Virta Health Study:</strong> 262 adults with type 2 diabetes followed for 2 years showed sustained improvements in blood sugar control and significant medication reductions²</li>
+                <li><strong>Duke University Research:</strong> Participants reduced HbA1c by 1.5% and lost an average of 11 kg over 6 months³</li>
+                <li><strong>Systematic Reviews:</strong> Analysis of 23 studies confirmed low-carb diets are more effective than low-fat diets for diabetes management⁴</li>
+            </ul>
+
+            <div class="success-box">
+                <p><strong>Good News:</strong> When done with proper medical supervision, low-carb diets have excellent safety records and can lead to dramatic improvements in diabetes control, often allowing people to reduce or eliminate medications.</p>
+            </div>
+
+            <h2>Getting Started Safely</h2>
+
+            <p>The safest approach is a gradual, medically supervised transition:</p>
+
+            <ol>
+                <li><strong>Consult your healthcare team first</strong> - never start without medical guidance</li>
+                <li><strong>Begin with moderate carb reduction</strong> (100-150g daily) before going very low-carb</li>
+                <li><strong>Adjust medications proactively</strong> as your doctor recommends</li>
+                <li><strong>Monitor blood sugars frequently</strong> for the first month</li>
+                <li><strong>Stay connected with your healthcare team</strong> for ongoing adjustments</li>
+            </ol>
+
+            <div class="key-point">
+                <p><strong>Remember:</strong> The goal isn't just lower blood sugars - it's achieving better overall health while staying safe. With proper medical supervision, low-carb eating can be a powerful tool for managing diabetes.</p>
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Athinarayanan SJ, Adams RN, Hallberg SJ, et al. Long-term effects of a novel continuous remote care intervention including nutritional ketosis for the management of type 2 diabetes: a 2-year non-randomized clinical trial. Front Endocrinol. 2019;10:348.</li>
+                    <li>Hallberg SJ, McKenzie AL, Williams PT, et al. Effectiveness and safety of a novel care model for the management of type 2 diabetes at 1 year: an open-label, single-arm, pragmatic, clinical trial. Diabetes Care. 2018;41(2):344-349.</li>
+                    <li>Westman EC, Yancy WS, Mavropoulos JC, Marquart M, McDuffie JR. The effect of a low-carbohydrate, ketogenic diet versus a low-glycemic index diet on glycemic control in type 2 diabetes mellitus. Nutr Metab. 2008;5:36.</li>
+                    <li>Snorgaard O, Poulsen GM, Andersen HK, Astrup A. Systematic review and meta-analysis of dietary carbohydrate restriction in patients with type 2 diabetes. BMJ Open Diabetes Res Care. 2017;5(1):e000354.</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </footer>
+    </div>
+</body>
+</html>
