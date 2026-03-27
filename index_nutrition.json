@@ -183,6 +183,31 @@
       ],
       "section": "sick-day-rules",
       "description": "Sick day rules for patients taking empagliflozin (Jardiance), dapagliflozin (Forxiga), or canagliflozin (Invokana). When to hold your medication, ketone monitoring, and when to seek emergency care."
+    },
+    {
+      "filename": "understanding_sugar_substitutes_handout.html",
+      "title": "Understanding Sugar Substitutes - Patient Handout",
+      "topics": [
+        "sweeteners",
+        "sugar-substitutes",
+        "practical-skills",
+        "low-carb",
+        "keto",
+        "food-choices"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "getting-started",
+      "description": "A practical guide to sugar substitutes on a low-carbohydrate or ketogenic diet. Covers which sweeteners are safe, which to avoid, their effect on blood sugar and insulin, and how to use them without compromising your diet goals."
     }
   ]
 }
