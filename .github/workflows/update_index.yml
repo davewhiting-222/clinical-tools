@@ -32,7 +32,6 @@ jobs:
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to index.html"
           else
-            git pull --rebase
             git commit -m "Automated index update"
-            git push
+            git push || (git pull --rebase && git push)
           fi
