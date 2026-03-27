@@ -4,7 +4,15 @@ from bs4 import BeautifulSoup
 # Configuration
 HANDOUTS_DIR = '.' 
 INDEX_FILE = 'index.html'
-EXCLUDE_FILES = [INDEX_FILE, 'generate_index.py', 'requirements.txt', 'README.md']
+# Change this part in generate_index.py
+EXCLUDE_FILES = [
+    INDEX_FILE, 
+    'generate_index.py', 
+    'generate_nutrition_index.py', 
+    'index_nutrition.json', 
+    'requirements.txt', 
+    'README.md'
+]
 
 def get_metadata(filepath):
     """Extracts title and category from HTML."""
