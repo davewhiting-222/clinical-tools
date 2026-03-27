@@ -43,11 +43,12 @@ def main():
             continue
 
         filepath = os.path.join(repo_root, filename)
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read(4096)  # Only need the head section
-        except Exception:
-            continue
+        # Change this part in generate_nutrition_index.py
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()  # Read the full file instead of 4096 bytes
+    except Exception:
+        continue
 
         parser = MetaExtractor()
         parser.feed(content)
