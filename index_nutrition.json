@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "generated": "manual-seed",
+  "handouts": [
+    {
+      "filename": "starting_low_carb_diet.html",
+      "title": "Starting a Low-Carbohydrate Diet: A Practical Guide",
+      "topics": ["onboarding", "low-carb", "all"],
+      "diet_codes": ["therapeutic_lc", "moderate_lc", "liberal_lc", "spanish_therapeutic_lc", "spanish_moderate_lc", "spanish_liberal_lc"],
+      "flags": [],
+      "section": "getting-started",
+      "description": "A practical introduction to starting a low-carbohydrate diet, including what to eat, what to avoid, and what to expect."
+    },
+    {
+      "filename": "mediterranean_diet_handout.html",
+      "title": "The Mediterranean Diet: Evidence-Based Guidance",
+      "topics": ["diet-guide", "mediterranean"],
+      "diet_codes": ["mediterranean", "spanish_therapeutic_lc", "spanish_moderate_lc", "spanish_liberal_lc", "spanish_med"],
+      "flags": [],
+      "section": "diet-guides",
+      "description": "Evidence-based guidance on the Mediterranean diet, its benefits, and how to follow it."
+    },
+    {
+      "filename": "portfolio_diet_handout.html",
+      "title": "The Portfolio Diet: A Natural Approach to Lowering Cholesterol",
+      "topics": ["diet-guide", "cholesterol"],
+      "diet_codes": ["portfolio"],
+      "flags": [],
+      "section": "diet-guides",
+      "description": "Guide to the Portfolio diet for patients focused on cholesterol management."
+    },
+    {
+      "filename": "insulin_resistance_handout.html",
+      "title": "Understanding Insulin Resistance and Low-Carbohydrate Diets",
+      "topics": ["diabetes", "insulin-resistance", "education"],
+      "diet_codes": [],
+      "flags": ["has_diabetes"],
+      "section": "condition-specific",
+      "description": "Explains the relationship between insulin resistance and low-carbohydrate diets for diabetic patients."
+    },
+    {
+      "filename": "afib_low_carb_handout.html",
+      "title": "Low-Carbohydrate Diets and Atrial Fibrillation: What You Need to Know",
+      "topics": ["arrhythmia", "safety", "cardiac"],
+      "diet_codes": [],
+      "flags": ["has_arrhythmia"],
+      "section": "condition-specific",
+      "description": "Important information for patients with atrial fibrillation starting a low-carbohydrate diet."
+    },
+    {
+      "filename": "low_carb_heart_disease_handout.html",
+      "title": "Low-Carbohydrate Diets and Heart Disease Risk: Understanding the Full Picture",
+      "topics": ["cardiac", "safety", "education"],
+      "diet_codes": ["therapeutic_lc", "moderate_lc", "liberal_lc", "keto", "spanish_med"],
+      "flags": ["has_heart_failure"],
+      "section": "condition-specific",
+      "description": "Evidence-based review of low-carbohydrate diets and cardiovascular risk."
+    },
+    {
+      "filename": "sick_day_rules.html",
+      "title": "Sick Day Rules for Diabetes: Medication Management During Illness",
+      "topics": ["sick-day", "diabetes", "safety", "medication"],
+      "diet_codes": [],
+      "flags": ["has_diabetes", "sglt2_inhibitor", "short_acting_insulin", "long_acting_insulin", "sulfonylurea"],
+      "section": "sick-day-rules",
+      "description": "Essential sick day rules for diabetic patients on medication, including when to hold medications."
+    },
+    {
+      "filename": "insulin_resistance_brain_dementia_handout.html",
+      "title": "Insulin Resistance and the Brain: A Guide for Patients and Families",
+      "topics": ["diabetes", "education", "brain-health"],
+      "diet_codes": [],
+      "flags": ["has_diabetes"],
+      "section": "condition-specific",
+      "description": "Explains how insulin resistance affects brain health and the role of diet in prevention."
+    },
+    {
+      "filename": "ibs_lowcarb_handout.html",
+      "title": "Low-Carbohydrate Diet for Irritable Bowel Syndrome",
+      "topics": ["ibs", "gut-health", "low-carb"],
+      "diet_codes": ["therapeutic_lc", "moderate_lc", "liberal_lc"],
+      "flags": [],
+      "section": "condition-specific",
+      "description": "How a low-carbohydrate diet can help manage IBS symptoms."
+    },
+    {
+      "filename": "why_are_oxalates_important_handout.html",
+      "title": "Understanding Oxalates: What You Need to Know",
+      "topics": ["nutrition", "keto", "education"],
+      "diet_codes": ["keto", "spanish_med"],
+      "flags": [],
+      "section": "nutrition-science",
+      "description": "Explains oxalates and their relevance to low-carbohydrate and ketogenic diets."
+    }
+  ]
+}
