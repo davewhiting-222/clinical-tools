@@ -17,6 +17,22 @@
       "flags": [],
       "section": "diet-guides",
       "description": ""
+    },
+    {
+      "filename": "two_line_title_approach_managing_illness_safely_on_your_sglt2_medication_applies_to_jardiance_empagliflozin_forxiga_dapagliflozin_invokana_canagliflozin_handout.html",
+      "title": "Managing Illness Safely on Your SGLT2 Medication",
+      "topics": [
+        "sick-day",
+        "sglt2",
+        "medication-safety",
+        "diabetes"
+      ],
+      "diet_codes": [],
+      "flags": [
+        "sglt2_inhibitor"
+      ],
+      "section": "sick-day-rules",
+      "description": "Sick day rules for patients taking empagliflozin (Jardiance), dapagliflozin (Forxiga), or canagliflozin (Invokana). When to hold your medication, ketone monitoring, and when to seek emergency care."
     }
   ]
 }
