@@ -36,6 +36,25 @@
       "description": ""
     },
     {
+      "filename": "hypoglycemia_recognition_handout.html",
+      "title": "Hypoglycemia Recognition and Management",
+      "topics": [
+        "hypoglycemia",
+        "medication-safety",
+        "diabetes",
+        "emergency"
+      ],
+      "diet_codes": [],
+      "flags": [
+        "has_diabetes",
+        "short_acting_insulin",
+        "long_acting_insulin",
+        "sulfonylurea"
+      ],
+      "section": "sick-day-rules",
+      "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
+    },
+    {
       "filename": "two_line_title_approach_managing_illness_safely_on_your_sglt2_medication_applies_to_jardiance_empagliflozin_forxiga_dapagliflozin_invokana_canagliflozin_handout.html",
       "title": "Managing Illness Safely on Your SGLT2 Medication",
       "topics": [
