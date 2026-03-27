@@ -5,6 +5,9 @@ on:
       - main
     paths:
       - '*.html'
+concurrency:
+  group: index-update
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
