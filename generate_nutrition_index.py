@@ -24,13 +24,11 @@ class MetaExtractor(HTMLParser):
         if self._in_title and self.title is None:
             self.title = data.strip()
 
-
 def parse_list(value):
     """Parse comma-separated string into list, stripping whitespace."""
     if not value:
         return []
     return [v.strip() for v in value.split(',') if v.strip()]
-
 
 def main():
     repo_root = os.path.dirname(os.path.abspath(__file__))
@@ -43,12 +41,11 @@ def main():
             continue
 
         filepath = os.path.join(repo_root, filename)
-        # Change this part in generate_nutrition_index.py
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()  # Read the full file instead of 4096 bytes
-    except Exception:
-        continue
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()  # Read full file to catch all metadata
+        except Exception:
+            continue
 
         parser = MetaExtractor()
         parser.feed(content)
@@ -79,7 +76,6 @@ def main():
         json.dump(output, f, indent=2)
 
     print(f"Generated index_nutrition.json with {len(handouts)} handouts")
-
 
 if __name__ == '__main__':
     main()
