@@ -55,6 +55,30 @@
       "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
     },
     {
+      "filename": "reading_food_labels_whole_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
+      "title": "Reading Food Labels on a Low Carbohydrate or Ketogenic Diet",
+      "topics": [
+        "food-labels",
+        "net-carbs",
+        "practical-skills",
+        "low-carb",
+        "keto"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "getting-started",
+      "description": "How to read food labels on a low-carbohydrate or ketogenic diet. Covers net carb calculation, hidden sugars, misleading health claims, and how to compare products at a glance."
+    },
+    {
       "filename": "two_line_title_approach_managing_illness_safely_on_your_sglt2_medication_applies_to_jardiance_empagliflozin_forxiga_dapagliflozin_invokana_canagliflozin_handout.html",
       "title": "Managing Illness Safely on Your SGLT2 Medication",
       "topics": [
