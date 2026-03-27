@@ -25,7 +25,6 @@ class MetaExtractor(HTMLParser):
             self.title = data.strip()
 
 def parse_list(value):
-    """Parse comma-separated string into list, stripping whitespace."""
     if not value:
         return []
     return [v.strip() for v in value.split(',') if v.strip()]
@@ -35,22 +34,20 @@ def main():
     handouts = []
 
     for filename in sorted(os.listdir(repo_root)):
-        if not filename.endswith('.html'):
-            continue
-        if filename.startswith('index'):
+        if not filename.endswith('.html') or filename.startswith('index'):
             continue
 
         filepath = os.path.join(repo_root, filename)
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()  # Read full file to catch all metadata
+                content = f.read()
         except Exception:
             continue
 
         parser = MetaExtractor()
         parser.feed(content)
 
-        # Only include handouts tagged for the nutrition module
+        # FIX: Corrected indentation for the filter
         if parser.meta.get('module', '').strip().lower() != 'nutrition':
             continue
 
@@ -65,17 +62,10 @@ def main():
         }
         handouts.append(entry)
 
-    output = {
-        "version": "1.0",
-        "generated": "auto",
-        "handouts": handouts
-    }
-
-    output_path = os.path.join(repo_root, 'index_nutrition.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
+    output = {"version": "1.0", "generated": "auto", "handouts": handouts}
+    
+    with open(os.path.join(repo_root, 'index_nutrition.json'), 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2)
-
-    print(f"Generated index_nutrition.json with {len(handouts)} handouts")
 
 if __name__ == '__main__':
     main()
