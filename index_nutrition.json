@@ -3,6 +3,22 @@
   "generated": "auto",
   "handouts": [
     {
+      "filename": "dash_diet_guide_handout.html",
+      "title": "DASH Diet Guide - A Heart-Healthy Approach to Eating",
+      "topics": [
+        "dash",
+        "diet-guide",
+        "blood-pressure",
+        "heart-health"
+      ],
+      "diet_codes": [
+        "dash"
+      ],
+      "flags": [],
+      "section": "diet-guides",
+      "description": "A practical guide to the DASH diet for patients managing blood pressure and cardiovascular health. Covers what to eat, portion guidance, sodium targets, and how the diet reduces blood pressure."
+    },
+    {
       "filename": "eating_out_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
       "title": "Eating Out on a Low Carbohydrate or Ketogenic Diet",
       "topics": [
