@@ -95,6 +95,31 @@
       "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
     },
     {
+      "filename": "myth_busters_can_i_do_this_long_term_handout.html",
+      "title": "Myth-Busters: Can I Do This Long Term?",
+      "topics": [
+        "myth-buster",
+        "sustainability",
+        "long-term",
+        "evidence-based",
+        "motivation",
+        "lifestyle"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "myth-busters",
+      "description": "Evidence-based answers to the question: can I follow a low-carbohydrate or ketogenic diet long term? Covers long-term clinical trial evidence, sustainability research, the maintenance phase, common challenges and how to address them, and what long-term success looks like in practice."
+    },
+    {
       "filename": "myth_busters_is_it_safe_to_eat_this_way_if_i_have_diabetes_handout.html",
       "title": "MYTH-BUSTERS: Is it Safe to Eat Low-Carb with Diabetes?",
       "topics": [
