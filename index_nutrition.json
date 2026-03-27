@@ -185,6 +185,31 @@
       "description": "Sick day rules for patients taking empagliflozin (Jardiance), dapagliflozin (Forxiga), or canagliflozin (Invokana). When to hold your medication, ketone monitoring, and when to seek emergency care."
     },
     {
+      "filename": "understanding_my_carbohydrate_targets_handout.html",
+      "title": "Understanding My Carbohydrate Targets",
+      "topics": [
+        "carb-target",
+        "net-carbs",
+        "practical-skills",
+        "low-carb",
+        "keto",
+        "portion-guide"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "getting-started",
+      "description": "Understanding your prescribed carbohydrate target. Covers net carb calculation, what your daily target means in practical food terms, how carbs are distributed across meals, and what to do if you go over your target."
+    },
+    {
       "filename": "understanding_sugar_substitutes_handout.html",
       "title": "Understanding Sugar Substitutes - Patient Handout",
       "topics": [
