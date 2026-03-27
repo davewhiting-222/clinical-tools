@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 # Configuration
 HANDOUTS_DIR = '.' 
 INDEX_FILE = 'index.html'
-# We exclude the new nutrition files so they don't show up in the patient list
 EXCLUDE_FILES = [
     INDEX_FILE, 
     'generate_index.py', 
@@ -14,17 +13,25 @@ EXCLUDE_FILES = [
     'README.md'
 ]
 
-def get_metadata(filepath):
+def get_metadata(filepath, filename):
     """Extracts title and category from HTML."""
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
-            soup = BeautifulSoup(f, 'utf-8', features="html.parser")
-            title = soup.title.string if soup.title else filepath
+            # FIX: Removed the incorrect 'utf-8' parameter from the constructor
+            soup = BeautifulSoup(f, "html.parser")
+            
+            # Extract title and strip extra whitespace
+            title = soup.title.get_text(strip=True) if soup.title else None
+            if not title:
+                # Fallback: Clean up filename (e.g., "acne_handout" -> "Acne Handout")
+                title = filename.replace('_', ' ').replace('.html', '').title()
+                
             cat_tag = soup.find('meta', attrs={'name': 'category'})
             category = cat_tag['content'].strip() if cat_tag else "Uncategorized"
             return title, category
     except Exception:
-        return filepath, "Uncategorized"
+        # Final safety fallback
+        return filename.replace('_', ' ').replace('.html', '').title(), "Uncategorized"
 
 def generate_index():
     files = [f for f in os.listdir(HANDOUTS_DIR) 
@@ -32,10 +39,11 @@ def generate_index():
     
     handouts = []
     for file in files:
-        title, category = get_metadata(os.path.join(HANDOUTS_DIR, file))
+        # We pass both path and filename for better error handling
+        title, category = get_metadata(os.path.join(HANDOUTS_DIR, file), file)
         handouts.append({'file': file, 'title': title, 'category': category})
 
-    # Sorts by parent category (the part before the underscore) first
+    # Group by family (SKIN, SKIN_ACNE, etc.)
     handouts.sort(key=lambda x: (x['category'].split('_')[0], x['category'], x['title']))
 
     rows_html = ""
@@ -46,12 +54,13 @@ def generate_index():
             <td><a href="{h['file']}">{h['title']}</a></td>
         </tr>"""
 
+    # ... (Keep the rest of your template code the same)
     template = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Handouts</title>
+    <title>Patient Information Handouts</title>
     <style>
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 30px; max-width: 1000px; margin: auto; background-color: #f8fafc; color: #1e293b; }}
         h1 {{ color: #0f172a; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; margin-bottom: 30px; font-weight: 800; }}
