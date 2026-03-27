@@ -29,6 +29,7 @@ jobs:
         run: python generate_index.py
       - name: Commit and push if index changed
         run: |
+          set +e
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add index.html
@@ -36,5 +37,9 @@ jobs:
             echo "No changes to index.html"
           else
             git commit -m "Automated index update"
-            git push || (git pull --rebase && git push)
+            git push
+            if [ $? -ne 0 ]; then
+              git pull --rebase
+              git push
+            fi
           fi
