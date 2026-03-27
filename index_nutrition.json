@@ -151,6 +151,31 @@
       "description": "Evidence-based answers to the question: is it safe to follow a low-carbohydrate or ketogenic diet with diabetes? Covers how low-carb diets lower blood sugar, why medication adjustment is essential, what monitoring is required, and what the clinical trial evidence shows."
     },
     {
+      "filename": "myth_busters_what_about_fibre_handout.html",
+      "title": "Myth-Busters: What About Fibre?",
+      "topics": [
+        "myth-buster",
+        "fibre",
+        "gut-health",
+        "net-carbs",
+        "vegetables",
+        "evidence-based"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "myth-busters",
+      "description": "Evidence-based answers to the question: will I get enough fibre on a low-carbohydrate or ketogenic diet? Covers why fibre does not count toward your carb target, high-fibre low-carb food sources, gut health on low-carb, and what the evidence shows about fibre intake on carbohydrate-restricted diets."
+    },
+    {
       "filename": "myth_busters_why_do_i_feel_worse_before_i_feel_better_keto_flu_handout.html",
       "title": "Myth-Busters: Why Do I Feel Worse Before I Feel Better? (Keto Flu)",
       "topics": [
