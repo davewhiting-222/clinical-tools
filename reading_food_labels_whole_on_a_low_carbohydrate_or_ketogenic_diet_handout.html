@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="module" content="nutrition">
+    <meta name="section" content="getting-started">
+    <meta name="topics" content="food-labels,net-carbs,practical-skills,low-carb,keto">
+    <meta name="diet_codes" content="keto,spanish_med,therapeutic_lc,moderate_lc,liberal_lc,spanish_therapeutic_lc,spanish_moderate_lc,spanish_liberal_lc">
+    <meta name="flags" content="">
+    <meta name="category" content="Nutrition_Diet">
+    <meta name="description" content="How to read food labels on a low-carbohydrate or ketogenic diet. Covers net carb calculation, hidden sugars, misleading health claims, and how to compare products at a glance.">
+
+    <title>Reading Food Labels on a Low Carbohydrate or Ketogenic Diet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .header small {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            min-height: 44px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            color: #1e3a8a;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-top: 0;
+        }
+
+        .references ol {
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        strong {
+            color: #1e3a8a;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+            
+            .header, .content, .footer {
+                padding: 20px;
+            }
+            
+            .references {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Reading Food Labels on a Low Carbohydrate or Ketogenic Diet</h1>
+            <small>Prepared by your family doctor</small>
+            <time>December 2024</time>
+        </header>
+
+        <div class="content">
+            <div class="success-box">
+                <h3>The Golden Rule</h3>
+                <p><strong>Prioritize whole foods first.</strong> The most effective way to succeed on a ketogenic diet is to build your meals around single-ingredient, whole foods like fresh meats, fish, eggs, and leafy greens. The best foods for your metabolism don't have nutrition labels at all!</p>
+            </div>
+
+            <p>However, when you do purchase packaged foods, knowing how to read labels properly can protect your metabolic health and keep you on track. Let's break down what to look for and what to avoid.</p>
+
+            <h2>1. The "Net Carb" Marketing Trap</h2>
+
+            <div class="warning-box">
+                <p><strong>Look at Total Carbohydrates, not "Net Carbs."</strong> Many products highlight low "Net Carb" counts on their packaging, but this can be misleading for people with metabolic issues.</p>
+            </div>
+
+            <p><strong>Why "Net Carbs" can be problematic:</strong></p>
+            <ul>
+                <li>"Net Carbs" subtract fibre and sugar alcohols from total carbohydrates</li>
+                <li>Food companies exploit this to market highly processed "keto" products</li>
+                <li>Synthetic fibres and modified starches can still trigger insulin responses</li>
+                <li>These products may trigger cravings and stall weight loss</li>
+            </ul>
+
+            <div class="key-point">
+                <p><strong>Better approach:</strong> Aim for 20 grams or less of <em>Total Carbohydrates</em> per day. This naturally guides you toward nutrient-dense whole foods and ensures you achieve ketosis.</p>
+            </div>
+
+            <h2>2. Sugar Alcohols and Sweeteners: Not All Are Equal</h2>
+
+            <p>When you see "Zero Sugar" claims, always check the ingredient list for sugar alcohols and artificial sweeteners.</p>
+
+            <h3>Avoid These:</h3>
+            <div class="caution-box">
+                <p><strong>Maltitol:</strong> Common in "keto" chocolate and bars. Has a significant glycemic index that spikes blood sugar and can cause severe digestive upset including bloating and diarrhea.</p>
+            </div>
+
+            <h3>Sugar Substitute Guidance:</h3>
+            <div class="key-point">
+                <p><strong>For detailed information on sugar substitutes and sweeteners:</strong> Please refer to our dedicated handout on "Sugar Substitutes and Artificial Sweeteners" which provides comprehensive guidance on which options are safe and which to avoid, including emerging research on various sweeteners.</p>
+            </div>
+
+            <h2>3. Hidden Sugars and Starches</h2>
+
+            <p>Food manufacturers hide sugar under many different names. This is especially common in condiments, sauces, and dressings.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Avoid These Ingredients</th>
+                        <th>Why They're Harmful</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>High-fructose corn syrup, honey, agave</td>
+                        <td>Directly promote fatty liver disease and insulin resistance</td>
+                    </tr>
+                    <tr>
+                        <td>Any ingredient ending in "-ose" (sucrose, fructose, etc.)</td>
+                        <td>Hidden forms of sugar that spike blood glucose</td>
+                    </tr>
+                    <tr>
+                        <td>Cane sugar, brown sugar, coconut sugar</td>
+                        <td>Still sugar, regardless of the "natural" marketing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>4. The Inflammatory Oil Check</h2>
+
+            <p>A healthy ketogenic diet relies on high-quality, anti-inflammatory fats. Unfortunately, many low-carb packaged foods use cheap, processed oils.</p>
+
+            <div class="caution-box">
+                <h3>Avoid These Industrial Seed Oils:</h3>
+                <ul>
+                    <li>Soybean oil</li>
+                    <li>Corn oil</li>
+                    <li>Canola oil</li>
+                    <li>Cottonseed oil</li>
+                    <li>Sunflower oil</li>
+                    <li>Safflower oil</li>
+                </ul>
+                <p><strong>Why avoid them:</strong> These oils are heavily processed, prone to oxidation, and can drive systemic inflammation in your body.</p>
+            </div>
+
+            <div class="success-box">
+                <h3>Look for These Healthy Fats:</h3>
+                <ul>
+                    <li>Extra virgin olive oil</li>
+                    <li>Avocado oil</li>
+                    <li>Coconut oil</li>
+                    <li>Natural animal fats (butter, tallow)</li>
+                </ul>
+            </div>
+
+            <h2>5. Processed Meats and Additives</h2>
+
+            <p>When buying bacon, sausage, or deli meats, check for added sugars and potentially harmful curing agents.</p>
+
+            <div class="warning-box">
+                <p><strong>Avoid nitrates and nitrites:</strong> These chemical curing agents (sodium nitrite/nitrate) can cause oxidative stress and may increase cardiovascular risk when combined with high sodium levels.</p>
+                <p><strong>Better choice:</strong> Fresh, unprocessed meats or brands explicitly labeled "nitrate-free."</p>
+            </div>
+
+            <h2>Your 10-Second Grocery Store Checklist</h2>
+
+            <div class="checklist">
+                <h3>Quick Label Reading Steps:</h3>
+                <ol>
+                    <li><strong>Skip the front packaging.</strong> Go straight to the Nutrition Facts and ingredient list</li>
+                    <li><strong>Check Total Carbs.</strong> Does it fit your daily carbohydrate limit?</li>
+                    <li><strong>Check the sweetener.</strong> Does it contain maltitol? (If yes, put it back)</li>
+                    <li><strong>Check the oils.</strong> Does it contain soybean, canola, or corn oil? (If yes, put it back)</li>
+                    <li><strong>Is it a whole food?</strong> If the ingredient list reads like a chemistry textbook, choose something simpler</li>
+                </ol>
+            </div>
+
+            <div class="mindset-box">
+                <h3>Remember: Quality Over Convenience</h3>
+                <p>If the ingredient list is a long paragraph of chemicals and synthetic fibres, it's "dirty keto." Your body will thank you for choosing nutrient-dense whole foods over processed alternatives, even if they require a bit more preparation time.</p>
+            </div>
+
+            <h2>Making Better Choices</h2>
+
+            <p><strong>Start with these simple swaps:</strong></p>
+            <ul>
+                <li>Replace "keto" bars with nuts and seeds</li>
+                <li>Choose full-fat plain Greek yogurt over flavoured versions</li>
+                <li>Make your own salad dressings with olive oil and vinegar</li>
+                <li>Buy fresh meat and season it yourself instead of pre-marinated options</li>
+            </ul>
+
+            <div class="key-point">
+                <p><strong>Bottom line:</strong> The fewer ingredients on the label, the better. Your metabolism works best with real, whole foods that humans have eaten for thousands of years, not laboratory creations marketed as "health foods."</p>
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Westman EC, Feinman RD, Mavropoulos JC, et al. Low-carbohydrate nutrition and metabolism. Am J Clin Nutr. 2007;86(2):276-284.</li>
+                    <li>Volek JS, Phinney SD. The Art and Science of Low Carbohydrate Living. Miami: Beyond Obesity LLC; 2011.</li>
+                    <li>Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163-191.</li>
+                    <li>Ramsden CE, Zamora D, Majchrzak-Hong S, et al. Re-evaluation of the traditional diet-heart hypothesis: analysis of recovered data from Minnesota Coronary Experiment (1968-73). BMJ. 2016;353:i1246.</li>
+                    <li>Lustig RH. Metabolical: The Lure and the Lies of Processed Food, Nutrition, and Modern Medicine. New York: HarperWave; 2021.</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <div class="disclaimer">
+                This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
