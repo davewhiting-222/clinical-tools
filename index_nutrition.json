@@ -3,6 +3,30 @@
   "generated": "auto",
   "handouts": [
     {
+      "filename": "eating_out_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
+      "title": "Eating Out on a Low Carbohydrate or Ketogenic Diet",
+      "topics": [
+        "eating-out",
+        "practical-skills",
+        "low-carb",
+        "keto",
+        "social-eating"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [],
+      "section": "getting-started",
+      "description": "Practical guidance for eating out on a low-carbohydrate or ketogenic diet. Covers how to navigate restaurant menus, what to order, what to avoid, and how to handle social situations without compromising your diet."
+    },
+    {
       "filename": "electrolyte_replacement_on_a_ketogenic_diet_handout.html",
       "title": "Electrolyte Replacement on a Ketogenic Diet",
       "topics": [
