@@ -79,6 +79,37 @@
       "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
     },
     {
+      "filename": "peri_procedural_rules_handout.html",
+      "title": "Peri-Procedural Rules for Low-Carb/Keto Diabetic Patients",
+      "topics": [
+        "peri-procedural",
+        "surgery",
+        "medication-safety",
+        "diabetes",
+        "keto",
+        "low-carb"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med",
+        "therapeutic_lc",
+        "moderate_lc",
+        "liberal_lc",
+        "spanish_therapeutic_lc",
+        "spanish_moderate_lc",
+        "spanish_liberal_lc"
+      ],
+      "flags": [
+        "has_diabetes",
+        "sglt2_inhibitor",
+        "short_acting_insulin",
+        "long_acting_insulin",
+        "sulfonylurea"
+      ],
+      "section": "sick-day-rules",
+      "description": "Essential rules for patients on low-carbohydrate or ketogenic diets before surgery, procedures, or bowel preparation. Covers when to stop low-carb eating, medication adjustment, minimum fasting periods, and when to contact your clinic."
+    },
+    {
       "filename": "reading_food_labels_whole_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
       "title": "Reading Food Labels on a Low Carbohydrate or Ketogenic Diet",
       "topics": [
