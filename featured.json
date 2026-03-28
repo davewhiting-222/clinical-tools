@@ -1,0 +1,227 @@
+[
+  {
+    "category": "Back Pain",
+    "filename": "chronic_back_pain_handout.html",
+    "title": "Managing Chronic Lower Back Pain"
+  },
+  {
+    "category": "Back Pain",
+    "filename": "acute_lower_back_pain_handout.html",
+    "title": "Understanding Acute Lower Back Pain"
+  },
+  {
+    "category": "Checkup",
+    "filename": "wellness_visit_handout.html",
+    "title": "Getting the Most Out of Your Health Visit"
+  },
+  {
+    "category": "Cholesterol",
+    "filename": "ezetimibe_handout.html",
+    "title": "Understanding Ezetimibe for Cholesterol Management"
+  },
+  {
+    "category": "Chronic Disease",
+    "filename": "heartburn_handout.html",
+    "title": "Managing Heartburn in Adults"
+  },
+  {
+    "category": "Diabetes",
+    "filename": "hypoglycemia_recognition_handout.html",
+    "title": "Hypoglycemia Recognition and Management"
+  },
+  {
+    "category": "Diabetes",
+    "filename": "two_line_title_approach_managing_illness_safely_on_your_sglt2_medication_applies_to_jardiance_empagliflozin_forxiga_dapagliflozin_invokana_canagliflozin_handout.html",
+    "title": "Managing Illness Safely on Your SGLT2 Medication"
+  },
+  {
+    "category": "Diabetes",
+    "filename": "peri_procedural_rules_handout.html",
+    "title": "Peri-Procedural Rules for Low-Carb/Keto Diabetic Patients"
+  },
+  {
+    "category": "Diabetes",
+    "filename": "sick_day_rules.html",
+    "title": "Sick Day Rules for Diabetes"
+  },
+  {
+    "category": "Fatigue",
+    "filename": "fatigue_older_adults_handout.html",
+    "title": "Understanding Fatigue in Adults 65–75"
+  },
+  {
+    "category": "Irritable Bowel Syndrome",
+    "filename": "ibs_lowcarb_handout.html",
+    "title": "Low-Carbohydrate Diet for Irritable Bowel Syndrome"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "insulin_resistance_handout.html",
+    "title": "Understanding Insulin Resistance and Low-Carbohydrate Diets"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "starting_low_carb_diet.html",
+    "title": "Starting a Low-Carbohydrate Diet: A Practical Guide"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "dash_diet_guide_handout.html",
+    "title": "DASH Diet Guide — A Heart-Healthy Approach to Eating"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "mediterranean_diet_handout.html",
+    "title": "The Mediterranean Diet: Evidence-Based Guidance"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "spanish_mediterranean_diet_handout.html",
+    "title": "Spanish Mediterranean Diet Guide"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "generate_a_keto_guide_for_patients_consider_the_source_material_handout.html",
+    "title": "Your Guide to the Ketogenic Diet"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "electrolyte_replacement_on_a_ketogenic_diet_handout.html",
+    "title": "Electrolyte Replacement on a Ketogenic Diet"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "eating_out_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
+    "title": "Eating Out on a Low Carbohydrate or Ketogenic Diet"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "reading_food_labels_whole_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
+    "title": "Reading Food Labels on a Low Carbohydrate or Ketogenic Diet"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "understanding_my_carbohydrate_targets_handout.html",
+    "title": "Understanding My Carbohydrate Targets"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "understanding_sugar_substitutes_handout.html",
+    "title": "Understanding Sugar Substitutes"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_can_i_do_this_long_term_handout.html",
+    "title": "Myth-Busters: Can I Do This Long Term?"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_is_it_safe_to_eat_this_way_if_i_have_diabetes_handout.html",
+    "title": "Myth-Busters: Is it Safe to Eat Low-Carb with Diabetes?"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_is_this_just_another_fad_diet_handout.html",
+    "title": "Low-Carb Diets: Separating Science from Fad"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_what_about_fibre_handout.html",
+    "title": "Myth-Busters: What About Fibre?"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_why_do_i_feel_worse_before_i_feel_better_keto_flu_handout.html",
+    "title": "Myth-Busters: Why Do I Feel Worse Before I Feel Better? (Keto Flu)"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_why_is_my_ldl_going_up_handout.html",
+    "title": "Myth-Busters: Why is my LDL going up?"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_will_i_be_deficient_in_vitamins_and_minerals_handout.html",
+    "title": "Myth-Busters: Will I Be Deficient in Vitamins and Minerals?"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_won_t_a_high_fat_diet_give_me_a_heart_attack_handout.html",
+    "title": "Myth-Busters: Won't a High Fat Diet Give Me a Heart Attack?"
+  },
+  {
+    "category": "Nutrition",
+    "filename": "myth_busters_won_t_this_damage_my_kidneys_handout.html",
+    "title": "Myth-Busters: Won't This Damage My Kidneys?"
+  },
+  {
+    "category": "Skin",
+    "filename": "sun_protection_handout.html",
+    "title": "Protecting Your Skin: A Balanced Approach to Sun Safety"
+  },
+  {
+    "category": "Skin",
+    "filename": "efudex_actinic_keratosis_handout.html",
+    "title": "Efudex (Fluorouracil) Cream for Actinic Keratosis"
+  },
+  {
+    "category": "Skin",
+    "filename": "nicotinimide-and-squamous-cell-cancer.html",
+    "title": "Nicotinamide (Vitamin B3) for Skin Cancer Prevention"
+  },
+  {
+    "category": "Skin",
+    "filename": "acne_handout.html",
+    "title": "Understanding and Treating Acne"
+  },
+  {
+    "category": "Skin",
+    "filename": "acne_teen_handout.html",
+    "title": "Your Skin, Your Questions: Understanding Acne for Teens"
+  },
+  {
+    "category": "Skin",
+    "filename": "accutane_patient_handout.html",
+    "title": "Accutane (Isotretinoin) Treatment Guide for Males"
+  },
+  {
+    "category": "Skin",
+    "filename": "accutane_female_handout.html",
+    "title": "Isotretinoin (Accutane) for Acne — A Guide for Female Patients"
+  },
+  {
+    "category": "Skin",
+    "filename": "dyshidrotic_eczema_handout.html",
+    "title": "Understanding Dyshidrotic Eczema (Pompholyx)"
+  },
+  {
+    "category": "Skin",
+    "filename": "molluscum_contagiosum_handout.html",
+    "title": "Molluscum Contagiosum in Children: What Parents Need to Know"
+  },
+  {
+    "category": "Skin",
+    "filename": "tinea_versicolor_handout.html",
+    "title": "Tinea Versicolor: Understanding and Treating This Common Skin Condition"
+  },
+  {
+    "category": "Sleep",
+    "filename": "insomnia_management_adults.html",
+    "title": "Understanding and Managing Insomnia"
+  },
+  {
+    "category": "Sleep",
+    "filename": "sleep_disturbance_elderly.html",
+    "title": "Understanding Sleep Changes as You Age"
+  },
+  {
+    "category": "Supplements",
+    "filename": "nattokinase_what_is_it_and_does_it_work_handout.html",
+    "title": "Nattokinase — What Is It, and Does It Work?"
+  },
+  {
+    "category": "Whiplash",
+    "filename": "whiplash_what_to_expect_handout.html",
+    "title": "Whiplash — What to Expect"
+  }
+]
