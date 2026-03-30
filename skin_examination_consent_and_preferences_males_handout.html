@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Skin_Examination">
+    <title>Skin Examination Consent and Preferences - Males</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .form-section {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .form-section h3 {
+            background: #1e3a8a;
+            color: white;
+            margin: -2rem -2rem 1.5rem -2rem;
+            padding: 1rem 2rem;
+            border-radius: 6px 6px 0 0;
+            font-size: 1.2rem;
+        }
+
+        .checkbox-group {
+            margin: 1rem 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 1rem 0;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            min-height: 44px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            min-width: 18px;
+            min-height: 18px;
+        }
+
+        .signature-section {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .signature-field {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .signature-field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+        }
+
+        .signature-line {
+            border-bottom: 2px solid #1e3a8a;
+            height: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 2rem;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            padding-left: 1.5rem;
+        }
+
+        .references li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            .footer {
+                padding: 1.5rem;
+            }
+
+            .signature-section {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Skin Examination Consent and Preferences - Males</h1>
+            <small>Prepared by your family doctor</small>
+        </header>
+
+        <div class="content">
+            <time datetime="2024-12-28">December 28, 2024</time>
+
+            <div class="key-point">
+                <h3>Why This Examination Matters</h3>
+                <p>A complete skin examination is one of the most effective ways to detect skin cancer early, when it's most treatable. Melanoma and other skin cancers can appear anywhere on your body, including areas not typically exposed to the sun.<sup>1</sup></p>
+            </div>
+
+            <div class="warning-box">
+                <h3>Important Limitation</h3>
+                <p>Even with dermoscopy (a special magnifying instrument), this examination cannot detect every skin cancer. You should report any new, changing, bleeding, or non-healing lesion to your physician promptly.<sup>2</sup></p>
+            </div>
+
+            <h2>Your Comfort and Preferences</h2>
+            <p>Your comfort and dignity are important to us. Please review the following sections and indicate your preferences. You may withdraw or modify your consent at any time without affecting your care.</p>
+
+            <div class="form-section">
+                <h3>1 · Buttocks and Lower Abdomen</h3>
+                <p><em>Melanoma can occur in these areas. If underwear is kept on, the physician will need to briefly adjust the fabric to view the skin underneath.<sup>3</sup></em></p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="buttocks-consent" name="buttocks" value="consent">
+                        <label for="buttocks-consent">I give permission to adjust my underwear as needed to examine these areas.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="buttocks-omit" name="buttocks" value="omit">
+                        <label for="buttocks-omit">Please omit this area from today's examination.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>2 · Inner Thigh</h3>
+                <p><em>Examining the inner thigh requires adjusting the position of your legs.</em></p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="thigh-consent" name="thigh" value="consent">
+                        <label for="thigh-consent">I consent to examination of the inner thigh.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="thigh-omit" name="thigh" value="omit">
+                        <label for="thigh-omit">Please omit the inner thigh — proceed directly to the lower legs and feet.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>What to Expect</h3>
+                <ul>
+                    <li>The examination typically takes 10-15 minutes</li>
+                    <li>Your doctor will examine your skin systematically from head to toe</li>
+                    <li>A dermoscope may be used to look more closely at any concerning spots</li>
+                    <li>You'll be asked to change positions to examine different body areas</li>
+                    <li>Your privacy and comfort will be maintained throughout</li>
+                </ul>
+            </div>
+
+            <div class="form-section">
+                <h3>3 · Final Consent</h3>
+                <p>I have read the information above and understand the purpose of this skin examination. I understand that even with dermoscopy, this examination cannot detect every skin cancer, and that I should report any new, changing, bleeding, or non-healing lesion to my physician promptly. My preferences above will be respected throughout, and I may withdraw or modify my consent at any time without affecting my care.</p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="final-consent" name="final-consent" value="consent" required>
+                        <label for="final-consent"><strong>I consent to today's skin examination in accordance with my preferences above.</strong></label>
+                    </div>
+                </div>
+
+                <div class="signature-section">
+                    <div class="signature-field">
+                        <label for="patient-name">Patient Name</label>
+                        <div class="signature-line" id="patient-name"></div>
+                    </div>
+                    <div class="signature-field">
+                        <label for="date">Date</label>
+                        <div class="signature-line" id="date"></div>
+                    </div>
+                </div>
+                
+                <div class="signature-section">
+                    <div class="signature-field">
+                        <label for="patient-signature">Patient Signature</label>
+                        <div class="signature-line" id="patient-signature"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mindset-box">
+                <h3>After Your Examination</h3>
+                <p>Your doctor will discuss any findings with you and provide recommendations for follow-up care if needed. Remember, most skin changes are benign, but early detection of any problems leads to the best outcomes.</p>
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Canadian Cancer Society. Skin cancer statistics. Available from: https://cancer.ca/en/cancer-information/cancer-types/skin-melanoma/statistics</li>
+                    <li>Dinnes J, Deeks JJ, Chuchu N, et al. Dermoscopy, with and without visual inspection, for diagnosing melanoma in adults. Cochrane Database Syst Rev. 2018;12(12):CD011902.</li>
+                    <li>Canadian Dermatology Association. Melanoma prevention and detection. Available from: https://dermatology.ca/public-patients/skin-cancer/melanoma/</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <div class="disclaimer">
+                This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
