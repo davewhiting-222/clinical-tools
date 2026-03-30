@@ -1,5 +1,10 @@
 [
   {
+    "category": "Alternative and Complementary Medicine",
+    "filename": "what_are_the_roles_of_allopathic_versus_naturopathic_physicians_understanding_the_nuances_handout.html",
+    "title": "Understanding Your Healthcare Options: MDs vs. NDs"
+  },
+  {
     "category": "Back Pain",
     "filename": "chronic_back_pain_handout.html",
     "title": "Managing Chronic Lower Back Pain"
@@ -15,9 +20,24 @@
     "title": "Getting the Most Out of Your Health Visit: Quality Over Quantity"
   },
   {
+    "category": "Cholesterol_Treatment",
+    "filename": "ezetimibe_handout.html",
+    "title": "Understanding Ezetimibe for Cholesterol Management"
+  },
+  {
     "category": "Chronic Disease",
     "filename": "heartburn_handout.html",
     "title": "Managing Heartburn in Adults"
+  },
+  {
+    "category": "Chronic Disease",
+    "filename": "understanding_squamous_cell_cancer_in_situ_handout.html",
+    "title": "Understanding Squamous Cell Cancer in Situ"
+  },
+  {
+    "category": "Dementia_Insulin Resistance",
+    "filename": "insulin_resistance_brain_dementia_handout.html",
+    "title": "Insulin Resistance and the Brain: A Guide for Patients and Families"
   },
   {
     "category": "Diabetes",
@@ -51,8 +71,23 @@
   },
   {
     "category": "Nutrition_Diet",
+    "filename": "eating_out_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
+    "title": "Eating Out on a Low Carbohydrate or Ketogenic Diet"
+  },
+  {
+    "category": "Nutrition_Diet",
     "filename": "myth_busters_is_this_just_another_fad_diet_handout.html",
     "title": "Low-Carb Diets: Separating Science from Fad"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_is_it_safe_to_eat_this_way_if_i_have_diabetes_handout.html",
+    "title": "Myth-Busters: Is it Safe to Eat Low-Carb with Diabetes?"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_won_t_a_high_fat_diet_give_me_a_heart_attack_handout.html",
+    "title": "Myth-Busters: Won't a High Fat Diet Give Me a Heart Attack?"
   },
   {
     "category": "Nutrition_Diet",
@@ -71,8 +106,18 @@
   },
   {
     "category": "Nutrition_Diet",
+    "filename": "carnivore_diet_handout.html",
+    "title": "The Carnivore Diet: A Balanced Look at the Evidence"
+  },
+  {
+    "category": "Nutrition_Diet",
     "filename": "mediterranean_diet_handout.html",
     "title": "The Mediterranean Diet: Evidence-Based Guidance"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "portfolio_diet_handout.html",
+    "title": "The Portfolio Diet: A Natural Approach to Lowering Cholesterol"
   },
   {
     "category": "Nutrition_Diet",
@@ -148,6 +193,11 @@
     "category": "Sleep",
     "filename": "insomnia_management_adults.html",
     "title": "Understanding and Managing Insomnia"
+  },
+  {
+    "category": "Supplements",
+    "filename": "nattokinase_what_is_it_and_does_it_work_handout.html",
+    "title": "Nattokinase - What Is It, and Does It Work?"
   },
   {
     "category": "Whiplash",
