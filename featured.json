@@ -5,6 +5,11 @@
     "title": "Understanding Your Healthcare Options: MDs vs. NDs"
   },
   {
+    "category": "Anti-coagulants and Anti-platelet agents",
+    "filename": "blood_thinners_and_minor_surgical_procedures_handout.html",
+    "title": "Blood Thinners and Minor Surgery: When to Stop Your Medications"
+  },
+  {
     "category": "Back Pain",
     "filename": "chronic_back_pain_handout.html",
     "title": "Managing Chronic Lower Back Pain"
@@ -198,6 +203,11 @@
     "category": "Supplements",
     "filename": "nattokinase_what_is_it_and_does_it_work_handout.html",
     "title": "Nattokinase - What Is It, and Does It Work?"
+  },
+  {
+    "category": "Weight Loss",
+    "filename": "ozempic_the_full_story_handout.html",
+    "title": "Ozempic: The Full Story"
   },
   {
     "category": "Whiplash",
