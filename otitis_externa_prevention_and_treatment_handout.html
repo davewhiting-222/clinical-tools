@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Ear">
+    <title>Otitis Externa - Prevention and Treatment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background-color: #f8f9fa;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2.5rem;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3em;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-weight: 500;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .checklist {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .checklist h4 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.1em;
+        }
+
+        .checklist ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .checklist li::before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-size: 1.2em;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 1.875rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            margin-left: 1rem;
+        }
+
+        .references li {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 1.25rem 2.5rem;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+            
+            .header, .content {
+                padding: 1.5rem;
+            }
+            
+            .footer {
+                padding: 1.25rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Otitis Externa - Prevention and Treatment</h1>
+            <small>Prepared by your family doctor</small>
+            <br><br>
+            <time>December 2024</time>
+        </header>
+
+        <main class="content">
+            <div class="key-point">
+                <strong>What You Need to Know:</strong> Otitis externa, commonly called "swimmer's ear," is an infection of your outer ear canal. It's treatable and preventable with the right approach. Most cases clear up within 7-10 days with proper treatment.
+            </div>
+
+            <h2>What is Otitis Externa?</h2>
+            <p>Otitis externa is an infection or inflammation of the ear canal (the tube that leads from your outer ear to your eardrum). The ear canal becomes red, swollen, and painful. It's called "swimmer's ear" because it often happens after water gets trapped in the ear, but you don't have to be a swimmer to get it.</p>
+
+            <p><strong>Common symptoms include:</strong></p>
+            <ul>
+                <li>Ear pain that gets worse when you pull on your ear or press on the small bump in front of your ear</li>
+                <li>Itching inside the ear canal</li>
+                <li>Clear or yellowish discharge from the ear</li>
+                <li>Feeling like your ear is plugged</li>
+                <li>Temporary hearing loss</li>
+                <li>Swelling of the ear canal</li>
+            </ul>
+
+            <h2>What Causes Otitis Externa?</h2>
+            <p>Your ear canal has natural defenses against infection, including earwax and the shape of the canal itself. When these defenses are compromised, bacteria or fungi can grow and cause infection.</p>
+
+            <h3>Common Causes Include:</h3>
+            <ul>
+                <li><strong>Moisture in the ear:</strong> Swimming, showering, or humid weather can create a moist environment where bacteria thrive</li>
+                <li><strong>Scratches or cuts:</strong> Using cotton swabs, bobby pins, or fingers to clean ears can damage the delicate skin</li>
+                <li><strong>Allergic reactions:</strong> Hair products, earrings, or hearing aids can cause irritation</li>
+                <li><strong>Skin conditions:</strong> Eczema or psoriasis can make you more prone to ear infections</li>
+                <li><strong>Narrow ear canals:</strong> Some people are naturally more susceptible due to their anatomy</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>When to See Your Doctor:</strong> See your family doctor if you have ear pain, discharge, or hearing loss. Don't try to treat severe symptoms on your own. If you have diabetes or a weakened immune system, seek medical care promptly as infections can be more serious.
+            </div>
+
+            <h2>Prevention Strategies</h2>
+            
+            <div class="success-box">
+                <strong>Good News:</strong> Otitis externa is very preventable! Following these simple steps can dramatically reduce your risk of developing swimmer's ear.
+            </div>
+
+            <h3>Keep Your Ears Dry</h3>
+            <ul>
+                <li>Dry your ears thoroughly after swimming or showering</li>
+                <li>Tilt your head to each side to help water drain out</li>
+                <li>Use a clean, dry towel to gently dry the outer ear</li>
+                <li>Consider using earplugs or a swim cap when swimming</li>
+                <li>Use a hair dryer on the coolest setting, held at arm's length, to help dry ears</li>
+            </ul>
+
+            <h3>Don't Damage Your Ear Canal</h3>
+            <ul>
+                <li><strong>Never use cotton swabs, bobby pins, or your fingers</strong> to clean inside your ears</li>
+                <li>Let your ears clean themselves naturally - earwax is protective</li>
+                <li>Be gentle when cleaning the outer ear with a washcloth</li>
+                <li>Avoid using earphones or hearing aids when ears are wet</li>
+            </ul>
+
+            <div class="checklist">
+                <h4>Daily Prevention Checklist:</h4>
+                <ul>
+                    <li>After shower/swimming: Dry ears thoroughly</li>
+                    <li>Avoid putting anything in your ear canal</li>
+                    <li>Keep hair products away from ear opening</li>
+                    <li>Remove hearing aids/earbuds if ears feel moist</li>
+                    <li>See your doctor if you have recurring ear problems</li>
+                </ul>
+            </div>
+
+            <h2>Treatment Options</h2>
+            
+            <div class="mindset-box">
+                <strong>Treatment Mindset:</strong> Otitis externa responds well to treatment, but it requires patience. Don't expect overnight improvement. Following your treatment plan completely is key to preventing the infection from returning.
+            </div>
+
+            <h3>Medical Treatment</h3>
+            <p>Your family doctor will typically prescribe ear drops containing antibiotics, antifungals, or anti-inflammatory medications. Common treatments include:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Treatment Type</th>
+                        <th>Purpose</th>
+                        <th>How to Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Antibiotic ear drops</td>
+                        <td>Kill bacteria causing infection</td>
+                        <td>Usually 2-4 drops, 2-3 times daily for 7-10 days</td>
+                    </tr>
+                    <tr>
+                        <td>Steroid ear drops</td>
+                        <td>Reduce inflammation and pain</td>
+                        <td>Often combined with antibiotics</td>
+                    </tr>
+                    <tr>
+                        <td>Acidifying drops</td>
+                        <td>Restore normal ear canal pH</td>
+                        <td>May be used for prevention or mild cases</td>
+                    </tr>
+                    <tr>
+                        <td>Oral antibiotics</td>
+                        <td>For severe or spreading infections</td>
+                        <td>Only when infection extends beyond ear canal</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>How to Apply Ear Drops Properly</h3>
+            <ol>
+                <li>Wash your hands thoroughly</li>
+                <li>Warm the drops to room temperature (hold bottle in your hands for a few minutes)</li>
+                <li>Lie on your side with the affected ear facing up</li>
+                <li>Gently pull your ear up and back to straighten the ear canal</li>
+                <li>Put the prescribed number of drops in your ear</li>
+                <li>Stay lying on your side for 3-5 minutes</li>
+                <li>Gently wipe away any excess that drains out</li>
+            </ol>
+
+            <h3>Home Care Measures</h3>
+            <ul>
+                <li><strong>Pain relief:</strong> Over-the-counter pain relievers like acetaminophen or ibuprofen can help</li>
+                <li><strong>Warm compress:</strong> A warm, dry compress on the outside of your ear may provide comfort</li>
+                <li><strong>Keep ears dry:</strong> Avoid swimming and be extra careful when showering</li>
+                <li><strong>Don't use headphones</strong> or hearing aids until infection clears</li>
+            </ul>
+
+            <div class="caution-box">
+                <strong>What NOT to Do:</strong>
+                <ul>
+                    <li>Don't use cotton swabs or try to clean out discharge</li>
+                    <li>Don't use home remedies like hydrogen peroxide without asking your doctor</li>
+                    <li>Don't stop treatment early, even if you feel better</li>
+                    <li>Don't swim or get water in your ears during treatment</li>
+                </ul>
+            </div>
+
+            <h2>When to Follow Up</h2>
+            <p>Most cases of otitis externa improve within 48-72 hours of starting treatment. Contact your doctor if:</p>
+            <ul>
+                <li>Pain gets worse after 2-3 days of treatment</li>
+                <li>You develop fever or feel unwell</li>
+                <li>The infection doesn't improve after a week of treatment</li>
+                <li>You have recurring episodes of otitis externa</li>
+                <li>You experience severe hearing loss</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Recovery Expectations:</strong> With proper treatment, most people feel significantly better within 3-4 days and are completely healed within 7-10 days. Following prevention strategies can help ensure this doesn't happen again.
+            </div>
+
+            <h2>Special Considerations</h2>
+            
+            <h3>For Frequent Swimmers</h3>
+            <ul>
+                <li>Consider using preventive ear drops after swimming (ask your doctor about options)</li>
+                <li>Use well-fitted earplugs designed for swimming</li>
+                <li>Rinse ears with clean, fresh water after swimming in lakes or pools</li>
+                <li>Take breaks from swimming if you notice early signs of irritation</li>
+            </ul>
+
+            <h3>For People with Diabetes or Compromised Immunity</h3>
+            <ul>
+                <li>Seek medical attention promptly for any ear symptoms</li>
+                <li>Follow treatment plans exactly as prescribed</li>
+                <li>Be aware that infections may be more severe or take longer to heal</li>
+                <li>Regular follow-up may be needed</li>
+            </ul>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Rosenfeld RM, Schwartz SR, Cannon CR, et al. Clinical practice guideline: acute otitis externa. Otolaryngology–Head and Neck Surgery. 2014;150(1 suppl):S1-S24.</li>
+                    <li>Kaushik V, Malik T, Saeed SR. Interventions for acute otitis externa. Cochrane Database of Systematic Reviews. 2010;(1):CD004740.</li>
+                    <li>Wipperman J. Otitis externa. Primary Care: Clinics in Office Practice. 2014;41(1):1-9.</li>
+                    <li>Hui CP. Acute otitis externa. Paediatrics & Child Health. 2013;18(2):96-98.</li>
+                    <li>Schaefer P, Baugh RF. Acute otitis externa: an update. American Family Physician. 2012;86(11):1055-1061.</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </footer>
+    </div>
+</body>
+</html>
