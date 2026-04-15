@@ -5,6 +5,11 @@
     "title": "Understanding Your Healthcare Options: MDs vs. NDs"
   },
   {
+    "category": "Anal Fissure",
+    "filename": "understanding_anal_fissure_handout.html",
+    "title": "Understanding Anal Fissure"
+  },
+  {
     "category": "Anti-coagulants and Anti-platelet agents",
     "filename": "blood_thinners_and_minor_surgical_procedures_handout.html",
     "title": "Blood Thinners and Minor Surgery: When to Stop Your Medications"
@@ -46,6 +51,11 @@
   },
   {
     "category": "Diabetes",
+    "filename": "restoring_insulin_sensitivity_in_type_2_diabetics_on_insulin_handout.html",
+    "title": "Beyond Blood Sugar: Your Guide to Reversing Insulin Resistance"
+  },
+  {
+    "category": "Diabetes",
     "filename": "hypoglycemia_recognition_handout.html",
     "title": "Hypoglycemia Recognition and Management"
   },
@@ -60,6 +70,11 @@
     "title": "Sick Day Rules for Diabetes: Medication Management During Illness"
   },
   {
+    "category": "Ear",
+    "filename": "otitis_externa_prevention_and_treatment_handout.html",
+    "title": "Otitis Externa - Prevention and Treatment"
+  },
+  {
     "category": "Fatigue",
     "filename": "fatigue_older_adults_handout.html",
     "title": "Understanding Fatigue in Adults 65–75: What's Really Behind Your Tiredness"
@@ -70,6 +85,11 @@
     "title": "Low-Carbohydrate Diet for Irritable Bowel Syndrome"
   },
   {
+    "category": "Nutrition",
+    "filename": "why_are_oxalates_important_handout.html",
+    "title": "Understanding Oxalates: What You Need to Know"
+  },
+  {
     "category": "Nutrition_Diet",
     "filename": "dash_diet_guide_handout.html",
     "title": "DASH Diet Guide - A Heart-Healthy Approach to Eating"
@@ -78,6 +98,11 @@
     "category": "Nutrition_Diet",
     "filename": "eating_out_on_a_low_carbohydrate_or_ketogenic_diet_handout.html",
     "title": "Eating Out on a Low Carbohydrate or Ketogenic Diet"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "electrolyte_replacement_on_a_ketogenic_diet_handout.html",
+    "title": "Electrolyte Replacement on a Ketogenic Diet"
   },
   {
     "category": "Nutrition_Diet",
@@ -155,6 +180,11 @@
     "title": "Molluscum Contagiosum in Children: What Parents Need to Know"
   },
   {
+    "category": "Skin",
+    "filename": "what_causes_itchy_skin_pruritis_as_we_age_handout.html",
+    "title": "What Causes Itchy Skin (Pruritus) As We Age"
+  },
+  {
     "category": "Skin_Acne",
     "filename": "accutane_patient_handout.html",
     "title": "Accutane (Isotretinoin) Treatment Guide for Males"
@@ -178,6 +208,11 @@
     "category": "Skin_Eczema",
     "filename": "dyshidrotic_eczema_handout.html",
     "title": "Understanding Dyshidrotic Eczema (Pompholyx)"
+  },
+  {
+    "category": "Skin_Eczema",
+    "filename": "understanding_spongiotic_dermatitis_handout.html",
+    "title": "Understanding Spongiotic Dermatitis"
   },
   {
     "category": "Skin_Protection",
