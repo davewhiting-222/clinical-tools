@@ -216,7 +216,17 @@
                 gap: 1rem;
             }
         }
-    </style>
+@media print {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    body { background-color: white; padding: 0; }
+    .container { box-shadow: none; }
+    .header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important; }
+    .form-section h3 { background: #1e3a8a !important; }
+    .footer { background: #1e293b !important; }
+    .section-body { break-inside: avoid; }
+}    
+</style>
 </head>
 <body>
     <div class="container">
