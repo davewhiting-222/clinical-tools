@@ -245,22 +245,15 @@
 
         /* Print optimisation */
         @media print {
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-            body {
-                background-color: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-            }
-            .content {
-                padding: 24px 30px;
-            }
-            .sig-grid {
-                page-break-inside: avoid;
-            }
-        }
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    body { background-color: white; padding: 0; }
+    .container { box-shadow: none; }
+    .header { background: #1e3a8a !important; background-image: none !important; }
+    .form-section h3 { background: #1e3a8a !important; background-image: none !important; }
+    .footer { background: #1e293b !important; background-image: none !important; }
+    .section-body { break-inside: avoid; }
+}
 
         @media (max-width: 640px) {
             body { padding: 0; }
