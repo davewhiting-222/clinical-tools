@@ -51,8 +51,8 @@
   },
   {
     "category": "Chronic Disease",
-    "filename": "understanding_squamous_cell_cancer_in_situ_handout.html",
-    "title": "Understanding Squamous Cell Cancer in Situ"
+    "filename": "understanding_polymyalgia_rheumatica_pmr_handout.html",
+    "title": "Understanding Polymyalgia Rheumatica (PMR)"
   },
   {
     "category": "Dementia_Insulin Resistance",
@@ -188,6 +188,11 @@
     "category": "Skin",
     "filename": "molluscum_contagiosum_handout.html",
     "title": "Molluscum Contagiosum in Children: What Parents Need to Know"
+  },
+  {
+    "category": "Skin",
+    "filename": "understanding_squamous_cell_cancer_in_situ_handout.html",
+    "title": "Understanding Squamous Cell Cancer in Situ"
   },
   {
     "category": "Skin",
