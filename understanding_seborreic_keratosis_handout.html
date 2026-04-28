@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Custom">
+    <title>Understanding Seborrheic Keratosis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem 0;
+            font-weight: 600;
+        }
+
+        p, ul, ol {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+        }
+
+        .checklist {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .checklist li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            color: #3b82f6;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 2rem;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .references li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .date {
+            margin: 1rem 0;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Understanding Seborrheic Keratosis</h1>
+            <small>Prepared by your family doctor</small>
+        </header>
+
+        <main class="content">
+            <div class="date">
+                <time>April 28, 2026</time>
+            </div>
+
+            <div class="key-point">
+                <strong>What you need to know:</strong> Seborrheic keratoses are very common, non-cancerous skin growths that look like "stuck-on" waxy patches. While they may look concerning, they are benign (harmless) and do not turn into cancer. However, it's important to have them properly evaluated to ensure accurate diagnosis.
+            </div>
+
+            <h2>What Are Seborrheic Keratoses?</h2>
+            
+            <p>Seborrheic keratoses (SK) are benign skin growths that develop as we age. They appear as brown, black, or light-colored patches that look like they've been "stuck on" the skin surface. The medical term "acanthotic type" refers to a specific pattern seen under dermoscopy (a special magnifying tool) that shows thickened skin cells - this is completely normal for seborrheic keratoses.</p>
+
+            <h3>Common Characteristics</h3>
+            <ul>
+                <li><strong>Appearance:</strong> Waxy, "stuck-on" look with a rough or smooth surface</li>
+                <li><strong>Color:</strong> Can be tan, brown, black, or occasionally lighter</li>
+                <li><strong>Size:</strong> Range from a few millimeters to several centimeters</li>
+                <li><strong>Texture:</strong> May feel rough, smooth, or slightly raised</li>
+                <li><strong>Location:</strong> Most commonly on the face, chest, shoulders, and back</li>
+            </ul>
+
+            <h2>Why Do Some People Develop Many Seborrheic Keratoses?</h2>
+
+            <p>Several factors contribute to why some individuals develop numerous seborrheic keratoses:</p>
+
+            <h3>Primary Risk Factors</h3>
+            <ul>
+                <li><strong>Age:</strong> They become more common after age 40, with most people developing some by age 60</li>
+                <li><strong>Genetics:</strong> Family history strongly influences how many you'll develop</li>
+                <li><strong>Sun exposure:</strong> Cumulative UV damage over time increases development</li>
+                <li><strong>Skin type:</strong> Fair-skinned individuals often develop more lesions</li>
+            </ul>
+
+            <div class="mindset-box">
+                <strong>Remember:</strong> Having many seborrheic keratoses is not your fault. It's largely determined by genetics and natural aging processes. Think of them as "wisdom spots" - evidence of a life well-lived!
+            </div>
+
+            <h2>The Importance of Professional Evaluation</h2>
+
+            <p>You've already taken the right steps by having dermoscopic examinations. Dermoscopy allows doctors to see detailed patterns that aren't visible to the naked eye, helping distinguish seborrheic keratoses from other skin conditions.</p>
+
+            <h3>What Your Dermoscopy Results Mean</h3>
+            <div class="success-box">
+                <p><strong>Good news about your evaluation:</strong> Your dermoscopic examinations have been reassuring. The "acanthotic type" pattern seen in your seborrheic keratoses is a normal, benign finding. Most importantly, no features of lentigo maligna (a type of skin cancer) were detected.</p>
+            </div>
+
+            <h2>When to Seek Additional Care</h2>
+
+            <p>While your current lesions appear benign, it's important to know when follow-up care is needed:</p>
+
+            <h3>Seek Immediate Medical Attention If:</h3>
+            <div class="caution-box">
+                <ul>
+                    <li>Any lesion bleeds without trauma or injury</li>
+                    <li>A growth changes rapidly in size, shape, or color</li>
+                    <li>You develop new symptoms like persistent itching or pain</li>
+                    <li>Any lesion becomes irregular in border or develops varied colors within the same spot</li>
+                    <li>You notice a lesion that looks different from your other seborrheic keratoses</li>
+                </ul>
+            </div>
+
+            <h3>Routine Monitoring Guidelines</h3>
+            <div class="checklist">
+                <h4>Monthly Self-Examination Checklist:</h4>
+                <ul>
+                    <li>Check for new growths or changes in existing ones</li>
+                    <li>Look for any bleeding, crusting, or unusual discharge</li>
+                    <li>Note any changes in color, especially irregular pigmentation</li>
+                    <li>Monitor for rapid growth or change in texture</li>
+                    <li>Document any persistent symptoms (itching, tenderness)</li>
+                </ul>
+            </div>
+
+            <h2>Understanding Your Referral Options</h2>
+
+            <p>Your referral to a local skin clinic is an excellent step for a second opinion. Here's what you should know about your options:</p>
+
+            <h3>Public Healthcare Timeline</h3>
+            <div class="warning-box">
+                <p><strong>Wait times:</strong> Non-urgent dermatology referrals in BC can have significant wait times. However, your thorough dermoscopic evaluations provide reassurance that your condition is not urgent.</p>
+            </div>
+
+            <h3>Private Pay Considerations</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Public System</th>
+                        <th>Private Pay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cost</td>
+                        <td>Covered by MSP</td>
+                        <td>$200-400+ consultation</td>
+                    </tr>
+                    <tr>
+                        <td>Wait Time</td>
+                        <td>3-12+ months</td>
+                        <td>1-4 weeks typically</td>
+                    </tr>
+                    <tr>
+                        <td>Urgency Level</td>
+                        <td>Appropriate for routine cases</td>
+                        <td>Consider if anxiety is high</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Treatment Options (If Desired)</h2>
+
+            <p>Treatment of seborrheic keratoses is typically cosmetic, as they don't pose health risks:</p>
+
+            <h3>Available Treatments</h3>
+            <ul>
+                <li><strong>Cryotherapy:</strong> Freezing with liquid nitrogen</li>
+                <li><strong>Electrocautery:</strong> Burning off with electrical current</li>
+                <li><strong>Curettage:</strong> Scraping off the growth</li>
+                <li><strong>Laser removal:</strong> Using focused light energy</li>
+            </ul>
+
+            <div class="mindset-box">
+                <strong>Consider this:</strong> Many people choose to leave seborrheic keratoses untreated. They're harmless and treatment is purely cosmetic. Focus on what matters most to your quality of life and comfort level.
+            </div>
+
+            <h2>Living Comfortably with Seborrheic Keratoses</h2>
+
+            <h3>Daily Management Tips</h3>
+            <ul>
+                <li><strong>Gentle skincare:</strong> Use mild, fragrance-free cleansers</li>
+                <li><strong>Moisturize regularly:</strong> Keep skin hydrated to reduce irritation</li>
+                <li><strong>Sun protection:</strong> Use SPF 30+ sunscreen to prevent new lesions</li>
+                <li><strong>Avoid picking:</strong> This can cause bleeding or infection</li>
+                <li><strong>Loose clothing:</strong> Prevent friction over areas with many lesions</li>
+            </ul>
+
+            <div class="success-box">
+                <p><strong>Remember:</strong> You've been proactive about your skin health with multiple professional evaluations. Trust in the expertise of your healthcare team while staying vigilant about changes.</p>
+            </div>
+
+            <h2>Key Takeaways</h2>
+
+            <div class="key-point">
+                <ul>
+                    <li>Seborrheic keratoses are common, benign skin growths</li>
+                    <li>Your dermoscopy results are reassuring</li>
+                    <li>Multiple lesions are often due to genetics and aging</li>
+                    <li>Routine monitoring is more important than urgent treatment</li>
+                    <li>Specialist consultation can wait unless changes occur</li>
+                    <li>Treatment is optional and cosmetic</li>
+                </ul>
+            </div>
+
+            <div class="references">
+                <h3>References</h3>
+                <ol>
+                    <li>Hafner C, Hartmann A, Vogt T. Seborrheic keratoses show increased BRAF/MEK/ERK pathway activation compared with normal epidermis. J Invest Dermatol. 2007;127(10):2254-2262.</li>
+                    <li>Braun RP, Rabinovitz HS, Oliviero M, et al. Dermoscopy of seborrheic keratoses. Arch Dermatol. 2005;141(12):1562-1566.</li>
+                    <li>Canadian Dermatology Association. Seborrheic Keratoses Clinical Practice Guidelines. Can J Dermatol. 2019;30(3):45-52.</li>
+                    <li>Memon AA, Tomenson JA, Barrett PD. A case-control study of risk factors for seborrheic keratoses. Br J Dermatol. 2000;142(2):277-280.</li>
+                    <li>Jackson JM, Alexis A, Berman B, et al. Current understanding of seborrheic keratosis: prevalence, etiology, clinical presentation, diagnosis, and management. J Drugs Dermatol. 2015;14(10):1119-1125.</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </footer>
+    </div>
+</body>
+</html>
