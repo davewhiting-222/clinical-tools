@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="category" content="Custom">
+    <title>Managing Type 2 Diabetes with Severe Insulin Resistance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .key-point {
+            background: #dbeafe;
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .caution-box {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mindset-box {
+            background: #ede9fe;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .action-checklist {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .action-checklist h4 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .action-checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .action-checklist li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .action-checklist li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            color: #3b82f6;
+        }
+
+        .references {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 2rem;
+        }
+
+        .references h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .references ol {
+            font-size: 0.9rem;
+        }
+
+        .references li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-style: italic;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .header, .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Managing Type 2 Diabetes with Severe Insulin Resistance</h1>
+            <small>Prepared by your family doctor</small>
+        </div>
+
+        <div class="content">
+            <time>December 2024</time>
+
+            <div class="key-point">
+                <strong>Important:</strong> Your high blood sugars are NOT due to poor diet adherence. You're experiencing severe insulin resistance - a complex metabolic condition where your body makes plenty of insulin but can't use it effectively. This handout explains why this happens and provides a clear path forward.
+            </div>
+
+            <h2>Why Your Blood Sugars Remain High Despite Low-Carb Diet</h2>
+
+            <p>Many people with type 2 diabetes are told to "just eat less carbs" and expect their blood sugars to normalize. However, your situation demonstrates that diabetes is more complex than carbohydrate restriction alone can solve.</p>
+
+            <h3>The Real Problem: Excess Fat in Your Organs</h3>
+
+            <p>Research from Newcastle University shows that type 2 diabetes is primarily caused by excess fat stored inside two critical organs:</p>
+
+            <ul>
+                <li><strong>Your liver:</strong> Excess fat here causes your liver to overproduce glucose, even when you eat no carbohydrates</li>
+                <li><strong>Your pancreas:</strong> Fat here damages your insulin-producing cells, making them work less efficiently</li>
+            </ul>
+
+            <div class="mindset-box">
+                <strong>Key Insight:</strong> Your body has exceeded its "Personal Fat Threshold" - the amount of fat it can safely store under your skin. When this happens, fat spills into organs where it doesn't belong, causing diabetes. Removing carbohydrates changes what your liver uses to make glucose, but it doesn't remove the organ fat that's driving the problem.
+            </div>
+
+            <h3>The Five Barriers Keeping Your Blood Sugar High</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Barrier</th>
+                        <th>What It Means</th>
+                        <th>Impact on You</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Organ Fat Overload</td>
+                        <td>Fat in liver and pancreas prevents normal function</td>
+                        <td>Liver makes glucose even on zero carbs</td>
+                    </tr>
+                    <tr>
+                        <td>Hyperinsulin Lock</td>
+                        <td>High insulin levels prevent fat burning</td>
+                        <td>Can't access stored fat for energy</td>
+                    </tr>
+                    <tr>
+                        <td>Protein-to-Sugar Conversion</td>
+                        <td>Liver converts dietary protein to glucose</td>
+                        <td>Blood sugar rises even after eggs and cheese</td>
+                    </tr>
+                    <tr>
+                        <td>Kidney Disease Amplification</td>
+                        <td>Reduced kidney function worsens insulin resistance</td>
+                        <td>Insulin works even less effectively</td>
+                    </tr>
+                    <tr>
+                        <td>Medication Withdrawal</td>
+                        <td>Stopping SGLT2 inhibitors removed glucose escape valve</td>
+                        <td>Lost 50-90g daily glucose disposal</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Why Your High C-Peptide is Actually Good News</h2>
+
+            <div class="success-box">
+                <strong>Hope for Recovery:</strong> Your C-peptide level of 1410 pmol/L shows your pancreas is still producing plenty of insulin. This means you have the biological foundation needed for improvement - we just need to help your body use insulin more effectively.
+            </div>
+
+            <p>Unlike people with "burned out" pancreas cells, your insulin-producing cells are working hard to overcome resistance. This suggests that if we can reduce the resistance, your insulin needs could decrease significantly.</p>
+
+            <h2>The Path Forward: Evidence-Based Strategies</h2>
+
+            <h3>Strategy 1: Break the Hyperinsulin Lock</h3>
+
+            <div class="warning-box">
+                <strong>Medical Supervision Required:</strong> Any changes to insulin doses must be done under close medical supervision with frequent blood sugar monitoring.
+            </div>
+
+            <p>The key insight is that high insulin levels prevent your body from burning stored fat - the very fat that's causing your diabetes. We need to create periods of lower insulin to allow fat burning while maintaining safe blood sugar levels.</p>
+
+            <p><strong>Potential approaches include:</strong></p>
+            <ul>
+                <li>Reintroducing SGLT2 inhibitors (like empagliflozin) to provide insulin-independent glucose disposal</li>
+                <li>Adding GLP-1 medications (like semaglutide) to improve insulin sensitivity and reduce inappropriate glucose production</li>
+                <li>Carefully reducing basal insulin doses as other medications take effect</li>
+            </ul>
+
+            <h3>Strategy 2: Create Meaningful Energy Deficit</h3>
+
+            <p>Low-carb diet alone has plateaued because it doesn't address total energy balance. Research shows that losing 10-15% of body weight can remove the critical organ fat causing diabetes.<sup>1</sup></p>
+
+            <div class="action-checklist">
+                <h4>Sustainable Weight Loss Options:</h4>
+                <ul>
+                    <li>Very Low Energy Diet (800-900 calories) under medical supervision</li>
+                    <li>Time-restricted eating (8-10 hour eating window)</li>
+                    <li>Portion-controlled low-carb diet with 500-800 calorie daily deficit</li>
+                    <li>Medically supervised meal replacement programs</li>
+                </ul>
+            </div>
+
+            <h3>Strategy 3: Exercise for Insulin-Independent Glucose Control</h3>
+
+            <p>Exercise activates glucose uptake through pathways that bypass insulin resistance, providing immediate benefits even when insulin isn't working well.<sup>2</sup></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exercise Type</th>
+                        <th>Benefit</th>
+                        <th>Getting Started</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Post-meal walking (10-15 minutes)</td>
+                        <td>Directly lowers post-meal blood sugar spikes</td>
+                        <td>Start immediately after protein meals</td>
+                    </tr>
+                    <tr>
+                        <td>Aerobic exercise (150 min/week)</td>
+                        <td>Improves overall insulin sensitivity</td>
+                        <td>Begin with 10-minute sessions, build gradually</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance training (2-3x/week)</td>
+                        <td>Builds muscle mass (glucose storage)</td>
+                        <td>Light weights, higher repetitions</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Strategy 4: Optimize Protein Intake</h3>
+
+            <p>Since protein is contributing to your blood sugar spikes, we can modify your approach without compromising nutrition:</p>
+
+            <ul>
+                <li>Distribute protein across multiple smaller meals rather than large portions</li>
+                <li>Choose fatty fish (salmon, mackerel) over high-dairy protein sources</li>
+                <li>Add vinegar or lemon juice to protein meals to slow glucose absorption</li>
+                <li>Consider plant-based proteins for some meals</li>
+            </ul>
+
+            <h3>Strategy 5: Address Kidney-Related Factors</h3>
+
+            <p>Your Stage 3a kidney disease is contributing to insulin resistance through several mechanisms. Addressing these can help:</p>
+
+            <div class="key-point">
+                <strong>Correctable Factors:</strong>
+                <ul>
+                    <li>Metabolic acidosis (if blood bicarbonate is low)</li>
+                    <li>Uremic toxin accumulation</li>
+                    <li>Reduced insulin clearance by kidneys</li>
+                </ul>
+            </div>
+
+            <h2>What to Expect</h2>
+
+            <h3>Timeline for Improvement</h3>
+
+            <ul>
+                <li><strong>1-2 weeks:</strong> Initial liver fat reduction begins; some glucose improvement</li>
+                <li><strong>2-8 weeks:</strong> Insulin sensitivity starts improving; possible medication adjustments</li>
+                <li><strong>3-6 months:</strong> Significant pancreatic fat reduction; major improvement potential</li>
+                <li><strong>6-12 months:</strong> Maximum metabolic recovery achievable</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Realistic Goal:</strong> Based on your high C-peptide levels, significant improvement in blood sugar control and reduction in insulin requirements is biologically possible. Complete remission (normal blood sugars without medication) occurs in about 46% of people who lose sufficient weight, but meaningful improvement is achievable for most people.
+            </div>
+
+            <h2>Next Steps with Your Doctor</h2>
+
+            <div class="action-checklist">
+                <h4>Priority Actions to Discuss:</h4>
+                <ul>
+                    <li>Assess appropriateness of restarting SGLT2 inhibitor</li>
+                    <li>Consider GLP-1 receptor agonist (semaglutide or similar)</li>
+                    <li>Plan for medically supervised insulin dose reduction</li>
+                    <li>Check serum bicarbonate levels (kidney acid-base balance)</li>
+                    <li>Develop structured weight loss plan with dietitian support</li>
+                    <li>Screen for sleep apnea (worsens insulin resistance)</li>
+                    <li>Set up more frequent blood sugar monitoring during transition</li>
+                </ul>
+            </div>
+
+            <div class="caution-box">
+                <strong>Important Safety Note:</strong> Never adjust insulin doses on your own. The strategies outlined here require careful medical supervision with frequent monitoring to prevent dangerous low blood sugar episodes.
+            </div>
+
+            <h2>The Bottom Line</h2>
+
+            <p>Your persistent high blood sugars despite excellent carbohydrate restriction reflect severe insulin resistance, not dietary failure. Your high C-peptide levels indicate that significant improvement is biologically possible with the right combination of interventions. The key is addressing the root causes - organ fat accumulation and hyperinsulinemia - rather than just restricting carbohydrates.</p>
+
+            <p>Success will require a coordinated approach involving medication optimization, structured weight loss, exercise, and careful monitoring. While this seems complex, many people with similar presentations have achieved dramatic improvements in blood sugar control and quality of life.</p>
+
+        </div>
+
+        <div class="references">
+            <h3>References</h3>
+            <ol>
+                <li>Lean ME, Leslie WS, Barnes AC, et al. Primary care-led weight management for remission of type 2 diabetes (DiRECT): an open-label, cluster-randomised trial. Lancet. 2018;391(10120):541-551.</li>
+                <li>Taylor R. Type 2 diabetes: etiology and reversibility. Diabetes Care. 2013;36(4):1047-1055.</li>
+                <li>Colberg SR, Sigal RJ, Yardley JE, et al. Physical Activity/Exercise and Diabetes: A Position Statement of the American Diabetes Association. Diabetes Care. 2016;39(11):2065-2079.</li>
+                <li>Zinman B, Wanner C, Lachin JM, et al. Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes. N Engl J Med. 2015;373(22):2117-2128.</li>
+                <li>Davies M, Færch L, Jeppesen OK, et al. Semaglutide 2.4 mg once a week in adults with overweight or obesity (STEP 1): a double-blind, randomised, placebo-controlled, phase 3 trial. N Engl J Med. 2021;384(11):989-1002.</li>
+                <li>de Brito-Ashurst I, Varagunam M, Raftery MJ, Yaqoob MM. Bicarbonate supplementation slows progression of CKD and improves nutritional status. J Am Soc Nephrol. 2009;20(9):2075-2084.</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+            <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+        </div>
+    </div>
+</body>
+</html>
