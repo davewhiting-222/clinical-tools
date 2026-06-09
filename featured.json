@@ -51,6 +51,11 @@
   },
   {
     "category": "Chronic Disease",
+    "filename": "generate_a_patient_handout_on_atrial_fibrillation_explained_what_causes_it_what_the_risk_factors_are_what_the_patient_can_modify_to_reduce_risk_of_af_eg_alcohol_how_we_treat_it_and_in_particular_add_a_section_on_anticoagulation_handout.html",
+    "title": "Understanding Atrial Fibrillation: Your Guide to Management"
+  },
+  {
+    "category": "Chronic Disease",
     "filename": "pigmented_purpuric_dermatitis_handout.html",
     "title": "Understanding Pigmented Purpuric Dermatitis"
   },
@@ -58,6 +63,31 @@
     "category": "Chronic Disease",
     "filename": "understanding_polymyalgia_rheumatica_pmr_handout.html",
     "title": "Understanding Polymyalgia Rheumatica (PMR)"
+  },
+  {
+    "category": "Consent_Forms",
+    "filename": "accutane_female_consent_form.html",
+    "title": "Isotretinoin — Informed Consent and Pregnancy Prevention Agreement"
+  },
+  {
+    "category": "Consent_Forms",
+    "filename": "skin_examination_consent_and_preferences_males_handout.html",
+    "title": "Skin Examination Consent and Preferences - Males"
+  },
+  {
+    "category": "Consent_Forms",
+    "filename": "skin_exam_consent_v2.html",
+    "title": "Skin Examination: Consent and Preferences"
+  },
+  {
+    "category": "Custom",
+    "filename": "making_sense_of_chronic_fatigue_and_adolescents_and_young_adults_handout.html",
+    "title": "Making Sense of Chronic Fatigue in Adolescents and Young Adults"
+  },
+  {
+    "category": "Custom",
+    "filename": "understanding_seborreic_keratosis_handout.html",
+    "title": "Understanding Seborrheic Keratosis"
   },
   {
     "category": "Dementia_Insulin Resistance",
@@ -78,6 +108,11 @@
     "category": "Diabetes",
     "filename": "two_line_title_approach_managing_illness_safely_on_your_sglt2_medication_applies_to_jardiance_empagliflozin_forxiga_dapagliflozin_invokana_canagliflozin_handout.html",
     "title": "Managing Illness Safely on Your SGLT2 Medication"
+  },
+  {
+    "category": "Diabetes",
+    "filename": "peri_procedural_rules_handout.html",
+    "title": "Peri-Procedural Rules for Low-Carb/Keto Diabetic Patients"
   },
   {
     "category": "Diabetes",
@@ -126,8 +161,48 @@
   },
   {
     "category": "Nutrition_Diet",
+    "filename": "afib_low_carb_handout.html",
+    "title": "Low-Carbohydrate Diets and Atrial Fibrillation: What You Need to Know"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "low_carb_heart_disease_handout.html",
+    "title": "Low-Carbohydrate Diets and Heart Disease Risk: Understanding the Full Picture"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_can_i_do_this_long_term_handout.html",
+    "title": "Myth-Busters: Can I Do This Long Term?"
+  },
+  {
+    "category": "Nutrition_Diet",
     "filename": "myth_busters_is_it_safe_to_eat_this_way_if_i_have_diabetes_handout.html",
     "title": "Myth-Busters: Is it Safe to Eat Low-Carb with Diabetes?"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_what_about_fibre_handout.html",
+    "title": "Myth-Busters: What About Fibre?"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_why_do_i_feel_worse_before_i_feel_better_keto_flu_handout.html",
+    "title": "Myth-Busters: Why Do I Feel Worse Before I Feel Better? (Keto Flu)"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_why_is_my_ldl_going_up_handout.html",
+    "title": "Myth-Busters: Why is my LDL going up?"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_will_i_be_deficient_in_vitamins_and_minerals_handout.html",
+    "title": "Myth-Busters: Will I Be Deficient in Vitamins and Minerals?"
+  },
+  {
+    "category": "Nutrition_Diet",
+    "filename": "myth_busters_won_t_this_damage_my_kidneys_handout.html",
+    "title": "Myth-Busters: Won't This Damage My Kidneys?"
   },
   {
     "category": "Nutrition_Diet",
@@ -166,6 +241,11 @@
   },
   {
     "category": "Nutrition_Diet",
+    "filename": "understanding_my_carbohydrate_targets_handout.html",
+    "title": "Understanding My Carbohydrate Targets"
+  },
+  {
+    "category": "Nutrition_Diet",
     "filename": "understanding_sugar_substitutes_handout.html",
     "title": "Understanding Sugar Substitutes - Patient Handout"
   },
@@ -183,6 +263,11 @@
     "category": "Prevention",
     "filename": "nicotinimide-and-squamous-cell-cancer.html",
     "title": "Nicotinamide (Vitamin B3) for Skin Cancer Prevention"
+  },
+  {
+    "category": "RN_Diabetes",
+    "filename": "restoring_insulin_sensitivity_in_type_2_diabetics_on_insulin_nurse_handout.html",
+    "title": "Restoring Insulin Sensitivity in Type 2 Diabetics on Insulin"
   },
   {
     "category": "Skin",
@@ -233,6 +318,16 @@
     "category": "Skin_Eczema",
     "filename": "understanding_spongiotic_dermatitis_handout.html",
     "title": "Understanding Spongiotic Dermatitis"
+  },
+  {
+    "category": "Skin_Examination",
+    "filename": "skin_exam_handout_v2.html",
+    "title": "Your Full Skin Examination: What to Expect"
+  },
+  {
+    "category": "Skin_Examination",
+    "filename": "your_full_skin_examination_what_to_expect_males_handout.html",
+    "title": "Your Full Skin Examination: What to Expect - Males"
   },
   {
     "category": "Skin_Protection",
