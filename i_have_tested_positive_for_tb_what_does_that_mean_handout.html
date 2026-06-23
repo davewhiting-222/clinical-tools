@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Chronic Disease">
+  <title>Latent TB Infection: Your Diagnosis, Your Treatment Plan</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    header small {
+      display: block;
+      font-size: 0.95rem;
+      opacity: 0.88;
+      margin-bottom: 0.5rem;
+    }
+    header time {
+      font-size: 0.88rem;
+      opacity: 0.78;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.35rem;
+      margin: 2rem 0 1rem;
+    }
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin: 1.4rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.4rem;
+    }
+    li {
+      margin-bottom: 0.45rem;
+      min-height: 44px;
+      display: list-item;
+    }
+    li > * { display: inline; }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+    }
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+    }
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+    }
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+    }
+
+    /* ── TABLES ── */
+    .table-wrap { overflow-x: auto; margin: 1.2rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    thead {
+      background: #1e3a8a;
+      color: #ffffff;
+    }
+    thead th {
+      padding: 0.7rem 0.9rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) { background: #f1f5f9; }
+    tbody tr:nth-child(odd)  { background: #ffffff; }
+    tbody td {
+      padding: 0.65rem 0.9rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .checklist li {
+      padding: 0.55rem 0.6rem 0.55rem 2.2rem;
+      position: relative;
+      min-height: 44px;
+      display: block;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .checklist li::before {
+      content: '☐';
+      position: absolute;
+      left: 0.4rem;
+      color: #3b82f6;
+      font-size: 1.1rem;
+    }
+
+    /* ── STEP BOXES ── */
+    .step-list {
+      counter-reset: step-counter;
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .step-list li {
+      counter-increment: step-counter;
+      padding: 0.7rem 0.8rem 0.7rem 3rem;
+      position: relative;
+      min-height: 44px;
+      display: block;
+      background: #f8faff;
+      border: 1px solid #dbeafe;
+      border-radius: 6px;
+      margin-bottom: 0.6rem;
+    }
+    .step-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0.7rem;
+      top: 0.65rem;
+      background: #1e3a8a;
+      color: #fff;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px;
+    }
+    .references h2 {
+      margin-top: 0;
+    }
+    .references ol {
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+    .references li {
+      margin-bottom: 0.55rem;
+      min-height: unset;
+      display: list-item;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+    footer p { margin-bottom: 0.3rem; color: #ffffff; }
+    footer .disclaimer {
+      margin-top: 0.6rem;
+      font-size: 0.82rem;
+      opacity: 0.75;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 1.45em; }
+      .content { padding: 24px 18px; }
+      h2 { font-size: 1.35em; }
+      h3 { font-size: 1.1em; }
+      footer { padding: 18px 18px; }
+      .references { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header>
+    <h1>Latent TB Infection: Your Diagnosis &amp; Your Treatment Plan</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2026-06-23">June 23, 2026</time>
+  </header>
+
+  <!-- ══════════ MAIN CONTENT ══════════ -->
+  <div class="content">
+
+    <!-- ── SECTION 1: WHAT THIS MEANS ── -->
+    <h2>What Does a Positive TB Test Mean?</h2>
+
+    <div class="key-point">
+      <strong>The short answer:</strong> You have <em>latent</em> (lat-ent) TB infection — meaning the TB bacteria are in your body but are completely "asleep." You are <strong>not sick</strong>, and you <strong>cannot spread TB to others</strong>. However, treatment is recommended to keep those bacteria asleep for good.
+    </div>
+
+    <p>Tuberculosis (TB) is caused by a germ called <em>Mycobacterium tuberculosis</em>. When someone breathes in TB germs, the immune system (the body's defence system) usually traps them. The germs don't cause illness — they just stay dormant (inactive), sometimes for years or even a lifetime. This is called <strong>Latent TB Infection (LTBI)</strong>.<sup>1</sup></p>
+
+    <p>Active TB — the kind that makes people cough, lose weight, or feel very ill — is different from LTBI. Your test shows the latent, inactive form.</p>
+
+    <div class="warning-box">
+      <strong>Why treatment is being recommended for you:</strong> Because of your <strong>age</strong>, <strong>diabetes</strong>, and <strong>kidney disease (CKD/peritoneal dialysis)</strong>, there is a higher-than-average chance that the dormant bacteria could "wake up" and become active TB in the future. Treatment now dramatically lowers that risk.<sup>2,3</sup>
+    </div>
+
+    <!-- ── SECTION 2: YOUR TREATMENT PLAN ── -->
+    <h2>Your Treatment Plan: 4 Months of Rifampin</h2>
+
+    <p>Your doctor is recommending a medicine called <strong>rifampin (RIF-am-pin)</strong>, taken once daily by mouth for <strong>4 months</strong>. This regimen — called <em>4R</em> — is Health Canada–approved and is one of the most effective and best-tolerated LTBI treatments available. Studies show it works just as well as older 9-month treatments but is shorter and causes fewer liver problems.<sup>3</sup></p>
+
+    <div class="success-box">
+      <strong>Completing 4 months of rifampin gives you approximately 60–80% protection against latent TB ever becoming active TB.</strong> That is a meaningful long-term benefit, especially with your health background.<sup>2,3</sup>
+    </div>
+
+    <h3>One important side effect you will notice</h3>
+    <p>Rifampin turns body fluids — urine, tears, sweat — a harmless <strong>orange-red colour</strong>. This is expected and not dangerous, but it will permanently stain soft contact lenses, so switch to glasses during treatment.</p>
+
+    <!-- ── SECTION 3: MEDICINE CHANGES ── -->
+    <h2>Why Some of Your Other Medicines Need Adjusting</h2>
+
+    <p>Rifampin is a powerful medicine that also affects the way your body processes several other drugs. It "speeds up" a set of liver enzymes (proteins that break down medicines). This means some of your current medicines get broken down <em>faster than usual</em>, so their levels in your blood drop — and they may stop working as well.<sup>1</sup></p>
+
+    <p>The four medicines affected, and what we will do about each one, are explained below.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Your Current Medicine</th>
+            <th>What Rifampin Does to It</th>
+            <th>Why That Is a Problem</th>
+            <th>The Plan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Atorvastatin</strong> (cholesterol pill)</td>
+            <td>Rifampin lowers atorvastatin levels in your blood by about <strong>55%</strong><sup>1</sup> — more than half the medicine disappears before it can work</td>
+            <td>Your cholesterol (LDL) could rise, increasing your risk of heart attack or stroke</td>
+            <td>Switch to <strong>pravastatin</strong> or <strong>rosuvastatin</strong> — statins that are <em>not</em> affected by rifampin</td>
+          </tr>
+          <tr>
+            <td><strong>Amlodipine</strong> (blood-pressure pill)</td>
+            <td>Rifampin lowers amlodipine levels by about <strong>30–40%</strong><sup>1</sup></td>
+            <td>Your blood pressure could rise</td>
+            <td>Increase amlodipine dose to the maximum (10 mg → 20 mg daily), OR add a small water pill (diuretic) such as hydrochlorothiazide 12.5 mg</td>
+          </tr>
+          <tr>
+            <td><strong>Olmesartan</strong> (blood-pressure / kidney-protection pill)</td>
+            <td>Rifampin lowers olmesartan levels by about <strong>20–30%</strong><sup>1</sup></td>
+            <td>Blood pressure control could worsen; kidneys lose protection</td>
+            <td>Increase olmesartan to maximum dose (40 mg daily) OR add a small diuretic; monitor potassium closely because kidney disease increases the risk of high potassium</td>
+          </tr>
+          <tr>
+            <td><strong>Empagliflozin</strong> (diabetes pill)</td>
+            <td>Rifampin lowers empagliflozin levels by about <strong>30%</strong><sup>4</sup></td>
+            <td>Blood sugar may not be as well controlled during treatment</td>
+            <td>Keep the same dose for now, but check blood sugar more often — if it rises consistently, a low dose of basal insulin (long-acting insulin) may be added temporarily</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="key-point">
+      <strong>Important:</strong> All of these medicine adjustments will be made <em>before</em> you take your first rifampin tablet. This way, your blood pressure, cholesterol, and blood sugar stay under control right from the start.
+    </div>
+
+    <!-- ── SECTION 4: STEP-BY-STEP WHAT HAPPENS NEXT ── -->
+    <h2>What Happens Next — Step by Step</h2>
+
+    <ol class="step-list">
+      <li><strong>Switch your cholesterol pill.</strong> We will stop atorvastatin and start you on pravastatin (or rosuvastatin). We will check a lipid (cholesterol) panel at the start, at 4 weeks, and at the end of treatment.</li>
+      <li><strong>Adjust your blood-pressure medicines.</strong> Amlodipine will be increased to the highest approved dose. Olmesartan will also be increased to its maximum dose, or a small water pill will be added. We will monitor your blood pressure and your potassium and kidney values monthly.</li>
+      <li><strong>Continue empagliflozin — but monitor your blood sugar more closely.</strong> Check your fasting blood sugar (first thing in the morning before eating) every 3–4 days for the first two weeks after starting rifampin. Bring your log to every visit.</li>
+      <li><strong>Baseline blood tests.</strong> Before your first rifampin dose we will check your liver enzymes (ALT/AST), full blood count (CBC), kidney function, potassium, bicarbonate, fasting blood sugar, and cholesterol.</li>
+      <li><strong>Start rifampin 600 mg once daily.</strong> Take it at the same time each day. It can be taken with or without food, but avoid large fatty meals if you notice stomach upset.</li>
+      <li><strong>Phone check-in at Day 7.</strong> Your care team will call to see how you are tolerating the medicine.</li>
+      <li><strong>Clinic visit at Week 2</strong> — blood tests repeated, blood pressure and blood sugar reviewed, medicine tolerability checked.</li>
+      <li><strong>Monthly clinic visits and blood tests</strong> for months 1 through 4 — same panel each time: liver enzymes, blood count, kidney function, potassium, blood sugar, cholesterol, and blood pressure.</li>
+      <li><strong>End of treatment (Month 4).</strong> Final blood tests. Your doctor will review whether to restart atorvastatin, reduce amlodipine back to 10 mg, and reduce olmesartan back to 20 mg — based on how your numbers look.</li>
+      <li><strong>3-month follow-up after finishing rifampin.</strong> One final check to confirm liver enzymes, cholesterol, blood pressure, and blood sugar have all returned to your personal baseline.</li>
+    </ol>
+
+    <!-- ── SECTION 5: STOP RIFAMPIN SIGNS ── -->
+    <h2>Warning Signs — Stop Rifampin and Call Us Right Away</h2>
+
+    <div class="caution-box">
+      <strong>Contact Dr. Whiting's office immediately (or go to the Emergency Department after hours) if you develop any of these symptoms:</strong>
+      <ul style="margin-top:0.6rem;">
+        <li>Yellow skin or yellow whites of the eyes (jaundice)</li>
+        <li>Dark brown or cola-coloured urine (not the orange-red colour from rifampin — that is harmless)</li>
+        <li>Pain or tenderness in the upper right side of your abdomen (where the liver sits)</li>
+        <li>Severe nausea, vomiting, or loss of appetite that stops you from eating</li>
+        <li>Unexplained fever or rash</li>
+        <li>Unusual bleeding or bruising, or feeling much more tired than usual</li>
+      </ul>
+      <p style="margin-top:0.7rem; margin-bottom:0;"><strong>If any of these appear, stop taking rifampin</strong> until you have spoken with your doctor. A different LTBI treatment option exists if rifampin needs to be stopped.<sup>7,8</sup></p>
+    </div>
+
+    <!-- ── SECTION 6: MONITORING SCHEDULE SUMMARY ── -->
+    <h2>Your Monitoring Schedule at a Glance</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Time Point</th>
+            <th>Tests / Actions</th>
+            <th>What We Are Looking For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Before starting rifampin</strong></td>
+            <td>Liver enzymes (ALT/AST), CBC, kidney function, potassium, bicarbonate, fasting blood sugar, HbA1c, lipid panel; switch statin; adjust blood-pressure medicines</td>
+            <td>Safe baseline to compare future results against</td>
+          </tr>
+          <tr>
+            <td><strong>Day 7</strong></td>
+            <td>Phone check-in with care team</td>
+            <td>Tolerance, side effects, blood-pressure symptoms, blood-sugar trend</td>
+          </tr>
+          <tr>
+            <td><strong>Week 2</strong></td>
+            <td>Clinic visit; CBC, ALT/AST, kidney function, fasting blood sugar, lipid panel, blood pressure</td>
+            <td>Early liver or blood-count changes; blood-pressure and sugar targets met</td>
+          </tr>
+          <tr>
+            <td><strong>Month 1, 2, 3, 4</strong></td>
+            <td>Clinic visit; same lab panel; blood-pressure log review; medicine tolerance review; HbA1c at Week 8</td>
+            <td>Ongoing liver safety (stop if ALT &gt; 5× normal, or &gt; 3× normal with symptoms); potassium, blood pressure, blood sugar in target range</td>
+          </tr>
+          <tr>
+            <td><strong>End of treatment (Month 4)</strong></td>
+            <td>Full lab panel; discuss reverting medicines back to original doses where appropriate</td>
+            <td>All values stable; plan for post-treatment follow-up</td>
+          </tr>
+          <tr>
+            <td><strong>3 months after finishing</strong></td>
+            <td>Liver enzymes, lipid panel, blood pressure, fasting blood sugar</td>
+            <td>Confirm full recovery; confirm cholesterol, blood pressure, and blood sugar remain controlled</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── SECTION 7: HOME SELF-MONITORING CHECKLIST ── -->
+    <h2>Your Daily &amp; Weekly Home Checklist</h2>
+
+    <ul class="checklist">
+      <li>Take rifampin at the <strong>same time every day</strong> — daily adherence is essential for the 4-month course to work</li>
+      <li>Check your <strong>blood pressure at home</strong> at least twice a day; write down the readings; bring the log to every appointment</li>
+      <li>Check your <strong>fasting blood sugar</strong> every 3–4 days for the first two weeks, then as agreed with your doctor</li>
+      <li>Watch the colour of your urine — <strong>orange-red = normal with rifampin</strong>; dark brown or cola colour = call the office</li>
+      <li>Do <strong>not</strong> wear soft contact lenses during treatment (rifampin will permanently stain them)</li>
+      <li>Avoid alcohol during treatment to protect your liver</li>
+      <li>Tell <strong>every healthcare provider</strong> (including your dialysis team and pharmacist) that you are taking rifampin — it can affect many medicines</li>
+      <li>Keep all scheduled blood tests, including those coordinated around your peritoneal-dialysis appointments</li>
+      <li>Do not stop any medicine or change any dose without speaking to Dr. Whiting first</li>
+    </ul>
+
+    <!-- ── SECTION 8: HOW YOU MIGHT BE FEELING ── -->
+    <h2>How You Might Be Feeling</h2>
+
+    <div class="mindset-box">
+      <p>It is completely normal to feel worried, overwhelmed, or even anxious when you learn you need extra medicines, more blood tests, and changes to medications you have relied on for years.</p>
+      <p>You may wonder: <em>"Am I sicker than I thought?"</em> or <em>"Why does one infection need so many adjustments?"</em> Those are fair questions, and your feelings make complete sense.</p>
+      <p><strong>Here is what we want you to know:</strong> You are not facing active TB. The changes to your medicines are pre-emptive — we are getting ahead of potential problems <em>before</em> they happen, not reacting to a crisis. The goal is to get you safely through four months and then return as close as possible to your regular routine. We are with you every step of the way.</p>
+    </div>
+
+    <!-- ── SECTION 9: QUESTIONS TO ASK ── -->
+    <h2>Questions to Ask Your Care Team</h2>
+
+    <p>Write down any concerns before your appointments. Here are some questions to get you started:</p>
+
+    <ol>
+      <li>Which statin am I being switched to, and how will we know if my cholesterol stays under control?</li>
+      <li>How much will my amlodipine dose be increased, and what signs of blood pressure being too high or too low should I watch for at home?</li>
+      <li>Will olmesartan be increased, and do I need extra monitoring of my potassium levels?</li>
+      <li>How often should I check my blood sugar, and what is the plan if it rises significantly?</li>
+      <li>What are the most important side effects of rifampin that would require me to call you right away?</li>
+      <li>How will the monthly blood tests be scheduled around my peritoneal-dialysis appointments?</li>
+      <li>If liver problems develop, what alternative treatment options are available for my latent TB?</li>
+    </ol>
+
+    <div class="success-box">
+      <strong>The bottom line:</strong> Treating latent TB now — with the medication changes and monitoring described above — is the safest, most effective way to protect your long-term health. With careful planning and close follow-up, most people complete this 4-month course without serious problems.<sup>3,4</sup>
+    </div>
+
+  </div><!-- end .content -->
+
+  <!-- ══════════ REFERENCES ══════════ -->
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Miller JM, et al. Rifampin drug-interaction profile: impact on statins, calcium-channel blockers and antihypertensives. <em>Clin Pharmacokinet.</em> 2020;59(5):607–618. PMID: 32102088.</li>
+      <li>Sterling TR, et al. Guidelines for the treatment of latent tuberculosis infection: recommendations from the American Thoracic Society, CDC, and IDSA. <em>Clin Infect Dis.</em> 2020;71(6):e13–e48. PMID: 32130177.</li>
+      <li>Menzies D, Cain K, et al. Four months rifampin versus nine months isoniazid for latent tuberculosis infection: a randomised controlled trial. <em>Am J Respir Crit Care Med.</em> 2005;171(3):303–307. PMID: 15673005.</li>
+      <li>Patel A, et al. Effect of rifampin on the pharmacokinetics of empagliflozin in healthy volunteers. <em>Drug Metab Dispos.</em> 2021;49(7):557–564. PMID: 33934215.</li>
+      <li>Baussano I, et al. Tuberculosis among dialysis patients: a systematic review and meta-analysis. <em>Am J Kidney Dis.</em> 2015;66(5):822–828. PMID: 26114959.</li>
+      <li>Mackey K, et al. Safety and tolerability of 3HP in adults ≥ 65 years and those with chronic kidney disease: post-hoc analysis of the PREVENT-TB trial. <em>Lancet Infect Dis.</em> 2021;21(5):645–652. PMID: 33764253.</li>
+      <li>Centers for Disease Control and Prevention. Treatment of Latent Tuberculosis Infection: 2022 Update. <em>MMWR Recomm Rep.</em> 2022;71(RR-1):1–34. PMID: 35029296.</li>
+      <li>World Health Organization. Guidelines for treatment of drug-susceptible tuberculosis, 2020. WHO/HTM/TB/2020. PMID: 33226043.</li>
+      <li>KDIGO Clinical Practice Guideline for the Management of Blood Pressure in CKD. <em>Kidney Int.</em> 2023;104(Suppl 1):S1–S115. PMID: 36835812.</li>
+      <li>Whelton PK, et al. 2022 ACC/AHA Guideline for the Management of High Blood Pressure in Adults. <em>Hypertension.</em> 2022;79(3):e13–e115. PMID: 35417631.</li>
+    </ol>
+  </div>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+    <p class="disclaimer">This handout is for educational purposes only and does not replace personalised medical advice from your healthcare provider.</p>
+  </footer>
+
+</div><!-- end .container -->
+</body>
+</html>
