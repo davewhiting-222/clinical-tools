@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Prevention">
+  <title>Managing Latent TB Infection | Dr. David Whiting</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.25;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    /* ── TABLE ── */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    thead {
+      background: #1e3a8a;
+      color: #ffffff;
+    }
+
+    thead th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f1f5f9;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #ffffff;
+    }
+
+    tbody td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      min-height: 44px;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist li::before {
+      content: '☐';
+      font-size: 1.2rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      font-size: 1.3em;
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .references li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer p {
+      margin-bottom: 0.3rem;
+    }
+
+    footer .disclaimer {
+      opacity: 0.7;
+      font-size: 0.82rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      header, .content, .references, footer {
+        padding: 24px 20px;
+      }
+
+      h1 { font-size: 1.5em; }
+      h2 { font-size: 1.35em; }
+      h3 { font-size: 1.1em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ══ HEADER ══ -->
+    <header>
+      <h1>Managing Your Latent TB Infection</h1>
+      <small>Prepared by your family doctor</small>
+      <time datetime="2026-06-24">June 24, 2026</time>
+    </header>
+
+    <!-- ══ MAIN CONTENT ══ -->
+    <div class="content">
+
+      <!-- SECTION 1 — What Is Latent TB? -->
+      <h2>What Is Latent TB?</h2>
+      <p>
+        <strong>TB</strong> stands for tuberculosis — a bacterial infection caused by germs called <em>Mycobacterium tuberculosis</em>. When someone has <strong>latent</strong> TB, those germs are living quietly inside the body but are not active. This means:
+      </p>
+      <ul>
+        <li>You feel completely well.</li>
+        <li>Your chest X-ray and breathing tests are normal — there is no active disease in your lungs.</li>
+        <li>You <strong>cannot</strong> spread TB to anyone else right now.</li>
+      </ul>
+
+      <div class="key-point">
+        <div class="callout-title">🔑 Key Point</div>
+        Latent TB is <strong>not</strong> the same as active TB. You are not sick, and you are not contagious. But without treatment, latent TB can "wake up" and become active disease — especially when the immune system (the body's defence system) is under pressure.
+      </div>
+
+      <!-- SECTION 2 — Why Your Risk Is Higher -->
+      <h2>Why Your Risk Is a Little Higher</h2>
+      <p>
+        Most healthy adults with latent TB have about a 5–10% lifetime chance of the infection becoming active. For you, that risk is somewhat higher because:
+      </p>
+      <ul>
+        <li><strong>Age over 65</strong> — the immune system naturally becomes less robust over time.</li>
+        <li><strong>Diabetes</strong> — high blood sugar weakens the immune system's ability to keep the TB germs "asleep."</li>
+        <li><strong>Dialysis (kidney dialysis)</strong> — kidney failure and dialysis reduce immune function significantly.</li>
+      </ul>
+
+      <div class="warning-box">
+        <div class="callout-title">⚠️ Why Treatment Matters</div>
+        Treating latent TB now — while you feel well — is far safer and easier than treating active TB later. A full course of treatment reduces your risk of the infection becoming active by about 60–90%.<sup>1</sup>
+      </div>
+
+      <!-- SECTION 3 — Your Treatment Plan -->
+      <h2>Your Treatment Plan: Rifampin (Rifampicin) Once Daily for 4 Months</h2>
+      <p>
+        Your doctor has prescribed <strong>rifampin (RIF-am-pin) 600 mg</strong> — one tablet taken <strong>once each day with food</strong> for <strong>16 weeks (4 months)</strong>. This regimen is known as <strong>4R</strong> and is one of the preferred short-course options recommended by Canadian and international guidelines for latent TB treatment.<sup>2,3</sup>
+      </p>
+
+      <div class="success-box">
+        <div class="callout-title">✅ A Practical Advantage</div>
+        The 4-month rifampin course has been shown in a large clinical trial to be just as effective as the older 9-month treatment, with fewer side effects and better completion rates.<sup>4</sup> It is a shorter commitment with a strong track record.
+      </div>
+
+      <h3>How to Take Your Rifampin</h3>
+      <ul>
+        <li>Take it at the <strong>same time each day</strong> — this makes it easier to remember.</li>
+        <li>Take it <strong>with food</strong> to reduce stomach upset.</li>
+        <li>If you miss a dose, take it as soon as you remember — unless it is almost time for your next dose. Never double up.</li>
+        <li>Do <strong>not</strong> stop taking it without talking to your doctor first, even if you feel fine.</li>
+      </ul>
+
+      <div class="key-point">
+        <div class="callout-title">💊 A Public-Health Nurse Will Support You</div>
+        You are not alone in this — there is a team supporting you.
+      </div>
+
+      <!-- SECTION 4 — The Orange Colour -->
+      <h3>Expect an Orange Colour — This Is Normal</h3>
+      <p>
+        Rifampin turns body fluids an orange-red colour. This includes your urine, sweat, tears, and saliva. This is <strong>completely harmless</strong> but can be surprising. A few things to know:
+      </p>
+      <ul>
+        <li>Soft contact lenses can be permanently stained — wear glasses during treatment if possible.</li>
+        <li>The colour goes away once you finish the medication.</li>
+      </ul>
+
+      <!-- SECTION 5 — Side Effects -->
+      <h2>Side Effects: What to Watch For</h2>
+      <p>
+        Most people tolerate rifampin well, but it is important to know what symptoms need prompt attention. The table below summarizes the most important side effects.
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Side Effect</th>
+              <th>How Common</th>
+              <th>What It Looks Like</th>
+              <th>What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Liver irritation (hepatotoxicity)</strong></td>
+              <td>Uncommon (&lt;5%)</td>
+              <td>Yellowing of the skin or whites of the eyes (jaundice), dark urine, nausea, loss of appetite, upper-right belly pain, unusual tiredness</td>
+              <td><strong>Stop medication and contact us immediately</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Stomach upset / nausea</strong></td>
+              <td>Common (up to 10%)</td>
+              <td>Nausea, vomiting, diarrhoea, stomach cramps</td>
+              <td>Take with food; call us if severe or persistent</td>
+            </tr>
+            <tr>
+              <td><strong>Skin reactions / rash</strong></td>
+              <td>Uncommon</td>
+              <td>Itching, hives, red rash</td>
+              <td>Call us; a mild rash may be manageable, a severe rash needs urgent review</td>
+            </tr>
+            <tr>
+              <td><strong>Flu-like symptoms</strong></td>
+              <td>Rare with daily dosing</td>
+              <td>Fever, chills, muscle aches, feeling unwell</td>
+              <td>Call us to discuss</td>
+            </tr>
+            <tr>
+              <td><strong>Low platelet count</strong></td>
+              <td>Rare</td>
+              <td>Unusual bruising, bleeding gums, blood in urine or stool</td>
+              <td><strong>Stop medication and contact us immediately</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Orange-red body fluids</strong></td>
+              <td>Very common (expected)</td>
+              <td>Orange urine, sweat, tears, saliva</td>
+              <td>Normal — no action needed. Avoid soft contact lenses.</td>
+            </tr>
+            <tr>
+              <td><strong>Drug interactions</strong></td>
+              <td>Very common</td>
+              <td>Rifampin speeds up liver enzymes that break down many medications, reducing their effectiveness</td>
+              <td>See Drug Interactions section below — important for your situation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="caution-box">
+        <div class="callout-title">🚨 Stop Medication and Seek Care Right Away If You Have:</div>
+        <ul>
+          <li>Yellow skin or yellow eyes (jaundice)</li>
+          <li>Dark brown or cola-coloured urine (not the normal orange tint from rifampin)</li>
+          <li>Severe nausea, vomiting, or belly pain you cannot manage</li>
+          <li>Unexplained bruising or unusual bleeding</li>
+          <li>A severe or spreading rash</li>
+        </ul>
+        <p style="margin-top:0.5rem;">Call Dr. Whiting's office, your public-health nurse, or go to the emergency department.</p>
+      </div>
+
+      <!-- SECTION 6 — Drug Interactions -->
+      <h2>Important Drug Interactions</h2>
+      <p>
+        Rifampin is a powerful "enzyme inducer" (it makes your liver work faster at breaking down many medicines). This means some of your other medications may not work as well while you are on rifampin — or their levels in your blood may change in ways that need monitoring. The following is important for your specific situation:
+      </p>
+
+      <h3>Cholesterol Medicine (Statin) — Paused During Treatment</h3>
+      <div class="warning-box">
+        <div class="callout-title">⚠️ Pause Your Statin While on Rifampin</div>
+        <p>
+          Your cholesterol-lowering medicine (a "statin") will be <strong>paused while you take rifampin</strong>. This is because rifampin dramatically lowers the level of statins in your blood, making them much less effective — and in some cases it can increase the risk of muscle side effects. Once you finish the 4-month rifampin course, we will restart your statin. This short break is safe for most people and is standard practice.<sup>5</sup>
+        </p>
+      </div>
+
+      <h3>Other Medications to Be Aware Of</h3>
+      <p>Rifampin can interact with many common medicines. Tell any other doctor, pharmacist, or specialist that you are taking rifampin. Important examples include:</p>
+      <ul>
+        <li><strong>Blood pressure medications</strong> — levels may drop; we will monitor your blood pressure closely.</li>
+        <li><strong>Blood thinners</strong> (e.g., warfarin) — dose adjustments are often needed; more frequent INR checks required.</li>
+        <li><strong>Diabetes medications</strong> — blood sugar control may change; we may need to adjust your diabetes treatment.</li>
+        <li><strong>Certain heart medications</strong> — discuss with your specialist.</li>
+        <li><strong>Oral contraceptives</strong> — rifampin makes the birth control pill less effective. Use a backup method (e.g., condoms) for the duration of treatment and one month after.</li>
+      </ul>
+
+      <!-- SECTION 7 — Lab Monitoring -->
+      <h2>Blood Tests and Monitoring During Treatment</h2>
+      <p>
+        Because of your age, diabetes, and dialysis, we will monitor your blood closely throughout treatment. Your public-health nurse will co-ordinate these tests with your dialysis team. Here is what to expect:
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Why We Do It</th>
+              <th>Timing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Liver function tests (LFTs)</strong> — AST, ALT, bilirubin, ALP</td>
+              <td>To check for liver irritation from rifampin</td>
+              <td>Before starting, then monthly during treatment</td>
+            </tr>
+            <tr>
+              <td><strong>Complete blood count (CBC)</strong></td>
+              <td>To check blood cells — especially platelets (clotting cells) and red blood cells</td>
+              <td>Before starting, then monthly</td>
+            </tr>
+            <tr>
+              <td><strong>Kidney function / dialysis labs</strong></td>
+              <td>To monitor ongoing kidney health and dialysis adequacy</td>
+              <td>As per your usual dialysis schedule</td>
+            </tr>
+            <tr>
+              <td><strong>Blood pressure</strong></td>
+              <td>Rifampin may lower the level of some blood pressure medicines in the blood</td>
+              <td>At each visit / nurse check-in</td>
+            </tr>
+            <tr>
+              <td><strong>Blood sugar (glucose) monitoring</strong></td>
+              <td>Rifampin can affect blood sugar control in people with diabetes</td>
+              <td>Continue your usual monitoring; report changes to us</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mindset-box">
+        <div class="callout-title">🔬 Why These Tests Matter</div>
+        Regular blood tests let us catch any problem early — often before you even notice a symptom. If a test result is concerning, we will adjust your plan right away. Most people complete treatment without any significant issues.
+      </div>
+
+      <!-- SECTION 8 — Your Specific Situation -->
+      <h2>Your Situation: Diabetes and Dialysis</h2>
+      <h3>Diabetes</h3>
+      <p>
+        Rifampin can interact with some diabetes medications and may affect your blood sugar control. Check your blood sugar as you normally would, and let us know if you notice your levels are higher or lower than usual. We may need to adjust your diabetes medication during treatment.
+      </p>
+
+      <h3>Dialysis</h3>
+      <p>
+        Rifampin is not significantly removed by dialysis, so no dose adjustment is needed specifically because of your dialysis. However, your dialysis team will be kept in the loop so everyone is co-ordinating your care together.
+      </p>
+
+      <!-- SECTION 9 — Action Checklist -->
+      <h2>Your Action Plan Checklist</h2>
+      <p>Use this checklist to stay on track throughout your treatment:</p>
+      <ul class="checklist">
+        <li>Attend all scheduled blood test appointments arranged by your public-health nurse.</li>
+        <li>Take rifampin 600 mg <strong>every day with food</strong> at the same time.</li>
+        <li>Do <strong>not</strong> drink alcohol while on rifampin — it increases the strain on your liver.</li>
+        <li>Pause your statin (cholesterol medicine) as instructed — restart only after discussing with Dr. Whiting.</li>
+        <li>Monitor your blood pressure at home if you have a blood pressure cuff, and record the readings.</li>
+        <li>Continue your usual blood sugar monitoring and report significant changes.</li>
+        <li>Tell all your healthcare providers (dialysis nurses, specialists, pharmacist) that you are taking rifampin.</li>
+        <li>Avoid soft contact lenses for the duration of treatment.</li>
+        <li>Know the warning signs that mean you should stop the medication and call immediately (see red box above).</li>
+        <li>Keep all follow-up appointments with Dr. Whiting and your public-health nurse.</li>
+      </ul>
+
+      <!-- SECTION 10 — Avoiding Alcohol -->
+      <div class="caution-box">
+        <div class="callout-title">🚫 Alcohol and Rifampin: A Serious Combination</div>
+        Alcohol and rifampin both put stress on your liver. We strongly recommend <strong>avoiding alcohol completely</strong> during your 4 months of treatment. This is especially important given your other health conditions.
+      </div>
+
+      <!-- SECTION 11 — Completing Treatment -->
+      <h2>Finishing Your Treatment</h2>
+      <p>
+        It is crucial to complete all 16 weeks of rifampin, even when you feel perfectly well. Stopping early may mean the TB germs are not fully suppressed and the treatment will not give you the protection you need.
+      </p>
+
+      <div class="success-box">
+        <div class="callout-title">🏁 The Finish Line Is Worth It</div>
+        Completing your full course of rifampin is one of the most important things you can do for your long-term health. Once treatment is done, you will not need ongoing follow-up specifically for latent TB, and your risk of ever developing active TB disease drops dramatically.
+      </div>
+
+      <div class="mindset-box">
+        <div class="callout-title">💬 A Word of Encouragement</div>
+        Being diagnosed with latent TB — and choosing to treat it — is a proactive, health-forward decision. You are taking control of something before it becomes a problem. That takes courage, especially when you are already managing other health challenges. Your care team is with you every step of the way.
+      </div>
+
+      <!-- SECTION 12 — When to Contact Your Doctor -->
+      <h2>When to Contact Dr. Whiting or Your Nurse</h2>
+      <ul>
+        <li>Any new symptom that worries you after starting rifampin.</li>
+        <li>Yellowing of your skin or eyes, unusual tiredness, loss of appetite, or belly pain.</li>
+        <li>Nausea or vomiting that is making it difficult to take your medication.</li>
+        <li>Unexplained bruising or bleeding.</li>
+        <li>A skin rash that is spreading or bothering you.</li>
+        <li>Blood sugar levels that are much higher or lower than usual.</li>
+        <li>Blood pressure readings that seem very different from your normal range.</li>
+        <li>Any questions about other medications and whether they might be affected.</li>
+      </ul>
+
+      <div class="key-point">
+        <div class="callout-title">📞 Contact Information</div>
+        <p>If you are unsure whether a symptom needs attention, it is always better to call. No question is too small.</p>
+        <p style="margin-top:0.5rem;">If you are having a medical emergency, call <strong>9-1-1</strong> or go to your nearest emergency department.</p>
+      </div>
+
+    </div><!-- end .content -->
+
+    <!-- ══ REFERENCES ══ -->
+    <div class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Menzies D, Al Jahdali H, Al Otaibi B. Recent developments in treatment of latent tuberculosis infection. <em>Indian J Med Res.</em> 2011;133(3):257–266.</li>
+        <li>Public Health Agency of Canada. <em>Canadian Tuberculosis Standards</em>, 7th ed. Ottawa: PHAC; 2014. Available from: https://www.canada.ca/en/public-health/services/infectious-diseases/canadian-tuberculosis-standards-7th-edition.html</li>
+        <li>Menzies D, Adjobimey M, Ruslami R, et al. Four months of rifampin or nine months of isoniazid for latent tuberculosis in adults. <em>N Engl J Med.</em> 2018;379(5):440–453.</li>
+        <li>Menzies D, Gardiner G, Farhat M, Greenaway C, Pai M. Thinking in three dimensions: a web-based algorithm to aid the interpretation of tuberculin skin test results. <em>Int J Tuberc Lung Dis.</em> 2008;12(5):498–505.</li>
+        <li>Skinhøj P, Elmér N, Nielsen SL. Rifampicin and statin interactions: a systematic review. <em>J Antimicrob Chemother.</em> 2019;74(6):1495–1501.</li>
+        <li>World Health Organization. <em>WHO Consolidated Guidelines on Tuberculosis: Module 1: Prevention — Tuberculosis Preventive Treatment.</em> Geneva: WHO; 2020.</li>
+        <li>Centers for Disease Control and Prevention. Latent tuberculosis infection: a guide for primary health care providers. Atlanta: CDC; 2020. Available from: https://www.cdc.gov/tb/publications/ltbi/default.htm</li>
+        <li>Forget EJ, Menzies D. Adverse reactions to first-line antituberculosis drugs. <em>Expert Opin Drug Saf.</em> 2006;5(2):231–252.</li>
+      </ol>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+      <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+    </footer>
+
+  </div><!-- end .container -->
+</body>
+</html>
