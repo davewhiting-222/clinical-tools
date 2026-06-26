@@ -209,15 +209,19 @@
             .footer { padding: 20px; }
         }
 
-        @media print {
+      @media print {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     body { background-color: white; padding: 0; }
     .container { box-shadow: none; }
     .header { background: #1e3a8a !important; background-image: none !important; }
-    .form-section h3 { background: #1e3a8a !important; background-image: none !important; }
     .footer { background: #1e293b !important; background-image: none !important; }
-    .section-body { break-inside: avoid; }
+    .section-header { break-after: avoid; page-break-after: avoid; }
+    .section-body { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+    input[type="radio"] { display: none; }
+    .option-list li { padding-left: 28px; position: relative; }
+    .option-list li::before { content: "○"; position: absolute; left: 10px; }
+    .patient-row { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
 }
         h2, h3 { break-after: avoid; page-break-after: avoid; }
     </style>
