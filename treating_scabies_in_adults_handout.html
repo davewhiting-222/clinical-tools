@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Acute Care">
+  <title>Treating Scabies in Adults</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1f2937;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.88rem;
+      opacity: 0.75;
+    }
+
+    /* ── Main content ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.45rem;
+      min-height: 44px;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    ul li::before {
+      content: '';
+      flex-shrink: 0;
+    }
+
+    /* ── Callout boxes ── */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+    }
+
+    .box-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    /* ── Table ── */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.2rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f1f5f9;
+    }
+
+    /* ── Checklist ── */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+      padding: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      min-height: 44px;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist li::before {
+      content: '☐';
+      font-size: 1.2rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      line-height: 1.4;
+    }
+
+    /* ── References ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+      font-size: 0.88rem;
+      color: #374151;
+    }
+
+    .references h2 {
+      font-size: 1.3em;
+      border-bottom: 2px solid #3b82f6;
+      margin-top: 0;
+    }
+
+    .references ol {
+      margin-left: 1.2rem;
+    }
+
+    .references ol li {
+      display: list-item;
+      min-height: unset;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer .footer-main {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    footer .disclaimer {
+      margin-top: 0.5rem;
+      opacity: 0.75;
+      font-size: 0.82rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header, .content, .references, footer {
+        padding: 24px 20px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+    }
+
+    /* ── Print ── */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body {
+        background: #ffffff;
+      }
+
+      .container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body   { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3          { break-after: avoid; page-break-after: avoid; }
+
+      input[type="checkbox"] { display: table-cell; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ══════════════ HEADER ══════════════ -->
+    <header>
+      <h1>Treating Scabies in Adults</h1>
+      <small>Prepared by your family doctor</small>
+      <time datetime="2026-06-26">June 26, 2026</time>
+    </header>
+
+    <!-- ══════════════ MAIN CONTENT ══════════════ -->
+    <main class="content">
+
+      <!-- What is Scabies -->
+      <h2>What Is Scabies?</h2>
+      <p>Scabies is a very itchy skin condition caused by a tiny mite called <em>Sarcoptes scabiei</em>. The mite burrows (digs tunnels) into the top layer of your skin, where it lays eggs. Your immune system (the part of your body that fights illness) reacts to the mite and its waste products, causing intense itching and a rash.</p>
+
+      <div class="key-point">
+        <span class="box-title">&#128203; Key Point</span>
+        Scabies is common and does not mean you are unclean. It spreads through prolonged, direct skin-to-skin contact — and it can happen to anyone.
+      </div>
+
+      <h3>What Does It Look Like?</h3>
+      <ul>
+        <li><span>An intensely itchy rash, usually worse at night</span></li>
+        <li><span>Small red bumps or blisters, especially between the fingers, on the wrists, around the waist, on the buttocks, and on the genitals</span></li>
+        <li><span>Thin, pencil-line burrow tracks in the skin (though these can be hard to see)</span></li>
+        <li><span>Redness and scratching marks from rubbing the skin</span></li>
+      </ul>
+
+      <div class="warning-box">
+        <span class="box-title">&#9888;&#65039; Important to Know</span>
+        Symptoms may not appear for 2–6 weeks after you first catch scabies. This means you can spread it to others <em>before you know you have it.</em>
+      </div>
+
+      <!-- How It Spreads -->
+      <h2>How Does Scabies Spread?</h2>
+      <p>Scabies spreads mainly through prolonged, direct skin-to-skin contact with someone who has it — for example, through sexual contact, holding hands for a long time, or close household contact. It can also, less commonly, spread through sharing clothing, towels, or bedding with an infected person.</p>
+
+      <div class="mindset-box">
+        <span class="box-title">&#128149; No Shame Here</span>
+        Scabies is often passed between people who live together or are intimate. It does not reflect your hygiene or lifestyle choices. Seeking treatment quickly protects you and those you care about.
+      </div>
+
+      <!-- Treatment -->
+      <h2>How Is Scabies Treated?</h2>
+      <p>Scabies cannot go away on its own. You will need a prescription treatment. In Canada, the most commonly used and most effective treatment is a cream called <strong>permethrin 5% (Nix Dermal Cream)</strong>. There is also an oral (by mouth) option called <strong>ivermectin (Stromectol)</strong>, which your doctor may recommend in certain situations.</p>
+
+      <h3>First-Line Treatment: Permethrin 5% Cream</h3>
+      <div class="success-box">
+        <span class="box-title">&#10003; Recommended First Choice</span>
+        Permethrin 5% cream is safe, effective, and applied directly to the skin. Most people are cured with one or two applications.
+      </div>
+
+      <h3>Step-by-Step: How to Apply Permethrin Cream</h3>
+      <ol>
+        <li><span><strong>Shower or bathe</strong> and let your skin cool and dry completely before applying the cream.</span></li>
+        <li><span><strong>Apply the cream from your chin down to the soles of your feet</strong> — covering every part of your body below the neck. Do not miss areas under your nails, between your toes and fingers, your belly button, and your buttocks.</span></li>
+        <li><span><strong>Leave it on for 8–14 hours</strong> (usually overnight). Do not wash it off early.</span></li>
+        <li><span><strong>Wash the cream off</strong> in the morning by showering or bathing.</span></li>
+        <li><span>A <strong>second application one week later</strong> is often recommended to kill any newly hatched mites. Follow your doctor's specific instructions.</span></li>
+      </ol>
+
+      <div class="caution-box">
+        <span class="box-title">&#128721; Pay Attention</span>
+        Do not apply permethrin cream to your face, scalp, or inside your mouth, eyes, or nose. If your face or scalp is affected (this is rare in adults), your doctor will give you separate instructions.
+      </div>
+
+      <h3>Alternative Option: Ivermectin (Oral Tablets)</h3>
+      <p>Your doctor may prescribe ivermectin tablets if permethrin cream has not worked, if you have a condition called <em>crusted (Norwegian) scabies</em> (a more severe form with thick, scaly patches), or if you simply cannot use the cream properly. It is usually taken as two doses, one week apart.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Treatment</th>
+              <th>How It's Used</th>
+              <th>Doses</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Permethrin 5% cream</strong> (Nix Dermal)</td>
+              <td>Applied to skin, left on overnight</td>
+              <td>1–2 applications, 1 week apart</td>
+              <td>First choice; safe in most adults</td>
+            </tr>
+            <tr>
+              <td><strong>Ivermectin</strong> (Stromectol)</td>
+              <td>Taken by mouth</td>
+              <td>2 doses, 1 week apart</td>
+              <td>Used when cream fails or in severe cases; not recommended in pregnancy</td>
+            </tr>
+            <tr>
+              <td><strong>Crotamiton 10% cream</strong></td>
+              <td>Applied to skin</td>
+              <td>Applied nightly for 5 nights</td>
+              <td>Less effective; occasionally used as an alternative</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Treating Household Contacts -->
+      <h2>Treating Everyone at the Same Time</h2>
+      <p>This step is critical. Even if other people in your household have no symptoms yet, they must be treated at the same time as you. If they are not treated, they can re-infect you even after you have been successfully treated.</p>
+
+      <div class="key-point">
+        <span class="box-title">&#128203; Key Point</span>
+        <strong>All close contacts — everyone in your home and recent sexual partners</strong> — should be treated on the same day as you, whether or not they have symptoms.
+      </div>
+
+      <!-- Decontaminating Your Home -->
+      <h2>Cleaning Your Home and Belongings</h2>
+      <p>Mites can survive off the skin for about 48–72 hours. The following steps help prevent re-infection. You do not need to do anything extreme — targeted, practical cleaning is enough.</p>
+
+      <h3>Treatment Day Checklist</h3>
+      <ul class="checklist">
+        <li>Wash all bed sheets, pillowcases, and blankets you have used in the past 3 days in hot water (at least 60°C) and dry on high heat</li>
+        <li>Wash all clothing, towels, and underwear worn in the past 3 days the same way</li>
+        <li>Items that cannot be washed (e.g., stuffed animals, certain clothing) — seal in a plastic bag for 72 hours and the mites will die</li>
+        <li>Vacuum upholstered furniture (sofas, chairs) and carpets; dispose of the vacuum bag immediately</li>
+        <li>Do not share towels, bedding, or clothing until treatment is complete</li>
+        <li>Notify recent sexual partners so they can seek assessment and treatment</li>
+      </ul>
+
+      <!-- Itching After Treatment -->
+      <h2>Why Does the Itch Continue After Treatment?</h2>
+      <p>Many people worry when their itching continues for 2–4 weeks after completing treatment. This is <strong>completely normal</strong> and does not mean the treatment has failed. Your immune system continues to react to the dead mites and eggs still in your skin. The itch will fade gradually.</p>
+
+      <div class="success-box">
+        <span class="box-title">&#128257; Be Patient — This Is Normal</span>
+        Itching can last up to 4 weeks after successful treatment. If the itch is very uncomfortable, your doctor can recommend anti-itch options such as an antihistamine (e.g., cetirizine/Reactine) or a mild steroid cream.
+      </div>
+
+      <div class="caution-box">
+        <span class="box-title">&#128721; When to Return to Your Doctor</span>
+        See your doctor again if:
+        <ul style="margin-top:0.5rem; margin-left:1.2rem;">
+          <li><span>New burrows or new rash appear after 4 weeks</span></li>
+          <li><span>The rash looks infected (increasing redness, warmth, pus, or fever)</span></li>
+          <li><span>A household member was not treated and their symptoms are worsening</span></li>
+          <li><span>Your symptoms have not improved at all after 2 weeks</span></li>
+        </ul>
+      </div>
+
+      <!-- Action Plan -->
+      <h2>Your Action Plan at a Glance</h2>
+      <ul class="checklist">
+        <li>Pick up your prescription for permethrin 5% cream (or ivermectin if prescribed) from the pharmacy today</li>
+        <li>Arrange for all household members and recent sexual partners to be treated on the same day</li>
+        <li>Apply the cream tonight following the step-by-step instructions above</li>
+        <li>Wash all bedding, towels, and clothing in hot water on treatment day</li>
+        <li>Schedule or arrange your second application one week later</li>
+        <li>Use an antihistamine for nighttime itch relief if needed (ask your pharmacist)</li>
+        <li>Return to your doctor if you are not improving after 4 weeks or develop signs of skin infection</li>
+      </ul>
+
+      <div class="mindset-box">
+        <span class="box-title">&#128161; A Word of Encouragement</span>
+        Scabies is highly treatable. With the right medication and by treating everyone in your home at the same time, the vast majority of people are fully cured within a few weeks. You've got this.
+      </div>
+
+    </main>
+
+    <!-- ══════════════ REFERENCES ══════════════ -->
+    <section class="references" aria-label="References">
+      <h2>References</h2>
+      <ol>
+        <li>Chosidow O. Scabies. N Engl J Med. 2006;354(16):1718–27.</li>
+        <li>Dhana A, Yen H, Okhiria L, Daveluy S. Scabies: a comprehensive review of a neglected skin condition. Int J Dermatol. 2021;60(6):682–93.</li>
+        <li>Salavastru CM, Chosidow O, Boffa MJ, Janier M, Tiplica GS. European guideline for the management of scabies. J Eur Acad Dermatol Venereol. 2017;31(8):1248–53.</li>
+        <li>British Columbia Centre for Disease Control. Scabies: For Health Care Providers [Internet]. Vancouver: BCCDC; 2022 [cited 2026 Jun 26]. Available from: http://www.bccdc.ca/health-info/diseases-conditions/scabies</li>
+        <li>Health Canada. Nix Dermal Cream 5% (permethrin) Product Monograph. Ottawa: Health Canada; 2019.</li>
+        <li>Currie BJ, McCarthy JS. Permethrin and ivermectin for scabies. N Engl J Med. 2010;362(8):717–25.</li>
+        <li>Public Health Agency of Canada. Canadian Guidelines on Sexually Transmitted Infections: Scabies. Ottawa: PHAC; 2022 [cited 2026 Jun 26]. Available from: https://www.canada.ca/en/public-health/services/infectious-diseases/sexual-health-sexually-transmitted-infections/canadian-guidelines.html</li>
+        <li>Strong M, Johnstone P. Interventions for treating scabies. Cochrane Database Syst Rev. 2007;(3):CD000320.</li>
+      </ol>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer>
+      <div class="footer-main">David Whiting, MBChB CCFP | Kelowna, BC</div>
+      <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
