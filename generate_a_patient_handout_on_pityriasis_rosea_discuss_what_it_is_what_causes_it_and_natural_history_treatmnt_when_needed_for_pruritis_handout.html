@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Acute Care">
+  <title>Pityriasis Rosea – Patient Handout</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1f2937;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.35rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    /* CALLOUT BOXES */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.97rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    tr:nth-child(even) td { background: #f1f5f9; }
+
+    /* CHECKLIST */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      min-height: 44px;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      font-size: 1.2rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      line-height: 1.5;
+    }
+
+    /* REFERENCES */
+    .references {
+      background: #f1f5f9;
+      padding: 30px;
+    }
+
+    .references h2 {
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #374151;
+    }
+
+    .references li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer .disclaimer {
+      opacity: 0.75;
+      margin-top: 0.4rem;
+      font-size: 0.82rem;
+    }
+
+    /* PRINT */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #ffffff; font-size: 0.92rem; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+      input { display: table-cell; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      header { padding: 24px 20px; }
+      .content { padding: 24px 20px; }
+      footer { padding: 16px 20px; }
+      .references { padding: 20px; }
+      h2 { font-size: 1.4em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1>Pityriasis Rosea</h1>
+      <small>Prepared by your family doctor</small>
+      <time datetime="2026-07-06">July 6, 2026</time>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <!-- WHAT IS IT -->
+      <h2>What Is Pityriasis Rosea?</h2>
+      <p>
+        Pityriasis rosea (say: <em>pit-ih-RY-ah-sis ROH-zee-ah</em>) is a common, self-limiting (goes away on its own) skin rash. It usually affects the trunk (chest, back, and belly), neck, and upper arms and legs. It is not contagious — you cannot catch it from another person, and you cannot pass it on.
+      </p>
+
+      <div class="key-point">
+        <div class="box-title">&#9432; The Good News</div>
+        In the vast majority of cases, pityriasis rosea clears up completely on its own within 6 to 12 weeks — with no scarring and no long-term effects on your health.
+      </div>
+
+      <!-- WHAT CAUSES IT -->
+      <h2>What Causes It?</h2>
+      <p>
+        Researchers believe pityriasis rosea is triggered by a reactivation (waking back up) of a common human herpes virus — specifically <strong>Human Herpesvirus 6 or 7 (HHV-6/HHV-7)</strong>. These are not the same viruses that cause cold sores or genital herpes. Almost all adults carry these viruses silently without knowing it.
+      </p>
+      <p>
+        The rash is <strong>not</strong> caused by a fungal infection, an allergy, or anything you ate or did. It can occur at any age but is most common in people between 10 and 35 years old. It can occasionally be triggered by certain medications, so it is worth mentioning to your doctor all the medications you are currently taking.
+      </p>
+
+      <div class="warning-box">
+        <div class="box-title">&#9888; A Note for Pregnant Patients</div>
+        If you are pregnant and develop this rash, please let your doctor know right away. There is some evidence that pityriasis rosea in early pregnancy may be associated with a small risk of complications. Closer monitoring may be recommended.
+      </div>
+
+      <!-- WHAT DOES IT LOOK LIKE -->
+      <h2>What Does It Look Like?</h2>
+
+      <h3>Stage 1 — The Herald Patch</h3>
+      <p>
+        The rash usually starts with a single, larger oval or round patch called the <strong>"herald patch"</strong> (sometimes called the "mother patch"). It is typically salmon-pink in colour, 2–10 cm across, with a scaly, slightly raised border. It often appears on the chest, back, or belly. Many people mistake it for ringworm (a fungal infection) at first.
+      </p>
+
+      <h3>Stage 2 — The General Rash</h3>
+      <p>
+        Within 1 to 2 weeks, smaller patches spread across the trunk and upper limbs. These patches often follow the lines of the ribs, creating a pattern that looks like a drooping "Christmas tree" on the back. The face, scalp, palms, and soles are usually <em>not</em> affected.
+      </p>
+
+      <div class="mindset-box">
+        <div class="box-title">&#128161; What to Expect</div>
+        The rash may look alarming at first, especially when it spreads in week one or two. This spreading is normal and expected — it does not mean the condition is getting worse or becoming dangerous.
+      </div>
+
+      <!-- NATURAL HISTORY -->
+      <h2>Natural History — How It Unfolds Over Time</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Timeframe</th>
+            <th>What Typically Happens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 1–2</strong></td>
+            <td>Herald patch appears. You may have mild flu-like feelings (fatigue, headache, sore throat) — this is less common but does occur.</td>
+          </tr>
+          <tr>
+            <td><strong>Week 2–4</strong></td>
+            <td>Smaller patches spread across the trunk and upper limbs. Itching (pruritis) is often at its worst during this phase.</td>
+          </tr>
+          <tr>
+            <td><strong>Week 4–8</strong></td>
+            <td>Most patches begin to fade from the centre outward. Itching usually improves.</td>
+          </tr>
+          <tr>
+            <td><strong>Week 6–12</strong></td>
+            <td>Rash is fully resolved in most people. Some darker-skinned individuals may notice temporary darkening of the skin (post-inflammatory hyperpigmentation) that gradually fades.</td>
+          </tr>
+          <tr>
+            <td><strong>Beyond 12 weeks</strong></td>
+            <td>Rarely, the rash can last longer (up to 5 months). If this happens, let your doctor know for reassessment.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="success-box">
+        <div class="box-title">&#10003; Recurrence Is Uncommon</div>
+        Once you have had pityriasis rosea, your immune system builds a lasting response. Most people only ever have it once in their lifetime. Recurrence is estimated to occur in fewer than 3% of people.
+      </div>
+
+      <!-- ITCHING -->
+      <h2>Managing Itch (Pruritis)</h2>
+      <p>
+        Not everyone with pityriasis rosea is bothered by itch — but for those who are, it can range from mild to quite uncomfortable. The following strategies are evidence-based and recommended by dermatologists (skin specialists).
+      </p>
+
+      <h3>First-Line: Soothing the Skin</h3>
+      <ul>
+        <li><strong>Cool or lukewarm showers</strong> — hot water worsens itch. Keep showers short.</li>
+        <li><strong>Fragrance-free moisturising creams</strong> (e.g., Cerave®, Aveeno® Skin Relief, Glaxal Base®) applied immediately after patting skin dry.</li>
+        <li><strong>Loose, breathable clothing</strong> (cotton) to reduce friction and heat on affected skin.</li>
+        <li><strong>Cool compresses</strong> applied to the itchiest areas for temporary relief.</li>
+      </ul>
+
+      <h3>Second-Line: Topical (On the Skin) Treatments</h3>
+      <ul>
+        <li>
+          <strong>Topical corticosteroids (steroid cream)</strong> — A mild-to-moderate strength steroid cream such as hydrocortisone 1% (available over the counter at Canadian pharmacies) or a prescription-strength cream (e.g., betamethasone valerate) can reduce inflammation and itch. Use only as directed — do not apply to the face or skin folds unless specifically told to.
+        </li>
+        <li>
+          <strong>Calamine lotion</strong> — An inexpensive, widely available option for soothing itchy skin.
+        </li>
+        <li>
+          <strong>Menthol-containing creams</strong> — Can provide a cooling, anti-itch sensation.
+        </li>
+      </ul>
+
+      <h3>Third-Line: Oral (Taken by Mouth) Medications for Significant Itch</h3>
+      <ul>
+        <li>
+          <strong>Antihistamines</strong> — Cetirizine (Reactine®) 10 mg once daily or loratadine (Claritin®) 10 mg once daily are non-drowsy options available over the counter. For nighttime itch disrupting sleep, diphenhydramine (Benadryl®) or hydroxyzine (prescription) may be helpful due to their sedating effect.
+        </li>
+      </ul>
+
+      <div class="warning-box">
+        <div class="box-title">&#9888; What About Acyclovir?</div>
+        Some studies suggest the antiviral medication acyclovir (used to treat herpes viruses) may shorten the duration of the rash and reduce itch when started early. However, evidence is mixed and current Canadian dermatology guidelines do not routinely recommend it. Your doctor will discuss whether it is appropriate for you based on your specific situation.
+      </div>
+
+      <h3>Sunlight and UV Therapy</h3>
+      <p>
+        Some evidence suggests that natural sunlight (with appropriate sun safety) or supervised UV light therapy (phototherapy) may speed up resolution of the rash. However, the evidence quality is moderate. Discuss this with your doctor before deliberately increasing sun exposure, especially if you are on photosensitising medications.
+      </p>
+
+      <!-- ACTION PLAN -->
+      <h2>Your Action Plan</h2>
+      <p>Use this checklist to manage your condition at home and know when to follow up:</p>
+
+      <ul class="checklist">
+        <li>Switch to short, cool or lukewarm showers and avoid hot baths.</li>
+        <li>Apply a fragrance-free moisturiser (e.g., Cerave®, Glaxal Base®) at least once daily, or after every shower.</li>
+        <li>Wear loose, breathable cotton clothing to avoid irritating the rash.</li>
+        <li>Try a non-drowsy antihistamine (cetirizine or loratadine) from your pharmacy if itch is bothering you during the day.</li>
+        <li>Use a mild steroid cream (hydrocortisone 1%) on itchy patches if needed — ask your pharmacist for guidance.</li>
+        <li>Avoid scratching — it can break the skin and lead to infection.</li>
+        <li>Keep a simple diary of how the rash is changing week to week.</li>
+        <li>Return to see Dr. Whiting if the rash has not improved after 10 weeks, is spreading to your face or palms and soles, is causing severe itch interfering with sleep, or if you develop a fever or the rash looks infected (swollen, warm, pus).</li>
+      </ul>
+
+      <div class="caution-box">
+        <div class="box-title">&#128680; When to Seek Medical Attention Sooner</div>
+        <ul>
+          <li>You are pregnant or think you may be pregnant.</li>
+          <li>The rash is very widespread and itch is severe or not responding to over-the-counter treatments.</li>
+          <li>The rash does not follow the typical pattern described above — unusual locations (face, palms, soles) or blisters are present.</li>
+          <li>You have a weakened immune system (e.g., from medication or illness).</li>
+          <li>The skin appears infected (red streaks, increasing swelling, pus, fever).</li>
+        </ul>
+      </div>
+
+      <!-- QUICK SUMMARY -->
+      <h2>Quick Summary</h2>
+      <div class="key-point">
+        <div class="box-title">&#9432; Key Takeaways</div>
+        <ul>
+          <li>Pityriasis rosea is a common, self-limiting rash likely triggered by a reactivated herpes virus (not the kind that causes cold sores or genital herpes).</li>
+          <li>It is NOT contagious, NOT caused by fungi, and NOT due to something you did wrong.</li>
+          <li>It resolves completely on its own in 6–12 weeks in most people.</li>
+          <li>Treatment focuses on keeping the skin comfortable and relieving itch — moisturisers, steroid creams, and antihistamines are the main tools.</li>
+          <li>Contact your doctor if you are pregnant, or if the rash is atypical, severe, or persists beyond 10–12 weeks.</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <!-- REFERENCES -->
+    <section class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Drago F, Ciccarese G, Rebora A, Broccolo F, Parodi A. Pityriasis rosea: A comprehensive classification. Dermatology. 2016;232(4):431–7.</li>
+        <li>Chuh A, Zawar V, Law M, Sciallis G. Gianotti-Crosti syndrome, asymmetric periflexural exanthem, unilateral mediothoracic exanthem, eruptive pseudoangiomatosis, and papular-purpuric gloves and socks syndrome: A brief review and arguments for diagnostic criteria. Infect Dis Rep. 2012;4(1):e12.</li>
+        <li>Drago F, Broccolo F, Zaccaria E, et al. Pregnancy outcome in patients with pityriasis rosea. J Am Acad Dermatol. 2008;61(5 Suppl 1):S45–8.</li>
+        <li>Chuh AA, Dofitas BL, Comisel GG, et al. Interventions for pityriasis rosea. Cochrane Database Syst Rev. 2007;(2):CD005068.</li>
+        <li>Stulberg DL, Wolfrey J. Pityriasis rosea. Am Fam Physician. 2004;69(1):87–91.</li>
+        <li>Ehsani AH, Esmaily N, Noormohammadpour P, et al. The comparison between the efficacy of high dose acyclovir and erythromycin on the period and signs of pityriasis rosea. Indian J Dermatol. 2010;55(3):246–8.</li>
+        <li>Mahajan K, Relhan V, Relhan AK, Garg VK. Pityriasis rosea: An update on etiopathogenesis and management of difficult aspects. Indian J Dermatol. 2016;61(4):375–84.</li>
+        <li>Canadian Dermatology Association. Pityriasis rosea [Internet]. Ottawa: CDA; 2023 [cited 2026 Jul 6]. Available from: https://dermatology.ca</li>
+      </ol>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>David Whiting, MBChB CCFP | Kelowna, BC</div>
+      <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
