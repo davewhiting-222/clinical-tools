@@ -60,22 +60,6 @@
       "description": "How to maintain healthy electrolyte levels on a ketogenic diet. Covers sodium, potassium, and magnesium \u2014 food sources, supplement options, and how to manage keto flu symptoms."
     },
     {
-      "filename": "generate_a_keto_guide_for_patients_consider_the_source_material_handout.html",
-      "title": "Your Guide to the Ketogenic Diet",
-      "topics": [
-        "keto",
-        "diet-guide",
-        "onboarding"
-      ],
-      "diet_codes": [
-        "keto",
-        "spanish_med"
-      ],
-      "flags": [],
-      "section": "diet-guides",
-      "description": ""
-    },
-    {
       "filename": "hypoglycemia_recognition_handout.html",
       "title": "Hypoglycemia Recognition and Management",
       "topics": [
@@ -93,6 +77,22 @@
       ],
       "section": "sick-day-rules",
       "description": "How to recognise and treat low blood sugar (hypoglycaemia). Covers symptoms, the 15-15 rule, when to call for help, and prevention strategies for patients on insulin or sulfonylureas."
+    },
+    {
+      "filename": "keto_guide.html",
+      "title": "Your Guide to the Ketogenic Diet",
+      "topics": [
+        "keto",
+        "diet-guide",
+        "onboarding"
+      ],
+      "diet_codes": [
+        "keto",
+        "spanish_med"
+      ],
+      "flags": [],
+      "section": "diet-guides",
+      "description": ""
     },
     {
       "filename": "myth_busters_can_i_do_this_long_term_handout.html",
