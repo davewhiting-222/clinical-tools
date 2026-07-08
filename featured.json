@@ -1,5 +1,15 @@
 [
   {
+    "category": "Acute Care",
+    "filename": "pityriasis_rosea.html",
+    "title": "Pityriasis Rosea – Patient Handout"
+  },
+  {
+    "category": "Acute Care",
+    "filename": "treating_scabies_in_adults_handout.html",
+    "title": "Treating Scabies in Adults"
+  },
+  {
     "category": "Alternative and Complementary Medicine",
     "filename": "what_are_the_roles_of_allopathic_versus_naturopathic_physicians_understanding_the_nuances_handout.html",
     "title": "Understanding Your Healthcare Options: MDs vs. NDs"
@@ -51,7 +61,7 @@
   },
   {
     "category": "Chronic Disease",
-    "filename": "generate_a_patient_handout_on_atrial_fibrillation_explained_what_causes_it_what_the_risk_factors_are_what_the_patient_can_modify_to_reduce_risk_of_af_eg_alcohol_how_we_treat_it_and_in_particular_add_a_section_on_anticoagulation_handout.html",
+    "filename": "atrial_fibrillation.html",
     "title": "Understanding Atrial Fibrillation: Your Guide to Management"
   },
   {
@@ -63,21 +73,6 @@
     "category": "Chronic Disease",
     "filename": "understanding_polymyalgia_rheumatica_pmr_handout.html",
     "title": "Understanding Polymyalgia Rheumatica (PMR)"
-  },
-  {
-    "category": "Consent_Forms",
-    "filename": "accutane_female_consent_form.html",
-    "title": "Isotretinoin — Informed Consent and Pregnancy Prevention Agreement"
-  },
-  {
-    "category": "Consent_Forms",
-    "filename": "skin_examination_consent_and_preferences_males_handout.html",
-    "title": "Skin Examination Consent and Preferences - Males"
-  },
-  {
-    "category": "Consent_Forms",
-    "filename": "skin_exam_consent_v2.html",
-    "title": "Skin Examination: Consent and Preferences"
   },
   {
     "category": "Custom",
@@ -251,7 +246,7 @@
   },
   {
     "category": "Nutrition_Diet",
-    "filename": "generate_a_keto_guide_for_patients_consider_the_source_material_handout.html",
+    "filename": "keto_guide.html",
     "title": "Your Guide to the Ketogenic Diet"
   },
   {
