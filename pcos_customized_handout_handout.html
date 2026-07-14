@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Metabolic Health">
+  <title>Understanding PCOS: Your Personalized Guide</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .site-header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .site-header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; min-height: 44px; display: flex; align-items: flex-start; gap: 0.4rem; }
+    li::marker { color: #3b82f6; }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1.1rem 1.3rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    /* ── TABLE ── */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .styled-table th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .styled-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    .styled-table tr:nth-child(even) td { background: #f1f5f9; }
+    .styled-table tr:hover td { background: #dbeafe; }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+      padding: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid #e2e8f0;
+      min-height: 44px;
+    }
+
+    .checklist li:last-child { border-bottom: none; }
+
+    .checklist li::before {
+      content: "☐";
+      color: #3b82f6;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* ── SECTION WRAPPER for print ── */
+    .section-header { break-after: avoid; page-break-after: avoid; }
+    .section-body   { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px;
+    }
+
+    .references h2 {
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    .references li {
+      display: list-item;
+      min-height: unset;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .site-footer .disclaimer {
+      opacity: 0.75;
+      font-size: 0.82rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ── DIAGRAM / CYCLE ── */
+    .cycle-diagram {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: center;
+      margin: 1.4rem 0;
+    }
+
+    .cycle-node {
+      background: #1e3a8a;
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      min-width: 150px;
+    }
+
+    .cycle-arrow {
+      font-size: 1.5rem;
+      color: #3b82f6;
+      font-weight: 700;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .site-header, .content, .site-footer, .references { padding: 24px 20px; }
+      h2 { font-size: 1.4em; }
+      h3 { font-size: 1.1em; }
+      .cycle-node { min-width: 110px; font-size: 0.8rem; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #fff; font-size: 12pt; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body   { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3          { break-after: avoid; page-break-after: avoid; }
+
+      input, select, textarea { display: table-cell; }
+
+      .site-footer { background: #1e293b !important; color: #fff !important; }
+      .site-header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
+  <header class="site-header">
+    <h1>Understanding PCOS: Your Personalised Guide</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2026-07-14">July 14, 2026</time>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════ -->
+  <main class="content">
+
+    <!-- ── INTRO ── -->
+    <div class="section-header">
+      <h2>What Is PCOS?</h2>
+    </div>
+    <div class="section-body">
+      <p>Polycystic ovary syndrome (PCOS) is one of the most common hormonal conditions affecting women and people with ovaries — it affects roughly 1 in 10 in Canada. <em>Polycystic</em> means "many cysts," referring to small fluid-filled sacs that can develop on the ovaries. Despite the name, you do not have to have ovarian cysts to have PCOS.</p>
+      <p>PCOS is diagnosed when at least two of the following three features are present:</p>
+      <ul>
+        <li><span>Irregular or infrequent periods (your ovaries are not releasing eggs regularly)</span></li>
+        <li><span>Signs of excess androgens (male-type hormones) — such as acne, excess body or facial hair, or hair thinning on the scalp</span></li>
+        <li><span>Polycystic-appearing ovaries on ultrasound</span></li>
+      </ul>
+
+      <div class="key-point">
+        <span class="box-title">🔑 Important to know</span>
+        PCOS is not just a reproductive condition — it affects your metabolism, energy levels, mood, skin, and long-term health. Understanding <em>your</em> version of PCOS is the first step toward feeling better.
+      </div>
+
+      <p>In your case, three key features are particularly important: <strong>marked hyperandrogenism</strong> (higher-than-normal male hormones), <strong>severe insulin resistance</strong> (your body's cells are not responding well to insulin), and <strong>elevated CRP</strong> (a marker of low-grade inflammation throughout the body). Each of these influences the others — and together they can make symptoms more pronounced. The good news: all three respond well to the right treatment plan.</p>
+    </div>
+
+    <!-- ── HOW IT AFFECTS YOU ── -->
+    <div class="section-header">
+      <h2>How PCOS Can Affect You Day-to-Day</h2>
+    </div>
+    <div class="section-body">
+      <p>Because PCOS touches so many body systems, its effects can be wide-ranging:</p>
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Body System</th>
+            <th>Common Effects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hormones &amp; Periods</strong></td>
+            <td>Irregular, infrequent, or absent periods; difficulty becoming pregnant; anovulation (no egg release)</td>
+          </tr>
+          <tr>
+            <td><strong>Skin &amp; Hair</strong></td>
+            <td>Acne (especially jawline/chin), excess facial or body hair (hirsutism), scalp hair thinning, darkened skin patches (acanthosis nigricans)</td>
+          </tr>
+          <tr>
+            <td><strong>Metabolism</strong></td>
+            <td>Weight gain (especially around the middle), difficulty losing weight, blood sugar fluctuations, increased risk of type 2 diabetes</td>
+          </tr>
+          <tr>
+            <td><strong>Energy &amp; Mood</strong></td>
+            <td>Fatigue, brain fog, increased rates of anxiety and depression</td>
+          </tr>
+          <tr>
+            <td><strong>Cardiovascular</strong></td>
+            <td>Higher risk of high blood pressure, high cholesterol, and heart disease over time</td>
+          </tr>
+          <tr>
+            <td><strong>Inflammation</strong></td>
+            <td>Elevated CRP (C-reactive protein) reflects ongoing low-grade inflammation that can worsen all other systems</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── THE TRIANGLE ── -->
+    <div class="section-header">
+      <h2>The Core Triangle: Androgens, Insulin Resistance &amp; Inflammation</h2>
+    </div>
+    <div class="section-body">
+      <p>In your situation, three forces are working together in a self-reinforcing cycle. Understanding this cycle helps explain why treating one piece can improve the others — and why this is such an empowering condition to manage.</p>
+
+      <div class="cycle-diagram" role="img" aria-label="Cycle showing how high androgens, insulin resistance, and inflammation reinforce each other">
+        <div class="cycle-node">High Androgens<br><small style="font-weight:400;font-size:0.8em;">(Hyperandrogenism)</small></div>
+        <div class="cycle-arrow">⟷</div>
+        <div class="cycle-node">Insulin Resistance</div>
+        <div class="cycle-arrow">⟷</div>
+        <div class="cycle-node">Chronic Inflammation<br><small style="font-weight:400;font-size:0.8em;">(Elevated CRP)</small></div>
+      </div>
+
+      <h3>1. Insulin Resistance — The Central Driver</h3>
+      <p>Insulin is a hormone made by your pancreas that acts like a "key" to let sugar (glucose) into your cells for energy. With insulin resistance, the cells do not respond well to that key. Your pancreas compensates by making <em>more</em> insulin. Those high insulin levels then signal your ovaries to produce excess testosterone and other androgens — fuelling the hormonal side of PCOS.</p>
+
+      <div class="warning-box">
+        <span class="box-title">⚠️ Why this matters for you</span>
+        Severe insulin resistance means your pancreas is working very hard. Over years, this increases the risk of developing pre-diabetes and type 2 diabetes. Getting on top of insulin resistance now is one of the most important things you can do for your long-term health.
+      </div>
+
+      <h3>2. Hyperandrogenism — The Hormonal Amplifier</h3>
+      <p>High androgens (testosterone and related hormones) make the ovaries produce even more androgens — a kind of self-amplifying loop. High androgens directly disrupt the normal development of egg follicles in the ovaries, contributing to irregular periods. They also worsen the body's sensitivity to insulin (making insulin resistance worse) and promote the storage of fat around the abdomen, which in turn drives more inflammation.</p>
+      <p>For you, <strong>marked hyperandrogenism</strong> explains many of the more visible symptoms such as acne, excess hair, and skin changes. These are not cosmetic nuisances — they are windows into what is happening metabolically.</p>
+
+      <h3>3. Chronic Inflammation — The Hidden Fuel</h3>
+      <p>CRP (C-reactive protein) is a protein your liver releases in response to inflammation anywhere in the body. Elevated CRP in PCOS suggests there is ongoing, low-grade inflammation that is not caused by infection — it is driven by the metabolic dysfunction itself. This inflammation:</p>
+      <ul>
+        <li><span>Worsens insulin resistance directly (inflammatory molecules interfere with insulin signalling)</span></li>
+        <li><span>Stimulates the ovaries and adrenal glands (a small gland near the kidney) to produce more androgens</span></li>
+        <li><span>Damages the lining of blood vessels over time, contributing to cardiovascular risk</span></li>
+        <li><span>Contributes to fatigue, brain fog, and mood changes</span></li>
+      </ul>
+
+      <div class="mindset-box">
+        <span class="box-title">💡 The empowering flip side</span>
+        Because these three systems reinforce each other, breaking the cycle anywhere creates a positive chain reaction. Improving insulin resistance lowers androgens AND reduces inflammation. Lower inflammation improves insulin sensitivity. Every positive step you take ripples through the entire system.
+      </div>
+    </div>
+
+    <!-- ── TREATMENT ── -->
+    <div class="section-header">
+      <h2>Your Treatment Options</h2>
+    </div>
+    <div class="section-body">
+      <p>There is no single "cure" for PCOS, but with the right combination of approaches, symptoms can improve significantly — and so can your long-term health. Here is an overview of the options relevant to your situation.</p>
+
+      <!-- OCP -->
+      <h3>🩺 The Birth Control Pill (Combined Oral Contraceptive)</h3>
+      <p>A combined oral contraceptive pill (OCP) containing both estrogen and progestin (a synthetic progesterone) is often the first hormonal treatment for PCOS. For PCOS management, its goal is not primarily contraception — it is hormonal regulation.</p>
+
+      <table class="styled-table">
+        <thead>
+          <tr><th>What it does</th><th>Why it helps</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Reduces LH (a hormone that drives androgen production)</td><td>Lowers testosterone levels made by the ovaries</td></tr>
+          <tr><td>Increases SHBG (sex hormone-binding globulin) in the blood</td><td>Binds up free testosterone, making less available to cause symptoms</td></tr>
+          <tr><td>Regulates the uterine lining</td><td>Provides regular withdrawal bleeds, protecting the uterus from abnormal cell growth</td></tr>
+          <tr><td>Reduces androgen-driven acne and hirsutism</td><td>Skin and hair improvements typically noticed within 3–6 months</td></tr>
+        </tbody>
+      </table>
+
+      <div class="key-point">
+        <span class="box-title">🔑 Important note</span>
+        Some oral contraceptive pills can slightly worsen insulin resistance. Your doctor will choose a formulation with a progestin that has a more favourable metabolic profile. This is especially important given your severe insulin resistance.
+      </div>
+
+      <!-- Spironolactone -->
+      <h3>🌿 Spironolactone — Targeting Androgens Directly</h3>
+      <p>Spironolactone (brand name Aldactone® in Canada) is a medication originally developed for blood pressure, but at lower doses it is a powerful anti-androgen (a drug that blocks the effects of male hormones). It works in two ways:</p>
+      <ul>
+        <li><span>Blocks androgen receptors — testosterone cannot dock onto cells and cause symptoms</span></li>
+        <li><span>Reduces androgen production in the ovaries and adrenal glands</span></li>
+      </ul>
+      <p>This is particularly effective for acne, excess facial and body hair, and scalp hair thinning. It is typically used alongside the birth control pill, as it can cause irregular periods on its own, and must be avoided during pregnancy.</p>
+
+      <div class="warning-box">
+        <span class="box-title">⚠️ Pregnancy precaution</span>
+        Spironolactone must not be taken during pregnancy, as it can affect fetal development. Reliable contraception (such as the OCP) is required while taking it.
+      </div>
+
+      <!-- Metformin -->
+      <h3>💊 Metformin — Tackling Insulin Resistance</h3>
+      <p>Metformin (brand names Glucophage®, Glumetza® in Canada) is a medication most people associate with type 2 diabetes — but it is also a cornerstone of PCOS treatment, especially when insulin resistance is prominent. It works by making your body's cells more responsive to insulin (improving insulin sensitivity) and reducing the amount of glucose your liver releases into the bloodstream.</p>
+      <p><strong>In PCOS, metformin can:</strong></p>
+      <ul>
+        <li><span>Lower circulating insulin levels, which reduces the signal to produce excess androgens</span></li>
+        <li><span>Help restore more regular ovulation and menstrual cycles</span></li>
+        <li><span>Support modest weight loss and reduce abdominal fat</span></li>
+        <li><span>Lower CRP and other inflammatory markers over time</span></li>
+        <li><span>Significantly reduce the long-term risk of developing type 2 diabetes</span></li>
+      </ul>
+      <p>It is started at a low dose and gradually increased to minimise digestive side effects (nausea, loose stools). Taking it with food and using the extended-release formulation helps most people tolerate it well.</p>
+
+      <div class="success-box">
+        <span class="box-title">✅ Long-term protection</span>
+        Metformin has decades of safety data and is protective against type 2 diabetes. For someone with severe insulin resistance and PCOS, it is one of the most important metabolic tools available.
+      </div>
+
+      <!-- GLP-1 -->
+      <h3>💉 GLP-1 Receptor Agonists (e.g., Ozempic®/Semaglutide)</h3>
+      <p>GLP-1 agonists are a newer class of medication that mimic a natural gut hormone called GLP-1 (glucagon-like peptide-1). Semaglutide (Ozempic®, Wegovy® in Canada) is the most well-known. Though approved primarily for type 2 diabetes and weight management, there is growing evidence supporting their use in PCOS — particularly for those with significant insulin resistance.</p>
+
+      <table class="styled-table">
+        <thead>
+          <tr><th>How it works</th><th>Benefit for PCOS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Stimulates insulin release only when blood sugar is elevated</td><td>Improves blood sugar control without the risk of dangerous lows</td></tr>
+          <tr><td>Reduces glucagon (a hormone that raises blood sugar)</td><td>Lowers overall insulin demand</td></tr>
+          <tr><td>Slows stomach emptying and reduces appetite signals in the brain</td><td>Supports significant, sustained weight loss</td></tr>
+          <tr><td>Directly reduces liver fat and abdominal fat</td><td>Dramatically improves insulin sensitivity</td></tr>
+          <tr><td>Has anti-inflammatory properties</td><td>Lowers CRP and inflammatory markers</td></tr>
+        </tbody>
+      </table>
+
+      <p>Research shows that GLP-1 agonists can lower androgen levels, restore regular periods, and improve fertility in women with PCOS and obesity. The weight loss achieved with these medications can be transformative for the entire hormonal and metabolic picture.</p>
+
+      <div class="key-point">
+        <span class="box-title">🔑 A note on cost and coverage</span>
+        Ozempic® and Wegovy® can be expensive without insurance coverage. In BC, coverage depends on your plan and clinical indications. We can discuss options including prior authorisation applications. Wegovy® (the higher-dose, weight-management-indicated formulation) may have different coverage criteria than Ozempic®.
+      </div>
+
+      <!-- Diet -->
+      <h3>🥗 Dietary Changes — Your Most Powerful Daily Tool</h3>
+      <p>Food is medicine in PCOS — particularly when insulin resistance and inflammation are the core problems. No single "PCOS diet" works for everyone, but the following principles are backed by strong evidence:</p>
+
+      <h3>Reduce the Insulin Load of Your Meals</h3>
+      <ul>
+        <li><span><strong>Choose lower glycaemic index (GI) carbohydrates</strong> — whole grains, legumes, and non-starchy vegetables cause a slower, smaller rise in blood sugar compared to white bread, white rice, sugary drinks, and processed snacks</span></li>
+        <li><span><strong>Pair carbohydrates with protein, healthy fat, or fibre</strong> — this further slows glucose absorption and flattens the post-meal insulin spike</span></li>
+        <li><span><strong>Reduce ultra-processed foods and added sugars</strong> — these drive insulin spikes and fuel inflammation</span></li>
+        <li><span><strong>Consider time-restricted eating</strong> (eating within a consistent 8–10 hour window) — early evidence suggests this can improve insulin sensitivity in PCOS</span></li>
+      </ul>
+
+      <h3>Reduce Inflammation Through Food</h3>
+      <ul>
+        <li><span>Increase <strong>omega-3 rich foods</strong>: fatty fish (salmon, mackerel, sardines), flaxseed, chia seeds, walnuts</span></li>
+        <li><span>Eat a wide variety of <strong>colourful vegetables and berries</strong> — the pigments (polyphenols) are powerful anti-inflammatory agents</span></li>
+        <li><span>Use <strong>olive oil</strong> as your primary cooking fat</span></li>
+        <li><span>Reduce <strong>refined vegetable oils, fried foods, and processed meats</strong></span></li>
+        <li><span>Limit <strong>alcohol</strong> — it raises triglycerides, worsens liver fat, and promotes inflammation</span></li>
+      </ul>
+
+      <div class="success-box">
+        <span class="box-title">✅ Even modest changes make a real difference</span>
+        Research shows that even a 5–10% reduction in body weight in women with PCOS can significantly lower androgen levels, restore regular periods, and improve insulin sensitivity — independent of how that weight is lost. You do not need to reach an "ideal" weight to see meaningful improvements.
+      </div>
+
+      <!-- Exercise -->
+      <h3>🏃 Exercise — A Direct Insulin-Sensitising Drug</h3>
+      <p>Exercise works like a medication for insulin resistance. When your muscles contract, they can absorb glucose from the bloodstream <em>without needing insulin</em> — directly improving the problem at the cellular level. This effect lasts for hours after each session and accumulates with consistent training.</p>
+
+      <table class="styled-table">
+        <thead>
+          <tr><th>Type of Exercise</th><th>Recommended Amount</th><th>Key Benefit for PCOS</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Moderate aerobic activity<br><small>(brisk walking, cycling, swimming)</small></td>
+            <td>150 min/week (30 min, 5 days)</td>
+            <td>Lowers blood glucose, reduces abdominal fat, improves mood</td>
+          </tr>
+          <tr>
+            <td>Resistance/strength training<br><small>(weights, resistance bands, bodyweight)</small></td>
+            <td>2–3 sessions/week</td>
+            <td>Builds muscle mass — muscle is your largest insulin-sensitive tissue</td>
+          </tr>
+          <tr>
+            <td>High-intensity interval training (HIIT)<br><small>(short bursts of intense effort)</small></td>
+            <td>2–3 sessions/week<br><small>(can replace aerobic)</small></td>
+            <td>Highly efficient insulin sensitiser; improves testosterone levels</td>
+          </tr>
+          <tr>
+            <td>Reducing prolonged sitting</td>
+            <td>Break sitting every 30 min</td>
+            <td>Even small movement breaks blunt post-meal glucose and insulin spikes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mindset-box">
+        <span class="box-title">💡 Where to start</span>
+        You do not need to do all of this at once. Starting with a 20–30 minute walk most days of the week is genuinely impactful. Building from there at a pace that feels achievable is far more sustainable than an all-or-nothing approach.
+      </div>
+    </div>
+
+    <!-- ── POSITIVE CHANGE ── -->
+    <div class="section-header">
+      <h2>What Happens When Insulin Resistance Improves?</h2>
+    </div>
+    <div class="section-body">
+      <p>This is the most exciting part of PCOS management. Because insulin resistance sits at the centre of the hormonal and inflammatory cycle, improving it sets off a cascade of positive changes throughout your body. Here is what you might notice as your insulin sensitivity improves:</p>
+
+      <div class="success-box">
+        <span class="box-title">✅ The positive cascade</span>
+        <ul style="margin-top:0.5rem; padding-left: 1.2rem;">
+          <li><span><strong>Lower insulin levels → Lower androgen production</strong> — the ovaries receive less stimulation to make testosterone</span></li>
+          <li><span><strong>Lower androgens → Fewer androgenic symptoms</strong> — gradual improvement in acne, excess hair, and scalp hair loss</span></li>
+          <li><span><strong>Lower insulin → More regular ovulation</strong> — periods become more predictable; fertility improves</span></li>
+          <li><span><strong>Reduced abdominal fat → Lower CRP</strong> — inflammation calms down throughout the body</span></li>
+          <li><span><strong>Lower inflammation → Better insulin signalling</strong> — a virtuous cycle begins to replace the vicious one</span></li>
+          <li><span><strong>Better energy, mood, and mental clarity</strong> — as blood sugar fluctuations stabilise</span></li>
+          <li><span><strong>Reduced long-term risk</strong> of type 2 diabetes, heart disease, and endometrial (uterine lining) cancer</span></li>
