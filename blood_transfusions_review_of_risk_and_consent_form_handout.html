@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Acute Care">
+  <title>Blood Transfusions: Risks & Consent</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .site-header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .site-header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      display: block;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin: 2rem 0 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin: 1.4rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    /* ── TABLE ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #f1f5f9; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; margin-left: 0; }
+    .checklist li {
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
+      position: relative;
+      border-bottom: 1px solid #e2e8f0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .checklist li::before {
+      content: '☐';
+      position: absolute;
+      left: 0.3rem;
+      font-size: 1.2rem;
+      color: #3b82f6;
+    }
+
+    /* ── CONSENT SECTION ── */
+    .consent-section {
+      background: #f8faff;
+      border: 2px solid #3b82f6;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .consent-section h2 {
+      border-bottom-color: #3b82f6;
+      margin-top: 0;
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #1e3a8a;
+      font-size: 0.95rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"] {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #1e3a8a;
+      padding: 0.5rem 0.25rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: transparent;
+      color: #1e293b;
+      min-height: 44px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus {
+      border-bottom-color: #3b82f6;
+    }
+
+    .sig-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .sig-grid { grid-template-columns: 1fr; }
+    }
+
+    .sig-block {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 1rem;
+      background: #ffffff;
+    }
+
+    .sig-block h3 { margin-top: 0; font-size: 1.05rem; }
+
+    .sig-line {
+      border: none;
+      border-bottom: 2px solid #1e3a8a;
+      width: 100%;
+      display: block;
+      min-height: 44px;
+      margin-top: 0.6rem;
+      background: transparent;
+    }
+
+    .sig-label {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    .consent-declaration {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .consent-checkboxes { list-style: none; margin-left: 0; }
+    .consent-checkboxes li {
+      padding: 0.55rem 0.5rem 0.55rem 2.2rem;
+      position: relative;
+      border-bottom: 1px solid #bfdbfe;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .consent-checkboxes li::before {
+      content: '☐';
+      position: absolute;
+      left: 0.3rem;
+      font-size: 1.3rem;
+      color: #1e3a8a;
+    }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .references li { margin-bottom: 0.5rem; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .site-footer .disclaimer {
+      font-size: 0.78rem;
+      opacity: 0.75;
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #ffffff; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body   { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3          { break-after: avoid; page-break-after: avoid; }
+
+      .consent-section { border: 2px solid #1e3a8a; }
+      .sig-block { border: 1px solid #000; }
+
+      input[type="text"],
+      input[type="date"] { display: table-cell; }
+
+      .sig-line { display: table-cell; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>Blood Transfusions: Understanding the Risks &amp; Your Consent</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2026-07-23">July 23, 2026</time>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- WHAT IS A BLOOD TRANSFUSION -->
+    <section>
+      <div class="section-header">
+        <h2>What Is a Blood Transfusion?</h2>
+      </div>
+      <div class="section-body">
+        <p>A blood transfusion is a medical procedure where donated blood — or parts of blood — are given to you through a needle placed in your vein (called an intravenous or IV line). Transfusions can be life-saving and are used when your own body does not have enough blood or when certain components of your blood are too low to keep you healthy.</p>
+
+        <div class="key-point">
+          <span class="box-title">🩸 Why might I need a transfusion?</span>
+          Common reasons include significant blood loss from surgery or injury, severe anaemia (low red blood cells) due to illness or treatment, blood disorders such as thalassemia or sickle cell disease, low platelets (cells that help clotting) before or after surgery, and bleeding disorders that need clotting factor replacement.
+        </div>
+
+        <h3>Types of Blood Products Used</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Blood Product</th>
+              <th>What It Contains</th>
+              <th>Common Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Red Blood Cells (RBCs)</strong></td>
+              <td>Cells that carry oxygen throughout your body</td>
+              <td>Anaemia, blood loss from surgery or injury</td>
+            </tr>
+            <tr>
+              <td><strong>Platelets</strong></td>
+              <td>Tiny cell fragments that form clots to stop bleeding</td>
+              <td>Low platelet counts, cancer treatment, bone marrow disorders</td>
+            </tr>
+            <tr>
+              <td><strong>Fresh Frozen Plasma (FFP)</strong></td>
+              <td>Liquid part of blood containing clotting proteins</td>
+              <td>Severe bleeding, liver disease, major surgery</td>
+            </tr>
+            <tr>
+              <td><strong>Cryoprecipitate</strong></td>
+              <td>Concentrated clotting factors (e.g., fibrinogen, Factor VIII)</td>
+              <td>Bleeding disorders such as hemophilia, massive haemorrhage</td>
+            </tr>
+            <tr>
+              <td><strong>Albumin</strong></td>
+              <td>A protein that helps maintain fluid balance</td>
+              <td>Severe burns, liver disease, low protein states</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section>
+      <div class="section-header">
+        <h2>Why This Matters: The Benefits</h2>
+      </div>
+      <div class="section-body">
+        <div class="success-box">
+          <span class="box-title">✅ Transfusions can be life-saving</span>
+          When used appropriately, blood transfusions restore oxygen delivery to your organs, control dangerous bleeding, and support your body through serious illness or major surgery. Canada's blood supply is among the safest in the world, carefully screened and managed by Canadian Blood Services.
+        </div>
+        <p>Your doctor will only recommend a transfusion when the benefit to you outweighs the risks. You always have the right to ask questions, understand your options, and — except in a life-threatening emergency — make your own decision.</p>
+      </div>
+    </section>
+
+    <!-- COMMON SIDE EFFECTS -->
+    <section>
+      <div class="section-header">
+        <h2>Common Side Effects (More Likely to Happen)</h2>
+      </div>
+      <div class="section-body">
+        <p>Most people tolerate blood transfusions well. However, some reactions can occur, especially during the transfusion itself. Nurses monitor you closely throughout the procedure for early signs of any reaction.</p>
+
+        <h3>Febrile Non-Haemolytic Reaction (Fever Without Destruction of Blood Cells)</h3>
+        <div class="warning-box">
+          <span class="box-title">⚠️ How common?</span> This is the <em>most frequent</em> transfusion reaction, occurring in approximately 1 in 100 transfusions of red blood cells and more frequently with platelets.<sup>1</sup>
+        </div>
+        <ul>
+          <li>You may develop a mild fever (temperature rise of ≥1°C), chills, or a flushed feeling during or shortly after the transfusion.</li>
+          <li>It is caused by white blood cells or cytokines (chemical signals from the immune system) in the donated blood reacting with your immune system.</li>
+          <li>It is uncomfortable but not dangerous. The transfusion may be slowed or stopped, and you may be given acetaminophen (e.g., Tylenol®) for comfort.</li>
+        </ul>
+
+        <h3>Allergic Reaction (Mild)</h3>
+        <div class="warning-box">
+          <span class="box-title">⚠️ How common?</span> Mild allergic reactions occur in roughly 1–3 in 100 transfusions.<sup>1,2</sup>
+        </div>
+        <ul>
+          <li>Symptoms include hives (itchy, raised skin welts), flushing, or itching — usually appearing within 1–4 hours of starting the transfusion.</li>
+          <li>Caused by your immune system reacting to proteins in the donated blood.</li>
+          <li>Usually managed by slowing the transfusion and giving an antihistamine such as diphenhydramine (Benadryl®).</li>
+        </ul>
+
+        <h3>Circulatory Overload (TACO — Transfusion-Associated Circulatory Overload)</h3>
+        <div class="warning-box">
+          <span class="box-title">⚠️ How common?</span> Affects approximately 1–8% of transfused patients, more common in the elderly and those with heart or kidney disease.<sup>3</sup>
+        </div>
+        <ul>
+          <li>Adding extra fluid volume to your bloodstream can put strain on your heart, causing difficulty breathing, high blood pressure, and swelling.</li>
+          <li>Risk is higher if you have heart failure or kidney disease.</li>
+          <li>Managed by slowing the transfusion rate, giving diuretics (water pills such as furosemide), and supportive care.</li>
+        </ul>
+
+        <h3>Iron Overload</h3>
+        <ul>
+          <li>Patients who receive many transfusions over time (e.g., for chronic anaemia) can accumulate iron in organs such as the heart, liver, and pancreas.</li>
+          <li>This is managed with iron chelation therapy (medicines that bind and remove excess iron).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERIOUS RARE RISKS -->
+    <section>
+      <div class="section-header">
+        <h2>Rare But Serious Risks (Less Likely, But Important to Know)</h2>
+      </div>
+      <div class="section-body">
+        <p>Canada's blood screening process is rigorous, and serious reactions are uncommon. However, your doctor has a duty to inform you of all significant risks so you can make a fully informed decision.</p>
+
+        <h3>Acute Haemolytic Reaction (Destruction of Blood Cells — Immediate)</h3>
+        <div class="caution-box">
+          <span class="box-title">🚨 How common?</span> Fatal haemolytic reactions occur in approximately 1 in 1,800,000 red cell transfusions; non-fatal acute reactions are more frequent but still rare.<sup>2,4</sup>
+        </div>
+        <ul>
+          <li>This is the most serious immediate transfusion reaction. It occurs when donor blood is incompatible with your blood type — most often due to a clerical or identification error.</li>
+          <li>Your immune system attacks the donated red blood cells, causing them to burst (haemolyse). This can lead to kidney failure, shock, and — in severe cases — death.</li>
+          <li>Symptoms include fever, chills, back or chest pain, dark urine, and a feeling of dread during the transfusion.</li>
+          <li>The transfusion is stopped immediately and emergency treatment is given.</li>
+          <li>Strict patient identification protocols (two-ID checks) at every step dramatically reduce this risk.</li>
+        </ul>
+
+        <h3>Delayed Haemolytic Reaction</h3>
+        <ul>
+          <li>Occurs 3–10 days after a transfusion when the body develops antibodies (proteins that fight foreign substances) against the donated red blood cells.</li>
+          <li>Symptoms include fatigue, unexplained fever, yellowing of the skin (jaundice), and a drop in blood count.</li>
+          <li>Usually less severe than an acute reaction and managed with monitoring and supportive care.</li>
+          <li>Frequency: approximately 1 in 2,500 to 1 in 11,000 transfusions.<sup>2</sup></li>
+        </ul>
+
+        <h3>Transfusion-Related Acute Lung Injury (TRALI)</h3>
+        <div class="caution-box">
+          <span class="box-title">🚨 How common?</span> Approximately 1 in 5,000 to 1 in 10,000 transfusions; the leading cause of transfusion-related death in Canada.<sup>3,5</sup>
+        </div>
+        <ul>
+          <li>A serious lung complication that causes sudden difficulty breathing, low oxygen levels, and fluid build-up in the lungs — usually within 6 hours of a transfusion.</li>
+          <li>Caused by antibodies or other immune factors in the donated blood triggering an inflammatory response in your lungs.</li>
+          <li>Requires immediate intensive care, often including oxygen support.</li>
+          <li>Canadian Blood Services screens plasma donors to significantly reduce this risk.</li>
+        </ul>
+
+        <h3>Severe Allergic Reaction (Anaphylaxis)</h3>
+        <div class="caution-box">
+          <span class="box-title">🚨 How common?</span> Approximately 1 in 20,000 to 1 in 50,000 transfusions.<sup>1,2</sup>
+        </div>
+        <ul>
+          <li>A severe, life-threatening allergic reaction involving throat swelling, difficulty breathing, a dangerous drop in blood pressure, and collapse.</li>
+          <li>Treated immediately with epinephrine (adrenaline), antihistamines, steroids, and IV fluids.</li>
+        </ul>
+
+        <h3>Transfusion-Transmitted Infections (TTIs)</h3>
+        <div class="key-point">
+          <span class="box-title">🛡️ Canada's Blood Supply Is Carefully Screened</span>
+          All donated blood in Canada is tested for a wide range of infections. The current risks are extremely low due to advances in testing technology.
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Infection</th>
+              <th>Estimated Risk per Unit in Canada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HIV (Human Immunodeficiency Virus)</td>
+              <td>Approximately 1 in 21 million donations<sup>6</sup></td>
+            </tr>
+            <tr>
+              <td>Hepatitis C (HCV)</td>
+              <td>Approximately 1 in 13 million donations<sup>6</sup></td>
+            </tr>
+            <tr>
+              <td>Hepatitis B (HBV)</td>
+              <td>Approximately 1 in 153,000 donations<sup>6</sup></td>
+            </tr>
+            <tr>
+              <td>Bacterial Contamination (mainly platelets)</td>
+              <td>Approximately 1 in 75,000 platelet units<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>West Nile Virus</td>
+              <td>Seasonal screening minimises risk significantly<sup>6</sup></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Graft-Versus-Host Disease (TA-GvHD)</h3>
+        <ul>
+          <li>An extremely rare but almost always fatal complication where immune cells (lymphocytes) in donated blood attack the patient's own tissues and organs.</li>
+          <li>Risk is highest in patients with very weakened immune systems (e.g., after bone marrow transplant or chemotherapy).</li>
+          <li>Prevented by irradiating (exposing to radiation) blood products for at-risk patients.</li>
+        </ul>
+
+        <h3>Post-Transfusion Purpura (PTP)</h3>
+        <ul>
+          <li>A rare reaction occurring 5–10 days after a transfusion where antibodies destroy the patient's own platelets, causing sudden severe bleeding and bruising.</li>
+          <li>Treated with intravenous immunoglobulin (IVIG) therapy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ALTERNATIVES -->
+    <section>
+      <div class="section-header">
+        <h2>Are There Alternatives?</h2>
+      </div>
+      <div class="section-body">
+        <p>Depending on your situation, there may be alternatives to, or ways to reduce the need for, a blood transfusion. It is important to discuss these options with your doctor.</p>
+        <div class="mindset-box">
+          <span class="box-title">💡 Options Worth Discussing With Your Doctor</span>
+          <ul style="margin-top:0.5rem;">
+            <li><strong>Iron supplementation</strong> — intravenous (IV) iron can treat iron-deficiency anaemia before planned surgery, reducing the need for transfusion.</li>
+            <li><strong>Erythropoietin-stimulating agents (ESAs)</strong> — injections that stimulate your bone marrow to make more red blood cells (used in kidney disease, cancer care).</li>
+            <li><strong>Autologous pre-donation</strong> — donating your own blood before a planned surgery, to be given back to you if needed.</li>
+            <li><strong>Intraoperative blood salvage</strong> — a technique where blood lost during surgery is collected, cleaned, and returned to you.</li>
+            <li><strong>Antifibrinolytic medicines</strong> (e.g., tranexamic acid) — medications that help your blood clot more effectively and reduce surgical bleeding.</li>
+            <li><strong>Accepting a lower transfusion threshold</strong> — in stable patients, doctors may safely accept a lower blood count before transfusing (a 'restrictive strategy').</li>
+          </ul>
+        </div>
+        <p>If you have religious, cultural, or personal objections to receiving blood or certain blood products, please tell your doctor as soon as possible so alternatives can be arranged in advance.</p>
+      </div>
+    </section>
+
+    <!-- QUESTIONS TO ASK -->
+    <section>
+      <div class="section-header">
+        <h2>Questions to Ask Your Doctor or Nurse</h2>
+      </div>
+      <div class="section-body">
+        <ul class="checklist">
+          <li>Why do I specifically need a transfusion?</li>
+          <li>What will happen if I choose not to have one?</li>
+          <li>Which blood product will I receive?</li>
+          <li>How many units are planned?</li>
+          <li>Are there alternatives that are right for me?</li>
+          <li>What reactions should I watch for after I go home?</li>
+          <li>Who do I contact if I feel unwell after the transfusion?</li>
+          <li>Will I need follow-up blood tests afterward?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONSENT SECTION -->
+    <section class="consent-section">
+      <div class="section-header">
+        <h2>Informed Consent for Blood Transfusion</h2>
+      </div>
+      <div class="section-body">
+
+        <div class="consent-declaration">
+          <span class="box-title">📋 Declaration</span>
+          I confirm that I have been given this information sheet to read. I have had the opportunity to ask questions and have had those questions answered to my satisfaction. I understand the purpose of the blood transfusion, the common side effects, the rare but serious risks, and that I may withdraw my consent at any time, except in a life-threatening emergency where I am unable to do so.
+        </div>
+
+        <h3>I confirm that I understand the following:</h3>
+        <ul class="consent-checkboxes">
+          <li>The reason a blood transfusion has been recommended for me</li>
+          <li>The type of blood product(s) that may be used</li>
+          <li>Common reactions, including fever, chills, and mild allergic reactions</li>
+          <li>Rare but serious risks, including haemolytic reactions, TRALI, anaphylaxis, and infection</li>
+          <li>That Canada's blood supply is carefully screened and the risk of infection is very low</li>
+          <li>The alternatives to transfusion that were discussed with me</li>
+          <li>That I have the right to refuse or withdraw consent, and that refusing may have serious health consequences</li>
+        </ul>
+
+        <div class="form-group" style="margin-top:1.5rem;">
+          <label for="patient-name">Full Name of Patient</label>
+          <input type="text" id="patient-name" name="patient-name" placeholder="Print full legal name" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="text" id="dob" name="dob" placeholder="DD / MMM / YYYY">
+        </div>
+
+        <div class="form-group">
+          <label for="phn">Provincial Health Number (PHN)</label>
+          <input type="text" id="phn" name="phn" placeholder="BC Services Card / PHN">
+        </div>
+
+        <!-- SIGNATURE GRID -->
+        <h3 style="margin-top:1.8rem;">Signatures</h3>
+        <p style="font-size:0.93rem; margin-bottom:1rem; color:#475569;">
+          Please complete the signature block that applies to you. If the patient is signing, the patient block must be completed. If someone else is signing on the patient's behalf, both the patient block and the appropriate representative block must be completed, and the relationship/authority must be noted.
+        </p>
+
+        <div class="sig-grid">
+
+          <!-- PATIENT -->
+          <div class="sig-block">
+            <h3>Patient</h3>
+            <p style="font-size:0.85rem; color:#475569; margin-bottom:0.6rem;">Complete this block if you are the patient and are signing for yourself.</p>
+            <div class="form-group">
+              <label for="sig-patient">Signature</label>
+              <input type="text" id="sig-patient" name="sig-patient" class="sig-line" placeholder="Sign or print name">
+              <span class="sig-label">Signature of Patient</span>
+            </div>
+            <div class="form-group">
+              <label for="date-patient">Date</label>
+              <input type="date" id="date-patient" name="date-patient">
+            </div>
+          </div>
+
+          <!-- COMMITTEE / TSDM / LEGAL GUARDIAN -->
+          <div class="sig-block">
+            <h3>Committee, TSDM, or Legal Guardian</h3>
+            <p style="font-size:0.85rem; color:#475569
