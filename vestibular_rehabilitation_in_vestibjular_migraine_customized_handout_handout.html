@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Chronic Disease">
+  <title>Vestibular Rehabilitation in Vestibular Migraine</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.88rem;
+      opacity: 0.75;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.3rem;
+      margin: 2rem 0 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin: 1.4rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li { margin-bottom: 0.45rem; min-height: 44px; display: flex; align-items: flex-start; }
+    li::before { content: ''; display: inline-block; min-height: 44px; }
+
+    ul li { list-style: disc; display: list-item; }
+    ol li { list-style: decimal; display: list-item; }
+
+    /* Callout boxes */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+    }
+
+    .box-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    td {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #f1f5f9; }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+      padding: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 0.5rem 0;
+      min-height: 44px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .checklist li:last-child { border-bottom: none; }
+
+    .checklist li::before { content: none; }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #3b82f6;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* References */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      font-size: 1.3em;
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #475569;
+    }
+
+    .references ol li {
+      display: list-item;
+      margin-bottom: 0.5rem;
+      min-height: unset;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    footer .disclaimer {
+      opacity: 0.75;
+      font-size: 0.82rem;
+    }
+
+    /* Pathway boxes */
+    .pathway {
+      background: #f8faff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin: 0.8rem 0;
+    }
+
+    .pathway-title {
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 0.4rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #3b82f6;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .badge-amber {
+      background: #f59e0b;
+    }
+
+    .badge-red {
+      background: #ef4444;
+    }
+
+    .badge-green {
+      background: #10b981;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header, .content, .references, footer { padding: 24px 18px; }
+      header h1 { font-size: 1.5em; }
+      h2 { font-size: 1.4em; }
+    }
+
+    /* Print */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #fff; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+      input { display: table-cell; }
+
+      footer { background: #1e293b !important; color: #fff !important; }
+      header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <h1>Vestibular Rehabilitation &amp; Vestibular Migraine</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2026-07-30">July 30, 2026</time>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <div class="content">
+
+    <!-- WHAT IS VESTIBULAR MIGRAINE -->
+    <div class="section-header">
+      <h2>What Is Vestibular Migraine?</h2>
+    </div>
+    <div class="section-body">
+      <p>Vestibular migraine (VM) is a type of migraine where dizziness, spinning sensations (vertigo), and balance problems are the main symptoms — sometimes even without a headache. It is one of the most common causes of recurrent dizziness in adults and can significantly affect your day-to-day life.<sup>1</sup></p>
+
+      <p>Between attacks, many people develop lasting sensitivity to movement and visual motion — sometimes called <strong>Persistent Postural-Perceptual Dizziness (PPPD)</strong> (a mouthful, but it simply means your brain stays "on edge" about balance signals even when an acute attack is not happening). This is where vestibular rehabilitation can play an important role.<sup>2</sup></p>
+
+      <div class="key-point">
+        <span class="box-title">🧠 Key Concept</span>
+        Vestibular migraine has two phases that matter for treatment: the <strong>acute attack</strong> (the flare) and the <strong>interictal period</strong> (the time in between attacks). Treatment — including rehabilitation — works differently in each phase.
+      </div>
+    </div>
+
+    <!-- WHAT IS VESTIBULAR REHABILITATION -->
+    <div class="section-header">
+      <h2>What Is Vestibular Rehabilitation?</h2>
+    </div>
+    <div class="section-body">
+      <p>Vestibular rehabilitation therapy (VRT) is a specialised physiotherapy program designed to help your brain recalibrate how it processes balance signals from your eyes, inner ears, and muscles. It typically involves:<sup>3</sup></p>
+      <ul>
+        <li>Gaze stabilisation exercises (training your eyes and inner ears to work together)</li>
+        <li>Habituation exercises (gradually exposing you to the movements or environments that provoke dizziness, to reduce sensitivity over time)</li>
+        <li>Balance retraining and gait (walking) exercises</li>
+        <li>Graded return to daily and physical activities</li>
+      </ul>
+
+      <div class="mindset-box">
+        <span class="box-title">💡 Think of it this way</span>
+        Your balance system is like a set of weighing scales that has gotten out of calibration. VRT is the process of slowly and safely recalibrating those scales. It takes patience, but the brain is remarkably good at adapting.
+      </div>
+    </div>
+
+    <!-- WHAT THE EVIDENCE ACTUALLY SAYS -->
+    <div class="section-header">
+      <h2>What Does the Evidence Say for Vestibular Migraine?</h2>
+    </div>
+    <div class="section-body">
+      <p>This is an area where it is important to be honest with you. The evidence for VRT in vestibular migraine is <strong>more limited than you might expect</strong>, and the benefit depends greatly on what specifically is causing your ongoing symptoms.<sup>4</sup></p>
+
+      <div class="warning-box">
+        <span class="box-title">⚠️ Important Nuance</span>
+        While vestibular rehabilitation is frequently recommended — including by neurologists — high-quality clinical trials specifically in vestibular migraine are still limited. The benefit varies considerably depending on which part of your condition is being treated.<sup>4,5</sup>
+      </div>
+
+      <h3>Where VRT Is Most Likely to Help You</h3>
+      <p>Research and clinical experience point to two situations where VRT provides the most meaningful benefit:<sup>5,6</sup></p>
+
+      <div class="success-box">
+        <span class="box-title">✅ Strongest Evidence: Between-Attack (Interictal) Symptoms</span>
+        Many people with vestibular migraine develop motion sensitivity, visual vertigo, or PPPD <em>between</em> acute attacks — a kind of "background dizziness" driven by the brain being over-sensitive. VRT is highly effective at resetting this central sensory integration (how your brain weighs up the signals from your eyes, inner ears, and body). If this describes your current experience, you are the best candidate for VRT.<sup>2,5</sup>
+      </div>
+
+      <div class="success-box">
+        <span class="box-title">✅ Best Results: When Used Alongside Preventive Medication</span>
+        Studies suggest that VRT works much better once your acute attack frequency is at least partially controlled with preventive (prophylactic) medications — such as beta-blockers (e.g., propranolol), topiramate, or newer CGRP inhibitors. Trying to do VRT while still having frequent acute attacks can actually worsen sensitisation.<sup>5,7</sup>
+      </div>
+
+      <h3>Where VRT Is Less Helpful</h3>
+      <div class="caution-box">
+        <span class="box-title">🔴 Less Benefit: During Active, Poorly Controlled Attacks</span>
+        If acute vestibular migraine attacks remain frequent and severe, VRT exercises can temporarily increase symptoms and may not produce lasting improvement. Getting your acute attack frequency under better control first is a priority.<sup>4</sup>
+      </div>
+    </div>
+
+    <!-- YOUR REFERRAL OPTIONS -->
+    <div class="section-header">
+      <h2>Your Referral Options in Kelowna</h2>
+    </div>
+    <div class="section-body">
+      <p>We have discussed the options for getting you access to vestibular rehabilitation, and I want to lay these out clearly so you can make an informed decision. There is no perfect path here — each option has real trade-offs.</p>
+
+      <div class="pathway">
+        <div class="pathway-title">Option 1: Private Vestibular Physiotherapy <span class="badge badge-green">Recommended Starting Point</span></div>
+        <p>You can self-refer (or I can provide a letter of referral) to a private physiotherapy clinic in Kelowna with a vestibular-trained therapist. Several clinics in the Okanagan offer this service. This is the <strong>most direct and fastest</strong> route to care.</p>
+        <ul>
+          <li><strong>Advantage:</strong> You can typically be seen within weeks, not months. You choose the timing and pace.</li>
+          <li><strong>Disadvantage:</strong> There is an out-of-pocket cost (sessions typically $100–$160 each). Extended health benefits through your employer or MSP supplementary coverage may help offset this — worth checking your plan.</li>
+          <li><strong>What to look for:</strong> Ask specifically for a physiotherapist with vestibular rehabilitation training or certification (CVESP or equivalent).</li>
+        </ul>
+      </div>
+
+      <div class="pathway">
+        <div class="pathway-title">Option 2: Referral to KGH Neurodiagnostics <span class="badge badge-amber">Long Wait — Uncertain Outcome</span></div>
+        <p>Kelowna General Hospital has a Neurodiagnostics Department that can be involved in complex dizziness assessments. However, this pathway has two significant challenges:</p>
+        <ul>
+          <li><strong>Wait times</strong> are typically very long — often many months.</li>
+          <li>Depending on the referral criteria at the time, they <strong>may not accept a referral from a family physician</strong> for this indication without a specialist's request.</li>
+          <li>This route is more useful for <em>diagnostic clarification</em> than for delivering ongoing vestibular rehabilitation.</li>
+        </ul>
+      </div>
+
+      <div class="pathway">
+        <div class="pathway-title">Option 3: Referral to ENT → Onward to a Specialised Centre in Vancouver <span class="badge badge-red">Uncertain — May Be Declined</span></div>
+        <p>A referral to the Ear, Nose &amp; Throat (ENT) service could, in principle, lead to onward referral to a specialised vestibular centre in Vancouver (such as those associated with Vancouver General Hospital or St. Paul's). However, there is a complication:</p>
+        <ul>
+          <li>The ENT team has already indicated that there is <strong>not much more they can offer</strong> at their level for your condition. They may decline to see you again, or may not provide an onward referral.</li>
+          <li>If accepted, wait times to a Vancouver specialist centre can be substantial.</li>
+          <li>This path may be worth pursuing if your symptoms escalate or if private physiotherapy does not achieve adequate benefit — it keeps a specialist pathway open.</li>
+        </ul>
+      </div>
+
+      <div class="key-point">
+        <span class="box-title">📋 Dr. Whiting's Suggestion</span>
+        Given the evidence and your specific situation, a reasonable approach would be to:
+        <ol style="margin-top:0.6rem; margin-left:1.3rem;">
+          <li>Ensure your preventive medication is optimised first (to reduce acute attack frequency).</li>
+          <li>Then pursue <strong>private vestibular physiotherapy</strong> as the fastest, most direct route — particularly targeted at your between-attack motion sensitivity.</li>
+          <li>Keep the ENT/Vancouver specialist option in reserve if private physiotherapy does not provide sufficient benefit.</li>
+        </ol>
+        <p style="margin-top:0.6rem;">I am happy to discuss which option feels right for you and your family, and to write any referral letters or supporting documentation needed. Please let me know how you would like to proceed.</p>
+      </div>
+    </div>
+
+    <!-- WHAT TO EXPECT FROM VRT -->
+    <div class="section-header">
+      <h2>What to Expect If You Start Vestibular Rehabilitation</h2>
+    </div>
+    <div class="section-body">
+      <p>If you decide to pursue VRT, here is a realistic picture of what the process involves:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Typical Timing</th>
+            <th>What Happens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Assessment</strong></td>
+            <td>Session 1</td>
+            <td>Detailed evaluation of your balance, eye movements, gait, and specific triggers. The therapist designs a personalised program.</td>
+          </tr>
+          <tr>
+            <td><strong>Early exercises</strong></td>
+            <td>Weeks 1–3</td>
+            <td>Gentle habituation and gaze exercises. Temporary symptom increase is <em>normal and expected</em> — this is the brain beginning to recalibrate.</td>
+          </tr>
+          <tr>
+            <td><strong>Progression</strong></td>
+            <td>Weeks 4–8</td>
+            <td>Exercises become more challenging. Balance and daily function typically begin to improve.</td>
+          </tr>
+          <tr>
+            <td><strong>Consolidation</strong></td>
+            <td>Months 2–4</td>
+            <td>Home exercise program continues. Sessions taper. Most meaningful gains occur in this window.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <span class="box-title">⚠️ A Common Misconception</span>
+        Many people stop VRT early because exercises temporarily make them feel worse. This initial worsening is actually a sign the therapy is working — your brain is being challenged to change. Always discuss symptom changes with your physiotherapist before stopping.
+      </div>
+    </div>
+
+    <!-- ACTION PLAN CHECKLIST -->
+    <div class="section-header">
+      <h2>Your Action Plan</h2>
+    </div>
+    <div class="section-body">
+      <p>Use this checklist to guide your next steps:</p>
+      <ul class="checklist">
+        <li><span class="check-icon"></span>Confirm with Dr. Whiting whether your current preventive medication is at its best dose — VRT works better once attack frequency is reduced.</li>
+        <li><span class="check-icon"></span>Decide which referral pathway feels right for your situation (private physiotherapy, KGH, or ENT/Vancouver).</li>
+        <li><span class="check-icon"></span>If choosing private physiotherapy: check your extended health benefits for physiotherapy coverage and confirm the therapist has vestibular rehabilitation training.</li>
+        <li><span class="check-icon"></span>Ask Dr. Whiting for a referral letter and your relevant medical history summary to bring to your first VRT appointment.</li>
+        <li><span class="check-icon"></span>Keep a simple symptom diary (noting acute attack days and between-attack dizziness levels) — this helps your physiotherapist and Dr. Whiting track progress.</li>
+        <li><span class="check-icon"></span>Follow up with Dr. Whiting in 6–8 weeks after starting VRT to review progress.</li>
+      </ul>
+    </div>
+
+    <!-- LIFESTYLE SUPPORTS -->
+    <div class="section-header">
+      <h2>Supporting Your Recovery — What Else Can Help</h2>
+    </div>
+    <div class="section-body">
+      <p>VRT works best alongside the foundational lifestyle strategies that reduce migraine burden overall:<sup>8</sup></p>
+      <ul>
+        <li><strong>Sleep regularity:</strong> Go to bed and wake at consistent times — sleep disruption is one of the strongest migraine triggers.</li>
+        <li><strong>Hydration:</strong> Aim for 8–10 cups of fluid daily. Dehydration sensitises the vestibular system.</li>
+        <li><strong>Dietary triggers:</strong> Common VM triggers include caffeine, alcohol (particularly red wine), aged cheeses, and MSG. A food diary can help identify your personal triggers.</li>
+        <li><strong>Stress management:</strong> Stress amplifies both migraine frequency and vestibular sensitivity. Even brief daily relaxation practice (e.g., slow breathing, short walks) helps.</li>
+        <li><strong>Gradual re-engagement with activity:</strong> Avoiding all movement due to fear of triggering dizziness can worsen PPPD over time. Graduated activity — guided by your physiotherapist — is key.</li>
+      </ul>
+
+      <div class="mindset-box">
+        <span class="box-title">🌱 A Note on the Journey</span>
+        Living with vestibular migraine is genuinely difficult — the unpredictability of attacks and background dizziness takes a real toll. Your experience is valid. Recovery with VRT tends to be gradual, but many people achieve meaningful improvement in their daily function and confidence. You are not dealing with this alone.
+      </div>
+    </div>
+
+  </div><!-- end .content -->
+
+  <!-- ═══ REFERENCES ═══ -->
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Lempert T, Olesen J, Furman J, Waterston J, Seemungal B, Carey J, et al. Vestibular migraine: Diagnostic criteria. <em>J Vestib Res.</em> 2012;22(4):167–72.</li>
+      <li>Staab JP, Eckhardt-Henn A, Horii A, Jacob R, Strupp M, Brandt T, et al. Diagnostic criteria for persistent postural-perceptual dizziness (PPPD): Consensus document of the committee for the Classification of Vestibular Disorders of the Bárány Society. <em>J Vestib Res.</em> 2017;27(4):191–208.</li>
+      <li>Hall CD, Herdman SJ, Whitney SL, Cass SP, Clendaniel RA, Fife TD, et al. Vestibular rehabilitation for peripheral vestibular hypofunction: An evidence-based clinical practice guideline. <em>J Neurol Phys Ther.</em> 2016;40(2):124–55.</li>
+      <li>Fotuhi M, Gholami S, Bhatt M, Mafakheri P. Is vestibular rehabilitation effective in vestibular migraine? A systematic review. <em>J Neurol.</em> 2021;268(10):3652–61.</li>
+      <li>Vitkovic J, Winoto A, Rance G, Dowell R, Paine M. Vestibular rehabilitation outcomes in patients with and without vestibular migraine. <em>J Neurol.</em> 2013;260(12):3039–48.</li>
+      <li>Sugaya N, Arai M, Goto F. Is the headache in patients with vestibular migraine attenuated by vestibular rehabilitation? <em>Front Neurol.</em> 2017;8:124.</li>
+      <li>Bisdorff AR. Management of vestibular migraine. <em>Ther Adv Neurol Disord.</em> 2011;4(3):183–91.</li>
+      <li>Lauritsen CG, Marmura MJ. Current treatment options: Vestibular migraine. <em>Curr Treat Options Neurol.</em> 2019;21(6):1–15.</li>
+    </ol>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div><strong>David Whiting, MBChB CCFP | Kelowna, BC</strong></div>
+    <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+  </footer>
+
+</div><!-- end .container -->
+</body>
+</html>
