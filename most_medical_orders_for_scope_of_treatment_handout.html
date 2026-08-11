@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Acute Care">
+  <title>Planning Your Care: Understanding MOST</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.35rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li { margin-bottom: 0.4rem; }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    /* ── CATEGORY BADGE TABLE ── */
+    .category-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.97rem;
+    }
+
+    .category-table th {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 0.65rem 1rem;
+      text-align: left;
+    }
+
+    .category-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    .category-table tr:nth-child(even) td { background: #f1f5f9; }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .badge-comfort  { background: #10b981; }
+    .badge-critical { background: #ef4444; }
+
+    /* ── WORKSHEET SECTION ── */
+    .worksheet {
+      background: #f8fafc;
+      border: 2px dashed #3b82f6;
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .worksheet h3 {
+      color: #1e3a8a;
+      margin-top: 0;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin: 0.75rem 0 1rem;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      cursor: pointer;
+      font-size: 0.97rem;
+      min-height: 44px;
+      padding: 0.15rem 0;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      margin-top: 0.15rem;
+      accent-color: #1e3a8a;
+      cursor: pointer;
+    }
+
+    .intervention-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    .intervention-table th {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 0.65rem 1rem;
+      text-align: left;
+    }
+
+    .intervention-table td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+
+    .intervention-table tr:nth-child(even) td { background: #f1f5f9; }
+
+    .radio-pair {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .radio-pair label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      min-height: 44px;
+      font-size: 0.95rem;
+    }
+
+    .radio-pair input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #1e3a8a;
+      cursor: pointer;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 0.65rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      resize: vertical;
+      margin-top: 0.5rem;
+    }
+
+    textarea:focus {
+      outline: 2px solid #3b82f6;
+    }
+
+    .notes-label {
+      font-weight: 600;
+      color: #1e3a8a;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      margin-top: 0;
+    }
+
+    .references ol {
+      margin-left: 1.2rem;
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    .references ol li { margin-bottom: 0.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    footer .provider { font-weight: 600; font-size: 0.95rem; }
+
+    footer .disclaimer {
+      opacity: 0.75;
+      font-size: 0.82rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #fff; font-size: 11pt; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+      header { padding: 24px 30px; }
+      .content { padding: 24px 30px; }
+      .references { padding: 20px 30px; }
+      footer { padding: 14px 30px; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body   { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3          { break-after: avoid; page-break-after: avoid; }
+
+      input[type="checkbox"],
+      input[type="radio"] { display: table-cell; }
+
+      textarea {
+        border: 1px solid #94a3b8;
+        min-height: 60px;
+      }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header { padding: 28px 20px; }
+      header h1 { font-size: 1.5em; }
+      .content { padding: 24px 18px; }
+      .references { padding: 20px 18px; }
+      footer { padding: 18px 18px; }
+      h2 { font-size: 1.4em; }
+      h3 { font-size: 1.15em; }
+      .radio-pair { flex-direction: column; gap: 0.4rem; }
+      .intervention-table th, .intervention-table td { padding: 0.55rem 0.6rem; font-size: 0.88rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <h1>Planning Your Care: Understanding MOST</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2026-08-11">August 11, 2026</time>
+  </header>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main class="content">
+
+    <!-- WHAT IS MOST -->
+    <div class="section-header">
+      <h2>What Is a MOST Form?</h2>
+    </div>
+    <div class="section-body">
+      <p>MOST stands for <strong>Medical Orders for Scope of Treatment</strong>. It is an official medical document — signed by you and your doctor or nurse practitioner — that records the level of medical care you would want to receive if you became seriously ill or had a medical emergency and could not speak for yourself.</p>
+
+      <p>Think of it like a detailed instruction sheet for your healthcare team. It takes the guesswork out of a very stressful moment and makes sure that your wishes are respected.</p>
+
+      <div class="key-point">
+        <div class="box-title">📋 Why this matters</div>
+        <p>Without a MOST form, emergency teams are required by law to do everything possible to keep you alive — including measures you may not want. A MOST form gives you a voice even when you cannot speak.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="box-title">⚠️ Important — this worksheet is not a legal order</div>
+        <p>This handout is a <strong>planning tool</strong> to help you think about your wishes and prepare for a conversation with your doctor or nurse practitioner. Only the official MOST form — discussed, agreed upon, and signed together with your healthcare provider — is legally valid.</p>
+      </div>
+    </div>
+
+    <!-- WHO SHOULD HAVE ONE -->
+    <div class="section-header">
+      <h2>Who Should Have a MOST Form?</h2>
+    </div>
+    <div class="section-body">
+      <p>A MOST form is most useful for people who:</p>
+      <ul>
+        <li>Have a serious or life-limiting illness (such as advanced cancer, heart failure, or COPD)</li>
+        <li>Are elderly or frail</li>
+        <li>Live in a care home or receive home support</li>
+        <li>Have strong feelings about the kind of care they do — or do not — want</li>
+      </ul>
+      <p>It is never too early to have this conversation. Many people find it gives them <em>peace of mind</em>, not anxiety.</p>
+
+      <div class="mindset-box">
+        <div class="box-title">💬 A note on this conversation</div>
+        <p>Talking about serious illness and end-of-life care can feel uncomfortable at first. That is completely normal. Your doctor is here to guide you — there are no right or wrong answers. This is about <em>your</em> values and <em>your</em> life.</p>
+      </div>
+    </div>
+
+    <!-- HOW THE FORM IS STRUCTURED -->
+    <div class="section-header">
+      <h2>How the MOST Form Works</h2>
+    </div>
+    <div class="section-body">
+      <p>The MOST form has two main parts:</p>
+      <ol>
+        <li><strong>Part 1 — Resuscitation Status &amp; General Medical Care:</strong> This is the big-picture choice. It covers whether you would want CPR (chest compressions), electrical shocks to the heart (defibrillation), or a breathing tube (intubation), and the overall level of care you receive.</li>
+        <li><strong>Part 2 — Specific Medical Interventions:</strong> This covers individual treatments such as blood transfusions, kidney dialysis, and feeding tubes.</li>
+      </ol>
+    </div>
+
+    <!-- PART 1 EXPLAINED -->
+    <div class="section-header">
+      <h2>Part 1 — Your Care Category Explained</h2>
+    </div>
+    <div class="section-body">
+      <p>There are six categories, grouped into <strong>Comfort &amp; Supportive Care (M categories)</strong> and <strong>Critical Care (C categories)</strong>.</p>
+
+      <h3>Comfort &amp; Supportive Care — M Categories</h3>
+      <p>These categories focus on <strong>quality of life, comfort, and dignity</strong>. They do <em>not</em> include CPR (chest compressions), electrical shocks to the heart (defibrillation), or a breathing tube (intubation).</p>
+
+      <table class="category-table" aria-label="M category descriptions">
+        <thead>
+          <tr>
+            <th style="width:14%">Category</th>
+            <th>What it means in plain language</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-comfort">M1</span></td>
+            <td><strong>Comfort &amp; Dignity Only.</strong> Your care team focuses entirely on keeping you comfortable, managing pain, and supporting you emotionally and spiritually. You will not be moved to a hospital unless your comfort needs cannot be met where you are. This is chosen when someone is nearing the end of life and wants a peaceful, natural death.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-comfort">M2</span></td>
+            <td><strong>Active Medical Care — Stay Where You Are.</strong> Treatments that might cure or control your illness (for example, antibiotics or IV fluids) are given where you currently live or are being cared for. You would only be moved to a hospital if those treatments truly cannot be given in your current location. No ICU, CPR, defibrillation, or breathing tube.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-comfort">M3</span></td>
+            <td><strong>Active Medical Care — Including Hospital Transfer.</strong> You receive treatments aimed at curing or managing your illness, and you agree to be transferred to a hospital or higher-level care if needed for tests or treatment. No ICU, CPR, defibrillation, or breathing tube.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Critical Care — C Categories</h3>
+      <p>These categories are for people who want full medical investigations and treatments in an <strong>intensive care unit (ICU)</strong> setting, with varying levels of life support.</p>
+
+      <table class="category-table" aria-label="C category descriptions">
+        <thead>
+          <tr>
+            <th style="width:14%">Category</th>
+            <th>What it means in plain language</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-critical">C0</span></td>
+            <td><strong>ICU Care — No CPR, No Defibrillation, No Breathing Tube.</strong> You receive intensive monitoring and specialist medications in the ICU, but your team would not perform CPR (chest compressions), give electrical shocks to the heart, or insert a breathing tube.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-critical">C1</span></td>
+            <td><strong>ICU Care Including Breathing Tube — No CPR or Defibrillation.</strong> In addition to ICU care, a breathing tube and mechanical ventilator (breathing machine) can be used. However, your team would not perform CPR or use electrical shocks to the heart.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-critical">C2</span></td>
+            <td><strong>Full Life Support — Everything Medically Appropriate.</strong> Your team uses all available critical care interventions, including CPR, electrical shocks to the heart (defibrillation), and a breathing tube (intubation). This is often called "full code."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="success-box">
+        <div class="box-title">✅ There is no wrong choice</div>
+        <p>Choosing M1 is not "giving up." Choosing C2 is not "being unrealistic." The right choice is the one that matches <em>your</em> values and goals. Your doctor will help you understand which options are medically reasonable for your individual situation.</p>
+      </div>
+    </div>
+
+    <!-- WORKSHEET PART 1 -->
+    <div class="section-header">
+      <h2>Worksheet — Part 1: Your Care Preferences</h2>
+    </div>
+    <div class="section-body">
+      <div class="worksheet">
+        <h3>📝 Use this to prepare for your appointment</h3>
+        <p>Read each option and tick the one that feels closest to your wishes. Bring this sheet to your next visit to discuss it with your doctor or nurse practitioner.</p>
+
+        <div class="checkbox-group" role="group" aria-label="Care category preferences">
+          <label>
+            <input type="checkbox" name="care-category" value="M1">
+            <span><strong>M1</strong> — Comfort and dignity only. Stay where I am. No hospital transfer unless comfort cannot be managed here.</span>
+          </label>
+          <label>
+            <input type="checkbox" name="care-category" value="M2">
+            <span><strong>M2</strong> — Active medical treatment in my current location. Transfer to hospital only if necessary. No ICU, CPR, defibrillation, or breathing tube.</span>
+          </label>
+          <label>
+            <input type="checkbox" name="care-category" value="M3">
+            <span><strong>M3</strong> — Active medical treatment, including transfer to hospital if needed. No ICU, CPR, defibrillation, or breathing tube.</span>
+          </label>
+          <label>
+            <input type="checkbox" name="care-category" value="C0">
+            <span><strong>C0</strong> — ICU-level care. No CPR, no electrical shocks, no breathing tube.</span>
+          </label>
+          <label>
+            <input type="checkbox" name="care-category" value="C1">
+            <span><strong>C1</strong> — ICU care including breathing tube and ventilator. No CPR or electrical shocks.</span>
+          </label>
+          <label>
+            <input type="checkbox" name="care-category" value="C2">
+            <span><strong>C2</strong> — Full life support including CPR, electrical shocks, and breathing tube.</span>
+          </label>
+          <label>
+            <input type="checkbox" name="care-category" value="unsure">
+            <span><strong>I'm not sure yet</strong> — I'd like to talk this through with my doctor.</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- PART 2 EXPLAINED -->
+    <div class="section-header">
+      <h2>Part 2 — Specific Treatments</h2>
+    </div>
+    <div class="section-body">
+      <p>Depending on your overall care goals, you can also say whether you would or would not want specific medical treatments. Here is a plain-language description of each one:</p>
+
+      <table class="category-table" aria-label="Specific treatment descriptions">
+        <thead>
+          <tr>
+            <th>Treatment</th>
+            <th>What it means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Blood / Blood Products</strong></td>
+            <td>A transfusion of blood cells, plasma, or platelets — for example, if you are bleeding heavily or your blood count drops dangerously low.</td>
+          </tr>
+          <tr>
+            <td><strong>Nutritional Support</strong></td>
+            <td>Receiving nutrition through a tube inserted into your stomach (tube feeding) or directly into a vein (IV nutrition) when you cannot eat on your own.</td>
+          </tr>
+          <tr>
+            <td><strong>Dialysis</strong></td>
+            <td>A machine that cleans your blood when your kidneys stop working well enough to do the job on their own. Sessions are usually several hours, several times a week.</td>
+          </tr>
+          <tr>
+            <td><strong>Non-Invasive Ventilation</strong></td>
+            <td>Breathing support given through a tightly fitting face mask — for example, CPAP or BiPAP. This helps your breathing without requiring a tube to be inserted into your airway.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WORKSHEET PART 2 -->
+    <div class="section-header">
+      <h2>Worksheet — Part 2: Specific Treatment Preferences</h2>
+    </div>
+    <div class="section-body">
+      <div class="worksheet">
+        <h3>📝 Circle or tick your preference for each treatment</h3>
+        <p>There is no obligation to decide everything now. Mark "Unsure" if you want to talk it through first.</p>
+
+        <table class="intervention-table" aria-label="Specific intervention preferences">
+          <thead>
+            <tr>
+              <th>Treatment</th>
+              <th>My preference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Blood / Blood Products</strong><br><span style="font-size:0.88rem;color:#475569;">Transfusions of red blood cells, plasma, or platelets</span></td>
+              <td>
+                <div class="radio-pair">
+                  <label><input type="radio" name="blood" value="yes"> Yes</label>
+                  <label><input type="radio" name="blood" value="no"> No</label>
+                  <label><input type="radio" name="blood" value="unsure"> Unsure</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Nutritional Support</strong><br><span style="font-size:0.88rem;color:#475569;">Tube feeding or IV nutrition when unable to eat</span></td>
+              <td>
+                <div class="radio-pair">
+                  <label><input type="radio" name="nutrition" value="yes"> Yes</label>
+                  <label><input type="radio" name="nutrition" value="no"> No</label>
+                  <label><input type="radio" name="nutrition" value="unsure"> Unsure</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Dialysis</strong><br><span style="font-size:0.88rem;color:#475569;">Machine-assisted blood filtering if kidneys fail</span></td>
+              <td>
+                <div class="radio-pair">
+                  <label><input type="radio" name="dialysis" value="yes"> Yes</label>
+                  <label><input type="radio" name="dialysis" value="no"> No</label>
+                  <label><input type="radio" name="dialysis" value="unsure"> Unsure</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Non-Invasive Ventilation</strong><br><span style="font-size:0.88rem;color:#475569;">Breathing support via face mask (e.g., CPAP / BiPAP)</span></td>
+              <td>
+                <div class="radio-pair">
+                  <label><input type="radio" name="niv" value="yes"> Yes</label>
+                  <label><input type="radio" name="niv" value="no"> No</label>
+                  <label><input type="radio" name="niv" value="unsure"> Unsure</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Other (e.g., IV antibiotics, IV fluids)</strong><br><span style="font-size:0.88rem;color:#475569;">Any other specific preferences</span></td>
+              <td style="font-size:0.9rem;color:#475569;">Write below ↓</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <label class="notes-label" for="other-interventions">Other preferences or treatments I want to discuss:</label>
+        <textarea id="other-interventions" name="other-interventions" placeholder="Write any specific wishes here…" aria-label="Other treatment preferences"></textarea>
+
+        <label class="notes-label" for="questions-notes">My questions and notes for my doctor:</label>
+        <textarea id="questions-notes" name="questions-notes" placeholder="e.g., 'I'm worried about being in pain. Is comfort care still good medical care?' or 'What would CPR actually look like for someone my age?'" aria-label="Questions and notes for doctor"></textarea>
+      </div>
+    </div>
+
+    <!-- WHAT HAPPENS NEXT -->
+    <div class="section-header">
+      <h2>What Happens Next?</h2>
+    </div>
+    <div class="section-body">
+      <p>Here is what to expect after you have thought through your preferences:</p>
+      <ol>
+        <li><strong>Bring this worksheet to your appointment.</strong> Your doctor will review your choices with you and answer any questions.</li>
+        <li><strong>Have an honest conversation.</strong> Your doctor will let you know which options are medically appropriate for your situation and help you think through any trade-offs.</li>
+        <li><strong>The official MOST form is completed and signed.</strong> Both you and your healthcare provider sign it. It becomes a legal medical order.</li>
+        <li><strong>Keep a copy somewhere accessible.</strong> Make sure family members or your substitute decision-maker (the person legally allowed to make decisions for you if you cannot) know where it is.</li>
+        <li><strong>Review it if things change.</strong> Your MOST form can be updated at any time if your health situation or wishes change.</li>
+      </ol>
+
+      <div class="key-point">
+        <div class="box-title">👪 Tell someone you trust</div>
+        <p>Let a family member, close friend, or your substitute decision-maker (sometimes called a personal directive or healthcare proxy in other provinces) know about your wishes — even before the form is signed. In BC, this person is often named in a <strong>Representation Agreement</strong>.</p>
+      </div>
+
+      <div class="success-box">
+        <div class="box-title">✅ Your choices can change</div>
+        <p>You are never locked in. A MOST form can be reviewed, changed, or cancelled at any time — as long as you have the ability to make your own decisions (called <em>decision-making capacity</em>). Your doctor will reassess it regularly with you.</p>
+      </div>
+    </div>
+
+    <!-- COMMON QUESTIONS -->
+    <div class="section-header">
+      <h2>Common Questions</h2>
+    </div>
+    <div class="section-body">
+      <h3>Does choosing comfort care mean my doctor will give up on me?</h3>
+      <p>Not at all. Comfort care is active, expert medical care — it simply focuses on quality of life, pain management, and your dignity rather than aggressive life-prolonging treatments. Many people live well for months or years on comfort-focused care.</p>
+
+      <h3>What if I change my mind in an emergency?</h3>
+      <p>If you are conscious and able to make decisions, you can always change your mind in the moment. Your healthcare team will always listen to you first.</p>
+
+      <h3>Can my family override my MOST form?</h3>
+      <p>No. Your MOST form reflects <em>your</em> documented wishes. Family members cannot overrule it. This is one of the most important reasons to have the conversation with family ahead of time — so there are no surprises.</p>
+
+      <h3>What is CPR really like?</h3>
+      <p>CPR (cardiopulmonary res
