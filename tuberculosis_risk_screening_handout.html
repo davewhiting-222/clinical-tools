@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Prevention">
+  <title>Tuberculosis Risk Screening | Dr. David Whiting</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin: 2rem 0 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+
+    .key-point   { background: #dbeafe; border-left: 5px solid #3b82f6; }
+    .warning-box { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 0 8px 8px 0; }
+    .caution-box { background: #fee2e2; border-left: 5px solid #ef4444; border-radius: 0 8px 8px 0; }
+    .success-box { background: #d1fae5; border-left: 5px solid #10b981; border-radius: 0 8px 8px 0; }
+    .mindset-box { background: #ede9fe; border-left: 5px solid #8b5cf6; border-radius: 0 8px 8px 0; }
+
+    /* ── SCREENING FORM ── */
+    .screening-form {
+      background: #f8faff;
+      border: 2px solid #3b82f6;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .screening-form .form-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .screening-form .form-section-title {
+      font-weight: 700;
+      color: #1e3a8a;
+      font-size: 1.05rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #bfdbfe;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.5rem 1rem;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-height: 44px;
+      padding: 0.3rem 0;
+      cursor: pointer;
+      font-size: 0.97rem;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      accent-color: #1e3a8a;
+      cursor: pointer;
+    }
+
+    .checkbox-list { display: flex; flex-direction: column; gap: 0.3rem; }
+
+    .checkbox-list .checkbox-item { min-height: 44px; }
+
+    /* Patient info fields */
+    .patient-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .field-group label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .field-group input[type="text"],
+    .field-group input[type="date"] {
+      border: 1.5px solid #93c5fd;
+      border-radius: 6px;
+      padding: 0.5rem 0.7rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      min-height: 44px;
+      background: #ffffff;
+      color: #1e293b;
+    }
+
+    .field-group input:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 1px;
+    }
+
+    /* Risk result area */
+    .risk-result {
+      border: 2px dashed #3b82f6;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
+      background: #eff6ff;
+    }
+
+    .risk-result p { margin-bottom: 0.4rem; }
+
+    .signature-line {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-top: 0.6rem;
+    }
+
+    .signature-line input[type="text"] {
+      border: none;
+      border-bottom: 1.5px solid #1e3a8a;
+      border-radius: 0;
+      padding: 0.3rem 0.2rem;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.95rem;
+      min-height: 44px;
+      width: 100%;
+    }
+
+    /* ── TABLE ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #f1f5f9; }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      font-size: 1.3em;
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    .references li { margin-bottom: 0.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    footer .disclaimer {
+      color: #94a3b8;
+      font-size: 0.82rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header, .content, .references, footer { padding: 24px 18px; }
+      header h1 { font-size: 1.5em; }
+      .patient-info { grid-template-columns: 1fr; }
+      .checkbox-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #ffffff; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body   { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3          { break-after: avoid; page-break-after: avoid; }
+
+      .screening-form { break-inside: avoid; page-break-inside: avoid; }
+
+      input[type="text"],
+      input[type="date"] { display: table-cell; border: 1px solid #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1>Tuberculosis (TB) Risk Screening</h1>
+      <small>Prepared by your family doctor</small>
+      <time datetime="2026-08-11">August 11, 2026</time>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+      <!-- WHAT IS TB -->
+      <h2>What Is Tuberculosis?</h2>
+      <p>
+        Tuberculosis (TB) is a serious infection caused by bacteria called <em>Mycobacterium tuberculosis</em>. It most often affects the lungs, but can involve other parts of the body. TB spreads through the air when a person with active TB coughs, sneezes, or speaks — making early identification important, especially in shared living environments like Long-Term Care Homes.
+      </p>
+
+      <div class="key-point">
+        <strong>Why screening matters:</strong> Many people carry TB bacteria without feeling sick (called <em>latent TB</em> — TB that is "sleeping" in the body). Identifying people at higher risk early helps prevent TB from becoming active and spreading to others, particularly in vulnerable settings.
+      </div>
+
+      <!-- TWO TYPES -->
+      <h2>Latent TB vs. Active TB</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Latent TB Infection</th>
+            <th>Active TB Disease</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Symptoms</td>
+            <td>None — person feels well</td>
+            <td>Cough, fever, night sweats, weight loss</td>
+          </tr>
+          <tr>
+            <td>Contagious?</td>
+            <td>No</td>
+            <td>Yes (if lungs are affected)</td>
+          </tr>
+          <tr>
+            <td>Can it progress?</td>
+            <td>Yes — up to 10% lifetime risk</td>
+            <td>Already progressed — needs treatment now</td>
+          </tr>
+          <tr>
+            <td>Treatment needed?</td>
+            <td>Sometimes (preventive therapy)</td>
+            <td>Yes — combination antibiotic therapy</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mindset-box">
+        <strong>A note of reassurance:</strong> Having risk factors for TB does not mean you have TB. This questionnaire simply helps us decide whether further testing (such as a TB skin test or blood test) is appropriate for you. There is no judgment here — only good preventive care.
+      </div>
+
+      <!-- INSTRUCTIONS -->
+      <h2>Screening Questionnaire Instructions</h2>
+      <p>
+        Please complete the form below honestly and to the best of your ability. This questionnaire is used to assess the TB risk for each person entering a Long-Term Care Home. A staff member or your healthcare provider will review your responses with you.
+      </p>
+      <p>
+        <strong>Check all boxes that apply.</strong> If you are unsure about any item, leave it blank and ask a staff member — your questions are always welcome.
+      </p>
+
+      <!-- ══ SCREENING FORM ══ -->
+      <div class="screening-form">
+
+        <!-- Patient Info -->
+        <div class="form-section">
+          <div class="form-section-title">Patient Information</div>
+          <div class="patient-info">
+            <div class="field-group">
+              <label for="pt-name">Full Name</label>
+              <input type="text" id="pt-name" placeholder="Last, First">
+            </div>
+            <div class="field-group">
+              <label for="pt-dob">Date of Birth</label>
+              <input type="date" id="pt-dob">
+            </div>
+            <div class="field-group">
+              <label for="pt-date">Date of Screening</label>
+              <input type="date" id="pt-date">
+            </div>
+            <div class="field-group">
+              <label for="pt-facility">Facility / Home Name</label>
+              <input type="text" id="pt-facility" placeholder="Long-Term Care Home">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 1: Geographic Exposure -->
+        <div class="form-section">
+          <div class="form-section-title">Section 1 — Geographic Exposure</div>
+          <p style="font-size:0.94rem; margin-bottom:0.8rem;">
+            Check <strong>all</strong> countries or regions where you were born <em>or</em> lived for an extended period of time:
+          </p>
+          <div class="checkbox-grid">
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="china">
+              <span>China</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="vietnam">
+              <span>Vietnam</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="philippines">
+              <span>Philippines</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="indian-subcontinent">
+              <span>Indian Subcontinent</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="africa">
+              <span>Africa</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="eastern-europe">
+              <span>Eastern Europe</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="korea">
+              <span>Korea</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="mexico">
+              <span>Mexico</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="geo" value="hong-kong">
+              <span>Hong Kong</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Section 2: Ethnic Background -->
+        <div class="form-section">
+          <div class="form-section-title">Section 2 — Ethnic Background</div>
+          <p style="font-size:0.94rem; margin-bottom:0.8rem;">
+            Check if applicable:
+          </p>
+          <div class="checkbox-list">
+            <label class="checkbox-item">
+              <input type="checkbox" name="ethnicity" value="aboriginal">
+              <span>Aboriginal — including Status Indian, Non-Status Indian, Métis, and Inuit</span>
+            </label>
+          </div>
+          <div class="key-point" style="margin-top:0.8rem; font-size:0.92rem;">
+            <strong>Why this is asked:</strong> TB rates in some Indigenous communities in Canada remain higher than the national average due to historical and ongoing social inequities, not personal risk behaviours. This information helps ensure appropriate follow-up and access to resources.<sup>1</sup>
+          </div>
+        </div>
+
+        <!-- Section 3: Symptoms & Clinical History -->
+        <div class="form-section">
+          <div class="form-section-title">Section 3 — Symptoms &amp; Clinical History</div>
+          <p style="font-size:0.94rem; margin-bottom:0.8rem;">
+            Check <strong>any</strong> of the following that apply to you <strong>now or in the recent past</strong>:
+          </p>
+
+          <h3 style="margin-top:0.5rem;">Current Symptoms</h3>
+          <div class="checkbox-list">
+            <label class="checkbox-item">
+              <input type="checkbox" name="sx" value="cough">
+              <span>Productive, prolonged cough lasting more than three weeks (a cough that brings up mucus or phlegm)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="sx" value="hemoptysis">
+              <span>Coughing up blood (called <em>hemoptysis</em>)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="sx" value="chest-pain">
+              <span>Chest pain with no other confirmed diagnosis</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="sx" value="fever">
+              <span>Fever, chills, or night sweats with no other confirmed diagnosis</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="sx" value="fatigue">
+              <span>Tires very easily — may be significant when combined with other symptoms above</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="sx" value="weight-loss">
+              <span>Loss of appetite and/or unexplained weight loss — may be significant when combined with other symptoms above</span>
+            </label>
+          </div>
+
+          <h3>Medical History</h3>
+          <div class="checkbox-list">
+            <label class="checkbox-item">
+              <input type="checkbox" name="hx" value="prev-tb">
+              <span>Previous history of tuberculosis (TB)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="hx" value="immune">
+              <span>Illness or treatment affecting the immune system — e.g., chemotherapy, organ transplant, HIV/AIDS, long-term steroid use, biologic medications</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="hx" value="pneumonia">
+              <span>History of non-resolving pneumonia (pneumonia that did not fully clear up with treatment)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="hx" value="substance">
+              <span>History of substance use — e.g., illicit drugs or heavy alcohol use</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Risk Determination -->
+        <div class="risk-result">
+          <p><strong>Screening Result / Action Taken:</strong></p>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:0.8rem;">
+            To be completed by the healthcare provider or designated staff member after reviewing the form.
+          </p>
+          <div class="checkbox-list" style="margin-bottom:0.8rem;">
+            <label class="checkbox-item">
+              <input type="checkbox" name="result" value="no-risk">
+              <span>No risk factors identified — no further action required at this time</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="result" value="risk-identified">
+              <span>One or more risk factors identified — TB skin test (Tuberculin Skin Test / TST) or IGRA (blood test) ordered</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="result" value="active-sx">
+              <span>Symptoms consistent with active TB — referred urgently for further evaluation and chest X-ray</span>
+            </label>
+          </div>
+          <div class="field-group" style="margin-bottom:0.8rem;">
+            <label for="notes">Notes / Comments:</label>
+            <input type="text" id="notes" placeholder="Optional notes">
+          </div>
+          <div class="signature-line">
+            <label style="font-weight:600; font-size:0.9rem;">Completed by (print name &amp; designation):</label>
+            <input type="text" aria-label="Staff name and designation">
+            <label style="font-weight:600; font-size:0.9rem; margin-top:0.5rem;">Signature &amp; Date:</label>
+            <input type="text" aria-label="Signature and date">
+          </div>
+        </div>
+
+      </div>
+      <!-- END SCREENING FORM -->
+
+      <!-- WHAT HAPPENS NEXT -->
+      <h2>What Happens After This Questionnaire?</h2>
+      <p>
+        Your responses will be reviewed by a healthcare provider. Depending on the results, one or more of the following steps may be recommended:
+      </p>
+
+      <div class="success-box">
+        <strong>No risk factors found:</strong> No further TB testing is required at this time. You will still receive regular health monitoring as part of your care plan.
+      </div>
+
+      <div class="warning-box">
+        <strong>Risk factors identified (but no symptoms):</strong> A TB skin test (also called a Tuberculin Skin Test, or TST) or a blood test called an IGRA (Interferon-Gamma Release Assay) may be arranged. These tests are simple, safe, and painless. A positive result does <em>not</em> automatically mean you have active TB — it just means further follow-up is needed.
+      </div>
+
+      <div class="caution-box">
+        <strong>Symptoms present:</strong> If you are currently experiencing symptoms that could be consistent with active TB — particularly a prolonged cough, fever, night sweats, or unexplained weight loss — please let a staff member know right away. A chest X-ray and additional testing will be arranged promptly. This is for your protection and the protection of those around you.
+      </div>
+
+      <!-- TREATMENT NOTE -->
+      <h2>A Word About Treatment</h2>
+      <p>
+        If you are found to have latent TB (TB bacteria present but not causing illness), your doctor may discuss preventive treatment options with you. In Canada, this often involves taking one or two antibiotic medications for several months. This is highly effective and greatly reduces your chance of ever developing active TB.<sup>2</sup>
+      </p>
+      <p>
+        Active TB is treated with a combination of antibiotics, usually over 6 months or longer. TB is fully treatable when caught and managed correctly.<sup>3</sup>
+      </p>
+
+      <div class="mindset-box">
+        <strong>Your privacy matters:</strong> All information on this form is kept strictly confidential within your care team. TB screening is a routine part of entering a Long-Term Care Home — it reflects our commitment to keeping everyone in our community as healthy as possible.
+      </div>
+
+      <!-- QUICK REFERENCE -->
+      <h2>Quick Reference: Who Should Be Tested?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Risk Factor</th>
+            <th>Why It Increases Risk</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Born in or lived in a high-prevalence country</td>
+            <td>TB rates are significantly higher in many parts of the world; people may carry latent TB for many years after leaving<sup>4</sup></td>
+          </tr>
+          <tr>
+            <td>Indigenous background</td>
+            <td>Ongoing social and structural inequities contribute to higher TB rates in some communities in Canada<sup>1</sup></td>
+          </tr>
+          <tr>
+            <td>Weakened immune system</td>
+            <td>Latent TB is more likely to become active when the immune system is suppressed<sup>5</sup></td>
+          </tr>
+          <tr>
+            <td>History of substance use</td>
+            <td>Associated with higher exposure risk and factors that can weaken the immune system<sup>6</sup></td>
+          </tr>
+          <tr>
+            <td>Previous TB or non-resolving pneumonia</td>
+            <td>May suggest prior TB exposure or untreated infection<sup>3</sup></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div><!-- /.content -->
+
+    <!-- REFERENCES -->
+    <div class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Public Health Agency of Canada. <em>Tuberculosis in Canada</em> [Internet]. Ottawa: PHAC; 2023 [cited 2026 Aug 11]. Available from: https://www.canada.ca/en/public-health/services/diseases/tuberculosis.html</li>
+        <li>Canadian Thoracic Society; Canadian Public Health Association. Canadian Tuberculosis Standards. 7th ed. Ottawa: PHAC; 2014.</li>
+        <li>World Health Organization. <em>Tuberculosis: Fact Sheet</em> [Internet]. Geneva: WHO; 2023 [cited 2026 Aug 11]. Available from: https://www.who.int/news-room/fact-sheets/detail/tuberculosis</li>
+        <li>Pareek M, Greenaway C, Noori T, Munoz J, Zenner D. The impact of migration on tuberculosis epidemiology and control in high-income countries: a review. <em>BMC Med.</em> 2016;14(1):48.</li>
+        <li>Getahun H, Matteelli A, Chaisson RE, Raviglione M. Latent Mycobacterium tuberculosis infection. <em>N Engl J Med.</em> 2015;372(22):2127–35.</li>
+        <li>Deiss RG, Rodwell TC, Garfein RS. Tuberculosis and illicit drug use: review and update. <em>Clin Infect Dis.</em> 2009;48(1):72–82.</li>
+      </ol>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>David Whiting, MBChB CCFP | Kelowna, BC</div>
+      <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+    </footer>
+
+  </div><!-- /.container -->
+</body>
+</html>
