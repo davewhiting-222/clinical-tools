@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Chronic Disease">
+  <title>Understanding Aortic Stenosis</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-top: 0.4rem;
+    }
+
+    .header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.35rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+      min-height: 44px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    li::before {
+      content: '';
+      min-height: 44px;
+    }
+
+    /* Simpler list spacing fix */
+    ul li, ol li {
+      display: list-item;
+      padding: 2px 0;
+    }
+
+    /* CALLOUT BOXES */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+    }
+
+    .box-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.97rem;
+    }
+
+    thead {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+    }
+
+    th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f1f5f9;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #cbd5e1;
+      min-height: 44px;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist li::before {
+      content: '☐';
+      font-size: 1.2rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      line-height: 1.5;
+      min-height: unset;
+    }
+
+    /* REFERENCES */
+    .references {
+      background: #f1f5f9;
+      padding: 30px;
+    }
+
+    .references h2 {
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    .references ol li {
+      margin-bottom: 0.6rem;
+      display: list-item;
+      padding: 0;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.9rem;
+    }
+
+    .footer p {
+      margin-bottom: 0.3rem;
+    }
+
+    .footer .disclaimer {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      margin-top: 0.5rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .header {
+        padding: 24px 20px;
+      }
+      .content {
+        padding: 24px 20px;
+      }
+      .footer {
+        padding: 16px 20px;
+      }
+      .references {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
+      h3 {
+        font-size: 1.15em;
+      }
+      .header h1 {
+        font-size: 1.5em;
+      }
+      table {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* PRINT */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body {
+        background: #ffffff;
+      }
+
+      .container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .section-header {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .section-body {
+        break-before: avoid;
+        page-break-before: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      input {
+        display: table-cell;
+      }
+
+      .key-point,
+      .warning-box,
+      .caution-box,
+      .success-box,
+      .mindset-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      table {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Understanding Aortic Stenosis</h1>
+      <small>Prepared by your family doctor</small>
+      <time datetime="2026-08-18">August 18, 2026</time>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+      <!-- WHAT IS IT -->
+      <h2>What Is Aortic Stenosis?</h2>
+
+      <p>Your heart has four valves that act like one-way doors, keeping blood flowing in the right direction. The <strong>aortic valve</strong> sits between the main pumping chamber of your heart (the left ventricle) and the large artery that carries blood to your body (the aorta).</p>
+
+      <p><strong>Aortic stenosis (AS)</strong> means this valve has become narrowed and stiff. Instead of opening fully with each heartbeat, a narrowed valve forces your heart to work much harder to push blood through a smaller opening. Over time, this extra strain can damage the heart muscle.</p>
+
+      <div class="key-point">
+        <span class="box-title">🫀 Key Point</span>
+        AS is the most common heart valve disease requiring treatment in adults in Canada. It becomes more common as we age — affecting roughly 2–5% of adults over 65 and up to 10% of those over 80.<sup>1</sup>
+      </div>
+
+      <h3>What Causes It?</h3>
+      <p>In most adults, AS develops because calcium (a mineral) gradually builds up on the valve leaflets (the flaps that open and close) over many years — similar to how hard water deposits form in a pipe. This process is called <strong>calcific aortic valve disease</strong>. Risk factors that speed it up include:</p>
+      <ul>
+        <li>Older age</li>
+        <li>Having a bicuspid aortic valve (born with two leaflets instead of three)</li>
+        <li>High blood pressure (hypertension)</li>
+        <li>High cholesterol</li>
+        <li>Diabetes</li>
+        <li>Smoking</li>
+        <li>Kidney disease</li>
+      </ul>
+
+      <p>Less commonly, AS in younger people results from rheumatic fever (a complication of strep throat infections).<sup>2</sup></p>
+
+      <!-- HOW SEVERE -->
+      <h2>What Do "Mild," "Moderate," and "Severe" Mean?</h2>
+
+      <p>When your doctor orders an <strong>echocardiogram</strong> (an ultrasound of the heart), it measures how narrow the valve has become and how much pressure the heart must build to push blood through. These measurements are used to classify AS into three stages:</p>
+
+      <div class="section-header"></div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>What It Means</th>
+              <th>Valve Area (cm²)</th>
+              <th>What Happens Next</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mild AS</strong></td>
+              <td>Some stiffening/narrowing, but blood flows fairly well</td>
+              <td>&gt; 1.5 cm²</td>
+              <td>Regular monitoring with echocardiograms; treat risk factors</td>
+            </tr>
+            <tr>
+              <td><strong>Moderate AS</strong></td>
+              <td>Noticeable narrowing; heart working harder</td>
+              <td>1.0 – 1.5 cm²</td>
+              <td>Closer follow-up; watch carefully for symptoms</td>
+            </tr>
+            <tr>
+              <td><strong>Severe AS</strong></td>
+              <td>Significantly narrowed; high risk of serious problems</td>
+              <td>&lt; 1.0 cm²</td>
+              <td>Specialist referral; treatment decision needed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="warning-box">
+        <span class="box-title">⚠️ Why Severity Matters</span>
+        AS is a <em>progressive</em> condition — it generally worsens over time and does not get better on its own. The pace varies from person to person. Mild AS may stay mild for many years; severe AS can progress quickly. This is why regular check-ups and echocardiograms are so important, even when you feel completely well.
+      </div>
+
+      <h3>How Often Will I Need Monitoring?</h3>
+      <p>Your cardiologist (heart specialist) or family doctor will recommend follow-up echocardiograms based on your severity:</p>
+      <ul>
+        <li><strong>Mild AS:</strong> Every 3–5 years</li>
+        <li><strong>Moderate AS:</strong> Every 1–2 years</li>
+        <li><strong>Severe AS (no symptoms yet):</strong> Every 6–12 months, or sooner if symptoms develop<sup>3</sup></li>
+      </ul>
+
+      <!-- SYMPTOMS -->
+      <h2>When Aortic Stenosis Becomes Symptomatic</h2>
+
+      <p>For many years — sometimes decades — AS causes no symptoms at all. During this <strong>asymptomatic (symptom-free) phase</strong>, your heart compensates by getting stronger and thicker. However, once the valve becomes severely narrowed, the heart eventually cannot keep up. This is the moment when symptoms appear, and it is a critical turning point.</p>
+
+      <p>The three classic warning symptoms of severe AS are:</p>
+
+      <div class="section-body">
+        <div class="caution-box">
+          <span class="box-title">🚨 The Three Warning Symptoms of Severe AS — Do Not Ignore These</span>
+          <ol>
+            <li><strong>Chest pain or tightness (angina)</strong> — Often felt during physical activity. Occurs because the thickened heart muscle does not get enough blood supply.</li>
+            <li><strong>Fainting or near-fainting (syncope)</strong> — Especially during or just after exertion. Happens because not enough blood can get through the narrowed valve to meet the body's demand.</li>
+            <li><strong>Shortness of breath</strong> — Particularly with exertion or when lying flat. A sign that the heart is struggling and fluid may be backing up into the lungs (heart failure).</li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>Why Symptoms Change Everything</h3>
+
+      <p>Research has shown that once symptoms develop in severe AS, the outlook changes dramatically without treatment:</p>
+      <ul>
+        <li>After chest pain develops: average survival without treatment is approximately 2–3 years<sup>4</sup></li>
+        <li>After fainting episodes begin: average survival without treatment is approximately 2–3 years<sup>4</sup></li>
+        <li>After shortness of breath (heart failure) appears: average survival without treatment is approximately 1–2 years<sup>4</sup></li>
+      </ul>
+
+      <div class="mindset-box">
+        <span class="box-title">💡 The Right Mindset</span>
+        These statistics sound alarming, but there is genuinely good news: <strong>treatment works very well</strong>. Once we know your AS is severe and symptomatic, acting promptly can dramatically improve both your quality of life and your long-term outlook. Please tell your doctor right away if any of these symptoms develop — even subtle ones.
+      </div>
+
+      <div class="caution-box">
+        <span class="box-title">🚨 Call 911 or Go to Your Nearest Emergency Department If You Experience:</span>
+        <ul>
+          <li>Sudden fainting or loss of consciousness</li>
+          <li>Severe chest pain</li>
+          <li>Sudden, severe difficulty breathing</li>
+          <li>Rapid or irregular heartbeat with dizziness</li>
+        </ul>
+      </div>
+
+      <!-- TREATMENT -->
+      <h2>Treatment Options</h2>
+
+      <p>At this time, <strong>there is no medication that reverses or slows the narrowing</strong> of the aortic valve.<sup>5</sup> The definitive treatment for severe AS is <strong>replacing the valve</strong>. Your heart team will help determine the best approach for you based on your age, overall health, and other individual factors.</p>
+
+      <h3>1. Surgical Aortic Valve Replacement (SAVR)</h3>
+      <p>This is open-heart surgery performed by a cardiac surgeon. The narrowed valve is removed and replaced with either a mechanical valve (metal, lasts a lifetime but requires blood-thinning medication permanently) or a tissue valve (made from animal tissue, does not require long-term blood thinners but may wear out after 10–20 years). SAVR has been performed for over 60 years and has an excellent long-term track record.<sup>6</sup></p>
+
+      <h3>2. Transcatheter Aortic Valve Implantation (TAVI)</h3>
+      <p>Also called TAVI (or TAVR — Transcatheter Aortic Valve Replacement), this is a less invasive procedure. A new valve is inserted through a thin tube (catheter) — usually through a small incision in the groin — and guided to the heart without opening the chest. The new valve pushes the old one aside and takes over. Recovery is typically much faster than open-heart surgery.<sup>7</sup></p>
+
+      <div class="success-box">
+        <span class="box-title">✅ TAVI in Canada</span>
+        TAVI is now widely available across Canada, including at centres in BC such as Royal Jubilee Hospital (Victoria) and St. Paul's Hospital (Vancouver). It is covered by provincial health insurance. Originally used only for patients too ill for surgery, evidence now supports TAVI for intermediate- and even low-risk patients in appropriate age groups.<sup>7</sup>
+      </div>
+
+      <h3>How Is the Best Option Chosen?</h3>
+      <p>A specialized group called a <strong>Heart Team</strong> — including cardiologists, cardiac surgeons, and other specialists — will review your full picture and discuss options with you. Factors considered include:</p>
+      <ul>
+        <li>Your age and life expectancy</li>
+        <li>Other medical conditions (kidney function, lung health, diabetes, etc.)</li>
+        <li>Frailty and functional status</li>
+        <li>Anatomy of your blood vessels and heart</li>
+        <li>Your personal values and preferences</li>
+      </ul>
+
+      <h3>3. Medical Management and Risk Factor Control</h3>
+      <p>While medications cannot fix the valve, managing risk factors remains important throughout your care:</p>
+      <ul>
+        <li><strong>Blood pressure control:</strong> High blood pressure worsens the heart's workload</li>
+        <li><strong>Cholesterol management:</strong> Statins (e.g., rosuvastatin, atorvastatin) are often recommended for cardiovascular risk</li>
+        <li><strong>Heart failure medications:</strong> If you develop heart failure, medications like ACE inhibitors or beta-blockers may be prescribed</li>
+        <li><strong>Staying active:</strong> Moderate activity is generally safe in mild-to-moderate AS; your doctor will guide you on exercise limits in severe AS</li>
+        <li><strong>Not smoking:</strong> Smoking accelerates valve disease and increases all cardiovascular risks</li>
+      </ul>
+
+      <div class="warning-box">
+        <span class="box-title">⚠️ Important: Dental Care and AS</span>
+        Good dental hygiene is especially important with heart valve disease. Bacteria from the mouth can travel through the bloodstream and infect heart valves (a serious condition called endocarditis). Tell <em>every</em> dentist and doctor you see that you have aortic valve disease. In some cases, antibiotic (germ-fighting medication) coverage before dental procedures may be recommended.<sup>8</sup>
+      </div>
+
+      <!-- ACTION PLAN / CHECKLIST -->
+      <h2>Your Action Plan</h2>
+      <p>Use this checklist to stay on top of your care:</p>
+
+      <ul class="checklist">
+        <li>Know your current AS severity (mild / moderate / severe) — ask your doctor if unsure</li>
+        <li>Keep all scheduled echocardiogram (heart ultrasound) appointments</li>
+        <li>Tell your doctor immediately if you develop chest pain, fainting, or shortness of breath</li>
+        <li>Keep your blood pressure, cholesterol, and blood sugar well controlled</li>
+        <li>Tell every dentist and healthcare provider about your aortic valve disease</li>
+        <li>Do not smoke — or speak to your doctor about a quit plan</li>
+        <li>Ask your doctor what level of physical activity is safe for you</li>
+        <li>Know when to call 911 (sudden fainting, severe chest pain, severe breathlessness)</li>
+        <li>If referred to a cardiologist (heart specialist), attend that appointment promptly</li>
+        <li>Ask questions — you have the right to understand your condition and your options</li>
+      </ul>
+
+      <!-- QUESTIONS TO ASK -->
+      <h2>Questions to Ask Your Doctor</h2>
+      <div class="key-point">
+        <span class="box-title">💬 Bring These Questions to Your Next Visit</span>
+        <ul>
+          <li>How severe is my aortic stenosis right now?</li>
+          <li>How often do I need echocardiograms?</li>
+          <li>What symptoms should prompt me to call you or go to the emergency department?</li>
+          <li>Should I be referred to a cardiologist or cardiac surgeon?</li>
+          <li>What type of exercise is safe for me?</li>
+          <li>Do I need antibiotics before dental work?</li>
+          <li>What would valve replacement involve for someone like me — SAVR or TAVI?</li>
+        </ul>
+      </div>
+
+    </div><!-- end .content -->
+
+    <!-- REFERENCES -->
+    <div class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Nkomo VT, Gardin JM, Skelton TN, et al. Burden of valvular heart diseases: a population-based study. <em>Lancet.</em> 2006;368(9540):1005–1011.</li>
+        <li>Baumgartner H, Falk V, Bax JJ, et al. 2017 ESC/EACTS Guidelines for the management of valvular heart disease. <em>Eur Heart J.</em> 2017;38(36):2739–2791.</li>
+        <li>Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the management of patients with valvular heart disease. <em>J Am Coll Cardiol.</em> 2021;77(4):e25–e197.</li>
+        <li>Ross J Jr, Braunwald E. Aortic stenosis. <em>Circulation.</em> 1968;38(1 Suppl):61–67.</li>
+        <li>Marquis-Gravel G, Redfors B, Leon MB, et al. Medical treatment of aortic stenosis. <em>Circulation.</em> 2016;134(22):1766–1784.</li>
+        <li>Yacoub MH, Takkenberg JJ. Will heart valve tissue engineering change the world? <em>Nat Clin Pract Cardiovasc Med.</em> 2005;2(2):60–61.</li>
+        <li>Mack MJ, Leon MB, Thourani VH, et al. Transcatheter aortic-valve replacement with a balloon-expandable valve in low-risk patients. <em>N Engl J Med.</em> 2019;380(18):1695–1705.</li>
+        <li>Wilson W, Taubert KA, Gewitz M, et al. Prevention of infective endocarditis: guidelines from the American Heart Association. <em>Circulation.</em> 2007;116(15):1736–1754.</li>
+      </ol>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+      <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+    </div>
+
+  </div><!-- end .container -->
+</body>
+</html>
