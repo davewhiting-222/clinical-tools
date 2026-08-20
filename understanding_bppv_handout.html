@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Acute Care">
+  <title>Understanding BPPV | Dr. David Whiting</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1f2937;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* CALLOUT BOXES */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.97rem;
+    }
+
+    thead {
+      background: #1e3a8a;
+      color: #ffffff;
+    }
+
+    thead th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f1f5f9;
+    }
+
+    tbody td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      min-height: 44px;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      font-size: 1.2rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      line-height: 1.4;
+    }
+
+    /* STEP BOX */
+    .steps-container {
+      counter-reset: step-counter;
+    }
+
+    .step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.1rem;
+    }
+
+    .step-number {
+      background: #1e3a8a;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .step-body {
+      flex: 1;
+    }
+
+    /* REFERENCES */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      border-bottom-color: #94a3b8;
+      color: #1e3a8a;
+    }
+
+    .references ol {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .references li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer .footer-main {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    footer .disclaimer {
+      opacity: 0.75;
+      font-size: 0.83rem;
+      margin-top: 0.5rem;
+    }
+
+    /* SECTION GROUPING for print */
+    .section-header {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .section-body {
+      break-before: avoid;
+      page-break-before: avoid;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      header, .content, .references, footer {
+        padding: 24px 20px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+
+    /* PRINT */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body {
+        background: #ffffff;
+        font-size: 11pt;
+      }
+
+      .container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+        max-width: 100%;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;
+      }
+
+      .section-header {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .section-body {
+        break-before: avoid;
+        page-break-before: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      input[type="text"],
+      input[type="checkbox"] {
+        display: table-cell;
+      }
+
+      .key-point,
+      .warning-box,
+      .caution-box,
+      .success-box,
+      .mindset-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1>Understanding BPPV</h1>
+      <small>Prepared by your family doctor</small>
+      <time datetime="2026-08-20">August 20, 2026</time>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <!-- WHAT IS BPPV -->
+      <div class="section-header">
+        <h2>What Is BPPV?</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          <strong>BPPV</strong> stands for <strong>Benign Paroxysmal Positional Vertigo</strong>. It sounds complicated, but let's break it down:
+        </p>
+        <ul>
+          <li><strong>Benign</strong> — not dangerous or life-threatening</li>
+          <li><strong>Paroxysmal</strong> — comes on suddenly, in short bursts</li>
+          <li><strong>Positional</strong> — triggered by head position or movement</li>
+          <li><strong>Vertigo</strong> — a spinning sensation, as if the room is moving around you</li>
+        </ul>
+        <p>
+          BPPV is the most common cause of vertigo (dizziness with a spinning feeling) and accounts for nearly half of all dizziness cases seen by doctors.<sup>1</sup> The good news is that it is very treatable — often in just one or two visits.
+        </p>
+
+        <div class="key-point">
+          <span class="box-title">💡 Key Point</span>
+          BPPV is extremely common. It affects about 2.4% of people at some point in their lives and becomes more frequent as we age.<sup>2</sup> You are not alone, and this is very manageable.
+        </div>
+      </div>
+
+      <!-- HOW YOUR EAR WORKS -->
+      <div class="section-header">
+        <h2>How Your Inner Ear Normally Works</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          To understand BPPV, it helps to know a little about your inner ear. Deep inside each ear, there are tiny fluid-filled canals — called <strong>semicircular canals</strong> — that sense movement and help your brain know which way is up.
+        </p>
+        <p>
+          Also inside the ear, there are microscopic crystals made of calcium carbonate called <strong>otoliths</strong> (or "otoconia"), which literally means "ear stones." These crystals sit in a specific area and normally help you sense gravity and straight-line movement (like going up in an elevator).
+        </p>
+      </div>
+
+      <!-- WHAT CAUSES BPPV -->
+      <div class="section-header">
+        <h2>What Causes BPPV?</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          BPPV happens when one or more of those calcium crystals (<em>otoconia</em>) break loose and drift into one of the semicircular canals — where they don't belong. When your head moves, the loose crystals shift around and send confusing signals to your brain, making you feel like you're spinning even when you're not.<sup>3</sup>
+        </p>
+
+        <h3>Common Triggers and Risk Factors</h3>
+        <p>Often there is no single clear cause, but some things can increase the chances of crystals breaking loose:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Risk Factor</th>
+              <th>Why It Matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Older age</td>
+              <td>Crystals naturally become less stable as we age; BPPV is most common in those over 50<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Head injury or trauma</td>
+              <td>A bump to the head can dislodge crystals</td>
+            </tr>
+            <tr>
+              <td>Prolonged bed rest or staying still</td>
+              <td>Being inactive (e.g., after surgery or illness) is a known trigger</td>
+            </tr>
+            <tr>
+              <td>Inner ear infection (vestibular neuritis)</td>
+              <td>Inflammation can loosen crystals</td>
+            </tr>
+            <tr>
+              <td>Low vitamin D</td>
+              <td>Some evidence links vitamin D deficiency to more frequent BPPV<sup>4</sup></td>
+            </tr>
+            <tr>
+              <td>Female sex</td>
+              <td>Women are affected about twice as often as men<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Osteoporosis</td>
+              <td>May affect crystal stability in the inner ear<sup>4</sup></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mindset-box">
+          <span class="box-title">🧠 Worth Knowing</span>
+          In many cases — especially a first episode — no specific cause is ever found. This is completely normal. BPPV can just happen. It does <em>not</em> mean something is seriously wrong with your brain or ears.
+        </div>
+      </div>
+
+      <!-- SYMPTOMS -->
+      <div class="section-header">
+        <h2>What Does BPPV Feel Like?</h2>
+      </div>
+      <div class="section-body">
+        <p>The hallmark of BPPV is a sudden, intense spinning sensation that:</p>
+        <ul>
+          <li>Comes on with specific head movements (rolling over in bed, looking up, bending down, tilting the head)</li>
+          <li>Starts within seconds of moving</li>
+          <li>Typically lasts <strong>less than one minute</strong> (usually 10–30 seconds)</li>
+          <li>May be accompanied by nausea, and occasionally vomiting</li>
+          <li>Settles quickly when you stop moving</li>
+          <li>Can return when you repeat the same movement</li>
+        </ul>
+
+        <p>You may also feel:</p>
+        <ul>
+          <li>Unsteady or "off balance" between spinning episodes</li>
+          <li>Lightheaded or woozy for a short time after an episode</li>
+          <li>Anxious or fatigued, especially if episodes are frequent</li>
+        </ul>
+
+        <div class="caution-box">
+          <span class="box-title">🚨 When to Seek Urgent Care</span>
+          The following symptoms are <strong>not</strong> typical of BPPV and need prompt medical attention. Please go to the emergency department or call 911 if you have:
+          <ul style="margin-top:0.5rem;">
+            <li>Vertigo that comes on suddenly with a severe headache or the "worst headache of your life"</li>
+            <li>Double vision, slurred speech, trouble swallowing</li>
+            <li>Weakness or numbness in your face, arm, or leg</li>
+            <li>Vertigo lasting hours without stopping</li>
+            <li>Significant hearing loss or ringing in both ears at once</li>
+            <li>Difficulty walking or loss of coordination</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DIAGNOSIS -->
+      <div class="section-header">
+        <h2>How Is BPPV Diagnosed?</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          Your doctor can usually diagnose BPPV through a careful history and a simple bedside test — no blood tests, MRI, or special equipment are needed in most cases.
+        </p>
+
+        <h3>The Dix-Hallpike Test</h3>
+        <p>
+          The most common diagnostic test is called the <strong>Dix-Hallpike manoeuvre</strong>. Your doctor will guide you from a sitting to a lying-down position while turning your head to one side. If BPPV is present, this position briefly triggers your dizziness and causes a telltale eye movement called <strong>nystagmus</strong> (rapid, involuntary eye movements), which helps confirm the diagnosis.<sup>3</sup>
+        </p>
+        <p>
+          The test is done quickly, and while it may briefly reproduce your symptoms, it is safe and gives your doctor important information about which ear and which canal is affected.
+        </p>
+
+        <div class="key-point">
+          <span class="box-title">💡 Good to Know</span>
+          There are different types of BPPV depending on which canal the crystals have moved into. The most common type involves the <strong>posterior semicircular canal</strong>, making up about 85–90% of cases.<sup>3</sup> Your doctor will determine the type before recommending treatment.
+        </div>
+      </div>
+
+      <!-- TREATMENT -->
+      <div class="section-header">
+        <h2>How Is BPPV Treated?</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          The main treatment for BPPV is a series of guided head movements performed by your doctor or physiotherapist. These movements are designed to gently guide the displaced crystals back to where they belong. This is called a <strong>canalith repositioning manoeuvre</strong>.
+        </p>
+
+        <h3>The Epley Manoeuvre (Most Common Treatment)</h3>
+        <p>
+          For the most common type of BPPV (posterior canal), the <strong>Epley manoeuvre</strong> is the first-line treatment.<sup>5</sup> It involves a sequence of four slow head-position changes, each held for about 30 seconds. Research shows it is effective in about <strong>80–90% of cases after one or two sessions</strong>.<sup>5</sup>
+        </p>
+
+        <div class="success-box">
+          <span class="box-title">✅ Treatment Success</span>
+          The Epley manoeuvre has a very high success rate. Many people feel significantly better — or completely symptom-free — after a single treatment session. A second session, if needed, brings the overall success rate even higher.
+        </div>
+
+        <h3>Other Manoeuvres</h3>
+        <p>Depending on which canal is involved, your provider may use a different technique:</p>
+        <ul>
+          <li><strong>Semont manoeuvre</strong> — an alternative for posterior canal BPPV</li>
+          <li><strong>Barbecue roll (Log Roll)</strong> — used for horizontal canal BPPV</li>
+          <li><strong>Deep head-hanging manoeuvre</strong> — occasionally used for anterior canal BPPV</li>
+        </ul>
+
+        <h3>What About Medication?</h3>
+        <p>
+          Medications <strong>do not fix the underlying problem</strong> (the displaced crystals), but they may be used short-term to manage nausea during episodes. Common options include <strong>dimenhydrinate (Gravol®)</strong> for nausea. Your doctor may recommend this for comfort while arranging treatment, but repositioning manoeuvres remain the main treatment.<sup>6</sup>
+        </p>
+
+        <div class="warning-box">
+          <span class="box-title">⚠️ Avoid Long-Term Medication Use</span>
+          Medications like Gravol® can cause sedation and are not a long-term solution for BPPV. They suppress your balance system, which can actually slow recovery. The repositioning manoeuvre — not medication — is the evidence-based treatment of choice.<sup>6</sup>
+        </div>
+
+        <h3>Home Exercises: The Brandt-Daroff Exercises</h3>
+        <p>
+          After a repositioning manoeuvre, or in milder cases, your doctor or physiotherapist may teach you <strong>Brandt-Daroff exercises</strong> to do at home. These involve moving in and out of positions that briefly bring on your dizziness — helping your brain adapt over time. Ask your provider before starting these on your own, as the correct technique depends on which canal is affected.<sup>6</sup>
+        </p>
+      </div>
+
+      <!-- ACTION PLAN / CHECKLIST -->
+      <div class="section-header">
+        <h2>Your BPPV Action Plan</h2>
+      </div>
+      <div class="section-body">
+        <p>Here is a simple checklist to guide you through managing your BPPV:</p>
+
+        <ul class="checklist">
+          <li>Tell your doctor about all your symptoms, including exactly which head movements bring on dizziness</li>
+          <li>Undergo the Dix-Hallpike (or roll test) in office so your doctor can confirm the diagnosis and affected side</li>
+          <li>Have the Epley manoeuvre (or appropriate repositioning manoeuvre) performed by your doctor or physiotherapist</li>
+          <li>Move slowly and carefully when getting in and out of bed, especially in the first few days after treatment</li>
+          <li>Ask if a referral to a physiotherapist experienced in vestibular rehabilitation is right for you</li>
+          <li>Discuss whether your vitamin D levels should be checked (low vitamin D may increase recurrence risk)<sup>4</sup></li>
+          <li>Know the warning signs (listed above) that would warrant urgent care</li>
+          <li>Follow up with your doctor if symptoms return — BPPV can recur in about 15–50% of people within 1–5 years<sup>7</sup></li>
+        </ul>
+
+        <h3>Safety Tips at Home During Episodes</h3>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-body"><strong>Sit down immediately</strong> when you feel a spinning episode coming on to prevent falls.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-body"><strong>Grip a stable surface</strong> — a countertop, wall, or sturdy chair — until the spinning passes.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-body"><strong>Move slowly and deliberately</strong>, especially when getting out of bed. Roll to your side first, then push yourself up.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-body"><strong>Avoid driving</strong> if you are having frequent or unpredictable episodes of vertigo.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-body"><strong>Keep your home safe:</strong> remove loose rugs, use night lights, and keep pathways clear to reduce fall risk.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECURRENCE AND OUTLOOK -->
+      <div class="section-header">
+        <h2>Will BPPV Come Back?</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          BPPV can recur. Roughly <strong>15–50% of people</strong> experience another episode within one to five years.<sup>7</sup> This is not a sign that the treatment failed — it simply means that crystals have shifted again. The good news is that treatment works just as well the second (or third) time around.
+        </p>
+        <p>
+          If your BPPV recurs frequently, your doctor may look for underlying contributing factors, such as low vitamin D, osteoporosis, or inner ear conditions, and address those directly.
+        </p>
+
+        <div class="mindset-box">
+          <span class="box-title">🧠 A Word of Reassurance</span>
+          BPPV, while disorienting and sometimes frightening, is <em>not</em> a sign of a stroke, brain tumour, or serious neurological disease. It is a mechanical problem — like a small pebble rolling to where it shouldn't be — and it responds very well to the right physical treatment. Most people return to full normal activity quickly.
+        </div>
+      </div>
+
+      <!-- PHYSIOTHERAPY -->
+      <div class="section-header">
+        <h2>Physiotherapy and Vestibular Rehabilitation</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          A physiotherapist with training in <strong>vestibular rehabilitation</strong> can be a valuable part of your care, especially if:
+        </p>
+        <ul>
+          <li>Your BPPV is recurrent or hard to treat</li>
+          <li>You continue to feel unsteady between episodes</li>
+          <li>You are at risk of falls</li>
+          <li>You need guided home exercise instruction</li>
+        </ul>
+        <p>
+          Vestibular physiotherapy is available in Kelowna and the surrounding Okanagan area. Ask your doctor for a referral if you feel this would benefit you. In BC, you can also self-refer to many private physiotherapy clinics.
+        </p>
+
+        <div class="success-box">
+          <span class="box-title">✅ Canadian Resources</span>
+          <ul style="margin-top:0.5rem;">
+            <li><strong>Vestibular Disorders Association (VEDA):</strong> <a href="https://vestibular.org" style="color:#065f46;">vestibular.org</a> — patient guides and treatment information</li>
+            <li><strong>Physiotherapy Alberta / BC Physiotherapy Association:</strong> Find a vestibular-trained physiotherapist in your area</li>
+            <li><strong>HealthLink BC:</strong> Call 811 for 24/7 health information in BC</li>
+          </ul>
+        </div>
+      </div>
+
+    </main><!-- end .content -->
+
+    <!-- REFERENCES -->
+    <section class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Bhattacharyya N, Gubbels SP, Schwartz SR, et al. Clinical practice guideline: benign paroxysmal positional vertigo (update). <em>Otolaryngol Head Neck Surg.</em> 2017;156(3_suppl):S1–S47.</li>
+        <li>von Brevern M, Radtke A, Lezius F, et al. Epidemiology of benign paroxysmal positional vertigo: a population-based study. <em>J Neurol Neurosurg Psychiatry.</em> 2007;78(7):710–715.</li>
+        <li>Fife TD, Iverson DJ, Lempert T, et al. Practice parameter: therapies for benign paroxysmal positional vertigo (an evidence-based review). <em>Neurology.</em> 2008;70(22):2067–2074.</li>
+        <li>Jeong SH, Kim JS, Shin JW, et al. Decreased serum vitamin D in idiopathic benign paroxysmal positional vertigo. <em>J Neurol.</em> 2013;260(3):832–838.</li>
+        <li>Helminski JO, Zee DS, Janssen I, Bhattacharyya N. Effectiveness of particle repositioning maneuvers in the treatment of benign paroxysmal positional vertigo: a systematic review. <em>Phys Ther.</em> 2010;90(5):663–678.</li>
+        <li>Hain TC, Uddin M. Pharmacological treatment of vertigo. <em>CNS Drugs.</em> 2003;17(2):85–100.</li>
+        <li>Nunez RA, Cass SP, Furman JM. Short- and long-term outcomes of canalith repositioning for benign paroxysmal positional vertigo. <em>Otolaryngol Head Neck Surg.</em> 2000;122(5):647–652.</li>
+      </ol>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-main">David Whiting, MBChB CCFP | Kelowna, BC</div>
+      <div>Family Physician | Kelowna, British Columbia, Canada</div>
+      <div class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</div>
+    </footer>
+
+  </div><!-- end .container -->
+</body>
+</html>
