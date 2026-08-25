@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Chronic Disease">
+  <title>Understanding & Managing Your Nerve-Related Leg Symptoms</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      line-height: 1.25;
+    }
+
+    header small {
+      font-size: 1rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    header time {
+      font-size: 0.9rem;
+      opacity: 0.78;
+      display: block;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* CALLOUT BOXES */
+    .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+      min-height: 44px;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem 0;
+      font-size: 0.97rem;
+    }
+
+    thead tr {
+      background: #1e3a8a;
+      color: #ffffff;
+    }
+
+    thead th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f1f5f9;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #ffffff;
+    }
+
+    tbody td {
+      padding: 0.7rem 1rem;
+      vertical-align: top;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    tbody td:first-child {
+      font-weight: 600;
+      color: #1e3a8a;
+      min-width: 170px;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      font-size: 1.2rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* REFERENCES */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      border-bottom-color: #3b82f6;
+    }
+
+    .references ol {
+      margin-left: 1.2rem;
+    }
+
+    .references li {
+      font-size: 0.88rem;
+      color: #374151;
+      margin-bottom: 0.55rem;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    footer p {
+      margin-bottom: 0.3rem;
+      color: #ffffff;
+    }
+
+    footer .disclaimer {
+      font-size: 0.82rem;
+      opacity: 0.75;
+      margin-top: 0.5rem;
+    }
+
+    /* PT SCRIPT */
+    .pt-script {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #2563eb;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem;
+      margin: 0.8rem 0;
+      font-style: italic;
+      color: #1e3a8a;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 1.5em; }
+      .content { padding: 24px 16px; }
+      .references { padding: 24px 16px; }
+      footer { padding: 16px 20px; }
+      h2 { font-size: 1.4em; }
+      h3 { font-size: 1.15em; }
+      table { font-size: 0.88rem; }
+      thead th, tbody td { padding: 0.55rem 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Understanding &amp; Managing Your Nerve-Related Leg Symptoms</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2025-07-14">July 14, 2025</time>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <!-- INTRO KEY POINT -->
+    <div class="key-point">
+      <span class="box-title">&#128276; What this handout is for</span>
+      This guide explains what is likely causing your leg cramps, numbness, and pain — and gives you a clear, practical plan for managing them. You do not have to do everything at once. The steps below are meant to work together, at a pace that suits you.
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2>1. What Is Likely Causing Your Symptoms?</h2>
+
+    <p>Nerves leave your lower spine through small openings between the vertebrae (the bones of your back). The main nerves involved in your case — called the <strong>L5 and S1 nerve roots</strong> — join together to form the <strong>sciatic nerve</strong>, which controls feeling and muscle movement in your legs, including your hamstrings (the muscles at the back of your thighs).</p>
+
+    <p>When a nerve root is squeezed or cannot glide freely through a narrowed opening (<strong>"stenosis"</strong> — a narrowing of the space around the nerve), it can become irritated and fire on its own. This sends an involuntary spasm signal to the muscles it supplies — causing a <strong>nerve-triggered cramp</strong>. This is different from a regular muscle cramp, which is why bending, twisting, and even stretching your leg in bed (all of which pull on the nerve) can set it off. [1,2,3]</p>
+
+    <p>You may also have separate findings around your <strong>hip</strong> — including a strained fascia band (a tough sheet of tissue), inflammation of the bursa (a fluid-filled cushion near the hip joint), and some tendon wear. These are being addressed as a <em>second, overlapping problem</em>, not the same thing as the nerve cramping.</p>
+
+    <div class="mindset-box">
+      <span class="box-title">&#129504; Two things happening at once</span>
+      Think of it as two separate issues that overlap: (1) nerve root irritation from narrowing in your spine, causing cramps and numbness; and (2) hip and soft-tissue irritation causing local hip pain and tenderness. Both need attention, but through slightly different approaches.
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2>2. Why Movement Feels Scary — and How to Move Safely</h2>
+
+    <p>It makes complete sense that you have become cautious about moving. The cramps have been severe and unpredictable, and it is natural to want to protect yourself by staying still. But here is the problem: when pain causes us to <em>stop moving altogether</em>, the body tends to stiffen and become more sensitive over time — which can actually make things feel <em>worse</em>, not better. This is a well-understood pattern in nerve-related pain called <strong>fear-avoidance</strong>. [4]</p>
+
+    <div class="mindset-box">
+      <span class="box-title">&#128161; The right approach</span>
+      The goal is <strong>not</strong> to push through pain, and it is <strong>not</strong> to avoid all movement. It is to find the middle ground — small, gentle, guided motion that keeps the nerve gliding smoothly without provoking it. This is exactly what nerve "flossing" exercises in physiotherapy are designed to do.
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2>3. Your Treatment Plan</h2>
+
+    <p>These strategies are meant to work <strong>together</strong>. You do not need to tackle them all at once. Think of this as a layered plan — each piece supports the others.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Strategy</th>
+          <th>What It Does</th>
+          <th>Key Points for You</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pregabalin (Lyrica) — nerve-calming medication</td>
+          <td>Quiets the overactive, irritated nerve signals that may be driving the cramps.</td>
+          <td>Start at 25 mg twice daily for 1 week, then 50 mg twice daily for 1 week. Common early side effects: mild dizziness or drowsiness — usually settles. Do not drive until you know how it affects you. This is a <em>trial</em> — not a guaranteed fix. We will reassess after 2 weeks. If it is not helping, we will stop it rather than keep increasing the dose. [6,7,8,9]</td>
+        </tr>
+        <tr>
+          <td>Cyclobenzaprine or baclofen — muscle relaxant (as needed)</td>
+          <td>Provides symptomatic relief during a severe cramping episode.</td>
+          <td>Use only as needed and only short-term, generally at night because of drowsiness. This is a symptom-control tool, not a primary treatment for the underlying nerve problem. [10]</td>
+        </tr>
+        <tr>
+          <td>Physiotherapy — neural gliding ("nerve flossing")</td>
+          <td>Restores the nerve's ability to glide smoothly through irritated areas, without the same provocation as forceful stretching.</td>
+          <td>Gentle, guided sciatic nerve mobilisation exercises done within a pain-free range. Gradual, paced return to bending and twisting rather than either avoiding all movement or pushing through severe pain. [11]</td>
+        </tr>
+        <tr>
+          <td>Physiotherapy — hip and fascia program</td>
+          <td>Addresses the separate hip findings (fascia lata strain, trochanteric bursitis, gluteal tendon changes).</td>
+          <td>Avoid positions that compress the outside of your hip (crossing legs, lying directly on the affected hip). Start with gentle isometric hip-abduction holds (squeezing the hip muscles without moving), then progress slowly to loaded strengthening as tolerated. [12]</td>
+        </tr>
+        <tr>
+          <td>TENS unit (Transcutaneous Electrical Nerve Stimulation)</td>
+          <td>A low-risk, non-drug device that some people find helps dampen pain signals.</td>
+          <td>An optional add-on. The evidence for this specific use is limited, but the risk is very low. Reasonable to trial if you would like to try it.</td>
+        </tr>
+        <tr>
+          <td>Epidural steroid injection — pain clinic referral</td>
+          <td>Delivers anti-inflammatory medication close to the irritated nerve root(s) to reduce pain and cramping.</td>
+          <td>Considered if symptoms do not settle enough with the strategies above. Typically provides modest, short-term improvement in leg symptoms rather than a permanent cure — one useful tool, not a stand-alone solution. [13]</td>
+        </tr>
+        <tr>
+          <td>CT scan of the lower back ± neurosurgical opinion</td>
+          <td>Checks your spinal hardware and looks for new bone regrowth or areas that might benefit from further surgical decompression (widening of the space around the nerve).</td>
+          <td>CT is scheduled. Results will guide whether a referral to a neurosurgeon is useful. Repeat surgery is a bigger decision and is not an automatic next step — this would be a specialist's call.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SECTION 4 -->
+    <h2>4. What to Tell Your Physiotherapist</h2>
+
+    <p>Bringing these key points to your next session will help make sure your physiotherapy program is tailored to protect your irritated nerve roots while also addressing the hip findings:</p>
+
+    <div class="pt-script">
+      "My cramping is thought to be nerve-triggered — from lumbar nerve root irritation that gets worse with traction during bending. Can we focus on gentle neural gliding rather than aggressive hamstring stretching, which sets off severe spasms for me?"
+    </div>
+
+    <div class="pt-script">
+      "I've become afraid to move because the cramps are so unpredictable. Can we start slowly and build up gradually so I can rebuild confidence in movement rather than avoiding it?"
+    </div>
+
+    <div class="pt-script">
+      "My hip MRI also showed a strained fascia band, trochanteric bursitis, and some gluteal tendon wear. Can we avoid positions that compress the outside of my hip — like crossing my legs or lying directly on that side — and begin hip strengthening with gentle isometric holds rather than stretching?"
+    </div>
+
+    <div class="pt-script">
+      "Can we work in a spine-neutral range for now — avoiding deep forward bending and twisting — until things settle, and progress gradually from there?"
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2>5. Daily Movement &amp; Self-Care Tips</h2>
+
+    <h3>Helpful Positions and Habits</h3>
+
+    <ul>
+      <li><strong>Brushing your teeth or leaning over the sink:</strong> Keep your spine tall and hinge at the hips with softly bent knees, or rest one foot on a small stool — instead of rounding your lower back forward.</li>
+      <li><strong>Sleeping on your back:</strong> Place a pillow under your knees to reduce tension on your lower back and nerve roots.</li>
+      <li><strong>Sleeping on your side:</strong> Place a pillow between your knees and ankles to keep your hips in a neutral, supported position.</li>
+      <li><strong>Sitting:</strong> Avoid prolonged sitting with your legs crossed. Change position or take a short stand-up break every 20–30 minutes if possible.</li>
+    </ul>
+
+    <h3>Things to Avoid</h3>
+
+    <ul>
+      <li><strong>Deep, forceful hamstring stretching</strong> (for example, pulling your toes toward your nose with a straight leg while lying flat) — this pulls directly on an irritated nerve root and can trigger a rebound cramp.</li>
+      <li><strong>Lying directly on the side with hip tenderness</strong> — use a pillow between your knees for support.</li>
+      <li><strong>Forcing through a cramp with a stretch</strong> — if a cramp starts, easing off the position that triggered it is usually more effective than trying to "stretch it out."</li>
+    </ul>
+
+    <div class="success-box">
+      <span class="box-title">&#9989; When a cramp hits — what to do</span>
+      <ol style="margin-left:1.2rem; margin-top:0.4rem;">
+        <li>Ease out of whatever position triggered it — do not force a stretch.</li>
+        <li>Try to relax the leg completely, letting it rest in whatever position is most comfortable.</li>
+        <li>Apply gentle warmth (a heating pad on low) if that helps you relax.</li>
+        <li>Take your as-needed muscle relaxant if prescribed and if cramps are severe.</li>
+        <li>Note the time, position, and what you were doing — bring this log to your next appointment.</li>
+      </ol>
+    </div>
+
+    <!-- SECTION 6 -->
+    <h2>6. When to Seek Immediate Care</h2>
+
+    <p>Call your physician or go to the nearest Emergency Department right away if you notice <strong>any</strong> of the following:</p>
+
+    <div class="caution-box">
+      <span class="box-title">&#128680; Go to Emergency or call 911 if you develop:</span>
+      <ul style="margin-top:0.4rem; margin-left:1.2rem;">
+        <li><strong>Loss of bladder or bowel control</strong> — inability to urinate, or leaking urine or stool without control. This can signal a serious nerve emergency called <em>cauda equina syndrome</em> and requires immediate assessment.</li>
+        <li><strong>Sudden, severe weakness in one or both legs</strong> — for example, a leg giving way completely when you try to walk or stand.</li>
+        <li><strong>Rapidly spreading or worsening numbness</strong> in the groin, inner thighs, or saddle area (the area you would sit on a bicycle seat).</li>
+        <li><strong>Signs of infection around your surgical site</strong> — redness, warmth, swelling, or drainage, especially with fever.</li>
+        <li><strong>A fall with injury</strong> due to leg weakness or loss of balance.</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <span class="box-title">&#9888;&#65039; Call your doctor's office (non-emergency) if:</span>
+      <ul style="margin-top:0.4rem; margin-left:1.2rem;">
+        <li>Your cramps are getting significantly worse or more frequent despite the current plan.</li>
+        <li>You notice new numbness spreading to areas that were not affected before.</li>
+        <li>Side effects from pregabalin (Lyrica) — such as significant dizziness, confusion, or swelling — are bothersome or not settling after the first week.</li>
+        <li>You feel you cannot safely participate in physiotherapy at this time.</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 7 -->
+    <h2>7. Your Personal Action Checklist</h2>
+
+    <p>Use this checklist to track the steps we have discussed. Bring it to your next appointment.</p>
+
+    <ul class="checklist">
+      <li>Begin pregabalin (Lyrica) at 25 mg twice daily for the first week, then 50 mg twice daily as directed.</li>
+      <li>Keep a simple symptom log — note when cramps happen, what you were doing, and how severe they were (rate 0–10).</li>
+      <li>Attend physiotherapy and share the key talking points from Section 4 of this handout with your therapist.</li>
+      <li>Trial sleeping with a pillow under your knees (on your back) or between your knees (on your side) for at least 5 nights and note whether it helps.</li>
+      <li>Avoid deep, forceful hamstring stretching until cleared by your physiotherapist.</li>
+      <li>Avoid crossing your legs when sitting and avoid lying directly on the tender hip.</li>
+      <li>Attend your scheduled CT scan of the lower back.</li>
+      <li>Follow up with Dr. Whiting in approximately 2 weeks to review how the pregabalin trial is going.</li>
+      <li>Know the emergency warning signs (Section 6) and seek immediate care if they occur.</li>
+      <li>Ask about a pain clinic referral if symptoms are not improving after trying the above steps.</li>
+    </ul>
+
+    <!-- SECTION 8 -->
+    <h2>8. A Note on Your Mindset &amp; Recovery</h2>
+
+    <div class="mindset-box">
+      <span class="box-title">&#128170; You are not broken — and movement is not the enemy</span>
+      <p style="margin-top:0.5rem;">Living with severe, unpredictable cramps is exhausting and frightening. It makes complete sense that you have become cautious. But the research is clear: people who gradually and safely return to movement tend to do better than those who rest completely. [4]</p>
+      <p style="margin-bottom:0;">Every small step counts. Your physiotherapist is there to help you rebuild confidence — one gentle, guided movement at a time. This is a process, and you do not have to rush it.</p>
+    </div>
+
+  </div><!-- end .content -->
+
+  <!-- REFERENCES -->
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Merck Manual, Professional Edition. Nerve root disorders [Internet]. Merck &amp; Co., Inc.; 2024 [cited 2025 Jul 14]. Available from: merckmanuals.com/professional.</li>
+      <li>Raut TP, Garg RK, Chaudhari TS, Malhotra HS, Singh MK. Focal neuromyotonia as a presenting feature of lumbosacral radiculopathy. Ann Indian Acad Neurol. 2013;16(4):693–695. PMID 24339612.</li>
+      <li>Mahn F, Hüllemann P, Gockel U, Brosz M, Freynhagen R, Tölle TR, Baron R. Sensory symptom profiles and co-morbidities in painful radiculopathy. PLoS One. 2011;6(5):e18018. PMID 21573064.</li>
+      <li>Vlaeyen JWS, Linton SJ. Fear-avoidance and its consequences in chronic musculoskeletal pain: a state of the art. Pain. 2000;85(3):317–332.</li>
+      <li>Stamiris S, Karampalis C, Stamiris D, Anestiadou E, Christodoulou P. S1 radiculopathy initially presenting with sole knee flexion weakness: a case report. Cureus. 2024;16(4):e57673.</li>
+      <li>Mathieson S, Maher CG, McLachlan AJ, et al. Trial of pregabalin for acute and chronic sciatica (PRECISE trial). N Engl J Med. 2017;376(12):1111–1120.</li>
+      <li>Giménez-Campos MS, Pimenta-Fermisson-Ramos P, Díaz-Cambronero JI, Carbonell-Sanchís R, López-Briz E, Ruíz-García V. A systematic review and meta-analysis of the effectiveness and adverse events of gabapentin and pregabalin for sciatica pain. Aten Primaria. 2022;54(1):102144.</li>
+      <li>Baron R, Freynhagen R, Tölle TR, Cloutier C, Leon T, Murphy KT, Phillips K. The efficacy and safety of pregabalin in the treatment of neuropathic pain associated with chronic lumbosacral radiculopathy. Pain. 2010;150(3):420–427.</li>
+      <li>Orita S, Yamashita M, Eguchi Y, et al. Pregabalin for refractory radicular leg pain due to lumbar spinal stenosis: a preliminary prospective study. Pain Res Manag. 2016;2016:5079675.</li>
+      <li>Chou R, Peterson K, Helfand M. Comparative efficacy and safety of skeletal muscle relaxants for spasticity and musculoskeletal conditions: a systematic review. J Pain Symptom Manage. 2004;28(2):140–175.</li>
+      <li>Peacock M, Douglas S, Nair P. Neural mobilization in low back and radicular pain: a systematic review. J Man Manip Ther. 2023;31(1):4–12.</li>
+      <li>Grimaldi A, Fearon A. Gluteal tendinopathy: integrating pathomechanics and clinical features in its management. J Orthop Sports Phys Ther. 2015;45(11):910–922.</li>
+      <li>Oliveira CB, Maher CG, Ferreira ML, Hancock MJ, Oliveira VC, McLachlan AJ, Pinto RZ. Epidural corticosteroid injections for lumbosacral radicular pain. Cochrane Database Syst Rev. 2020;4:CD013577.</li>
+    </ol>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>David Whiting, MBChB CCFP | Kelowna, BC</strong></p>
+    <p>Dr. Whiting Metabolic Clinic</p>
+    <p class="disclaimer">This handout is for educational purposes only and does not replace personalised medical advice from your healthcare provider. If you have questions or concerns about your specific situation, please contact your healthcare team.</p>
+  </footer>
+
+</div><!-- end .container -->
+</body>
+</html>
