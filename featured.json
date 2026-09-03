@@ -71,6 +71,11 @@
   },
   {
     "category": "Chronic Disease",
+    "filename": "heartburn_handout.html",
+    "title": "Managing Heartburn in Adults"
+  },
+  {
+    "category": "Chronic Disease",
     "filename": "customized_handout_manage_nerve_related_leg_symptoms_handout.html",
     "title": "Understanding & Managing Your Nerve-Related Leg Symptoms"
   },
@@ -93,6 +98,11 @@
     "category": "Chronic Disease",
     "filename": "understanding_polymyalgia_rheumatica_pmr_handout.html",
     "title": "Understanding Polymyalgia Rheumatica (PMR)"
+  },
+  {
+    "category": "Chronic Disease, Nutrition, Lifestyle",
+    "filename": "managing_diarrhea_in_the_context_of_low_carbohydrate_diet_with_underlying_paraplegia_neurogenic_bowel_handout.html",
+    "title": "Managing Loose Bowel Movements on a Low-Carb Diet — Neurogenic Bowel"
   },
   {
     "category": "Custom",
