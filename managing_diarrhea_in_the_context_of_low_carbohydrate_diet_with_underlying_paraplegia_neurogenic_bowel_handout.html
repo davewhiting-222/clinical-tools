@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Chronic Disease, Nutrition, Lifestyle">
+  <title>Managing Loose Bowel Movements on a Low-Carb Diet — Neurogenic Bowel</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .site-header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .site-header small {
+      display: block;
+      font-size: 0.95rem;
+      opacity: 0.88;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-header time {
+      display: block;
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin: 2rem 0 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin: 1.4rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.45rem;
+      min-height: 44px;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    ul li::before { content: none; }
+
+    /* list items that are plain <li> inside ul — use disc */
+    ul { list-style: disc; }
+    ul li { display: list-item; padding-left: 0.2rem; }
+    ol li { display: list-item; padding-left: 0.2rem; }
+
+    strong { color: #1e293b; }
+
+    /* ── CALLOUT BOXES ── */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* ── TABLE ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #f8fafc; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; margin-left: 0; }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.4rem 0;
+      min-height: 44px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li input[type="checkbox"] {
+      margin-top: 0.3rem;
+      accent-color: #1e3a8a;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    /* ── STEP BLOCKS ── */
+    .step-block {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.4rem 0;
+      border-left: 5px solid #1e3a8a;
+    }
+
+    .step-block .step-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #3b82f6;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    /* ── SAMPLE DAY ── */
+    .meal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .meal-card {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 1rem;
+      border-top: 4px solid #3b82f6;
+    }
+
+    .meal-card h4 {
+      color: #1e3a8a;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .meal-card p { font-size: 0.9rem; margin: 0; }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: #f1f5f9;
+      padding: 30px 40px;
+    }
+
+    .references h2 {
+      font-size: 1.3em;
+      border-bottom: 2px solid #3b82f6;
+    }
+
+    .references ol { font-size: 0.88rem; }
+    .references ol li { display: list-item; min-height: auto; margin-bottom: 0.5rem; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .site-footer .disclaimer {
+      opacity: 0.75;
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #ffffff; font-size: 11pt; }
+      .container { box-shadow: none; margin: 0; max-width: 100%; border-radius: 0; }
+      .site-header { padding: 24px; }
+      .content { padding: 20px; }
+      .references { padding: 20px; }
+      .site-footer { padding: 12px 20px; }
+
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      .step-block { break-inside: avoid; page-break-inside: avoid; }
+      .caution-box, .warning-box, .key-point, .success-box, .mindset-box { break-inside: avoid; page-break-inside: avoid; }
+      .meal-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .checklist li input[type="checkbox"] { display: table-cell; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .site-header { padding: 24px 20px; }
+      .site-header h1 { font-size: 1.45em; }
+      .content { padding: 24px 20px; }
+      .references { padding: 20px; }
+      .site-footer { padding: 16px 20px; }
+      h2 { font-size: 1.4em; }
+      h3 { font-size: 1.15em; }
+      .meal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <h1>Managing Loose Bowel Movements on a Low-Carb Diet</h1>
+    <small>Prepared by your family doctor &mdash; Neurogenic Bowel Guidance for Spinal Cord Injury</small>
+    <time datetime="2026-09-03">September 3, 2026</time>
+  </header>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main class="content">
+
+    <!-- INTRO -->
+    <p>When you have a spinal cord injury, loose or watery stool makes bowel care unpredictable and raises your risk of skin breakdown and unplanned leakage. The goal is to get your stool back to a <strong>firm, soft-formed consistency</strong> — think of a smooth, soft log rather than something watery or liquid.</p>
+
+    <div class="caution-box">
+      <strong>⚠ Important before you change anything:</strong> Loose stool can sometimes <em>look</em> like diarrhea but actually be liquid leaking <em>around</em> a hard blockage higher up — called a <strong>fecal impaction</strong>. Because reduced sensation may make it hard to feel a blockage forming, please work through Step 1 below before adjusting your diet or medications.
+    </div>
+
+    <!-- STEP 1 -->
+    <h2>Step 1: Check This Before You Change Anything</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <p>Ask yourself the questions below. If you answer <strong>yes</strong> to any of them — or you're simply not sure — contact your clinic or bowel care nurse before stopping or changing any of your bowel medications.</p>
+
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" id="chk1" aria-label="Last full bowel movement">
+          <label for="chk1">When was your last <em>full, complete</em> bowel movement — not just leakage?</label>
+        </li>
+        <li>
+          <input type="checkbox" id="chk2" aria-label="Belly discomfort">
+          <label for="chk2">Do you have any belly discomfort, fullness, or bloating, even if mild or hard to pinpoint?</label>
+        </li>
+        <li>
+          <input type="checkbox" id="chk3" aria-label="Autonomic dysreflexia signs">
+          <label for="chk3">Any signs of <strong>autonomic dysreflexia</strong> — sudden headache, flushing, sweating above your injury level, slow heart rate, or goosebumps? <em>(Applies if your injury is at T6 or above.)</em></label>
+        </li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>If you answered yes to any of the above, or you're unsure:</strong> Contact your clinic or bowel care nurse before changing your routine. Do <em>not</em> stop your regular laxatives or stool softeners on your own — the treatment for a blockage is different, and those same medications may still be needed. If autonomic dysreflexia symptoms are present, seek urgent care immediately.
+      </div>
+
+      <div class="success-box">
+        <strong>If none of these apply,</strong> continue to Step 2 below.
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <h2>Step 2: Immediate Safety Steps</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <ul>
+        <li><strong>Do not take anti-diarrheal medicine</strong> (such as Imodium® / loperamide) unless your care team has specifically told you to — it can worsen a hidden blockage.</li>
+        <li><strong>Protect your skin:</strong> Apply a barrier cream (zinc oxide, dimethicone, or petroleum jelly) after every cleanup to prevent irritation over your buttocks and tailbone.</li>
+        <li><strong>Keep your scheduled bowel care routine</strong> — digital stimulation or manual evacuation at your usual time — even if stool is leaking between sessions.</li>
+        <li><strong>Only pause</strong> your regular stool softener or laxative (docusate, senna, PEG/MiraLAX, magnesium) <em>after</em> you have confirmed Step 1 is clear. Check with your care team about when to restart them.</li>
+      </ul>
+    </div>
+
+    <!-- STEP 3 -->
+    <h2>Step 3: Understanding Fibre — It's Not All the Same</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <p>Not all fibre affects loose stool in the same way. Knowing the difference helps you make smarter food and supplement choices.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type of Fibre</th>
+            <th>Examples</th>
+            <th>Effect on Loose Stool</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rapidly fermentable fibre</strong></td>
+            <td>Inulin, chicory root fibre, FOS (fructooligosaccharides)</td>
+            <td>Can cause gas and make stool looser — often hidden in "keto-friendly" bars and protein products</td>
+          </tr>
+          <tr>
+            <td><strong>Bulking / gelling fibre</strong></td>
+            <td>Calcium polycarbophil, psyllium husk (controlled dose)</td>
+            <td>Helps firm stool without heavy fermentation — preferred right now</td>
+          </tr>
+          <tr>
+            <td><strong>Rough raw fibre</strong></td>
+            <td>Raw salads, raw broccoli or cabbage, vegetable skins, seeds, wheat bran, oat bran</td>
+            <td>Can speed transit further while your gut is sensitive — cook and peel vegetables for now</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- STEP 4 -->
+    <h2>Step 4: Foods to Favour Right Now</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <p>These foods are gentle on a sensitive gut, low in rapidly fermentable fibre, and compatible with a low-carbohydrate eating pattern:</p>
+
+      <ul>
+        <li><strong>Avocado</strong> — provides gelling soluble fibre and healthy fat without fermentable fibre</li>
+        <li><strong>Well-cooked, peeled vegetables:</strong> zucchini, yellow squash, eggplant, asparagus tips, cauliflower, carrots</li>
+        <li><strong>Chia seeds</strong> — pre-soaked in water, unsweetened almond milk, or broth until fully gelled (not eaten dry)</li>
+        <li><strong>Cooked mushrooms</strong> — low-carb and gentle on the gut when cooked</li>
+        <li><strong>Eggs</strong> — easy to digest and nutrient-dense</li>
+        <li><strong>Plain grilled or baked protein:</strong> salmon, chicken, lean ground beef, canned tuna or salmon</li>
+      </ul>
+
+      <div class="key-point">
+        <strong>Tip:</strong> Cooking and peeling vegetables removes most of the rough outer fibre that can speed things up. While things settle, favour soft-cooked over raw.
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <h2>Step 5: Hidden Triggers to Check For</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <p>These ingredients are common in low-carb and "keto-friendly" products and are frequent causes of loose stool. Check labels carefully:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Trigger</th>
+            <th>Where It Hides</th>
+            <th>What to Do</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Sugar alcohols:</strong> maltitol, sorbitol, xylitol, isomalt, erythritol</td>
+            <td>Low-carb bars, sugar-free chocolate or candy, keto treats, protein powders</td>
+            <td>Avoid products containing these for now; switch to products sweetened with stevia or monk fruit</td>
+          </tr>
+          <tr>
+            <td><strong>Added fermentable fibre:</strong> inulin, chicory root fibre, FOS</td>
+            <td>Keto bars, fibre supplements marketed as low-carb</td>
+            <td>Read ingredient lists — avoid products listing these at the top</td>
+          </tr>
+          <tr>
+            <td><strong>Large amounts of added fat or oil:</strong> MCT oil, "bulletproof" coffee, heavy cream in excess, large amounts of mayonnaise</td>
+            <td>Keto coffee drinks, high-fat snacks, dressings</td>
+            <td>Stick to fat that comes naturally bound in whole foods — avocado, eggs, salmon, olive oil in normal cooking amounts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- STEP 6 -->
+    <h2>Step 6: Fluids and Electrolytes</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <p>Loose stool means you're losing more fluid and salt than usual. This matters more for you than for most people, because a spinal cord injury can affect how your body manages fluid and blood pressure shifts.</p>
+
+      <ul>
+        <li>Drink water steadily through the day rather than in large amounts at once.</li>
+        <li>Add a source of <strong>sodium and potassium</strong> — a cup of broth, a low-sugar electrolyte drink (such as Hydralyte® or a plain oral rehydration sachet), or salted food works well.</li>
+        <li>Avoid caffeine and alcohol until things have settled, as both increase fluid loss.</li>
+      </ul>
+
+      <div class="key-point">
+        <strong>Why this matters:</strong> A low-carbohydrate diet also causes the kidneys to release more sodium in the first few weeks. Combined with loose stool losses, you may feel lightheaded, fatigued, or have muscle cramps — all signs that you need more salt and fluid.
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <h2>Step 7: Fibre Supplements</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+
+      <div class="caution-box">
+        <strong>Only start these once Step 1 is clear</strong> — do not add fibre supplements if there is any chance of a blockage.
+      </div>
+
+      <h3>Calcium Polycarbophil (FiberCon® or generic)</h3>
+      <p>1–2 tablets (625–1250 mg — check the product you are using), taken 1–2 times daily with approximately 125–175 mL (4–6 oz) of water. This type of fibre absorbs water in the bowel and forms a gel that helps firm stool without significant fermentation.</p>
+
+      <h3>Psyllium Husk (sugar-free / unflavoured)</h3>
+      <p>Start with ½ to 1 teaspoon once daily stirred into 125–175 mL (4–6 oz) of water, increasing to twice daily if tolerated. <strong>Always check the label</strong> for added maltitol or sorbitol, which can worsen loose stool.</p>
+
+      <div class="mindset-box">
+        <strong>A note on expectations:</strong> Fibre supplements take 2–4 days to show their full effect. Start low, go slow, and give each change a few days before deciding whether it's working.
+      </div>
+    </div>
+
+    <!-- SAMPLE DAY -->
+    <h2>Sample Day of Eating</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <div class="meal-grid">
+        <div class="meal-card">
+          <h4>🍳 Breakfast</h4>
+          <p>Eggs cooked in butter or olive oil; half an avocado; chia pudding pre-soaked overnight in unsweetened almond milk</p>
+        </div>
+        <div class="meal-card">
+          <h4>🥗 Lunch</h4>
+          <p>Grilled chicken or canned salmon / tuna; steamed peeled zucchini and well-cooked cauliflower; broth or a low-sugar electrolyte drink</p>
+        </div>
+        <div class="meal-card">
+          <h4>🍽 Dinner</h4>
+          <p>Baked salmon or lean ground beef; sautéed mushrooms and peeled zucchini; fibre supplement with dinner if advised by your care team</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHEN TO CONTACT -->
+    <h2>When to Contact Your Clinic</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+
+      <h3>Contact the same day (or call 911 / go to Emergency) if you have:</h3>
+      <div class="caution-box">
+        <ul>
+          <li>Any autonomic dysreflexia symptoms — sudden severe headache, flushing, sweating above your injury level, or slow heart rate <em>(if injury at T6 or above)</em></li>
+          <li>Fever, chills, or severe belly pain</li>
+          <li>Blood in the stool</li>
+          <li>Any new redness, skin breakdown, blistering, or open area on your buttocks, tailbone, or perianal area</li>
+          <li>Any uncertainty about whether this could be a blockage</li>
+        </ul>
+      </div>
+
+      <h3>Contact within 24 hours if:</h3>
+      <div class="warning-box">
+        <ul>
+          <li>No improvement despite the changes above</li>
+          <li>You are not confident this is diet-related</li>
+          <li>You have questions about restarting your regular bowel medications</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- QUICK REFERENCE TABLE -->
+    <h2>Quick Reference: What Helps vs. What to Avoid</h2>
+
+    <div class="section-header"></div>
+    <div class="section-body">
+      <table>
+        <thead>
+          <tr>
+            <th>✅ Favour Right Now</th>
+            <th>❌ Avoid Until Resolved</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Well-cooked, peeled vegetables</td>
+            <td>Raw salads, raw cruciferous vegetables (broccoli, cabbage)</td>
+          </tr>
+          <tr>
+            <td>Avocado, eggs, plain grilled fish or meat</td>
+            <td>Keto bars / products with inulin, FOS, chicory root</td>
+          </tr>
+          <tr>
+            <td>Pre-soaked chia seeds</td>
+            <td>Sugar alcohols: maltitol, sorbitol, xylitol, erythritol</td>
+          </tr>
+          <tr>
+            <td>Broth, water, low-sugar electrolyte drink</td>
+            <td>MCT oil, bulletproof coffee, heavy cream in large amounts</td>
+          </tr>
+          <tr>
+            <td>Calcium polycarbophil or psyllium (once Step 1 clear)</td>
+            <td>Anti-diarrheal drugs (Imodium / loperamide) unless directed</td>
+          </tr>
+          <tr>
+            <td>Barrier cream to protect skin</td>
+            <td>Skipping your scheduled bowel care routine</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- ══ REFERENCES ══ -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Consortium for Spinal Cord Medicine. Neurogenic bowel management in adults with spinal cord injury. J Spinal Cord Med. 1998;21(3):248–93. Updated clinical practice guidelines available at PVA.org.</li>
+      <li>Krassioukov A, Eng JJ, Warburton DE, Teasell R; Spinal Cord Injury Rehabilitation Evidence Research Team. A systematic review of the management of orthostatic hypotension after spinal cord injury. Arch Phys Med Rehabil. 2009;90(5):876–85.</li>
+      <li>Coggrave M, Norton C, Cody JD. Management of faecal incontinence and constipation in adults with central neurological diseases. Cochrane Database Syst Rev. 2014;(1):CD002115.</li>
+      <li>Westby M, Bhanu A, Fairfield CA, Avery M, Hay-Smith EJC. Neurogenic bowel dysfunction in people with spinal cord injury: a scoping review of guidelines. Spinal Cord. 2021;59(6):625–36.</li>
+      <li>Piche T. Tight junctions and IBS — the link between epithelial permeability, low-grade inflammation and symptom generation? Neurogastroenterol Motil. 2014;26(3):296–302.</li>
+      <li>Rao SS, Rattanakovit K, Patcharatrakul T. Diagnosis and management of chronic constipation in adults. Nat Rev Gastroenterol Hepatol. 2016;13(5):295–305.</li>
+      <li>McRorie JW Jr. Evidence-based approach to fiber supplements and clinically meaningful health benefits, part 2: what to look for and how to recommend an effective fiber therapy. Nutr Today. 2015;50(2):90–7.</li>
+      <li>Westman EC, Feinman RD, Mavropoulos JC, et al. Low-carbohydrate nutrition and metabolism. Am J Clin Nutr. 2007;86(2):276–84.</li>
+      <li>Hamamoto Y, Akiyama T, Dhindsa S, et al. Mechanisms of autonomic dysreflexia and its prevention and treatment. Spinal Cord. 2020;58(9):942–50.</li>
+      <li>Hussain TA, Mathew TC, Dashti AA, et al. Effect of low-calorie versus low-carbohydrate ketogenic diet in type 2 diabetes. Nutrition. 2012;28(10):1016–21. [Cited for electrolyte/sodium excretion context on low-carb diets.]</li>
+    </ol>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <p>David Whiting, MBChB CCFP | Kelowna, BC</p>
+    <p class="disclaimer">This handout is for educational purposes only and does not replace personalized medical advice from your healthcare provider.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
