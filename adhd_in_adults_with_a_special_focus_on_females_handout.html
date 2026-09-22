@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="category" content="Mental Health">
+  <title>Understanding Adult ADHD: A Guide for Women</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1e293b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .header small {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .header time {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #2563eb;
+      font-size: 1.3em;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.6rem 0 1rem 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* CALLOUT BOXES */
+    .key-point,
+    .warning-box,
+    .caution-box,
+    .success-box,
+    .mindset-box {
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+
+    .key-point {
+      background: #dbeafe;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .caution-box {
+      background: #fee2e2;
+      border-left: 5px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .success-box {
+      background: #d1fae5;
+      border-left: 5px solid #10b981;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .mindset-box {
+      background: #ede9fe;
+      border-left: 5px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .box-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f1f5f9;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      padding: 0.55rem 0.5rem 0.55rem 2.2rem;
+      position: relative;
+      border-bottom: 1px solid #e2e8f0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .checklist li::before {
+      content: '☐';
+      position: absolute;
+      left: 0.4rem;
+      font-size: 1.2rem;
+      color: #3b82f6;
+    }
+
+    /* REFERENCES */
+    .references {
+      background: #f1f5f9;
+      padding: 30px;
+    }
+
+    .references h2 {
+      margin-top: 0;
+    }
+
+    .references ol {
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    .references li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 20px 40px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .footer p {
+      margin-bottom: 0.3rem;
+    }
+
+    .disclaimer {
+      opacity: 0.75;
+      font-size: 0.82rem;
+      margin-top: 0.5rem;
+    }
+
+    /* SECTION HELPERS */
+    .section-header { }
+    .section-body { }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .header { padding: 24px 20px; }
+      .content { padding: 24px 20px; }
+      .references { padding: 20px; }
+      .footer { padding: 16px 20px; }
+      h2 { font-size: 1.4em; }
+      h3 { font-size: 1.15em; }
+      .header h1 { font-size: 1.5em; }
+      table { font-size: 0.85rem; }
+    }
+
+    /* PRINT */
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      body { background: #ffffff; }
+      .container { box-shadow: none; margin: 0; border-radius: 0; }
+
+      .section-header { break-after: avoid; page-break-after: avoid; }
+      .section-body { break-before: avoid; page-break-before: avoid; break-inside: avoid; page-break-inside: avoid; }
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+      input[type="checkbox"] { display: table-cell; }
+
+      .key-point, .warning-box, .caution-box, .success-box, .mindset-box {
+        border-radius: 0 8px 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Understanding Adult ADHD: A Guide for Women</h1>
+    <small>Prepared by your family doctor</small>
+    <time datetime="2026-09-22">September 22, 2026</time>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- INTRO -->
+    <div class="section-header">
+      <h2>Rethinking How We View ADHD</h2>
+    </div>
+    <div class="section-body">
+      <p>Attention-Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental condition (one that affects how the brain develops and functions) that has long been associated with young, hyperactive boys. That picture is incomplete — and it has left many women without answers for years, sometimes decades.<sup>1</sup></p>
+
+      <p>In reality, ADHD is common in women and girls, but it tends to look different, be overlooked more easily, and be diagnosed much later in life. If you are reading this, you may have recently received a diagnosis, or you may be wondering whether ADHD explains experiences you have been struggling to understand for a long time. Either way, this handout is for you.</p>
+
+      <div class="mindset-box">
+        <div class="box-title">💜 A note before we begin</div>
+        <p>Many women living with undiagnosed ADHD spend years believing they are lazy, disorganized, or "not trying hard enough." If that sounds familiar, please know this: those feelings are a symptom of an underdiagnosed condition — not a reflection of your character or your worth.</p>
+      </div>
+    </div>
+
+    <!-- HOW ADHD PRESENTS IN WOMEN -->
+    <div class="section-header">
+      <h2>How ADHD Looks Different in Women</h2>
+    </div>
+    <div class="section-body">
+
+      <h3>Inattentive Symptoms Are the Norm</h3>
+      <p>Women with ADHD are significantly more likely to experience the <strong>inattentive subtype</strong> — meaning their main struggles involve attention, memory, and mental organization rather than obvious physical hyperactivity.<sup>2</sup> These symptoms are harder to see from the outside, which makes them easier to miss.</p>
+
+      <p>Common experiences for women with ADHD include:</p>
+      <ul>
+        <li>Chronic difficulty sustaining focus on tasks, especially routine or repetitive ones</li>
+        <li>A busy, restless inner mental world — sometimes called "mental hyperactivity"</li>
+        <li>Losing track of conversations, appointments, or belongings regularly</li>
+        <li>Starting many projects but struggling to complete them</li>
+        <li>Feeling overwhelmed by everyday tasks that seem easier for others</li>
+        <li>Difficulty managing time and consistently underestimating how long things will take</li>
+        <li>Emotional sensitivity and intense reactions to perceived criticism (sometimes called rejection sensitive dysphoria)</li>
+      </ul>
+
+      <div class="key-point">
+        <div class="box-title">📌 Key Point: Hyperactivity can be internal</div>
+        <p>Women with ADHD may appear calm on the outside while their mind races constantly. This internal restlessness is just as real as physical hyperactivity — and just as exhausting.</p>
+      </div>
+
+      <h3>Masking: The Hidden Work of Coping</h3>
+      <p>Many women with ADHD develop highly effective coping strategies — working extra hard to appear organized, using reminder systems obsessively, or relying on anxiety and perfectionism to push through tasks. This is called <strong>masking</strong>. While masking can help in the short term, it is mentally exhausting and often delays diagnosis because women appear to be "doing fine" on the surface.<sup>3</sup></p>
+
+      <h3>Misdiagnosis Is Common</h3>
+      <p>Because ADHD in women tends to be internalized, many women are first diagnosed and treated for anxiety, depression, or both — without anyone recognizing the underlying ADHD driving those experiences.<sup>2</sup> It is important to know that anxiety and depression can absolutely co-exist with ADHD, but treating those conditions alone often leaves ADHD unaddressed and symptoms ongoing.</p>
+
+      <div class="warning-box">
+        <div class="box-title">⚠️ Watch for this pattern</div>
+        <p>If you have been treated for anxiety or depression but have not experienced substantial improvement in your day-to-day functioning, it is worth discussing with your doctor whether ADHD may also be playing a role.</p>
+      </div>
+    </div>
+
+    <!-- HORMONES AND ADHD -->
+    <div class="section-header">
+      <h2>Hormones and ADHD: An Important Connection</h2>
+    </div>
+    <div class="section-body">
+      <p>One of the most underappreciated aspects of ADHD in women is the significant influence of female sex hormones — particularly <strong>estrogen</strong> — on ADHD symptoms.<sup>4</sup></p>
+
+      <p>Estrogen supports the activity of dopamine (a brain chemical central to attention, motivation, and mood). When estrogen levels drop, dopamine function can be affected, often leading to a worsening of ADHD symptoms. This happens at predictable points in a woman's hormonal cycle and life:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Hormonal Phase</th>
+            <th>What Happens</th>
+            <th>What You Might Notice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Late Luteal Phase</strong> (the week before your period)</td>
+            <td>Estrogen drops sharply</td>
+            <td>ADHD symptoms often worsen; medication may feel less effective; mood becomes harder to regulate</td>
+          </tr>
+          <tr>
+            <td><strong>Postpartum Period</strong></td>
+            <td>Estrogen falls dramatically after delivery</td>
+            <td>Significant increase in ADHD symptoms; overlap with postpartum mood changes can complicate the picture</td>
+          </tr>
+          <tr>
+            <td><strong>Perimenopause</strong></td>
+            <td>Estrogen levels become erratic and eventually decline</td>
+            <td>Many women experience a meaningful worsening of ADHD symptoms, sometimes prompting a first-time diagnosis</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="key-point">
+        <div class="box-title">📌 Tell your doctor about patterns</div>
+        <p>If your ADHD symptoms or the effectiveness of your medication seems to fluctuate with your menstrual cycle or life phase, tell your doctor. This information is clinically useful and may influence your treatment plan.</p>
+      </div>
+    </div>
+
+    <!-- IMPACT ON LIFE -->
+    <div class="section-header">
+      <h2>The Real-Life Impact of Undiagnosed ADHD</h2>
+    </div>
+    <div class="section-body">
+      <p>Living with unrecognized and untreated ADHD over many years can affect nearly every area of life. Research shows that women with ADHD are at higher risk for:<sup>1,5</sup></p>
+
+      <ul>
+        <li>Chronic low self-esteem and a deep sense of not reaching their potential</li>
+        <li>Anxiety disorders and major depression</li>
+        <li>Relationship difficulties, including higher rates of relationship instability</li>
+        <li>Challenges in the workplace — including difficulty sustaining employment or reaching career goals</li>
+        <li>Higher rates of risky driving behaviours</li>
+        <li>Substance use disorders (alcohol and drug misuse are significantly more common in adults with untreated ADHD)<sup>6</sup></li>
+        <li>Sleep difficulties and chronic fatigue</li>
+      </ul>
+
+      <div class="mindset-box">
+        <div class="box-title">💜 This is not about blame</div>
+        <p>These challenges are the downstream effects of an unrecognized neurological condition — not personal failures. Understanding this is one of the most important steps toward change.</p>
+      </div>
+    </div>
+
+    <!-- THE VALUE OF DIAGNOSIS -->
+    <div class="section-header">
+      <h2>The Value of Getting Diagnosed</h2>
+    </div>
+    <div class="section-body">
+      <p>Receiving a formal diagnosis in adulthood can be a turning point for many women. Research consistently shows that adult women who receive a diagnosis describe it as profoundly positive — a moment when a lifetime of confusing experiences finally makes sense.<sup>1</sup></p>
+
+      <div class="success-box">
+        <div class="box-title">✅ What a diagnosis can offer</div>
+        <ul>
+          <li><strong>Emotional relief:</strong> Guilt and self-blame often decrease significantly once ADHD is understood as a neurological condition, not a character flaw</li>
+          <li><strong>Better self-understanding:</strong> Knowing your brain works differently allows you to build strategies that actually fit how you think</li>
+          <li><strong>Access to effective treatment:</strong> Medication and therapy have strong evidence for improving quality of life in adults with ADHD</li>
+          <li><strong>Reduced long-term risk:</strong> Effective treatment lowers the risk of many of the complications listed above</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TREATMENT: MEDICATIONS -->
+    <div class="section-header">
+      <h2>Treatment Options: Medications</h2>
+    </div>
+    <div class="section-body">
+      <p>Medications are currently the most effective available treatment for the core symptoms of ADHD — particularly improving focus, reducing impulsivity, and supporting executive function (the brain's ability to plan, organize, and follow through).<sup>7</sup></p>
+
+      <p>There are two main types of medication used in Canada:</p>
+
+      <h3>1. Stimulant Medications (First-Line Treatment)</h3>
+      <p>Stimulants are the most well-studied and most effective ADHD medications available. They work by increasing the availability of dopamine and norepinephrine in the brain. There are two main stimulant families:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Common Canadian Brand/Generic Names</th>
+            <th>Duration of Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Methylphenidate</strong></td>
+            <td>Ritalin® (short-acting); Biphentin®, Concerta® (long-acting)</td>
+            <td>4–6 hrs (short); 10–12 hrs (long)</td>
+          </tr>
+          <tr>
+            <td><strong>Amphetamine-based</strong></td>
+            <td>Adderall XR®, Vyvanse® (lisdexamfetamine)</td>
+            <td>8–14 hrs</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Long-acting formulations are generally preferred because they provide more consistent coverage throughout the day and have a lower potential for misuse.</p>
+
+      <div class="key-point">
+        <div class="box-title">📌 Stimulants and hormonal fluctuations</div>
+        <p>Some women notice that their stimulant medication feels less effective in the week before their period. This is thought to be related to the drop in estrogen affecting dopamine systems. If you notice this pattern, mention it to your doctor — dose adjustments or other strategies may help.</p>
+      </div>
+
+      <h3>Common Side Effects of Stimulants</h3>
+      <ul>
+        <li><strong>Appetite suppression:</strong> Most common, especially earlier in the day. Taking medication with food and eating a larger meal in the evening can help.</li>
+        <li><strong>Sleep difficulties:</strong> Long-acting medications taken too late in the day can delay sleep onset. Timing of doses matters significantly.</li>
+        <li><strong>Increased heart rate and blood pressure:</strong> Regular monitoring is important, especially if you have a history of heart conditions. Your doctor will check your blood pressure at follow-up visits.<sup>7</sup></li>
+        <li><strong>Anxiety or irritability:</strong> Can occur at higher doses or may indicate that the dose needs adjustment. If pre-existing anxiety worsens, let your doctor know.</li>
+        <li><strong>"Rebound" effect:</strong> As short-acting medication wears off, some people notice a temporary increase in irritability or fatigue. Switching to a long-acting preparation often resolves this.</li>
+        <li><strong>Headaches or stomach upset:</strong> Usually mild and often improve after the first few weeks.</li>
+      </ul>
+
+      <div class="caution-box">
+        <div class="box-title">🔴 Stimulants and misuse risk</div>
+        <p>When taken exactly as prescribed, stimulants are safe and well-tolerated. However, they are classified as controlled substances because they carry a risk of misuse, particularly if taken in doses higher than prescribed, or if combined with alcohol or other substances. Always take your medication exactly as directed and store it securely.</p>
+      </div>
+
+      <h3>2. Non-Stimulant Medications (Alternative Options)</h3>
+      <p>For some individuals, stimulants are not appropriate — due to side effects, personal preference, a history of substance use disorder, or heart conditions. Non-stimulant options include:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Medication</th>
+            <th>How It Works</th>
+            <th>Things to Know</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Atomoxetine (Strattera®)</strong></td>
+            <td>Increases norepinephrine; not a stimulant and not a controlled substance</td>
+            <td>Takes 4–8 weeks for full effect; useful if anxiety is prominent; may cause nausea initially. Rare risk of increased blood pressure. Caution: rare reports of suicidal ideation — discuss with your doctor.</td>
+          </tr>
+          <tr>
+            <td><strong>Bupropion (Wellbutrin®)</strong></td>
+            <td>Antidepressant that also modestly helps with ADHD symptoms</td>
+            <td>May be useful when ADHD co-exists with depression; less effective for ADHD than stimulants; lowers seizure threshold slightly</td>
+          </tr>
+          <tr>
+            <td><strong>Guanfacine (Intuniv®)</strong></td>
+            <td>Acts on norepinephrine receptors in the prefrontal cortex</td>
+            <td>Can reduce emotional reactivity and impulsivity; may cause fatigue or low blood pressure; sometimes used as an add-on to stimulants</td>
+          </tr>
+          <tr>
+            <td><strong>Clonidine</strong></td>
+            <td>Similar mechanism to guanfacine</td>
+            <td>Used less commonly in adults; may help with sleep and hyperarousal; can cause sedation and low blood pressure</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <div class="box-title">⚠️ Important: Blood pressure monitoring</div>
+        <p>Both stimulant and some non-stimulant ADHD medications can affect blood pressure. Your doctor will monitor this regularly. Do not stop or change your medication without talking to your doctor first.</p>
+      </div>
+    </div>
+
+    <!-- TREATMENT: BEYOND MEDICATION -->
+    <div class="section-header">
+      <h2>Treatment Beyond Medication: Building Skills That Last</h2>
+    </div>
+    <div class="section-body">
+      <p>Medication can significantly improve your brain's ability to focus and regulate attention. However, it does not automatically teach the organizational skills, time management strategies, or emotional regulation tools that many women with ADHD have never had the opportunity to develop.<sup>7</sup> This is where non-medication approaches become essential partners to medical treatment.</p>
+
+      <h3>Cognitive-Behavioural Therapy (CBT)</h3>
+      <p>CBT is the most evidence-based psychological treatment for adult ADHD.<sup>8</sup> In the context of ADHD, CBT helps you:</p>
+      <ul>
+        <li>Build practical organizational and time management systems that fit your brain</li>
+        <li>Challenge the negative beliefs about yourself that years of struggling have created</li>
+        <li>Develop strategies for managing procrastination and task initiation</li>
+        <li>Improve emotional regulation, particularly around frustration and rejection sensitivity</li>
+      </ul>
+
+      <h3>ADHD Coaching</h3>
+      <p>An ADHD coach (a certified professional who specializes in supporting people with ADHD) works with you in a more practical, forward-focused way than therapy. Coaching focuses on accountability, goal setting, and developing individualized systems for managing daily life demands.</p>
+
+      <h3>Mindfulness-Based Approaches</h3>
+      <p>Mindfulness practices — including mindfulness-based stress reduction (MBSR) — have shown promise as a complement to standard ADHD treatment, particularly for reducing stress and improving emotional regulation.<sup>9</sup></p>
+
+      <h3>Lifestyle Foundations</h3>
+      <p>The following lifestyle factors have meaningful evidence for supporting ADHD management:</p>
+      <ul>
+        <li><strong>Regular aerobic exercise:</strong> Consistently shown to improve attention, mood, and executive function in adults with ADHD — even a 20-minute brisk walk makes a difference<sup>10</sup></li>
+        <li><strong>Sleep hygiene:</strong> Sleep difficulties are extremely common with ADHD; protecting sleep is one of the most important things you can do</li>
+        <li><strong>Consistent daily structure and routines:</strong> External structure compensates for internal regulation difficulties</li>
+        <li><strong>Limiting alcohol:</strong> Alcohol worsens ADHD symptoms and interacts poorly with medications; it is also a common coping mechanism that can become problematic<sup>6</sup></li>
+      </ul>
+
+      <div class="success-box">
+        <div class="box-title">✅ The best approach combines both</div>
+        <p>Medication works best as a foundation that makes therapy and skill-building more accessible. Most ADHD specialists recommend a combined approach — medication plus psychological support — for adults, especially those with significant comorbidities like anxiety or depression.<sup>7,8</sup></p>
+      </div>
+    </div>
+
+    <!-- ACTION PLAN CHECKLIST -->
+    <div class="section-header">
+      <h2>Your ADHD Action Plan</h2>
+    </div>
+    <div class="section-body">
+      <p>Use this checklist to keep track of important steps in your care. Bring it to your next appointment to discuss with your doctor.</p>
+
+      <ul class="checklist">
+        <li>I have had my blood pressure and heart rate checked before starting medication</li>
+        <li>I have discussed my full medication list with my doctor (including supplements and oral contraceptives)</li>
+        <li>I have told my doctor about any personal or family history of heart problems, anxiety, or substance use</li>
+        <li>I understand how and when to take my medication correctly</li>
+        <li>I have a follow-up appointment scheduled to review how my medication is working</li>
+        <li>I have tracked whether my symptoms seem to change with my menstrual cycle and told my doctor</li>
+        <li>I have asked my doctor or a counsellor about CBT for ADHD in my area</li>
+        <li>I am working on at least one lifestyle habit (exercise, sleep routine, or reducing alcohol)</li>
+        <li>I know what side effects to watch for and when to call my doctor</li>
+        <li>I have access to a Canadian ADHD resource (see below)</li>
+      </ul>
+    </div>
+
+    <!-- CANADIAN RESOURCES -->
+    <div class="section-header">
+      <h2>Canadian Resources</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li><strong>CADDAC (Centre for ADHD Awareness, Canada):</strong> <em>caddac.ca</em> — Patient education, support groups, and provider directories</li>
+        <li><strong>CADDRA (Canadian ADHD Resource Alliance):</strong> <em>caddra.ca</em> — Clinical guidelines and patient tools based on Canadian practice</li>
+        <li><strong>BC Mental Health Support Line:</strong> 310-6789 (no area code needed) — Available 24/7 in BC</li>
+        <li><strong>Kelowna Mental Health and Substance Use:</strong> 250-869-4050 — Interior Health mental health services</li>
+      </ul>
+    </div>
+
+  </main><!-- end .content -->
+
+  <!-- REFERENCES -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Quinn PO, Madhoo M. A review of attention-deficit/hyperactivity disorder in women and girls: uncovering this hidden diagnosis. <em>Prim Care Companion CNS Disord.</em> 2014;16(3):PCC.13r01596.</li>
+      <li>Gershon J. A meta-analytic review of gender differences in ADHD. <em>J Atten Disord.</em> 2002;5(4):230–42.</li>
+      <li>Young S, Adamo N, Ásgeirsdóttir BB, et al. Females with ADHD: An expert consensus statement taking a lifespan approach providing guidance for the identification and treatment of attention-deficit/ hyperactivity disorder in females of all ages. <em>BMC Psychiatry.</em> 2020;20(1):404.</li>
+      <li>Nussbaum NL. ADHD and female specific concerns: a review of the literature and clinical implications. <em>J Atten Disord.</em> 2012;16(2):87–100.</li>
+      <li>Biederman J, Faraone SV, Spencer TJ, et al. Functional impairments in adults with self-reports of diagnosed ADHD: A controlled study of 1001 adults in the community. <em>J Clin Psychiatry.</em> 2006;67(4):524–40.</li>
+      <li>Wilens TE. Attention deficit hyperactivity disorder and substance use disorders. <em>Am J Psychiatry.</em> 2006;163(12):2059–63.</li>
+      <li>Canadian ADHD Resource Alliance (CADDRA). <em>Canadian ADHD Practice Guidelines.</em> 4.1 ed. Toronto: CADDRA; 2020.</li>
+      <li>Safren SA, Sprich S, Mimiaga MJ, et al. Cognitive behavioral therapy vs relaxation with educational support for medication-treated adults with ADHD and persistent symptoms. <em>JAMA.</em> 2010;304(8):875–80.</li>
+      <li>Zylowska L, Ackerman DL, Yang MH, et al. Mindfulness meditation training in adults and adolescents with ADHD: a feasibility study. <em>J Atten Disord.</em> 2008;11(6):737–46.</li>
+      <li>Ratey JJ, Loehr JE. The positive impact
